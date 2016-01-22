@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
-	<meta name="format-detection" content="telephone=no,email=no,adress=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-touch-fullscreen" content="yes">
-	<meta name="full-screen" content="yes">
+<!-- 	<meta name="format-detection" content="telephone=no,email=no,adress=no"> -->
+<!-- 	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes"> -->
+<!-- 	<meta name="full-screen" content="yes">
 	<meta name="browsermode" content="application">
-	<meta name="x5-fullscreen" content="true">
+	<meta name="x5-fullscreen" content="true"> -->
 	<title>La-Chance</title>
 	<!-- <link rel="stylesheet" href="style/reset.css"> -->
 	<link rel="stylesheet" href="style/index.css">
@@ -18,7 +18,7 @@
 <body>
 	<div id="fullpage">
 		<div class="section section1" ><span>第一</span></div>
-		<div class="section section1" >第二</div>
+		<div class="section section1" ></div>
 	</div>
 	<script src="scripts/jquery-1.12.0.min.js"></script>
 	<script src="scripts/jquery.fullPage.min.js"></script>
@@ -26,10 +26,6 @@
 	<script>
 		$(function(){
 			$('#fullpage').fullpage();
-			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
-			function hideURLbar(){ 
-				window.scrollTo(0,1); 
-			} 
 		});
 	</script>
 </body>
