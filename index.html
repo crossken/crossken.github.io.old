@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>无标题文档</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<title>La-Chance</title>
+	<!-- <link rel="stylesheet" href="style/reset.css"> -->
+	<link rel="stylesheet" href="style/index.css">
+	<link rel="stylesheet" href="style/jquery.fullPage.css">
+
 </head>
 <body>
-
-	<p id="show">00:00:00</p>
-
+	<div id="fullpage">
+		<div class="section section1" ><span>第一</span></div>
+		<div class="section section1" >第二</div>
+	</div>
+	<script src="scripts/jquery-1.12.0.min.js"></script>
+	<script src="scripts/jquery.fullPage.min.js"></script>
+	<script src="scripts/jquery.easings.min.js"></script>
 	<script>
-	window.onload = function () {
-
-		var num = null;
-		var num2 = num + 2;
-		alert(num2);
-	}
+		$(function(){
+			$('#fullpage').fullpage();
+		});
 	</script>
 </body>
 </html>
