@@ -5,9 +5,9 @@
 	user-select: none; 
 }*/
 .section {
-	vertical-align: top;
+	/*vertical-align: top;*/
 	background: url(../images/index.jpg) 0 0 no-repeat;
-	background-size: cover;
+	/*background-size: cover;*/
 	/*height: 100vh;*/
 }
 * {
