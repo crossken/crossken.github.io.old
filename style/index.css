@@ -4,16 +4,16 @@
 	-khtml-user-select: none; 
 	user-select: none; 
 }*/
-.section1 {
+.section {
 	/*vertical-align: top;*/
-	/*background: url(../images/index.jpg) 0 0 no-repeat;*/
+	background: black url(../images/index.jpg) 0 0 no-repeat;
 	/*background-size: cover;*/
 	/*height: 100vh;*/
-	background-color: red;
+	/*background-color: red;*/
 }
-.section2 {
+/*.section2 {
 	background-color: blue;
-}
+}*/
 * {
 	margin: 0;
 	padding: 0;
