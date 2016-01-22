@@ -4,11 +4,15 @@
 	-khtml-user-select: none; 
 	user-select: none; 
 }*/
-.section {
+.section1 {
 	/*vertical-align: top;*/
-	background: url(../images/index.jpg) 0 0 no-repeat;
+	/*background: url(../images/index.jpg) 0 0 no-repeat;*/
 	/*background-size: cover;*/
 	/*height: 100vh;*/
+	background-color: red;
+}
+.section2 {
+	background-color: blue;
 }
 * {
 	margin: 0;
