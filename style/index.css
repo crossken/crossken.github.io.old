@@ -1,20 +1,37 @@
-/*body {
+body {
 	-webkit-user-select: none; 
 	-moz-user-select: none; 
 	-khtml-user-select: none; 
 	user-select: none; 
+	background-color: #323232;
+}
+html,body,#wrapper,#section1 {
+	height: 100%;
+}
+/*#section1 header a {
+	display: block;
+	height: auto;
 }*/
-.section {
-	/*vertical-align: top;*/
-	background: black url(../images/index.jpg) 0 0 no-repeat;
+#section1 header {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#section1 header img {
+	width: 100%;
+	display: block;
+}
+
+#section1 .main {
+	background: url(../images/section1bg.png) 0 0 no-repeat;
 	background-size: cover;
 	/*height: 100vh;*/
-	/*background-color: red;*/
+	height: 100%;
 }
-/*.section2 {
-	background-color: blue;
-}*/
-* {
-	margin: 0;
-	padding: 0;
+#section1 .main p {
+	font-size: 27px;
+	padding-top: 20%;
+	color: white;
+	text-align: center;
+	font-weight: bold;
 }
