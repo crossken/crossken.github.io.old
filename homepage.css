@@ -23,6 +23,7 @@ ul,li {
 	position: absolute;
 	top:0;
 	left: 0;
+	width: 91px;
 }
 .rootList li {
 	width: 90px;
