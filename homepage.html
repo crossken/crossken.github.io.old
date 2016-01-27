@@ -109,7 +109,8 @@
 			var myScrollRight = new IScroll('.categoryContent', {
 				mouseWheel: true,
 				momentum:true,
-				click:true
+				click:true,
+				tap:true
 			});
 			var myScrollLeft = new IScroll('.rootList', {
 				mouseWheel: true,
@@ -117,6 +118,7 @@
 				click:true
 			});
 			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			// $('#element').on('tap', doSomething);
 		});
 	</script>
 </body>
