@@ -77,7 +77,11 @@
 	<script src="iscroll.min.js"></script>
 	<script src="zepto.min.js"></script>
 	<script>
-		var myScroll = new IScroll('.categoryContent', {
+		var myScrollRight = new IScroll('.categoryContent', {
+			mouseWheel: true,
+			momentum: true
+		});
+		var myScrollLeft = new IScroll('.rootList', {
 			mouseWheel: true,
 			momentum: true
 		});
