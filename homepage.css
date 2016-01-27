@@ -4,7 +4,7 @@ body {
 }
 html,body,.categoryBody,.rootList,.categoryContent{
 	height: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 a,img {
 	-webkit-touch-callout:none;
