@@ -109,10 +109,12 @@
 			var myScrollRight = new IScroll('.categoryContent', {
 				mouseWheel: true,
 				momentum:true
+				click:true
 			});
 			var myScrollLeft = new IScroll('.rootList', {
 				mouseWheel: true,
-				momentum:true
+				momentum:true,
+				preventDefault:true
 			});
 		});
 	</script>
