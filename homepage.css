@@ -89,11 +89,8 @@ li.active a,li.active a:visited{
 /*.rootList {
 	overflow-y:scroll; 
 }*/
-.wrapper {
-	/*overflow-y:scroll;*/
-/*	z-index: 2;*/
-	/*overflow:scroll;*/
-	/*position: absolute;*/
+.wrapper,.rooList ul{
+	-webkit-transform:translate3d(0,0,0);
 }
 /*.categoryContent {
 	position: relative;
