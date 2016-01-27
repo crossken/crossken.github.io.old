@@ -1,9 +1,13 @@
 body {
 	font-family: SimHei,'Helvetica Neue',Arial,'Droid Sans',sans-serif;
+	-webkit-user-select: none; 
 }
 html,body,.categoryBody,.rootList,.categoryContent{
 	height: 100%;
 	overflow: hidden;
+}
+a,img {
+	-webkit-touch-callout:none;
 }
 div, span, a, header {
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
@@ -82,9 +86,9 @@ li.active a,li.active a:visited{
 	margin-bottom: 20px;
 	overflow: hidden;
 }
-.rootList {
+/*.rootList {
 	overflow-y:scroll; 
-}
+}*/
 .wrapper {
 	/*overflow-y:scroll;*/
 /*	z-index: 2;*/
