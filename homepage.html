@@ -124,9 +124,10 @@
 
 			$('.rootList li').click(function() {
 				$(this).addClass('active').siblings().removeClass();
-				var destinaton = $(this).index()*49*(-1);
+				// var destinaton = $(this).index()*49*(-1);
 				// startMove($('.rootList>ul')[0],{'top':destinaton});
-				$('.rootList>ul').css('transform','translate(0px,'+destinaton+'px)');
+				// $('.rootList>ul').css('transform','translate(0px,'+destinaton+'px)');
+				myScrollLeft.scrollToElement(this, 100);
 				return false;
 			});
 		});
