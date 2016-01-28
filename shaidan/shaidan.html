@@ -37,22 +37,20 @@
 			background-color: #fff;
 		}
 		#title {
-			/*width: 100%;*/
-			/*display: block;*/
 			padding: 10px;
 			font-size: 14px;
-			/*margin: 0 10px;*/
-			/*border-bottom: 1px solid #ebebeb;*/
 			border: 0;
 			outline: none;
 		}
 		#comment {
+			/*display: block;*/
 			border:0;
-			/*width: 100%;*/
 			resize: none;
 			font-size: 14px;
 			padding: 10px;
 			line-height: 1.2;
+			box-sizing:border-box;
+			width: 100%;
 		}
 		.line {
 			width: 97%;
@@ -114,29 +112,6 @@
 	<div>
 		<h2>发布晒单</h2>
 		<form action="action.php?a=insert" method="post" enctype="multipart/form-data">
-<!-- 			<table width="600" border="0">
-				<tr>
-					<td align="right">标题:</td>
-					<td><input type="text" name="goods"></td>
-				</tr>
-				<tr>
-					<td align="right">图片</td>
-					<td><input type="file" name="name"></td>
-				</tr>
-				<tr>
-					<td align="right">描述:</td>
-					<td>
-						<textarea name="descr" cols="30" rows="5"></textarea>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center">
-						<input type="submit" value="添加" />
-						<input type="reset" value="重置" />
-					</td>
-				</tr>
-			</table> -->
-
 			<input type="text" placeholder="此处填写晒单主题" id="title" name="goods">
 			<div class="line"></div>
 			<textarea name="descr" id="comment" rows="10" placeholder="此处填写晒单评论感想"></textarea>
@@ -150,7 +125,6 @@
 			</div>
 			<input type="submit" value="发&nbsp;&nbsp;&nbsp;&nbsp;布" id="submit">
 		</form>
-
 	</div>
 
 </body>

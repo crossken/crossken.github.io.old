@@ -104,6 +104,7 @@
 	</div>
 	<script src="iscroll.min.js"></script>
 	<script src="zepto.min.js"></script>
+	
 	<script>
 		$(function() {
 			var myScrollRight = new IScroll('.categoryContent', {
@@ -119,6 +120,14 @@
 			});
 			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 			// $('#element').on('tap', doSomething);
+
+			$('.rootList li').click(function() {
+				$(this).addClass('active').siblings().removeClass();
+				var destinaton = $(this).index()*49*(-1);
+				// startMove($('.rootList>ul')[0],{'top':destinaton});
+				$('.rootList>ul').css('transform','translate(0px,'+destinaton+'px)');
+				return false;
+			});
 		});
 	</script>
 </body>
