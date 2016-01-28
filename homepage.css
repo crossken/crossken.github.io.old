@@ -84,7 +84,7 @@ li.active a,li.active a:visited{
 	text-align: center;
 }
 .categoryContent section {
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 	overflow: hidden;
 }
 /*.rootList {
