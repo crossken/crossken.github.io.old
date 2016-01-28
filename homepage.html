@@ -116,7 +116,8 @@
 			var myScrollLeft = new IScroll('.rootList', {
 				mouseWheel: true,
 				momentum:true,
-				click:true
+				click:true,
+				bounce:true
 			});
 			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 			// $('#element').on('tap', doSomething);
