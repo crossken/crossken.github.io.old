@@ -92,7 +92,7 @@ li.active a,li.active a:visited{
 	}*/
 	.wrapper,.rooList ul{
 		-webkit-transform:translate3d(0,0,0);
-		margin-bottom: 68px;
+		/*margin-bottom: 68px;*/
 	}
 /*.categoryContent {
 	position: relative;
@@ -125,6 +125,9 @@ li.active a,li.active a:visited{
 	#footer img {
 		display: inline-block;
 		width: 40px;
+	}
+	.bottomFix {
+		height: 68px;
 	}
 
 
