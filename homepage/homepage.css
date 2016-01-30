@@ -102,9 +102,9 @@ li.active a,li.active a:visited{
 	left: 0;
 }
 #footer {
-/*	position: fixed;
+	position: fixed;
 	bottom: 0;
-	left: 0;*/
+	left: 0;
 	font-size: 0;
 	width: 100%;
 	background: #fff;
