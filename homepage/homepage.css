@@ -112,6 +112,7 @@ li.active a,li.active a:visited{
 		padding: 5px 0;
 		/*	position: relative;*/
 		z-index: 999;
+		border-top: 1px solid #e0e0e0;
 	}
 	#footer span {
 		display: inline-block;
@@ -127,7 +128,7 @@ li.active a,li.active a:visited{
 		width: 40px;
 	}
 	.bottomFix {
-		height: 68px;
+		height: 69px;
 	}
 
 
