@@ -24,7 +24,6 @@ ul,li {
 	top:0;
 	left: 0;
 	width: 91px;
-	margin-bottom: 68px;
 }
 .rootList li {
 	width: 90px;
@@ -55,7 +54,6 @@ li.active a,li.active a:visited{
 .categoryContent {
 	margin:10px;
 	margin-left: 100px;
-	margin-bottom: 68px;
 }
 .bannerImg img {
 	width: 100%;
@@ -94,6 +92,7 @@ li.active a,li.active a:visited{
 	}*/
 	.wrapper,.rooList ul{
 		-webkit-transform:translate3d(0,0,0);
+		margin-bottom: 68px;
 	}
 /*.categoryContent {
 	position: relative;
