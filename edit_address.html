@@ -113,7 +113,7 @@
 			width: 180px;
 			height: 70px;
 			text-align: center;
-			background: rgba(0,0,0,0.4);
+			background: rgba(0,0,0,0.5);
 			font-size: 20px;
 			line-height: 70px;
 			border-radius: 8px;
@@ -142,7 +142,7 @@
 		<input id="address" name="address" type="hidden" value="">
 		<div id="button">
 			<span><a href="">取&nbsp;&nbsp;消</a></span>
-			<span><input type="submit" value="修&nbsp;&nbsp;改"></span>
+			<span><input onclick="alert(promptinfo())" type="submit" value="修&nbsp;&nbsp;改"></span>
 		</div>
 
 	</form>
@@ -151,14 +151,14 @@
 
 	<script src="jquery-2.1.4.min.js"></script>
 	<script>
-		$('#button input').click(function() {
-			$('#error').fadeIn(500, function() {
-				setTimeout(function(){
-					$('#error').fadeOut(500);
-				},500);
-			});
-			return false;
-		});
+		// $('#button input').click(function() {
+		// 	$('#error').fadeIn(500, function() {
+		// 		setTimeout(function(){
+		// 			$('#error').fadeOut(500);
+		// 		},500);
+		// 	});
+		// 	return false;
+		// });
 
 
 		function promptinfo()
