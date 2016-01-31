@@ -160,7 +160,7 @@
 		// 	return false;
 		// });
 
-		alert('test4');
+		alert('test5');
 
 		function promptinfo()
 		{
@@ -610,8 +610,10 @@ function setup() {
 setTimeout(function(){
 
 	var shengfen = '广东省';
-	$('#s1').find(':contains('+shengfen+')').attr('selected', 'selected');
-	alert($('#s1').find(':contains('+shengfen+')').attr('selected'));
+	// $('#s1').find(':contains('+shengfen+')').attr('selected', 'selected');
+	// alert($('#s1').find(':contains('+shengfen+')').attr('selected'));
+	var val = $('#s1').find(':contains('+shengfen+')').val();
+	$('#s1').val(val);
 	change(1);
 
 
