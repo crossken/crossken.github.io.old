@@ -104,6 +104,8 @@
 			-webkit-appearance: none;
 		}
 
+
+		/*0201添加*/
 		#error {
 			position: absolute;
 			top: 30%;
@@ -131,6 +133,9 @@
 			font-size: 12px;
 			padding-left: 10px;
 		}
+		input[type=text],input[type=tel] {
+			-webkit-appearance: none;
+		}
 	</style>
 </head>
 <body onload="setup();promptinfo();">
@@ -145,7 +150,10 @@
 
 		<div><span class="left"></span><input type="checkbox" name="set_default" id="set_default"><label for="set_default" id="default_comfirm">设为默认</label></div>
 		<input id="address" name="address" type="hidden" value="">
+
+		<!-- 0201添加 -->
 		<div id="warn">*提示：以上信息请填写完整，否则将导致提交失败。</div>
+		
 		<div id="button">
 			<span><a href="">取&nbsp;&nbsp;消</a></span>
 			<span><input type="submit" value="修&nbsp;&nbsp;改"></span>
@@ -153,10 +161,13 @@
 
 	</form>
 
-	<div id="error"><img src="error.png">提交失败！</div>
+	<!-- 0201添加 -->
+	<div id="error"><img src="error.png">提交失败！</div> 
 
 	<script src="jquery-2.1.4.min.js"></script>
 	<script>
+
+		// 0201添加
 		$('#button input').click(function() {
 			$('#error').fadeIn(400, function() {
 				setTimeout(function(){
@@ -612,6 +623,8 @@ function setup() {
 }
 
 
+
+// 0201修改
 setTimeout(function(){
 
 	var shengfen = '广东省';
