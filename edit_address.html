@@ -142,7 +142,7 @@
 		<input id="address" name="address" type="hidden" value="">
 		<div id="button">
 			<span><a href="">取&nbsp;&nbsp;消</a></span>
-			<span><input onclick="alert(promptinfo())" type="submit" value="修&nbsp;&nbsp;改"></span>
+			<span><input type="submit" value="修&nbsp;&nbsp;改"></span>
 		</div>
 
 	</form>
@@ -151,16 +151,16 @@
 
 	<script src="jquery-2.1.4.min.js"></script>
 	<script>
-		// $('#button input').click(function() {
-		// 	$('#error').fadeIn(500, function() {
-		// 		setTimeout(function(){
-		// 			$('#error').fadeOut(500);
-		// 		},500);
-		// 	});
-		// 	return false;
-		// });
+		$('#button input').click(function() {
+			$('#error').fadeIn(500, function() {
+				setTimeout(function(){
+					$('#error').fadeOut(500);
+				},500);
+			});
+			return false;
+		});
 
-		alert('test5');
+		alert('test6');
 
 		function promptinfo()
 		{
@@ -610,19 +610,19 @@ function setup() {
 setTimeout(function(){
 
 	var shengfen = '广东省';
-	// $('#s1').find(':contains('+shengfen+')').attr('selected', 'selected');
-	// alert($('#s1').find(':contains('+shengfen+')').attr('selected'));
-	var val = $('#s1').find(':contains('+shengfen+')').val();
-	$('#s1').val(val);
+	var val1 = $('#s1').find(':contains('+shengfen+')').val();
+	$('#s1').val(val1);
 	change(1);
 
 
 	var chengshi = '惠州市';
-	$('#s2').find(':contains('+chengshi+')').attr('selected', 'selected');
+	var val2 = $('#s2').find(':contains('+chengshi+')').val();
+	$('#s2').val(val2);
 	change(2);
 
 	var diqv = '惠城区';
-	$('#s3').find(':contains('+diqv+')').attr('selected', 'selected');
+	var val3 = $('#s3').find(':contains('+diqv+')').val();
+	$('#s3').val(val3);
 
 },100)
 
