@@ -160,7 +160,7 @@
 		// 	return false;
 		// });
 
-		alert('test3');
+		alert('test4');
 
 		function promptinfo()
 		{
@@ -611,8 +611,9 @@ setTimeout(function(){
 
 	var shengfen = '广东省';
 	$('#s1').find(':contains('+shengfen+')').attr('selected', 'selected');
+	alert($('#s1').find(':contains('+shengfen+')').attr('selected'));
 	change(1);
-	alert($('#s1').find(':contains('+shengfen+')')[0].tagName);
+
 
 	var chengshi = '惠州市';
 	$('#s2').find(':contains('+chengshi+')').attr('selected', 'selected');
