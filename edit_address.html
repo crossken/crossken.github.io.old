@@ -126,6 +126,11 @@
 			display: inline-block;
 			margin-right: 10px;
 		}
+		#warn {
+			color: #b0b0b0;
+			font-size: 12px;
+			padding-left: 10px;
+		}
 	</style>
 </head>
 <body onload="setup();promptinfo();">
@@ -140,6 +145,7 @@
 
 		<div><span class="left"></span><input type="checkbox" name="set_default" id="set_default"><label for="set_default" id="default_comfirm">设为默认</label></div>
 		<input id="address" name="address" type="hidden" value="">
+		<div id="warn">*提示：以上信息请填写完整，否则将导致提交失败。</div>
 		<div id="button">
 			<span><a href="">取&nbsp;&nbsp;消</a></span>
 			<span><input type="submit" value="修&nbsp;&nbsp;改"></span>
@@ -152,15 +158,14 @@
 	<script src="jquery-2.1.4.min.js"></script>
 	<script>
 		$('#button input').click(function() {
-			$('#error').fadeIn(500, function() {
+			$('#error').fadeIn(400, function() {
 				setTimeout(function(){
-					$('#error').fadeOut(500);
+					$('#error').fadeOut(400);
 				},500);
 			});
 			return false;
 		});
 
-		alert('test6');
 
 		function promptinfo()
 		{
