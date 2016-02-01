@@ -26,6 +26,8 @@
 
 	<!-- css -->
 	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/swiper-3.3.0.min.css">
 	<link rel="stylesheet" href="style/tech.css">
 </head>
 <body>
@@ -40,18 +42,30 @@
 			<div class="bg-shadow"></div>
 			<h3>Web</h3>
 			<p>网页设计，企业网站，商城，OA/CRM企业内部系统开发搭建，上线前测试调整，后期跟踪维护。</p>
-			<div>
-				<div></div>
+			<div class="swiper-bg">
+				<div>
+					<div class="swiper-container" id="swiper-01">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/sec02-01.jpg"></div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>
 	<script src="scripts/zepto.min.js"></script>
+	<script src="scripts/swiper-3.3.0.jquery.min.js"></script>
 	<script>
-	$(function() {
-		$('#sec-01').tap(function(){
-			alert('1');
-		})
-	});
+		var mySwiper = new Swiper ('.swiper-container', {
+			loop: true
+		});
+		$(function() {
+			var $wrapDiv02 = $('#sec-02 .swiper-bg>div');
+			$wrapDiv02.height($wrapDiv02.width()*0.59);
+			$('#sec-02 .swiper-bg').height($wrapDiv02.width()*0.59+70);
+		});
 	</script>
 </body>
 </html>
