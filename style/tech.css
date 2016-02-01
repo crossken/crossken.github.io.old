@@ -14,10 +14,9 @@ header img {
 	display: block;
 }
 #sec-01 {
-	background: #fff url(../images/tech_sec01_bg.png) 0 5px repeat-y;
+	background: #fff url(../images/tech_sec01_bg.png) 0 0 repeat-y;
 	padding: 25px 0 30px 25px;
 	overflow: hidden;
-	/*	box-shadow: 0 6px 0 2px #4e972f;*/
 }
 #sec-01 img {
 	width: 20%;
