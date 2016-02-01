@@ -23,6 +23,8 @@
 	<meta name="x5-page-mode" content="app">
 
 	<title>La-Chance</title>
+
+	<!-- css -->
 	<link rel="stylesheet" href="style/normalize.css">
 	<link rel="stylesheet" href="style/index.css">
 
@@ -31,25 +33,32 @@
 <body>
 	<div id="wrapper">
 		<section id="section1">
-			<header><a href="index.html"><img src="images/header.png" alt="header"></a></header>
+
+			<header><a href="#"><img src="images/header.png" alt="header"></a></header>
+
 			<div class="main">
 				<p>创意 · 设计 · 开发</p>
 			</div>
-			<div class="technology-01 bigbox"><a href="edit_address.html"><span>技术</span><img src="images/technology.png" alt="技术"></a></div>
-			<div class="technology-02 smallbox"><a href=""><img src="images/wechat.png" alt="微信"></a></div>
-			<div class="technology-03 smallbox"><a href=""><span>Web</span></a></div>
-			<div class="technology-04 smallbox"><a href=""><span>App</span></a></div>
-			<div class="design-01 bigbox"><a href=""><span>设计</span><img src="images/design.png" alt="设计"></a></div>
-			<div class="planning-01 bigbox"><a href=""><span>策划运营</span><img src="images/planning.png" alt="策划"></a></div>
-			<div class="planning-02 smallbox"><a href=""><span>运营</span></a></div>
-			<div class="planning-03 smallbox"><a href=""><span>推广</span></a></div>
-			<footer><a href="">案例 & 合作伙伴<span></span></a></footer>
+
+			<div class="technology-01 bigbox"><a href="tech.html"><span>技术</span><img src="images/technology.png" alt="技术"></a></div>
+			<div class="technology-02 smallbox"><a href="tech.html"><img src="images/wechat.png" alt="微信"></a></div>
+			<div class="technology-03 smallbox"><a href="tech.html"><span>Web</span></a></div>
+			<div class="technology-04 smallbox"><a href="tech.html"><span>App</span></a></div>
+			<div class="design-01 bigbox"><a href="design.html"><span>设计</span><img src="images/design.png" alt="设计"></a></div>
+			<div class="planning-01 bigbox"><a href="planning.html"><span>策划运营</span><img src="images/planning.png" alt="策划"></a></div>
+			<div class="planning-02 smallbox"><a href="planning.html"><span>运营</span></a></div>
+			<div class="planning-03 smallbox"><a href="planning.html"><span>推广</span></a></div>
+
+			<footer><a href="product.html">案例 & 合作伙伴<span></span></a></footer>
+
 		</section>
 	</div>
 
 	<script src="scripts/zepto.min.js"></script>
 	<script>
 		$(function() {
+
+			// 布局
 			var bigBoxWidth = $('.bigbox').width();
 			var smallBoxWidth = (bigBoxWidth-5)/2;
 			$('.bigbox').height(bigBoxWidth);
@@ -77,6 +86,8 @@
 				window.location.href=this.href;
 			})
 		});
+
+		// 禁止用户拉动页面
 		document.querySelector('body').addEventListener('touchstart', function (ev) {
 			ev.preventDefault();
 		});
