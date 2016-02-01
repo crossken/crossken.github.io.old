@@ -84,6 +84,8 @@ section h3 {
 }
 #swiper-01 {
 	width: 100%;
+	background: #fff;
+	color: #000;
 }
 #swiper-01 img {
 	width: 100%;
@@ -94,11 +96,12 @@ section h3 {
 	margin: 0 auto;
 	position: relative;
 	left: 0.38%;
-	top: 2.8%;
+	top: 4%;
 }
-::-webkit-scrollbar {
+body::-webkit-scrollbar,html::-webkit-scrollbar {
 	display: none;
 }
+
 
 
 
