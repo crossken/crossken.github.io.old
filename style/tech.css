@@ -1,5 +1,6 @@
 body {
 	color: #fff;
+
 }
 h2,h3,h4 {
 	margin: 0;
@@ -94,6 +95,9 @@ section h3 {
 	position: relative;
 	left: 0.38%;
 	top: 2.8%;
+}
+::-webkit-scrollbar {
+	display: none;
 }
 
 
