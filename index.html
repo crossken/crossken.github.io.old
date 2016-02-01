@@ -35,7 +35,7 @@
 			<div class="main">
 				<p>创意 · 设计 · 开发</p>
 			</div>
-			<div class="jishu-01 bigbox"><a href=""><span>技术</span><img src="images/jishu.png" alt="技术"></a></div>
+			<div class="jishu-01 bigbox"><a href="edit_address.html"><span>技术</span><img src="images/jishu.png" alt="技术"></a></div>
 			<div class="jishu-02 smallbox"><a href=""><img src="images/wechat.png" alt="微信"></a></div>
 			<div class="jishu-03 smallbox"><a href=""><span>Web</span></a></div>
 			<div class="jishu-04 smallbox"><a href=""><span>App</span></a></div>
@@ -53,7 +53,9 @@
 			var bigBoxWidth = $('.bigbox').width();
 			var smallBoxWidth = (bigBoxWidth-5)/2;
 			$('.bigbox').height(bigBoxWidth);
-			$('.smallbox').width(smallBoxWidth);
+			$('.smallbox').width(smallBoxWidth).tap(function(){
+				alert('nihao');
+			});
 			$('.smallbox').height(smallBoxWidth);
 			$('.cehua-03').css('left', bigBoxWidth+10);
 			$('.cehua-02').css({
