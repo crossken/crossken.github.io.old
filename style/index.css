@@ -20,17 +20,23 @@ body {
 		width: 100%;
 		display: block;
 	}
-
-	#section1 .main {
+	#section1 {
 		background: url(../images/section1bg.png) 0 0 no-repeat;
 		background-size: cover;
-		height: 100%;
+	}
+	#section1 .main {
+
+		/*height: 100%;*/
 	}
 	#section1 .main p {
 		font-size: 27px;
 		color: white;
 		text-align: center;
 		font-weight: bold;
+		position: absolute;
+		top: 12%;
+		width: 100%;
+		text-align: center;
 	}
 	footer {
 		position: fixed;
@@ -64,67 +70,67 @@ body {
 	footer a,footer a:visited {
 		color: #1e63aa;
 	}
-	.cehua-01 {
-
-		background: #5a77be;
-		width: 33%;
-		position: fixed;
+	.bigbox {
+		width: 30%;
 		left: 5px;
-		bottom: 60px;
 		text-align: center;
-
 	}
-	.cehua-01 img,.sheji-01 img {
-		width: 45%;
+	.cehua-01 {
+		background: #5a77be;
+		bottom: 60px;
+	}
+	.bigbox img {
+		width: 42%;
 		vertical-align: middle;
 	}
-	.cehua-01 a,.sheji-01 a{
+	.bigbox a{
 		display: block;
 		vertical-align: middle;
 		width: 100%;
 		height: 100%;
 	}
-	.cehua-01 span,.sheji-01 span {
+	.bigbox span {
 		color: #fff;
 		position: absolute;
 		bottom: 6px;
 		left: 8px;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1;
 		-webkit-transform: translateZ(0);
 	}
-	.cehua-01 a:after,.cehua-03 a:after,.cehua-02 a:after,.sheji-01 a:after{
+	.bigbox a:after,.smallbox a:after{
 		display: inline-block;
 		content:"";
 		height: 100%;
 		vertical-align: middle;
 	}
+	.smallbox,.bigbox {
+		position: fixed;
+		font-size: 12px;
+	}
 	.cehua-02,.cehua-03 {
 		background: #5a77be;
 	}
 	.cehua-03 {
-		position: fixed;
 		bottom: 60px;
 	}
-	.cehua-03 a,.cehua-02 a{
+	.smallbox a{
 		display: block;
 		width: 100%;
 		height: 100%;
 		text-align: center;
 		color: #fff;
 	}
-	.cehua-03 a:visited,.cehua-02 a{
+	.smallbox a:visited{
 		color: #fff;
-	}
-	.cehua-02 {
-		position: fixed;
 	}
 	.sheji-01 {
 		background: #e2ad2e;
-		position: fixed;
-		left: 5px;
-		width: 33%;
-		text-align: center;
-
 	}
-
+	.jishu-01,.jishu-02,.jishu-03,.jishu-04{
+		background: #63ba3d;
+	}
+	.jishu-02 img{
+		width: 80%;
+		vertical-align: middle;
+	}

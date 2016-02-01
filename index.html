@@ -33,13 +33,17 @@
 		<section id="section1">
 			<header><a href="index.html"><img src="images/header.png" alt="header"></a></header>
 			<div class="main">
-				<!-- <p>创意 · 设计 · 开发</p> -->
+				<p>创意 · 设计 · 开发</p>
 			</div>
+			<div class="jishu-01 bigbox"><a href=""><span>技术</span><img src="images/jishu.png" alt="技术"></a></div>
+			<div class="jishu-02 smallbox"><a href=""><img src="images/wechat.png" alt="微信"></a></div>
+			<div class="jishu-03 smallbox"><a href=""><span>Web</span></a></div>
+			<div class="jishu-04 smallbox"><a href=""><span>App</span></a></div>
 			<div class="sheji-01 bigbox"><a href=""><span>设计</span><img src="images/sheji.png" alt="设计"></a></div>
 			<div class="cehua-01 bigbox"><a href=""><span>策划运营</span><img src="images/cehua.png" alt="策划"></a></div>
 			<div class="cehua-02 smallbox"><a href=""><span>运营</span></a></div>
 			<div class="cehua-03 smallbox"><a href=""><span>推广</span></a></div>
-			<footer><a href="#">案例 & 合作伙伴<span>></span></a></footer>
+			<footer><a href="#">案例 & 合作伙伴<span></span></a></footer>
 		</section>
 	</div>
 
@@ -57,7 +61,19 @@
 				'bottom': 60+smallBoxWidth+5
 			});
 			$('.sheji-01').css('bottom', 60+bigBoxWidth+5);
-			// $('.sheji-01 span').css('bottom', '6px');
+			$('.jishu-01').css('bottom', 60+bigBoxWidth*2+10);
+			$('.jishu-02').css({
+				'left': bigBoxWidth+10,
+				'bottom': 60+bigBoxWidth*2+smallBoxWidth+15
+			});
+			$('.jishu-03').css({
+				'left': bigBoxWidth+10,
+				'bottom': 60+bigBoxWidth*2+10
+			});
+			$('.jishu-04').css({
+				'left': bigBoxWidth+smallBoxWidth+15,
+				'bottom': 60+bigBoxWidth*2+10
+			});
 		});
 	</script>
 </body>
