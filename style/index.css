@@ -24,17 +24,13 @@ body {
 		background: url(../images/section1bg.png) 0 0 no-repeat;
 		background-size: cover;
 	}
-	#section1 .main {
-
-		/*height: 100%;*/
-	}
 	#section1 .main p {
 		font-size: 27px;
 		color: white;
 		text-align: center;
 		font-weight: bold;
 		position: absolute;
-		top: 12%;
+		top: 10%;
 		width: 100%;
 		text-align: center;
 	}
@@ -61,11 +57,9 @@ body {
 		height: 25px;
 		position: absolute;
 		right: 30px;
-		top:15px;
-		border: 2px solid #1e63aa;
-		line-height: 28px;
-
-		border-radius: 25px;
+		top: 18px;
+		background: url(../images/arrow_right.png) 0 0 no-repeat;
+		background-size: cover;
 	}
 	footer a,footer a:visited {
 		color: #1e63aa;
@@ -75,7 +69,7 @@ body {
 		left: 5px;
 		text-align: center;
 	}
-	.cehua-01 {
+	.planning-01 {
 		background: #5a77be;
 		bottom: 60px;
 	}
@@ -108,10 +102,10 @@ body {
 		position: fixed;
 		font-size: 12px;
 	}
-	.cehua-02,.cehua-03 {
+	.planning-02,.planning-03 {
 		background: #5a77be;
 	}
-	.cehua-03 {
+	.planning-03 {
 		bottom: 60px;
 	}
 	.smallbox a{
@@ -124,13 +118,13 @@ body {
 	.smallbox a:visited{
 		color: #fff;
 	}
-	.sheji-01 {
+	.design-01 {
 		background: #e2ad2e;
 	}
-	.jishu-01,.jishu-02,.jishu-03,.jishu-04{
+	.technology-01,.technology-02,.technology-03,.technology-04{
 		background: #63ba3d;
 	}
-	.jishu-02 img{
+	.technology-02 img{
 		width: 80%;
 		vertical-align: middle;
 	}

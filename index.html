@@ -35,15 +35,15 @@
 			<div class="main">
 				<p>创意 · 设计 · 开发</p>
 			</div>
-			<div class="jishu-01 bigbox"><a href="edit_address.html"><span>技术</span><img src="images/jishu.png" alt="技术"></a></div>
-			<div class="jishu-02 smallbox"><a href=""><img src="images/wechat.png" alt="微信"></a></div>
-			<div class="jishu-03 smallbox"><a href=""><span>Web</span></a></div>
-			<div class="jishu-04 smallbox"><a href=""><span>App</span></a></div>
-			<div class="sheji-01 bigbox"><a href=""><span>设计</span><img src="images/sheji.png" alt="设计"></a></div>
-			<div class="cehua-01 bigbox"><a href=""><span>策划运营</span><img src="images/cehua.png" alt="策划"></a></div>
-			<div class="cehua-02 smallbox"><a href=""><span>运营</span></a></div>
-			<div class="cehua-03 smallbox"><a href=""><span>推广</span></a></div>
-			<footer><a href="#">案例 & 合作伙伴<span>></span></a></footer>
+			<div class="technology-01 bigbox"><a href="edit_address.html"><span>技术</span><img src="images/technology.png" alt="技术"></a></div>
+			<div class="technology-02 smallbox"><a href=""><img src="images/wechat.png" alt="微信"></a></div>
+			<div class="technology-03 smallbox"><a href=""><span>Web</span></a></div>
+			<div class="technology-04 smallbox"><a href=""><span>App</span></a></div>
+			<div class="design-01 bigbox"><a href=""><span>设计</span><img src="images/design.png" alt="设计"></a></div>
+			<div class="planning-01 bigbox"><a href=""><span>策划运营</span><img src="images/planning.png" alt="策划"></a></div>
+			<div class="planning-02 smallbox"><a href=""><span>运营</span></a></div>
+			<div class="planning-03 smallbox"><a href=""><span>推广</span></a></div>
+			<footer><a href="">案例 & 合作伙伴<span></span></a></footer>
 		</section>
 	</div>
 
@@ -53,29 +53,29 @@
 			var bigBoxWidth = $('.bigbox').width();
 			var smallBoxWidth = (bigBoxWidth-5)/2;
 			$('.bigbox').height(bigBoxWidth);
-			$('.smallbox').width(smallBoxWidth).tap(function(){
-				alert('nihao');
-			});
-			$('.smallbox').height(smallBoxWidth);
-			$('.cehua-03').css('left', bigBoxWidth+10);
-			$('.cehua-02').css({
+			$('.smallbox').width(smallBoxWidth).height(smallBoxWidth);
+			$('.planning-03').css('left', bigBoxWidth+10);
+			$('.planning-02').css({
 				'left': bigBoxWidth+10,
 				'bottom': 60+smallBoxWidth+5
 			});
-			$('.sheji-01').css('bottom', 60+bigBoxWidth+5);
-			$('.jishu-01').css('bottom', 60+bigBoxWidth*2+10);
-			$('.jishu-02').css({
+			$('.design-01').css('bottom', 60+bigBoxWidth+5);
+			$('.technology-01').css('bottom', 60+bigBoxWidth*2+10);
+			$('.technology-02').css({
 				'left': bigBoxWidth+10,
 				'bottom': 60+bigBoxWidth*2+smallBoxWidth+15
 			});
-			$('.jishu-03').css({
+			$('.technology-03').css({
 				'left': bigBoxWidth+10,
 				'bottom': 60+bigBoxWidth*2+10
 			});
-			$('.jishu-04').css({
+			$('.technology-04').css({
 				'left': bigBoxWidth+smallBoxWidth+15,
 				'bottom': 60+bigBoxWidth*2+10
 			});
+			$('a').tap(function(){
+				window.location.href=this.href;
+			})
 		});
 		document.querySelector('body').addEventListener('touchstart', function (ev) {
 			ev.preventDefault();
