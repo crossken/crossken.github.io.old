@@ -1,0 +1,147 @@
+body {
+	color: #fff;
+	background-color: #506cb2;
+	-webkit-transform:translate3d(0,0,0);
+}
+h2,h3,h4 {
+	margin: 0;
+	padding: 0;
+
+}
+p {
+	font-size: 10px;
+}
+header img {
+	width: 100%;
+	display: block;
+}
+#sec-01 {
+	background: #fff url(../images/planning_sec01_bg.png) 0 5px repeat-y;
+	padding: 25px 0 30px 25px;
+	overflow: hidden;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	box-sizing: border-box;
+	background-size: 100%;
+	width: 100%;
+}
+#sec-01 img {
+	width: 20%;
+	display: block;
+	float: left;
+}
+#sec-01>div {
+	margin: 2px 0 0 15px;
+	float: left;
+}
+#sec-01 h4 {
+	margin-left: 8px;
+	font-size: 12px;
+	display: inline-block;
+}
+#sec-01 p {
+	float: left;
+	margin: 10px 0 0 15px;
+	width: 70%;
+	line-height: 1.5;
+}
+#sec-01 h2 {
+	font-size: 20px;
+	display: inline-block;
+}
+.display {
+	/*background-color: #5cad38;*/
+	padding: 30px 0 0 0;
+	position: relative;
+}
+section h3 {
+	width: 80px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 50px;
+	background: url(../images/planning_h3.png) center center no-repeat;
+	-webkit-background-size: 82%;
+	background-size: 84%;
+	font-size: 16px;
+}
+.display p {
+	width: 80%;
+	margin: 7px auto 20px;
+	text-align: center;
+	line-height: 2;
+}
+.display img {
+	width: 100%;
+}
+.bg-shadow {
+	font-size: 0;
+	line-height: 0;
+}
+.bg-shadow img {
+	width: 100%;
+}
+
+/* section2轮播 */
+#sec-02 .swiper-bg {
+	background: url(../images/tech_sec02_bg.png) 0 0 no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 400px;
+}
+#swiper-01 {
+	width: 100%;
+	background: #fff;
+	color: #000;
+}
+
+#sec-02 .swiper-bg>div {
+	width: 84%;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+	left: 0.38%;
+	top: 3.6%;
+}
+
+/* section3、section4轮播 */
+
+#sec-03 .swiper-bg,#sec-04 .swiper-bg {
+	background: url(../images/tech_sec03_bg.png) 0 0 no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 400px;
+}
+#sec-03 .swiper-bg>div,#sec-04 .swiper-bg>div {
+	width: 26%;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+	left: 0.05%;
+}
+
+
+/*sec-04的文本段落稍微宽一点让其显示为一行*/
+#sec-04 p {
+	width: 85%;
+}
+
+#sec-03 .swiper-bg>div,#sec-04 .swiper-bg>div {
+	top: 12%;
+}
+#sec-03,#sec-04 {
+	width: 100%;
+}
+.bottom-hack {
+	height: 50px;
+}
+.additional-bg {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
