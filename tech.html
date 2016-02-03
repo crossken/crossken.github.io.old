@@ -61,7 +61,22 @@
 				<div>
 					<div class="swiper-container" id="swiper-02">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">slide 1</div>
+							<div class="swiper-slide"><img src="images/tech_sec03_01.jpg"></div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="sec-04" class="display">
+			<h3><img src="images/wechat.png" alt="wechat"></h3>
+			<p>微信开发搭建，基于微信平台webapp开发，H5设计开发。</p>
+			<div class="swiper-bg">
+				<div>
+					<div class="swiper-container" id="swiper-03">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/tech_sec04_01.jpg"></div>
 							<div class="swiper-slide">Slide 2</div>
 							<div class="swiper-slide">Slide 3</div>
 						</div>
@@ -84,7 +99,16 @@
 		$(function() {
 			var $wrapDiv02 = $('#sec-02 .swiper-bg>div');
 			$wrapDiv02.height($wrapDiv02.width()*0.59);
-			$('#sec-02 .swiper-bg').height($wrapDiv02.width()*0.59+70);
+			$('#sec-02 .swiper-bg').height($wrapDiv02.width()*0.59+40);
+
+
+			var $wrapDiv03 = $('#sec-03 .swiper-bg>div');
+			$wrapDiv03.height($wrapDiv03.width()*1.8);
+			$('#sec-03 .swiper-bg').height($wrapDiv03.height()+50);
+
+			var $wrapDiv04 = $('#sec-04 .swiper-bg>div');
+			$wrapDiv04.height($wrapDiv04.width()*1.8);
+			$('#sec-04 .swiper-bg').height($wrapDiv04.height()+90);
 		});
 		// document.querySelector('body').addEventListener('touchstart', function (ev) {
 		// 	ev.preventDefault();
