@@ -22,13 +22,100 @@
 	<meta name="x5-fullscreen" content="true">
 	<meta name="x5-page-mode" content="app">
 
+	<!-- 禁止百度自动转码 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+
 	<title>设计</title>
 
 	<!-- css -->
 	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/swiper-3.3.0.min.css">
 	<link rel="stylesheet" href="style/design.css">
 </head>
 <body>
-	待开发
+	<div id="tech">
+		<header><a href="#"><img src="images/header.png" alt="header"></a></header>
+		<section id="sec-01">
+			<img src="images/technology.png" alt="技术">
+			<div><h2>技术</h2><h4>[Technology]</h4></div>
+			<p>web/app/WeChat 我们用代码为您搭建一个新世界。</p>
+		</section>
+		<div class="bg-shadow"><img src="images/bg_shadow.png"></div>
+		<section id="sec-02" class="display">
+
+			<h3>Web</h3>
+			<p>网页设计，企业网站，商城，OA/CRM企业内部系统开发搭建，上线前测试调整，后期跟踪维护。</p>
+			<div class="swiper-bg">
+				<div>
+					<div class="swiper-container" id="swiper-01">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/tech_sec02_01.jpg"></div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="sec-03" class="display">
+			<h3>App</h3>
+			<p>UI页面设计，App开发测试，企业内部App开发。</p>
+			<div class="swiper-bg">
+				<div>
+					<div class="swiper-container" id="swiper-02">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/tech_sec03_01.jpg"></div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="sec-04" class="display">
+			<h3><img src="images/wechat.png" alt="wechat"></h3>
+			<p>微信开发搭建，基于微信平台webapp开发，H5设计开发。</p>
+			<div class="swiper-bg">
+				<div>
+					<div class="swiper-container" id="swiper-03">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/tech_sec04_01.jpg"></div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+	</div>
+	<script src="scripts/zepto.min.js"></script>
+	<script src="scripts/swiper-3.3.0.jquery.min.js"></script>
+	<script>
+		var mySwiper = new Swiper ('.swiper-container', {
+			loop: true
+		});
+		$(function() {
+			var $wrapDiv02 = $('#sec-02 .swiper-bg>div');
+			$wrapDiv02.height($wrapDiv02.width()*0.59);
+			$('#sec-02 .swiper-bg').height($wrapDiv02.width()*0.59+40);
+
+
+			var $wrapDiv03 = $('#sec-03 .swiper-bg>div');
+			$wrapDiv03.height($wrapDiv03.width()*1.8);
+			$('#sec-03 .swiper-bg').height($wrapDiv03.height()+50);
+
+			var $wrapDiv04 = $('#sec-04 .swiper-bg>div');
+			$wrapDiv04.height($wrapDiv04.width()*1.8);
+			$('#sec-04 .swiper-bg').height($wrapDiv04.height()+90);
+		});
+		// document.querySelector('body').addEventListener('touchstart', function (ev) {
+		// 	ev.preventDefault();
+		// });
+</script>
 </body>
 </html>

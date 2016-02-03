@@ -22,6 +22,8 @@
 	<meta name="x5-fullscreen" content="true">
 	<meta name="x5-page-mode" content="app">
 
+	<!-- 禁止百度自动转码 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
 	<title>技术</title>
 
 	<!-- css -->
@@ -93,7 +95,6 @@
 	<script src="scripts/zepto.min.js"></script>
 	<script src="scripts/swiper-3.3.0.jquery.min.js"></script>
 	<script>
-		// alert('3');
 		var mySwiper = new Swiper ('.swiper-container', {
 			loop: true
 		});

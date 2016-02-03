@@ -26,7 +26,7 @@ header img {
 	float: left;
 }
 #sec-01>div {
-	margin: 10px 0 0 15px;
+	margin: 2px 0 0 15px;
 	float: left;
 }
 #sec-01 h4 {
@@ -98,7 +98,7 @@ section h3 {
 	top: 3.6%;
 }
 
-/* section3轮播 */
+/* section3、section4轮播 */
 
 #sec-03 .swiper-bg,#sec-04 .swiper-bg {
 	background: url(../images/tech_sec03_bg.png) 0 0 no-repeat;
@@ -111,9 +111,6 @@ section h3 {
 	overflow: hidden;
 	margin: 0 auto;
 	position: relative;
-	/*left: 0.38%;*/
-	/*top: 9%;*/
-	/*border: 1px solid red;*/
 	left: 0.05%;
 }
 
@@ -124,6 +121,7 @@ section h3 {
 #sec-04 p {
 	width: 85%;
 }
+/*因为sec-03和sec-04高度不同，所有top属性要分别调整*/
 #sec-03 .swiper-bg>div {
 	top: 12%;
 }
@@ -133,15 +131,6 @@ section h3 {
 #sec-03,#sec-04 {
 	width: 100%;
 }
-
-
-
-
-
-
-/*body::-webkit-scrollbar,html::-webkit-scrollbar {
-	display: none;
-	}*/
 
 
 
