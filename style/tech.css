@@ -16,9 +16,13 @@ header img {
 	display: block;
 }
 #sec-01 {
-	background: #fff url(../images/tech_sec01_bg.png) 20px 5px repeat;
+	background: #fff url(../images/tech_sec01_bg.png) 0 5px repeat;
 	padding: 25px 0 30px 25px;
 	overflow: hidden;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	box-sizing: border-box;
+	width: 100%;
 }
 #sec-01 img {
 	width: 20%;
