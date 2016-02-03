@@ -1,6 +1,6 @@
 body {
 	color: #fff;
-
+	background-color: #5cad38;
 }
 h2,h3,h4 {
 	margin: 0;
@@ -13,9 +13,6 @@ p {
 header img {
 	width: 100%;
 	display: block;
-}
-#tech {
-	background-color: #5cad38;
 }
 #sec-01 {
 	background: #fff url(../images/tech_sec01_bg.png) 20px 5px repeat;
@@ -71,14 +68,11 @@ section h3 {
 	width: 100%;
 }
 .bg-shadow {
-	height: 4px;
+font-size: 0;
+line-height: 0;
+}
+.bg-shadow img {
 	width: 100%;
-	background-color: #4e972f;
-	position: absolute;
-	top: 0;
-	left: 2px;
-	-webkit-transform: skew(30deg);
-	transform: skew(60deg);
 }
 
 /* section2轮播 */
@@ -143,7 +137,7 @@ section h3 {
 
 /*body::-webkit-scrollbar,html::-webkit-scrollbar {
 	display: none;
-}*/
+	}*/
 
 
 
