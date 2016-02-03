@@ -16,7 +16,7 @@ header img {
 	display: block;
 }
 #sec-01 {
-	background: #fff url(../images/tech_sec01_bg.png) 0 5px repeat;
+	background: #fff url(../images/tech_sec01_bg.png) 0 5px repeat-y;
 	padding: 25px 0 30px 25px;
 	overflow: hidden;
 	-moz-box-sizing:border-box; /* Firefox */
@@ -49,7 +49,7 @@ header img {
 	display: inline-block;
 }
 .display {
-	background-color: #5cad38;
+	/*background-color: #5cad38;*/
 	padding: 30px 0 0 0;
 	position: relative;
 }
@@ -118,22 +118,24 @@ section h3 {
 	left: 0.05%;
 }
 
+/*sec-04的h3包含的是图片而不是文字*/
 #sec-04 h3 img {
 	width: 35%;
 	margin-top: 23%;
 }
+/*sec-04的文本段落稍微宽一点让其显示为一行*/
 #sec-04 p {
 	width: 85%;
 }
-/*因为sec-03和sec-04高度不同，所有top属性要分别调整*/
-#sec-03 .swiper-bg>div {
+
+#sec-03 .swiper-bg>div,#sec-04 .swiper-bg>div {
 	top: 12%;
-}
-#sec-04 .swiper-bg>div {
-	top: 10%;
 }
 #sec-03,#sec-04 {
 	width: 100%;
+}
+.bottom-hack {
+	height: 50px;
 }
 
 

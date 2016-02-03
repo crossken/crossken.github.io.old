@@ -1,6 +1,6 @@
 body {
 	color: #fff;
-	background-color: #5cad38;
+	background-color: #e2ad2e;
 	-webkit-transform:translate3d(0,0,0);
 }
 h2,h3,h4 {
@@ -16,9 +16,14 @@ header img {
 	display: block;
 }
 #sec-01 {
-	background: #fff url(../images/tech_sec01_bg.png) 20px 5px repeat;
+	background: #fff url(../images/design_sec01_bg.png) 10% 0 repeat;
 	padding: 25px 0 30px 25px;
 	overflow: hidden;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	box-sizing: border-box;
+	background-size: 30%;
+	width: 100%;
 }
 #sec-01 img {
 	width: 20%;
@@ -26,7 +31,7 @@ header img {
 	float: left;
 }
 #sec-01>div {
-	margin: 10px 0 0 15px;
+	margin: 2px 0 0 15px;
 	float: left;
 }
 #sec-01 h4 {
@@ -45,7 +50,7 @@ header img {
 	display: inline-block;
 }
 .display {
-	background-color: #5cad38;
+	/*background-color: #5cad38;*/
 	padding: 30px 0 0 0;
 	position: relative;
 }
@@ -54,7 +59,7 @@ section h3 {
 	margin: 0 auto;
 	text-align: center;
 	line-height: 50px;
-	background: url(../images/tech_h3.png) center center no-repeat;
+	background: url(../images/design_h3.png) center center no-repeat;
 	-webkit-background-size: 82%;
 	background-size: 84%;
 	font-size: 16px;
@@ -98,15 +103,15 @@ section h3 {
 	top: 3.6%;
 }
 
-/* section3、section4轮播 */
+/* section3轮播 */
 
-#sec-03 .swiper-bg,#sec-04 .swiper-bg {
+#sec-03 .swiper-bg {
 	background: url(../images/tech_sec03_bg.png) 0 0 no-repeat;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	height: 400px;
 }
-#sec-03 .swiper-bg>div,#sec-04 .swiper-bg>div {
+#sec-03 .swiper-bg>div {
 	width: 26%;
 	overflow: hidden;
 	margin: 0 auto;
@@ -114,22 +119,25 @@ section h3 {
 	left: 0.05%;
 }
 
-#sec-04 h3 img {
+/*#sec-04 h3 img {
 	width: 35%;
 	margin-top: 23%;
-}
-#sec-04 p {
+}*/
+/*#sec-04 p {
 	width: 85%;
-}
-/*因为sec-03和sec-04高度不同，所有top属性要分别调整*/
+}*/
+
 #sec-03 .swiper-bg>div {
 	top: 12%;
 }
-#sec-04 .swiper-bg>div {
+/*#sec-04 .swiper-bg>div {
 	top: 10%;
-}
-#sec-03,#sec-04 {
+}*/
+#sec-03 {
 	width: 100%;
+}
+.bottom-hack {
+	height: 50px;
 }
 
 
