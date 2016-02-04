@@ -58,11 +58,11 @@ html,body,#wrapper,#section1 {
 }
 #section1 li {
 	float: left;
-	width: 34%;
-	margin: 8%;
+	width: 36%;
+	margin: 2% 7%;
 }
 #section1 ul {
-	width:60%;
+	width:80%;
 	margin: 0 auto;
 	overflow: hidden;
 }
