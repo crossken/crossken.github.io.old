@@ -121,7 +121,8 @@
 			var mySwiper = new Swiper ('#sec-03 .swiper-container', {
 				loop: true,
 				autoplay: 5000,
-				speed: 500
+				speed: 500,
+				autoplayDisableOnInteraction: false;
 			});
 			var $wrapDiv02 = $('#sec-02 .swiper-bg>div');
 			$wrapDiv02.height($wrapDiv02.width()*0.58);
@@ -138,7 +139,7 @@
 			setTimeout(function(){
 				$('.loading,.loading-gif').fadeOut(700);
 				$('html').height('auto').css('overflow', 'auto');
-			},2000);
+			},1600);
 
 		});
 	</script>
