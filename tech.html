@@ -38,17 +38,15 @@
 	<link rel="stylesheet" href="style/base.css">
 	<link rel="stylesheet" href="style/swiper-3.3.0.min.css">
 	<link rel="stylesheet" href="style/tech.css">
+	<script>
+		document.querySelector('html').style.height = '100%';
+		document.querySelector('html').style.overflow = 'hidden';
+	</script>
 
 </head>
 <body>
-	 <script>
-
-	// 	document.querySelector('body').addEventListener('touchstart', function (ev) {
-	// 		ev.preventDefault();
-	// 	});
-	// </script>
-		<div class="loading"></div>
-	<img class="loading-gif" src="images/loading.gif">
+	<div class="loading"><img class="loading-gif" src="images/loading.gif"></div>
+	
 	<div id="tech">
 		<header><a href="index.html"><img src="images/header.png" alt="header"></a></header>
 		<section id="sec-01">
@@ -125,7 +123,12 @@
 			var sHeight = $('#sec-03 .swiper-bg>div').height();
 			$('#sec-03 .swiper-bg,#sec-04 .swiper-bg').height(sHeight+55);
 
-			// $('.loading').hide();
+			setTimeout(function(){
+				$('.loading,.loading-gif').fadeOut(700);
+				$('html').height('auto').css('overflow', 'auto');
+			},1000);
+
+
 
 
 		});
