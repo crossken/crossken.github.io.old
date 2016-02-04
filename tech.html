@@ -102,10 +102,11 @@
 	<script src="scripts/zepto.min.js"></script>
 	<script src="scripts/swiper-3.3.0.jquery.min.js"></script>
 	<script>
-		var mySwiper = new Swiper ('.swiper-container', {
-			loop: true
-		});
+
 		$(function() {
+			var mySwiper = new Swiper ('.swiper-container', {
+				loop: true
+			});
 			var $wrapDiv02 = $('#sec-02 .swiper-bg>div');
 			$wrapDiv02.height($wrapDiv02.width()*0.58);
 			$('#sec-02 .swiper-bg').height($wrapDiv02.width()*0.58+40);
