@@ -43,7 +43,8 @@
 
 </head>
 <body>
-	<div class="loading"><img src="images/loading.gif"></div>
+	<div class="loading"></div>
+	<img class="loading-gif" src="images/loading.gif">
 	<div id="wrapper">
 		<section id="section1">
 
@@ -91,7 +92,9 @@
 				window.location.href=this.href;
 			})
 
-			$('.loading').hide();
+			setTimeout(function(){
+				$('.loading,.loading-gif').fadeOut(700);
+			},1000);
 		});
 		
 	</script>
