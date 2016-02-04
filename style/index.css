@@ -112,6 +112,10 @@ footer a,footer a:visited {
 	height: 100%;
 	text-align: center;
 	color: #fff;
+	vertical-align: middle;
+}
+.smallbox a span {
+	vertical-align: middle;
 }
 .smallbox a:visited{
 	color: #fff;
