@@ -38,6 +38,12 @@
 	<link rel="stylesheet" href="style/base.css">
 	<link rel="stylesheet" href="style/swiper-3.3.0.min.css">
 	<link rel="stylesheet" href="style/design.css">
+
+	<script>
+		HTML = document.getElementsByTagName('html')[0];
+		HTML.style.height = '100%';
+		HTML.style.overflow = 'hidden';
+	</script>
 </head>
 <body>
 	<div class="loading"><img src="images/loading.gif"></div>
@@ -106,7 +112,11 @@
 			$wrapDiv03.height($wrapDiv03.width()*1.8);
 			$('#sec-03 .swiper-bg').height($wrapDiv03.height()+55);
 
-			$('.loading').hide();
+			setTimeout(function(){
+				$('.loading,.loading-gif').fadeOut(700);
+				$('html').height('auto').css('overflow', 'auto');
+			},2000);
+
 		});
 
 	</script>

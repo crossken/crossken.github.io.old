@@ -38,6 +38,12 @@
 	<link rel="stylesheet" href="style/base.css">
 	<link rel="stylesheet" href="style/product.css">
 
+	<script>
+		HTML = document.getElementsByTagName('html')[0];
+		HTML.style.height = '100%';
+		HTML.style.overflow = 'hidden';
+	</script>
+
 </head>
 
 <body>
@@ -71,7 +77,11 @@
 				window.location.href=this.href;
 			})
 
-			$('.loading').hide();
+			setTimeout(function(){
+				$('.loading,.loading-gif').fadeOut(700);
+				$('html').height('auto').css('overflow', 'auto');
+			},2000);
+
 		});
 	</script>
 </body>
