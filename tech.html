@@ -40,6 +40,7 @@
 	<link rel="stylesheet" href="style/tech.css">
 </head>
 <body>
+	<div class="loading"><img src="images/loading.gif"></div>
 	<div id="tech">
 		<header><a href="index.html"><img src="images/header.png" alt="header"></a></header>
 		<section id="sec-01">
@@ -115,6 +116,8 @@
 			$('#sec-03 .swiper-bg>div,#sec-04 .swiper-bg>div').height(sWidth*1.8);
 			var sHeight = $('#sec-03 .swiper-bg>div').height();
 			$('#sec-03 .swiper-bg,#sec-04 .swiper-bg').height(sHeight+55);
+
+			$('.loading').hide();
 
 		});
 	</script>

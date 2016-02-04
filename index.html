@@ -39,8 +39,11 @@
 	<link rel="stylesheet" href="style/index.css">
 
 
+
+
 </head>
 <body>
+	<div class="loading"><img src="images/loading.gif"></div>
 	<div id="wrapper">
 		<section id="section1">
 
@@ -66,6 +69,7 @@
 
 	<script src="scripts/zepto.min.js"></script>
 	<script>
+
 		$(function() {
 
 			var bigBoxWidth = $('.bigbox').width();
@@ -86,6 +90,8 @@
 			$('a').tap(function(){
 				window.location.href=this.href;
 			})
+
+			$('.loading').hide();
 		});
 		
 	</script>

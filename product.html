@@ -41,6 +41,7 @@
 </head>
 
 <body>
+	<div class="loading"><img src="images/loading.gif"></div>
 	<div id="wrapper">
 		<section id="section1">
 
@@ -69,6 +70,8 @@
 			$('a').tap(function(){
 				window.location.href=this.href;
 			})
+
+			$('.loading').hide();
 		});
 	</script>
 </body>
