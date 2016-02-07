@@ -100,7 +100,7 @@
 	<script src="scripts/swiper-3.3.0.jquery.min.js"></script>
 	<script>
 
-		$(function() {
+		window.onload = function() {
 			var mySwiper = new Swiper ('.swiper-container', {
 				loop: true,
 				autoplay: 5000,
@@ -120,7 +120,7 @@
 				$('html').height('auto').css('overflow', 'auto');
 			},1600);
 
-		});
+		};
 
 	</script>
 </body>

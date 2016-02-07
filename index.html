@@ -71,7 +71,7 @@
 	<script src="scripts/zepto.min.js"></script>
 	<script>
 
-		$(function() {
+		window.onload = function() {
 
 			var bigBoxWidth = $('.bigbox').width();
 			var smallBoxWidth = (bigBoxWidth-5)/2;
@@ -95,7 +95,7 @@
 			setTimeout(function(){
 				$('.loading,.loading-gif').fadeOut(700);
 			},2000);
-		});
+		};
 		
 	</script>
 </body>
