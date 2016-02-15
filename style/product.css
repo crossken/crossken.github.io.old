@@ -55,3 +55,6 @@ html,body,#wrapper,#section1 {
 .bg-bottom img {
 	width: 100%;
 }
+#wrapper {
+	display: none;
+}

@@ -137,6 +137,9 @@ section h3 {
 .additional-bg {
 	width: 100%;
 }
+#planning {
+	display: none;
+}
 
 
 

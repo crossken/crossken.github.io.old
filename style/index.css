@@ -130,3 +130,6 @@ footer a,footer a:visited {
 	width: 80%;
 	vertical-align: middle;
 }
+#wrapper {
+	display: none;
+}
