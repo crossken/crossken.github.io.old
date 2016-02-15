@@ -127,6 +127,9 @@ section h3 {
 .bottom-hack {
 	height: 50px;
 }
+#design {
+	display: none;
+}
 
 
 
