@@ -100,11 +100,11 @@
 
 			setTimeout(function(){
 				$('.technology').fadeOut(2000, function() {
-					$(this).fadeIn(2000);
+					setTimeout(function(){$('.technology').fadeIn(2000);},500)
 				});
 				setInterval(function(){
 					$('.technology').fadeOut(2000, function() {
-						$(this).fadeIn(2000);
+						setTimeout(function(){$('.technology').fadeIn(2000);},500)
 					});
 				},6000);
 			},100);
@@ -112,25 +112,25 @@
 
 			setTimeout(function(){
 				$('.design-01').fadeOut(2000, function() {
-					$(this).fadeIn(2000);
+					setTimeout(function(){$('.design-01').fadeIn(2000);},500)
 				});
 				setInterval(function(){
 					$('.design-01').fadeOut(2000, function() {
-						$(this).fadeIn(2000);
-					});
-				},6000);
-			},700);
-
-			setTimeout(function(){
-				$('.planning').fadeOut(2000, function() {
-					$(this).fadeIn(2000);
-				});
-				setInterval(function(){
-					$('.planning').fadeOut(2000, function() {
-						$(this).fadeIn(2000);
+						setTimeout(function(){$('.design-01').fadeIn(2000);},500)
 					});
 				},6000);
 			},1300);
+
+			setTimeout(function(){
+				$('.planning').fadeOut(2000, function() {
+						setTimeout(function(){$('.planning').fadeIn(2000);},500)
+				});
+				setInterval(function(){
+					$('.planning').fadeOut(2000, function() {
+						setTimeout(function(){$('.planning').fadeIn(2000);},500)
+					});
+				},6000);
+			},2500);
 		};
 		
 	</script>
