@@ -1,0 +1,89 @@
+body {
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+.slide1,.slide5,.slide6{
+/*	height: 100%;
+width: 100%;*/
+background: #fff url(../images/page1-bg.jpg) 0 0 no-repeat;
+-webkit-background-size: cover;
+background-size: cover;
+}
+.slide1 .p1-bg {
+	width: 27%;
+	height: 100%;
+	background: #ccc;
+	opacity: 0.8;
+}
+.slide1 .p1-word {
+	display: block;
+	width: 27%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.slide2 .slide2-wrap {
+	position: absolute;
+	top: 40%;
+}
+.slide2 .slide2-wrap img {
+	display: block;
+	width: 100%;
+}
+.slide2 .p2-word {
+	border-bottom: #6d6d6d 1px solid;
+}
+.slide3 {
+	background: #fff url(../images/page3-bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.slide3 .avatar {
+	display: block;
+	width: 40%;
+	position: absolute;
+	top: 12%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.slide3 .word {
+	position: absolute;
+	top: 48%;
+}
+.slide3 .word img {
+	display: block;
+	width: 100%;
+}
+.slide4 {
+	background: #fff url(../images/page4-bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.slide4 .avatar {
+	display: block;
+	width: 40%;
+	position: absolute;
+	top: 12%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.slide4 .word {
+	position: absolute;
+	top: 48%;
+}
+.slide4 .word img {
+	display: block;
+	width: 100%;
+}
+.slide5>div,.slide6>div{
+	background: #fff;
+	opacity: 0.8;
+	position: absolute;
+	top: 20%;
+}
+.slide5 img,.slide6 img {
+	display: block;
+	width: 100%;
+}
+.slide6>div {
+	top: 40%;
+}

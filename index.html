@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- 固定视口宽度为设备宽度，禁止用户缩放页面 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+	<!-- 格式检测 -->
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+	<!-- 禁止百度自动转码 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+
+	<title>【素影|繁花】</title>
+	
+	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="swiper-container">
+
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide1">
+				<div class="p1-bg"></div>
+				<img src="images/page1-words.png" alt="素影、繁花" class="p1-word">
+			</div>
+			<div class="swiper-slide slide2">
+				<div class="slide2-wrap">
+					<img src="images/page2-words.png" class="p2-word">
+					<img src="images/page2-words2.png" class="p2-word2">
+				</div>
+			</div>
+			<div class="swiper-slide slide3">
+				<img src="images/page3-avatar.gif" class="avatar">
+				<div class="word">
+					<img src="images/page3-name.png">
+					<img src="images/page3-para.png">
+				</div>
+			</div>
+			<div class="swiper-slide slide4">
+				<img src="images/page4-avatar.gif" class="avatar">
+				<div class="word">
+					<img src="images/page4-name.png">
+					<img src="images/page4-para.png">
+				</div>
+			</div>
+			<div class="swiper-slide slide5">
+				<div>
+					<img src="images/page5-title.png">
+					<img src="images/page5-para1.png">
+					<img src="images/page5-para2.png">
+					<img src="images/page5-para3.png">
+				</div>
+			</div>
+			<div class="swiper-slide slide6">
+				<div>
+					<img src="images/page6-para1.png">
+					<img src="images/page6-para2.png">
+					<img src="images/page6-para3.png">
+				</div>
+			</div>
+		</div>
+
+		<!-- 如果需要导航按钮 -->
+<!-- 		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div> -->
+
+	</div>
+	<script src="js/zepto.js"></script>
+	<script src="js/swiper-3.3.1.jquery.min.js"></script>
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<script>        
+		var mySwiper = new Swiper ('.swiper-container', {
+			direction: 'vertical',
+			width: window.innerWidth,
+			height: window.innerHeight
+    // 如果需要前进后退按钮
+    // nextButton: '.swiper-button-next',
+    // prevButton: '.swiper-button-prev',
+})        
+	</script>
+</body>
+</html>
