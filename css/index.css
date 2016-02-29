@@ -26,8 +26,11 @@ background-size: cover;
 	top: 40%;
 }
 .slide2 .slide2-wrap img {
+	/*position: absolute;*/
 	display: block;
 	width: 100%;
+/*	top: 0;
+	left: 0;*/
 }
 .slide2 .p2-word {
 	border-bottom: #6d6d6d 1px solid;
