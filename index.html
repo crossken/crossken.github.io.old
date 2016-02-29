@@ -15,6 +15,7 @@
 	<title>【素影|繁花】</title>
 	
 	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
@@ -23,8 +24,8 @@
 
 		<div class="swiper-wrapper">
 			<div class="swiper-slide slide1">
-				<div class="p1-bg"></div>
-				<img src="images/page1-words.png" alt="素影、繁花" class="p1-word">
+				<div class="p1-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"></div>
+				<img src="images/page1-words.png" alt="素影、繁花" class="p1-word ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
 			</div>
 			<div class="swiper-slide slide2">
 				<div class="slide2-wrap">
@@ -63,9 +64,6 @@
 			</div>
 		</div>
 
-		<!-- 如果需要导航按钮 -->
-<!-- 		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div> -->
 
 	</div>
 	<script src="js/zepto.js"></script>
@@ -75,11 +73,15 @@
 		var mySwiper = new Swiper ('.swiper-container', {
 			direction: 'vertical',
 			width: window.innerWidth,
-			height: window.innerHeight
-    // 如果需要前进后退按钮
-    // nextButton: '.swiper-button-next',
-    // prevButton: '.swiper-button-prev',
-})        
+			height: window.innerHeight,
+			onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    			swiperAnimateCache(swiper); //隐藏动画元素 
+    			swiperAnimate(swiper); //初始化完成开始动画
+			}, 
+			onSlideChangeEnd: function(swiper){ 
+    			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+			} 
+		})        
 	</script>
 </body>
 </html>
