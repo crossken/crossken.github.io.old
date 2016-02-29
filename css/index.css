@@ -45,8 +45,6 @@ background-size: cover;
 	width: 100%;
 	position: absolute;
 	top: 12%;
-	/*left: 50%;*/
-	/*transform: translateX(-50%);*/
 }
 .slide3 .word {
 	position: absolute;
@@ -63,11 +61,9 @@ background-size: cover;
 }
 .slide4 .avatar {
 	display: block;
-	width: 40%;
+	width: 100%;
 	position: absolute;
 	top: 12%;
-	left: 50%;
-	transform: translateX(-50%);
 }
 .slide4 .word {
 	position: absolute;
