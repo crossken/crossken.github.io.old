@@ -18,8 +18,8 @@ background-size: cover;
 	display: block;
 	width: 27%;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 35%;
+	/*transform: translateY(-50%);*/
 }
 .slide2 .slide2-wrap {
 	position: absolute;
