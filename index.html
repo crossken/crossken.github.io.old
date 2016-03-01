@@ -34,11 +34,11 @@
 				<div class="slide2-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
 					<div class="bg1">
 						<img src="images/page2-bg1.jpg">
-						<img src="images/page2-words.png" class="p2-word ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<img src="images/page2-words.png" class="p2-word ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1s">
 					</div>
 					<div class="bg2">
 						<img src="images/page2-bg2.jpg">
-						<img src="images/page2-words2.png" class="p2-word2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2s">
+						<img src="images/page2-words2.png" class="p2-word2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
 						<img src="images/page2-words3.png" class="p2-word3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.8s">
 					</div>
 
@@ -48,16 +48,26 @@
 				</div>
 			</div>
 			<div class="swiper-slide slide3">
-				<img src="images/page3-avatar.png" class="avatar ani" swiper-animate-effect="rotateIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.6s">
+
+<!-- 				<img src="images/page3-avatar.png" class="avatar ani" swiper-animate-effect="rotateIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.6s">
 				<div class="word">
 					<img src="images/page3-name.png" class="ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1.5s" swiper-animate-delay="1s">
 					<img src="images/page3-para.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+				</div> -->
+
+				<div class="avatar">
+					<img src="images/page3-avatar1.jpg">
+					<img src="images/page3-avatar3.png">
+					<img src="images/page3-avatar2.png">
 				</div>
+				<img src="images/page3-bg.png" class="p3-bg">
+				<img src="images/page3-name.png" class="p3-name ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
+				<img src="images/page3-para.png" class="p3-para ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.8s">
 				<div class="u-arrow-bottom">
 					<img src="images/arrow.png">
 				</div>
 			</div>
-			<div class="swiper-slide slide4">
+<!-- 			<div class="swiper-slide slide4">
 				<img src="images/page4-avatar.png" class="avatar ani" swiper-animate-effect="rotateIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.6s">
 				<div class="word">
 					<img src="images/page4-name.png" class="ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1.5s" swiper-animate-delay="1s">
@@ -66,7 +76,7 @@
 				<div class="u-arrow-bottom">
 					<img src="images/arrow.png">
 				</div>
-			</div>
+			</div> -->
 			<div class="swiper-slide slide5">
 				<div class="wordwrap">
 					<img src="images/page5-title.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">
@@ -106,29 +116,36 @@
     		}, 
     		onSlideChangeEnd: function(swiper){ 
     			if (swiper.activeIndex == 1) {
-	    			setTimeout(function(){
+    				setTimeout(function(){
 
-	    				// $('.p2-word2').css({
-	    				// 	'animation-duration':'1s',
-	    				// 	'-webkit-animation-duration':'1s',
-	    				// 	'animation-delay': '0.3s',
-	    				// 	'-webkit-animation-delay': '0.3s'
-	    				// }).addClass('fadeOut');
-
-
-	    				   $('.p2-word2').attr('style', 'animation-duration:1s;-webkit-animation-duration:1s;animation-delay: 0.3s;-webkit-animation-delay: 0.3s;').addClass('fadeOut');
-	    			},3000)
+    					$('.p2-word2').attr('style', 'animation-duration:1s;-webkit-animation-duration:1s;animation-delay: 0.3s;-webkit-animation-delay: 0.3s;').addClass('fadeOut');
+    				},3000)
     			}
-    			// alert('2');
+
+    			if (swiper.activeIndex == 2) {
+    				setTimeout(function(){
+    					$('.avatar').show(1000, function() {
+    						$('.avatar img:eq(2)').animate({top:'160px'}, 1000);
+    						$('.avatar img:eq(1)').animate({top:'320px'}, 1000);
+    					});
+
+    				},1000)
+    				setTimeout(function(){
+    					$('.p3-bg').animate({opacity: '0.7'}, 700);
+    				},300)
+    			}
     			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
 
 
     		},
     		onSlideChangeStart: function(swiper){
     			$('.p2-word2').removeClass('fadeOut');
+    			$('.avatar img').css('top', '0');
+    			$('.p3-bg').css('opacity', '0');
+    			$('.avatar').hide();
     		}
     	}) 
-		}       
-	</script>
+}       
+</script>
 </body>
 </html>
