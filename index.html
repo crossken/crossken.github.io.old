@@ -106,15 +106,15 @@
     		}, 
     		onSlideChangeEnd: function(swiper){ 
     			if (swiper.activeIndex == 1) {
-    			setTimeout(function(){
+	    			setTimeout(function(){
 
-    				$('.p2-word2').css({
-    					'animation-delay': '0.3s',
-    					'-webkit-animation-delay': '0.3s'
-    				}).addClass('fadeOut');
-    			},3000)
+	    				$('.p2-word2').css({
+	    					'animation-delay': '0.3s',
+	    					'-webkit-animation-delay': '0.3s'
+	    				}).addClass('fadeOut');
+	    			},3000)
     			}
-
+    			alert('1');
     			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
 
 
