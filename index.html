@@ -45,11 +45,9 @@
 			</div>
 
 			<div class="swiper-slide slide3">
-				<div class="avatar">
-					<img src="images/page3-avatar1.jpg">
-					<img src="images/page3-avatar3.png">
-					<img src="images/page3-avatar2.png">
-				</div>
+				<img src="images/page3-avatar1.jpg" class="avatar">
+				<img src="images/page3-avatar3.png" class="avatar">
+				<img src="images/page3-avatar2.png" class="avatar">
 				<img src="images/page3-bg.png" class="p3-bg">
 				<img src="images/page3-name.png" class="p3-name ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
 				<img src="images/page3-para.png" class="p3-para ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.8s">
@@ -69,7 +67,7 @@
 				</div>
 			</div>
 
-			<div class="swiper-slide slide5">
+<!-- 			<div class="swiper-slide slide5">
 				<div class="wordwrap">
 					<img src="images/page5-title.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">
 					<img src="images/page5-para1.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.6s">
@@ -79,14 +77,14 @@
 				<div class="u-arrow-bottom">
 					<img src="images/arrow.png">
 				</div>
-			</div>
-			<div class="swiper-slide slide6">
+			</div> -->
+<!-- 			<div class="swiper-slide slide6">
 				<div>
 					<img src="images/page6-para1.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
 					<img src="images/page6-para2.png" class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.1s">
 					<img src="images/page6-para3.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.9s">
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 
@@ -116,9 +114,11 @@
 
     			if (swiper.activeIndex == 2) {
     				setTimeout(function(){
-    					$('.avatar').show(1000, function() {
-    						$('.avatar img:eq(2)').animate({top:'160px'}, 1000);
-    						$('.avatar img:eq(1)').animate({top:'320px'}, 1000);
+    					$('.avatar').show(800, function() {
+    						setTimeout(function(){
+    							$('.avatar:eq(2)').animate({'top':'28%'}, 1000);
+    							$('.avatar:eq(1)').animate({'top':'51%'}, 1000);
+    						},810)
     					});
 
     				},1000)
