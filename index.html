@@ -31,15 +31,15 @@
 				</div>
 			</div>
 			<div class="swiper-slide slide2">
-				<div class="slide2-wrap">
-					<div>
+				<div class="slide2-wrap ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+					<div class="bg1">
 						<img src="images/page2-bg1.jpg">
-						<!-- 						<img src="images/page2-words.png" class="p2-word ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="0.1s"> -->
+						<img src="images/page2-words.png" class="p2-word ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
 					</div>
-					<div>
+					<div class="bg2">
 						<img src="images/page2-bg2.jpg">
-<!-- 						<img src="images/page2-words2.png" class="p2-word2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.3s">
-						<img src="images/page2-words3.png" class="p2-Word3 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="3.4s"> -->
+						<img src="images/page2-words2.png" class="p2-word2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2s">
+						<img src="images/page2-words3.png" class="p2-word3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.8s">
 					</div>
 
 				</div>
@@ -105,13 +105,19 @@
     			swiperAnimate(swiper); //初始化完成开始动画
     		}, 
     		onSlideChangeEnd: function(swiper){ 
-    			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
     			if (swiper.activeIndex == 1) {
-    				setTimeout(function(){
+    			setTimeout(function(){
 
-    					$('.p2-word2').addClass('fadeOut');
-    				},2000)
+    				$('.p2-word2').css({
+    					'animation-delay': '0.3s',
+    					'-webkit-animation-delay': '0.3s'
+    				}).addClass('fadeOut');
+    			},3000)
     			}
+
+    			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+
+
     		},
     		onSlideChangeStart: function(swiper){
     			$('.p2-word2').removeClass('fadeOut');
