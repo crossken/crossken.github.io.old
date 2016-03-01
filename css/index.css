@@ -58,10 +58,10 @@ background-size: cover;
 	position: relative;
 }
 .slide3 .avatar {
-	display: none;
+	opacity: 0;
 	width: 55%;
 	position: absolute;
-	top: 4%;
+	top: 6%;
 	left: 3%;
 }
 /*.test {
@@ -92,7 +92,7 @@ background-size: cover;
 }
 .slide3 .p3-name {
 	position: absolute;
-	top: 15%;
+	top: 14%;
 	z-index: 20;
 	width: 100%;
 	left: 0;
@@ -100,7 +100,7 @@ background-size: cover;
 .slide3 .p3-para {
 	position: absolute;
 	width: 100%;
-	top: 25%;
+	top: 24%;
 	z-index: 20;
 	left: 0;
 }
@@ -115,7 +115,7 @@ background-size: cover;
 }*/
 .slide4 .word {
 	position: absolute;
-	top: 25%;
+	top: 33%;
 	z-index: 20;
 }
 .slide4 .word img {
