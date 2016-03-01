@@ -163,7 +163,7 @@ position: relative;
 }
 .slide6 .para {
 	position: absolute;
-	top: 40%;
+	top: 43%;
 	left: 0;
 }
 .slide6 .title {
@@ -174,13 +174,29 @@ position: relative;
 .slide6 .footer {
 	position: absolute;
 	bottom: 7%;
+	width: 100%;
 }
 .slide6 .footer>a {
 	display: block;
+	width: 100%;
 }
 .slide6 .footer>p {
 	text-align: center;
 	margin: 0;
+	width: 100%;
+}
+
+.slide6 .t1 {
+	position:absolute;
+	left: 0;
+	/*top: 17%;*/
+	top: 40%;
+}
+.slide6 .t2 {
+	position: absolute;
+	left: 0;
+	top: 28%;
+
 }
 /*.slide2-wrap>div {
 	position: relative;
