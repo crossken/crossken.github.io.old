@@ -24,12 +24,6 @@ background-size: cover;
 /*	position: absolute;
 	top: 40%;
 */
-	background-color: #fff;
-	background-image: url(../images/page2-bg.jpg)
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center center;
 }
 .slide2 .slide2-wrap img {
 	display: block;
