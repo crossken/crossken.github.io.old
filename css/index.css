@@ -115,7 +115,7 @@ background-size: cover;
 }*/
 .slide4 .word {
 	position: absolute;
-	top: 36%;
+	top: 38%;
 	z-index: 20;
 }
 .slide4 .word img {
@@ -199,14 +199,12 @@ position: relative;
 	top: 28%;
 
 }
-/*.slide2-wrap>div {
-	position: relative;
-}
-.slide2-wrap>div>img {
+.slide6 #finger {
 	position: absolute;
-	top: 0;
-	left: 0;
-	}*/
+	width: 7%;
+	right: 26%;
+	top: 12%;
+}
 	.u-arrow-bottom {
 		position: absolute;
 		bottom: 10px;
