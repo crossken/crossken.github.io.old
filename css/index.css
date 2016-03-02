@@ -190,7 +190,8 @@ position: relative;
 	position:absolute;
 	left: 0;
 	/*top: 17%;*/
-	top: 40%;
+	top: 50%;
+	opacity: 0;
 }
 .slide6 .t2 {
 	position: absolute;
