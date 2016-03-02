@@ -166,7 +166,7 @@ a,img {
 .slide6 #finger {
 	position: absolute;
 	width: 7%;
-	right: 17%;
+	right: 19%;
 	top: 51%;
 	-webkit-animation: righttoleft 0.5s infinite;
 	animation: righttoleft 0.5s infinite;
@@ -224,21 +224,21 @@ a,img {
 		transform: translate(0,-8px)
 	}
 }
-@webkit-keyframes righttoleft {
+@-webkit-keyframes righttoleft {
 	0%,100%{
-		right: 17%;
+		right: 19%;
 	}
 
 	50% {
-		right: 15%;
+		right: 17%;
 	}
 }
 @keyframes righttoleft {
 	0%,100%{
-		right: 17%;
+		right: 19%;
 	}
 
 	50% {
-		right: 15%;
+		right: 17%;
 	}
 }
