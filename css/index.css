@@ -1,23 +1,7 @@
 body {
 	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
-/*.slide1,.slide5,.slide6{
-background: #fff url(../images/page1-bg.jpg) 0 0 no-repeat;
--webkit-background-size: cover;
-background-size: cover;
-}*/
-/*.slide1 .p1-bg {
-	width: 27%;
-	height: 100%;
-	background: #ccc;
-	opacity: 0.8;
-}
-.slide1 .p1-word {
-	display: block;
-	width: 27%;
-	position: absolute;
-	top: 35%;
-}*/
+
 .slide1 {
 	background: #fff url(../images/page1-bg.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
@@ -44,16 +28,6 @@ background-size: cover;
 	left: 0;
 	top: 0;
 }
-/*.slide2 .p2-word2 {
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-}*/
-/*.slide3 {
-	-webkit-background-size: cover;
-	background-size: cover;
-	background: #fff url(../images/page3-bg.png) 0 0 no-repeat;
-
-}*/
 .slide3 {
 	position: relative;
 }
@@ -64,26 +38,6 @@ background-size: cover;
 	top: 6%;
 	left: 3%;
 }
-/*.test {
-	position: absolute;
-	width: 100%;
-	top:0;
-	left: 0;
-}*/
-/*.slide3 .word {
-	position: absolute;
-	top: 48%;
-}
-.slide3 .word img {
-	display: block;
-	width: 100%;
-}*/
-/*.slide3 .avatar>img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 220px;
-}*/
 .slide3 .p3-bg {
 	width: 100%;
 	position: relative;
@@ -107,12 +61,6 @@ background-size: cover;
 .slide4 {
 	position: relative;
 }
-/*.slide4 .avatar {
-	display: block;
-	width: 100%;
-	position: absolute;
-	top: 12%;
-}*/
 .slide4 .word {
 	position: absolute;
 	top: 38%;
@@ -143,16 +91,16 @@ background-size: cover;
 
 
 .slide5 {
-background: #fff url(../images/page5-bg.jpg) 0 0 no-repeat;
--webkit-background-size: cover;
-background-size: cover;
+	background: #fff url(../images/page5-bg.jpg) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 .slide6 {
-background: #fff url(../images/page6-bg.jpg) 0 0 no-repeat;
--webkit-background-size: cover;
-background-size: cover;
-position: relative;
+	background: #fff url(../images/page6-bg.jpg) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
 }
 
 
@@ -203,58 +151,69 @@ position: relative;
 	position: absolute;
 	width: 7%;
 	right: 26%;
-	top: 12%;
+	top: 13%;
+	-webkit-animation: righttoleft 0.5s infinite;
+	animation: righttoleft 0.5s infinite;
 }
-	.u-arrow-bottom {
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		z-index: 150;
-		width: 24px;
-		height: 14px;
-		margin-left: -7px;
+.u-arrow-bottom {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	z-index: 150;
+	width: 24px;
+	height: 14px;
+	margin-left: -7px;
+}
+.u-arrow-bottom img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -7px 0 0 -14px;
+	width: 24px;
+	height: 14px;
+	background-position: 0 -82px;
+	-webkit-animation: start 1.5s infinite ease-in-out;
+	-moz-animation: start 1.5s infinite ease-in-out;
+	animation: start 1.5s infinite ease-in-out;
+}
+@-webkit-keyframes start {
+	0%,30% {
+		opacity: 0;
+		-webkit-transform: translate(0,10px)
 	}
-	.u-arrow-bottom img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin: -7px 0 0 -14px;
-		width: 24px;
-		height: 14px;
-		background-position: 0 -82px;
-		-webkit-animation: start 1.5s infinite ease-in-out;
-		-moz-animation: start 1.5s infinite ease-in-out;
-		animation: start 1.5s infinite ease-in-out;
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate(0,0)
 	}
-	@-webkit-keyframes start {
-		0%,30% {
-			opacity: 0;
-			-webkit-transform: translate(0,10px)
-		}
 
-		60% {
-			opacity: 1;
-			-webkit-transform: translate(0,0)
-		}
-
-		100% {
-			opacity: 0;
-			-webkit-transform: translate(0,-8px)
-		}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate(0,-8px)
 	}
-	@keyframes start {
-		0%,30% {
-			opacity: 0;
-			transform: translate(0,10px)
-		}
-
-		60% {
-			opacity: 1;
-			transform: translate(0,0)
-		}
-
-		100% {
-			opacity: 0;
-			transform: translate(0,-8px)
-		}
+}
+@keyframes start {
+	0%,30% {
+		opacity: 0;
+		transform: translate(0,10px)
 	}
+
+	60% {
+		opacity: 1;
+		transform: translate(0,0)
+	}
+
+	100% {
+		opacity: 0;
+		transform: translate(0,-8px)
+	}
+}
+@keyframes righttoleft {
+	0%,100%{
+		right: 26%;
+	}
+
+	50% {
+		right: 24%;
+	}
+}
