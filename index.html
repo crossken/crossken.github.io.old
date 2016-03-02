@@ -63,8 +63,8 @@
 				<img src="images/page3-avatar3.png" class="avatar">
 				<img src="images/page3-avatar2.png" class="avatar">
 				<img src="images/page3-bg.png" class="p3-bg">
-				<img src="images/page3-name.png" class="p3-name ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.2s" swiper-animate-delay="2.5s">
-				<img src="images/page3-para.png" class="p3-para ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.2s">
+				<img src="images/page3-name.png" class="p3-name ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.2s" swiper-animate-delay="2.7s">
+				<img src="images/page3-para.png" class="p3-para ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.4s">
 				<div class="u-arrow-bottom">
 					<img src="images/arrow.png">
 				</div>
@@ -73,9 +73,9 @@
 			<div class="swiper-slide slide5">
 				<div class="wordwrap">
 					<img src="images/page5-title.png" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">
-					<img src="images/page5-para1.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.6s">
-					<img src="images/page5-para2.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.4s">
-					<img src="images/page5-para3.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s">
+					<img src="images/page5-para1.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.4s">
+					<img src="images/page5-para2.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.9s" swiper-animate-delay="2.1s">
+					<img src="images/page5-para3.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="2.8s">
 				</div>
 				<div class="u-arrow-bottom">
 					<img src="images/arrow.png">
@@ -85,11 +85,11 @@
 				<img src="images/page6-title.png" class="t1">
 				<img src="images/page6-title2.png" class="t2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.9s">
 				<div class="para">
-					<img src="images/page6-para1.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.7s">
-					<img src="images/page6-para2.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
-					<img src="images/page6-para3.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.3s">
+					<img src="images/page6-para1.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
+					<img src="images/page6-para2.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s">
+					<img src="images/page6-para3.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.9s">
 				</div>
-				<div class="footer ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="5.3s">
+				<div class="footer ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="4.8s">
 					<a href="wwww.la-chance.net"><img src="images/logo.png"></a>
 					<p>wwww.la-chance.net</p>
 				</div>
@@ -123,25 +123,25 @@
 
     			if (swiper.activeIndex == 3) {
     				setTimeout(function(){
-    					$('.avatar').animate({opacity: 1}, 800);
+    					$('.avatar').animate({opacity: 1}, 1200);
     					setTimeout(function(){
-    						$('.avatar:eq(2)').animate({'top':'28%'}, 800);
-    						$('.avatar:eq(1)').animate({'top':'51%'}, 800);
+    						$('.avatar:eq(2)').animate({'top':'28%'}, 800, 'ease-out');
+    						$('.avatar:eq(1)').animate({'top':'51%'}, 800, 'ease-out');
     					},800)
-    				},100)
+    				},300)
     				setTimeout(function(){
     					$('.p3-bg').animate({opacity: '0.7'}, 700);
-    				},1700)
+    				},2000)
     			}
     			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
 
 
     			if (swiper.activeIndex == 5) {
     				setTimeout(function(){
-    					$('.t1').animate({'opacity': '1'}, 800)
+    					$('.t1').animate({'opacity': '1'}, 800, 'ease-in-out')
     				},200)
     				setTimeout(function(){
-    					$('.t1').animate({'top': '17%'}, 800);
+    					$('.t1').animate({'top': '17%'}, 800, 'ease-in-out');
     				},1000)
     			}
 
