@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 
 	<!-- 固定视口宽度为设备宽度，禁止用户缩放页面 -->
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 
 	<!-- 格式检测 -->
 	<meta name="format-detection" content="telephone=no,email=no,adress=no">
@@ -90,8 +90,9 @@
 					<img src="images/page6-para3.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="3.9s">
 				</div>
 				<div class="footer ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="4.8s">
-					<a href="wwww.la-chance.net"><img src="images/logo.png"></a>
-					<p>wwww.la-chance.net</p>
+					<img src="images/logo.png">
+					<a href="http://www.la-chance.net/">wwww.la-chance.net</a>
+					<p>技术支持&nbsp;|&nbsp;玑域信息科技有限公司</p>
 					<img src="images/finger.png" id="finger">
 				</div>
 			</div>
@@ -104,7 +105,7 @@
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>        
 		window.onload = function(){
-			alert('5');
+			// alert('5');
 			var mySwiper = new Swiper ('.swiper-container', {
 				direction: 'vertical',
 				width: window.innerWidth,
@@ -156,13 +157,6 @@
     			$('.t1').css({'top':'45%','opacity':'0'});
     		}
     	}) 
-
-	// $('body').tap(function(event){
-	// 	event.preventdefault();
-	// })
-	// $('body').click(function(event) {
-	// 	event.preventdefault();
-	// });
 
 	$('.swiper-container').height(window.innerHeight);
 }       
