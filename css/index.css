@@ -1,7 +1,9 @@
 body {
 	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
-
+.swiper-container {
+	height: 100%;
+}
 .slide1 {
 	background: #fff url(../images/page1-bg.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
