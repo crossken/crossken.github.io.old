@@ -1,5 +1,11 @@
 body {
 	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: none;
+}
+a,img {
+	-webkit-touch-callout:none;
 }
 .slide1 {
 	background: #fff url(../images/page1-bg.jpg) 0 0 no-repeat;
@@ -160,8 +166,8 @@ body {
 .slide6 #finger {
 	position: absolute;
 	width: 7%;
-	right: 22%;
-	top: 50%;
+	right: 20%;
+	top: 52%;
 	-webkit-animation: righttoleft 0.5s infinite;
 	animation: righttoleft 0.5s infinite;
 }
@@ -220,19 +226,19 @@ body {
 }
 @webkit-keyframes righttoleft {
 	0%,100%{
-		right: 22%;
+		right: 20%;
 	}
 
 	50% {
-		right: 20%;
+		right: 18%;
 	}
 }
 @keyframes righttoleft {
 	0%,100%{
-		right: 22%;
+		right: 20%;
 	}
 
 	50% {
-		right: 20%;
+		right: 18%;
 	}
 }
