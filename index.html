@@ -92,7 +92,7 @@
 				<div class="footer ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="4.8s">
 					<img src="images/logo.png">
 					<a href="http://www.la-chance.net/">wwww.la-chance.net</a>
-					<p>技术支持&nbsp;|&nbsp;玑域信息科技有限公司</p>
+					<p>技术支持&nbsp;|&nbsp;广州玑域信息科技有限公司</p>
 					<img src="images/finger.png" id="finger">
 				</div>
 			</div>
@@ -105,7 +105,7 @@
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>        
 		window.onload = function(){
-			alert('test');
+			alert('test2');
 			var mySwiper = new Swiper ('.swiper-container', {
 				direction: 'vertical',
 				width: window.innerWidth,
@@ -159,6 +159,49 @@
     	}) 
 
 	$('.swiper-container').height(window.innerHeight);
+
+
+	<script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    window.shareData = {
+        "timeLineLink": "http://www.baidu.com",    
+        "sendFriendLink": "http://www.baidu.com",
+        "weiboLink": "http://www.baidu.com",
+        "tTitle": "【素影|繁花】",
+        "tContent": "测试",
+        "fTitle": "【素影|繁花】",
+        "fContent": "测试",
+        "wContent": "测试"
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": "http://su.bdimg.com/static/superplus/img/logo_white.png",
+                "img_width": "401",
+                "img_height": "275",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": "http://su.bdimg.com/static/superplus/img/logo_white.png",
+                "img_width": "401",
+                "img_height": "275",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+ 
+    }, false)
+</script>
 }       
 </script>
 </body>
