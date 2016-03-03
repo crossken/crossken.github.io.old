@@ -39,11 +39,11 @@ html,body,#wrapper,#section1 {
 }
 #section1 li {
 	float: left;
-	width: 42%;
-	margin: 2% 4%;
+	width: 38%;
+	margin: 2% 6%;
 }
 #section1 ul {
-	width:84%;
+	width:80%;
 	margin: 0 auto;
 	overflow: hidden;
 	margin-top: 8%;
@@ -61,6 +61,13 @@ html,body,#wrapper,#section1 {
 	display: none;
 }
 .contact {
-	padding-left: 10%;
 	margin-top: 8%;
+	padding-left: 10%;
 }
+.contact p {
+	margin: 5px 0;
+	line-height: 1.6;
+}
+/*.contact p:first-child {
+	margin-bottom: 8%;
+}*/
