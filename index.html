@@ -1,126 +1,511 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
+<html>
+<head lang="en">
+    <title>La-Chance</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 禁止响应式时，注释viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="css/non-resopndsive.css"/>-->
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/jquery.fullpage.css"/>
+    <style>
+        .sec6-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 60px;
+            width: 100%;
+            display:table-cell;
+            vertical-align:middle;
+            color: #fff;
+            background-color: #333;
+            font-size: 10px;
+        }
+        .firstPara {
+            margin-top: 10px;
+        }
+        .section6 h1 {
+            margin-bottom: 5%;
+        }
+        .s6-sp {
+            padding-bottom: 50px;
+        }
 
-	<!-- 固定视口宽度为设备宽度，禁止用户缩放页面 -->
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+        .secondPara span:first-child {
+            background: url(images/location.png) 0 0 no-repeat;
+            -webkit-background-size: 10px;
+            background-size: 10px;
+        }
+        .secondPara span:last-child {
+            background: url(images/phone.png) 0 0 no-repeat;
+            -webkit-background-size: 10px;
+            background-size: 10px;
+        }
+        .secondPara span {
+            display: inline-block;
+            padding-left: 20px;
 
-	<!-- 网站描述 -->
-	<meta name="keywords" content="玑域科技,互联网,技术,设计,策划运营,推广">
-	<meta name="description" content="玑域信息科技有限公司是一家致力于高端互联网一站式服务，为企业从传统经营模式向互联网转型提供高品质服务，涵盖界面设计、技术开发以及营销推广的策划+执行的处于高速成长期的初创型信息技术公司。">
-	<meta name="copyright" content="玑域信息科技有限公司">
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <!--[if it IE 9]>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <![end if]-->
+    <script type="text/javascript">
 
-	<!-- 格式检测 -->
-	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+        if(window.location.toString().indexOf('pref=padindex') != -1){
+            }else{
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){  
+        if(window.location.href.indexOf("?mobile")<0){
+        try{
+            if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                window.location.href="http://m.la-chance.net";
+            }
+        }catch(e){}
+    }
+    }
+}
 
-	<!-- 在iOS中以全屏模式运行 -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-touch-fullscreen" content="yes">
+        $(function(){
+            var $section = $('.section');
+            var $section3_para = $('.section3 .pc_list_main');
+            var $wecan = $('.wecan ul');
+            var $section4_para = $('.section4 .list');
+            var $yidong_wecan = $('.yidong_wecan ul');
+            var $section5_para = $('.section5 .chuangyi_list_main');
+            var $cych_wecan = $('.cych_wecan ul');
+            var sixTofive,fiveToFour,fourToFive,fourToThree,threeToFour,threeToTow,towToThree;
+            $('#fullpage').fullpage({
+                navigation: true,
+                navigationColor: "#bfbfbf",
+                sectionsColor: ['#566199', '#fed847', '#40b89f', '#f90'],
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+                resize:false,
+                paddingTop:'60px',
+                afterLoad: function(anchorLink, index){
+                    if (index == 1) {
+                        $.fn.fullpage.setAllowScrolling(false);
+                        $section.eq(0).mousewheel(function(event, delta, deltaX, deltaY) {
+                            switch (true) {
+                                case delta<0:
+                                $.fn.fullpage.moveTo(2);
+                                break;
+                                default:
+                                return false;
+                            }
+                        });
+                    }
+                    if (index == 2) {
+                        $.fn.fullpage.setAllowScrolling(false);
+                        setTimeout(function(){
+                            $section.eq(1).mousewheel(function(event, delta, deltaX, deltaY) {
+                                switch (true) {
+                                    case delta<0:
+                                    $.fn.fullpage.moveTo(3);
+                                    towToThree = true;
+                                    setTimeout(function(){
+                                        towToThree = false;
+                                    },800);
+                                    break;
+                                    case delta>0:
+                                    if (threeToTow) return;
+                                    $.fn.fullpage.moveTo(1);
+                                    default:
+                                    return false;
+                                }
+                            });
+                        },800);
+                    }
+                    if (index == 3) {
+                        $.fn.fullpage.setAllowScrolling(false);
+                        var thirdDefaultPara = $section3_para.is(':visible');
+                        var thirdRollTo2=thirdDefaultPara;
+                        var thirdRollTo4=!thirdRollTo2;
+                        var thirdTimer1;
+                        var thirdTimer2;
+                        $section.eq(2).mousewheel(function(event, delta, deltaX, deltaY){
+                            if (delta<0 && thirdDefaultPara) {
+                                if (towToThree) return;
+                                $section3_para.hide().removeClass('bounceInRight');
+                                $wecan.show().addClass('bounceInLeft');
+                                thirdRollTo2 = false;
+                                clearTimeout(thirdTimer2);
+                                thirdTimer1=setTimeout(function(){
+                                    thirdDefaultPara = false;
+                                    thirdRollTo4 = true;
+                                },1200);
+                            }
+                            if (delta>0 && thirdRollTo2) {
+                                $.fn.fullpage.moveTo(2);
+                                threeToTow = true;
+                                setTimeout(function(){
+                                    threeToTow = false;
+                                },800)
+                            }
+                            if (delta<0 && thirdRollTo4) {
+                                $.fn.fullpage.moveTo(4);
+                                threeToFour = true;
+                                setTimeout(function(){
+                                    threeToFour = false;
+                                },800)
+                            }
+                            if (delta>0 && !thirdDefaultPara) {
+                                if (fourToThree) return;
+                                $wecan.hide().removeClass('bounceInLeft');
+                                $section3_para.show().addClass('bounceInRight');
+                                thirdRollTo4 = false;
+                                clearTimeout(thirdTimer1);
+                                thirdTimer2=setTimeout(function(){
+                                    thirdDefaultPara = true;
+                                    thirdRollTo2 = true;
+                                },1200);
+                            }
+                        })
+}
+if (index == 4) {
+    $.fn.fullpage.setAllowScrolling(false);
+    var fourthDefaultPara = $section4_para.is(':visible');
+    var fourthRollTo3=fourthDefaultPara;
+    var fourthRollTo5;
+    var fourthTimer1;
+    var fourthTimer2;
+    $section.eq(3).mousewheel(function(event, delta, deltaX, deltaY){
+        if (delta<0 && fourthDefaultPara) {
+            if (threeToFour) return;
+            $section4_para.hide().removeClass('bounceInUp');
+            $yidong_wecan.show().addClass('bounceInLeft');
+            fourthRollTo3 = false;
+            clearTimeout(fourthTimer2);
+            fourthTimer1=setTimeout(function(){
+                fourthDefaultPara = false;
+                fourthRollTo5 = true;
+            },1200);
+        }
+        if (delta>0 && fourthRollTo3) {
+            $.fn.fullpage.moveTo(3);
+            fourToThree = true;
+            setTimeout(function(){
+                fourToThree = false;
+            },800)
+        }
+        if (delta<0 && fourthRollTo5) {
+            $.fn.fullpage.moveTo(5);
+            fourToFive = true;
+            setTimeout(function(){
+                fourToFive = false;
+            },800);
+        }
+        if (delta>0 && !fourthDefaultPara) {
+            if (fiveToFour) return;
+            $yidong_wecan.hide().removeClass('bounceInLeft');
+            $section4_para.show().addClass('bounceInUp');
+            fourthRollTo5 = false;
+            clearTimeout(fourthTimer1);
+            fourthTimer2=setTimeout(function(){
+                fourthDefaultPara = true;
+                fourthRollTo3 = true;
+            },1200);
+        }
+    });
+}
+if (index == 5) {
+    $.fn.fullpage.setAllowScrolling(false);
+    var fifthDefaultPara = $section5_para.is(':visible');
+    var fifthRollTo4=fifthDefaultPara;
+    var fifthRollTo6=!fifthRollTo4;
+    var fifthTimer1;
+    var fifthTimer2;
+    $section.eq(4).mousewheel(function(event, delta, deltaX, deltaY){
+        if (delta<0 && fifthDefaultPara) {
+            if (fourToFive) return;
+            $section5_para.hide().removeClass('bounceInDown');
+            $cych_wecan.show().addClass('bounceInLeft');
+            fifthRollTo4 = false;
+            clearTimeout(fifthTimer2);
+            fifthTimer1=setTimeout(function(){
+                fifthDefaultPara = false;
+                fifthRollTo6 = true;
+            },1200);
+        }
+        if (delta>0 && fifthRollTo4) {
+            $.fn.fullpage.moveTo(4);
+            fiveToFour = true;
+            setTimeout(function(){
+                fiveToFour = false;
+            },800);
+        }
+        if (delta<0 && fifthRollTo6) {
+            $.fn.fullpage.moveTo(6);
+        }
+        if (delta>0 && !fifthDefaultPara) {
+            if(sixToFive) return;
+            $cych_wecan.hide().removeClass('bounceInLeft');
+            $section5_para.show().addClass('bounceInDown');
+            fifthRollTo6 = false;
+            clearTimeout(fifthTimer1);
+            fifthTimer2=setTimeout(function(){
+                fifthDefaultPara = true;
+                fifthRollTo4 = true;
+            },1200);
+        }
+    });
+}
+if (index == 6) {
+    $.fn.fullpage.setAllowScrolling(false);
+    $section.eq(5).mousewheel(function(event, delta, deltaX, deltaY) {
+        switch (true) {
+            case delta>0:
+            $.fn.fullpage.moveTo(5);
+            sixToFive = true;
+            setTimeout(function(){
+                sixToFive = false;
+            },800);
+            break;
+            default:
+            return false;
+        }
+    });
+}
+}
+});
+});
 
-	<!-- UC强制全屏 -->
-	<meta name="screen-orientation" content="portrait"> <!-- 强制竖屏 -->
-	<meta name="full-screen" content="yes">
-	<meta name="browsermode" content="application">
-
-	<!-- QQ强制全屏 -->
-	<meta name="x5-orientation" content="portrait"> <!-- 强制竖屏 -->
-	<meta name="x5-fullscreen" content="true">
-	<meta name="x5-page-mode" content="app">
-
-	<!-- 禁止百度自动转码 -->
-	<meta http-equiv="Cache-Control" content="no-siteapp">
-
-	<title>La-Chance</title>
-
-	<!-- css -->
-	<link rel="stylesheet" href="style/normalize.css">
-	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/index.css">
-
-
-
-
+</script>
 </head>
 <body>
-	<div class="loading"><img class="loading-gif" src="images/loading.gif"></div>
+    <nav class="navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="logo" href="#">
+                    <img class="media media-middle" src="images/logo.png" alt=""/>
+                </a>
+            </div>
+            <ul class="nav navbar-nav pull-right clearfix">
+                <li><a href="#" class="btn-lg">联系我们</a></li>
+                <li><a href="join_us.html" class="btn-lg">加入我们</a></li>
+            </ul>
+        </div>
+    </nav>
 
-	<div id="wrapper">
-		<section id="section1">
+    <div id="fullpage">
+     <!--第一屏-->
+     <div class="section section1 container first text-center">
+        <div class="container divmt-first">
+            <h1>创意 · 设计 · 开发</h1>
+            <p>&nbsp;</p>
+            <p>互联网一站式服务商</p>
+            <p><a class="btn btn-default" href="#">了解更多</a></p>
+        </div>
+        <div class="container-fluid text-center">
 
-			<header><a href="#"><img src="images/header.png" alt="header"></a></header>
+        </div>
 
-			<div class="main">
-				<p>创意 · 设计 · 开发</p>
-			</div>
+        <img class="flashdisk" src="images/flashdisk.png" alt=""/>
+        <img class="headphone" src="images/headphones.png" alt=""/>
+        <img class="imac" src="images/imac.png" alt=""/>
+        <img class="iphone" src="images/iphone.png" alt=""/>
+        <img class="line" src="images/line.png" alt=""/>
+        <img class="note-01" src="images/note_01.png" alt=""/>
+        <img class="note-02" src="images/note_02.png" alt=""/>
+        <img class="pad" src="images/pad.png" alt=""/>
+        <img class="pen" src="images/pen.png" alt=""/>
+        <img class="tea" src="images/tea.png" alt=""/>
+    </div>
+    <!-- 第二屏 -->
+    <div class="section section2 second text-center">
+        <div class="container">
+            <h1>不一样的视野 · 把握互联网时代新机遇</h1>
+            <p>&nbsp;</p>
+            <p>专业的互联网服务</p>
+            <p>全方位的技术搭建，创意设计包装，推广运营</p>
+            <!--<p>这里其实是没有内容的</p>-->
+        </div>
+        <div class="container-fluid text-center footer">
+            <div class="row div-second">
+                <ul class="clearfix">
+                    <li class="col-lg-4 col-md-4">
+                        <img class="media media-middle" src="images/img_iphone.png" alt=""/>
+                        <a class="btn-second" href="#">网页</a>
+                    </li>
+                    <li class="col-lg-4 col-md-4">
+                        <img class="media media-middle" src="images/img_browser.png" alt=""/>
+                        <a class="btn-second" href="#">APP</a>
+                    </li>
+                    <li class="col-lg-4 col-md-4">
+                        <img class="media media-middle" src="images/img_light.png" alt=""/>
+                        <a class="btn-second" href="#">策划 </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 第三屏 -->
+    <div class="section section3 text-center">
+        <div class="container section3_txt">
+            <h1 id="pc_title">PC端</h1>
+            <ul class="pc_list_main animated">
+                <li><em></em>网页设计，搭建，优化</li>
+                <li><em></em>CRM OA等管理系统搭建</li>
+            </ul>
+        </div>
+        <div class="wecan clearfix">
+            <ul class="animated1">
+                <li>数据收集</li>
+                <li>原型设计</li>
+                <li>编码规范</li>
+                <li>测试整改</li>
+            </ul>
+            <ul class="animated2">
 
-			<div class="technology-01 bigbox technology"><a href="tech.html"><span>技术</span><img src="images/technology.png" alt="技术"></a></div>
-			<div class="technology-02 smallbox technology"><a href="tech.html#sec-04"><img src="images/wechat.png" alt="微信"></a></div>
-			<div class="technology-03 smallbox technology"><a href="tech.html#sec-02"><span>Web</span></a></div>
-			<div class="technology-04 smallbox technology"><a href="tech.html#sec-03"><span>App</span></a></div>
-			<div class="design-01 bigbox"><a href="design.html"><span>设计</span><img src="images/design.png" alt="设计"></a></div>
-			<div class="planning-01 bigbox planning"><a href="planning.html"><span>策划运营</span><img src="images/planning.png" alt="策划"></a></div>
-			<div class="planning-02 smallbox planning"><a href="planning.html#sec-03"><span>运营</span></a></div>
-			<div class="planning-03 smallbox planning"><a href="planning.html#sec-02"><span>推广</span></a></div>
+                <li>需求分析</li>
+                <li>界面设计</li>
+                <li>前端制作</li>
+                <li>后期维护</li>
+            </ul>
+            <ul class="animated3">
+                <li>技术开发</li>
+                <li>交互设计</li>
+                <li>功能定制</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+            <img class="img-third" src="images/screen.png" alt="screen"/>
+        </div>
+    </div>
+    <!-- 第四屏 -->
+    <div class="section section4 fourth">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-lg-offset-1 col-md-offset-1 divmt content">
+                    <h1 class="mobile">移动端</h1>
+                    <p>&nbsp;</p>
+                    <p class="list animated">Android/ios端应用开发</p>
+                    <p class="list animated">微信开发搭建</p>
+                    <p class="list animated">H5定制，小游戏开发</p>
+                    <div class="yidong_wecan clearfix">
+                        <ul class="animated1">
+                            <li>数据收集</li>
+                            <li>原型设计</li>
+                            <li>编码规范</li>
+                            <li>测试整改</li>
+                        </ul>
+                        <ul class="animated2">
 
-			<footer><a href="product.html">合作伙伴&nbsp;&nbsp;&&nbsp;&nbsp;联系方式<span></span></a></footer>
+                            <li>需求分析</li>
+                            <li>界面设计</li>
+                            <li>前端制作</li>
+                            <li>后期维护</li>
+                        </ul>
+                        <ul class="animated3">
+                            <li>技术开发</li>
+                            <li>交互设计</li>
+                            <li>功能定制</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-lg-offset-3 col-md-offset-3">
+                    <img class="img-fourth" src="images/img_blackphone.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 第五屏 -->
+    <div class="section section5 fifth text-center">
+        <div class="container test">
+            <h1 class="chuangyich">创意策划</h1>
+            <ul class="chuangyi_list_main animated">
+                <li><em></em>创意活动策划</li>
+                <li><em></em>新媒体（微信微博等）运营</li>
+                <li><em></em>推广投放</li>
+            </ul>
+            <div class="cych_wecan clearfix">
+                <ul class="animated1">
+                    <li>客户交流</li>
+                    <li>品牌定位</li>
+                    <li>用户分析</li>
+                </ul>
+                <ul class="animated2">
 
-		</section>
-	</div>
+                    <li>推广/搭建方案定制</li>
+                    <li>seo优化推广</li>
+                </ul>
+                <ul class="animated3">
+                    <li>运营/投放/炒作</li>
+                    <li>H5创意新玩法</li>
+                </ul>
+                <ul class="animated4">
+                    <li>后期跟进</li>
+                    <li>数据收集反馈</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-lg-4 col-md-4  dv-book">
+                <img class="media img-responsive" src="images/img_bookss.png" alt=""/>
+                <img class="handl" src="images/img_handl.png" alt=""/>
+                <img class="handr" src="images/img_handr.png" alt=""/>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <img class="media img-responsive" src="images/img_groups.png" alt=""/>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <img class="media img-responsive" src="images/img_paper_01.png" alt=""/>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <img class="media img-responsive" src="images/img_paper_02.png" alt=""/>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <img class="media img-responsive" src="images/img_paper_03.png" alt=""/>
+            </div>
+            <script>
+                var width=document.documentElement.clientWidth;
+                if(width>1366){
+                    $(".fifth img").css("width","75%");
+                    $(".dv-book .handl").css({'width':'20%','left':'0%'});
+                    $(".dv-book .handr").css({'width':'18%','right':'3%'});
+                }
 
-	<script src="scripts/zepto.min.js"></script>
-	<script>
+                else if(width<=1366&&width>1200){
+                    $(".fifth img").css("width","60%");
+                    $(".dv-book .handl").css({'width':'20%','left':'8%'});
+                    $(".dv-book .handr").css({'width':'18%','right':'8%'});
+                }
 
-		window.onload = function() {
-
-			$('#wrapper').show();
-			var bigBoxWidth = $('.bigbox').width();
-			var smallBoxWidth = (bigBoxWidth-5)/2;
-			$('.bigbox').height(bigBoxWidth);
-			$('.smallbox').width(smallBoxWidth).height(smallBoxWidth);
-			$('.planning-03,.planning-02,.technology-02,.technology-03').css('left', bigBoxWidth+10);
-			$('.planning-02').css('bottom', 55+smallBoxWidth+5);
-			$('.design-01').css('bottom', 55+bigBoxWidth+5);
-			$('.technology-01,.technology-03,.technology-04').css('bottom', 55+bigBoxWidth*2+10);
-			$('.technology-02').css('bottom', 55+bigBoxWidth*2+smallBoxWidth+15);
-			$('.technology-04').css('left', bigBoxWidth+smallBoxWidth+15);
-
-			// 禁止用户拉动页面
-			document.querySelector('body').addEventListener('touchstart', function (ev) {
-				ev.preventDefault();
-			});
-			$('a').tap(function(){
-				window.location.href=this.href;
-			})
-
-			setTimeout(function(){
-				$('.loading,.loading-gif').fadeOut(700);
-			},2000);
-
-
-		// 	setTimeout(function(){
-		// 		secFadeAnimate('.technology');
-		// 	},100);
-		// 	setTimeout(function(){
-		// 		secFadeAnimate('.design-01');
-		// 	},1300);
-		// 	setTimeout(function(){
-		// 		secFadeAnimate('.planning');
-		// 	},2500);
-		// };
-
-
-		// function secFadeAnimate(sec) {
-		// 	$(sec).fadeOut(2000, function() {
-		// 		setTimeout(function(){$(sec).fadeIn(2000);},500)
-		// 	});
-		// 	setInterval(function(){
-		// 		$(sec).fadeOut(2000, function() {
-		// 			setTimeout(function(){$(sec).fadeIn(2000);},500)
-		// 		});
-		// 	},6000);
-		}
-		
-	</script>
+            </script>
+        </div>
+    </div>
+    <!-- 第六屏 -->
+    <div class="section section6 text-center">
+        <h1>案例&合作伙伴</h1>
+        <div class="container-fluid s6-sp">
+            <div class="row">
+                <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5">
+                    <img class="img-responsive" src="images/img_iphonegroups.png" alt=""/>
+                </div>
+                <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5">
+                    <div class="row">
+                        <img class="img-circle img-responsive col-lg-3 col-md-3 friends" src="images/img_friends_02.png" alt=""/>
+                        <img class="img-circle img-responsive col-lg-3 col-md-3 friends" src="images/img_friends_01.png" alt=""/>
+                    </div>
+                    <div class="row">
+                        <img class="img-circle img-responsive col-lg-3 col-md-3 friends" src="images/img_friends_03.png" alt=""/>
+                        <img class="img-circle img-responsive col-lg-3 col-md-3 friends" src="images/img_friends_04.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec6-footer">
+            <p class="firstPara">copyright&nbsp;&nbsp;&nbsp;2014-2015&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;广州玑域信息科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16005623号</p>
+            <p class="secondPara"><span>广州市天河区天河路375号隆德大厦B座2206</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>020-38851236</span></p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
