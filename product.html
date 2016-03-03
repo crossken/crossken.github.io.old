@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- 固定视口宽度为设备宽度，禁止用户缩放页面 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+	<!-- 网站描述 -->
+	<meta name="keywords" content="玑域科技,互联网,技术,设计,策划运营,推广">
+	<meta name="description" content="玑域信息科技有限公司是一家致力于高端互联网一站式服务，为企业从传统经营模式向互联网转型提供高品质服务，涵盖界面设计、技术开发以及营销推广的策划+执行的处于高速成长期的初创型信息技术公司。">
+	<meta name="copyright" content="玑域信息科技有限公司">
+
+	<!-- 格式检测 -->
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+	<!-- 在iOS中以全屏模式运行 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+
+	<!-- UC强制全屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<meta name="full-screen" content="yes">
+	<meta name="browsermode" content="application">
+
+	<!-- QQ强制全屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="x5-page-mode" content="app">
+
+	<!-- 禁止百度自动转码 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+
+	<title>案例 & 合作伙伴</title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/product.css">
+
+
+
+</head>
+
+<body>
+	<div class="loading"><img class="loading-gif" src="images/loading.gif"></div>
+	<div id="wrapper">
+		<section id="section1">
+
+			<header><a href="index.html"><img src="images/header.png" alt="header"></a></header>
+
+			<div class="btn1"><a href="#">合作伙伴&nbsp;&nbsp;&&nbsp;&nbsp;联系方式</a></div>
+
+			<ul>
+				<li><a href=""><img src="images/product_01.png"></a></li>
+				<li><a href=""><img src="images/product_02.png"></a></li>
+				<li><a href=""><img src="images/product_03.png"></a></li>
+				<li><a href=""><img src="images/product_04.png"></a></li>
+			</ul>
+
+			<div class="contact">
+				<p>广州玑域信息科技有限公司</p>
+				<p><span>地址：</span><span>广州市天河区天河路375号隆德大厦东塔2206</span></p>
+				<p><span>电话：</span><span>020-38551236</span></p>
+				<p><span>邮箱：</span><span>business@la-chance.net</span></p>
+			</div>
+
+<!-- 			<div class="bg-bottom"><img src="images/product_bg_bottom.jpg"></div> -->
+
+		</section>
+	</div>
+	<script src="scripts/zepto.min.js"></script>
+	<script>
+		window.onload = function() {
+			$('#wrapper').show();
+			// 禁止用户拉动页面
+			document.querySelector('body').addEventListener('touchstart', function (ev) {
+				ev.preventDefault();
+			});
+			$('a').tap(function(){
+				window.location.href=this.href;
+			})
+
+			setTimeout(function(){
+				$('.loading,.loading-gif').fadeOut(700);
+				$('html').height('auto').css('overflow', 'auto');
+			},1600);
+
+		};
+	</script>
+</body>
+</html>
