@@ -46,7 +46,7 @@ html,body,#wrapper,#section1 {
 	width:80%;
 	margin: 0 auto;
 	overflow: hidden;
-	margin-top: 8%;
+	margin-top: 4%;
 }
 .bg-bottom {
 	position: absolute;
@@ -61,7 +61,7 @@ html,body,#wrapper,#section1 {
 	display: none;
 }
 .contact {
-	margin-top: 8%;
+	margin-top: 4%;
 	padding-left: 10%;
 }
 .contact p {
