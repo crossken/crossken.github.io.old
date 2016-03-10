@@ -1,0 +1,20 @@
+.md-about-main {
+	margin: 100px auto 150px;
+	width: 650px;
+}
+.md-about-main div:first-child img {
+	display: block;
+}
+.md-about-main img:first-child {
+	margin-bottom: 30px;
+}
+.md-about-main div:last-child {
+	float: right;
+	width: 400px;
+	margin-top: -210px;
+	line-height: 1.7;
+	font-size: 14px;
+}
+.md-about-main div:last-child p {
+	text-indent: 28px;
+}

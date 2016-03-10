@@ -2,125 +2,139 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-
-	<!-- 固定视口宽度为设备宽度，禁止用户缩放页面 -->
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
-
-	<!-- 网站描述 -->
-	<meta name="keywords" content="玑域科技,互联网,技术,设计,策划运营,推广">
-	<meta name="description" content="玑域信息科技有限公司是一家致力于高端互联网一站式服务，为企业从传统经营模式向互联网转型提供高品质服务，涵盖界面设计、技术开发以及营销推广的策划+执行的处于高速成长期的初创型信息技术公司。">
-	<meta name="copyright" content="玑域信息科技有限公司">
-
-	<!-- 格式检测 -->
-	<meta name="format-detection" content="telephone=no,email=no,adress=no">
-
-	<!-- 在iOS中以全屏模式运行 -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-touch-fullscreen" content="yes">
-
-	<!-- UC强制全屏 -->
-	<meta name="screen-orientation" content="portrait"> <!-- 强制竖屏 -->
-	<meta name="full-screen" content="yes">
-	<meta name="browsermode" content="application">
-
-	<!-- QQ强制全屏 -->
-	<meta name="x5-orientation" content="portrait"> <!-- 强制竖屏 -->
-	<meta name="x5-fullscreen" content="true">
-	<meta name="x5-page-mode" content="app">
-
-	<!-- 禁止百度自动转码 -->
-	<meta http-equiv="Cache-Control" content="no-siteapp">
-
-	<title>La-Chance</title>
-
-	<!-- css -->
-	<link rel="stylesheet" href="style/normalize.css">
-	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/index.css">
-
-
-
-
+	<title>ameliejiang</title>
+	<meta name="keywords" content="ameliejiang">
+	<meta name="description" content="ameliejiang">
+	<meta name="author" content="ken,kenchung.ftd@gmail.com">
+	<meta name="copyright" content="广州玑域信息科技有限公司">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<div class="loading"><img class="loading-gif" src="images/loading.gif"></div>
-
-	<div id="wrapper">
-		<section id="section1">
-
-			<header><a href="#"><img src="images/header.png" alt="header"></a></header>
-
-			<div class="main">
-				<p>创意 · 设计 · 开发</p>
-			</div>
-
-			<div class="technology-01 bigbox technology"><a href="tech.html"><span>技术</span><img src="images/technology.png" alt="技术"></a></div>
-			<div class="technology-02 smallbox technology"><a href="tech.html#sec-04"><img src="images/wechat.png" alt="微信"></a></div>
-			<div class="technology-03 smallbox technology"><a href="tech.html#sec-02"><span>Web</span></a></div>
-			<div class="technology-04 smallbox technology"><a href="tech.html#sec-03"><span>App</span></a></div>
-			<div class="design-01 bigbox"><a href="design.html"><span>设计</span><img src="images/design.png" alt="设计"></a></div>
-			<div class="planning-01 bigbox planning"><a href="planning.html"><span>策划运营</span><img src="images/planning.png" alt="策划"></a></div>
-			<div class="planning-02 smallbox planning"><a href="planning.html#sec-03"><span>运营</span></a></div>
-			<div class="planning-03 smallbox planning"><a href="planning.html#sec-02"><span>推广</span></a></div>
-
-			<footer><a href="product.html">合作伙伴&nbsp;&nbsp;&&nbsp;&nbsp;联系方式<span></span></a></footer>
-
-		</section>
-	</div>
-
-	<script src="scripts/zepto.min.js"></script>
+	<header class="md-header">
+		<img src="images/work.jpg" class="banner">
+		<img src="images/title.png" class="title">
+		<div>
+			<ul>
+				<li>
+					<a href="index.html" class="left active"><img src="images/link_work.png"></a>
+				</li>
+				<li>
+					<a href="about.html" class="center"><img src="images/link_about.png"></a>
+				</li>
+				<li>
+					<a href="contact.html" class="right"><img src="images/link_contact.png"></a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<section class="md-gallery">
+		<div class="gallery-container">
+			<ul>
+				<li><a href=""><img src="images/1.jpg"></a></li>
+				<li><a href=""><img src="images/2.jpg"></a></li>
+				<li><a href=""><img src="images/3.jpg"></a></li>
+				<li><a href=""><img src="images/4.jpg"></a></li>
+				<li><a href=""><img src="images/5.jpg"></a></li>
+				<li><a href=""><img src="images/6.jpg"></a></li>
+				<li><a href=""><img src="images/7.jpg"></a></li>
+				<li><a href=""><img src="images/8.jpg"></a></li>
+				<li><a href=""><img src="images/9.jpg"></a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="show-pic">
+		<div><img src="images/1.jpg"></div>
+		<a href="" class="left-arrow"><img src="images/left_arrow.png"></a>
+		<a href="" class="right-arrow"><img src="images/right_arrow.png"></a>
+		<a href="" class="back-btn"><img src="images/back.png"></a>
+	</section>
+	<div class="mask"></div>
+	<footer class="md-footer"></footer>
+	<script src="lib/jquery-1.12.0.min.js"></script>
 	<script>
+		$(function() {
 
-		window.onload = function() {
-
-			$('#wrapper').show();
-			var bigBoxWidth = $('.bigbox').width();
-			var smallBoxWidth = (bigBoxWidth-5)/2;
-			$('.bigbox').height(bigBoxWidth);
-			$('.smallbox').width(smallBoxWidth).height(smallBoxWidth);
-			$('.planning-03,.planning-02,.technology-02,.technology-03').css('left', bigBoxWidth+10);
-			$('.planning-02').css('bottom', 55+smallBoxWidth+5);
-			$('.design-01').css('bottom', 55+bigBoxWidth+5);
-			$('.technology-01,.technology-03,.technology-04').css('bottom', 55+bigBoxWidth*2+10);
-			$('.technology-02').css('bottom', 55+bigBoxWidth*2+smallBoxWidth+15);
-			$('.technology-04').css('left', bigBoxWidth+smallBoxWidth+15);
-
-			// 禁止用户拉动页面
-			document.querySelector('body').addEventListener('touchstart', function (ev) {
-				ev.preventDefault();
+			$('.gallery-container').on('click', 'a', function(event) {
+				$(this).parent().addClass('active-img');
+				$('.show-pic>div>img').attr('src', $(this).find('img')[0].src);
+				$('.show-pic').show();
+				if ($('.show-pic>div>img').height() > 500) {
+					$('.show-pic>div').css('overflow-x', 'hidden');
+				} else {
+					$('.show-pic>div').css('overflow-x', '')
+				}
+				$('.mask').show();
+				return false;
 			});
-			$('a').tap(function(){
-				window.location.href=this.href;
-			})
 
-			setTimeout(function(){
-				$('.loading,.loading-gif').fadeOut(700);
-			},2000);
+			$('.show-pic').mouseover(function(event) {
+				$('.show-pic a').show();
+			});
+			$('.show-pic').mouseout(function(event) {
+				$('.show-pic a').hide();
+			});
+			$('.back-btn').click(function(event) {
+				$('.show-pic').hide();
+				$('.mask').hide();
+				$('.gallery-container li').removeClass();
+				return false;
+			});
+			$('.left-arrow').click(function(event) {
+				var $nowImg = $('.active-img');
+				if($nowImg.prev().length) {
+					$nowImg.prev().addClass('active-img').end().removeClass();
+					$('.show-pic>div>img').attr('src', $('.active-img').find('img')[0].src);
+				}
+				if ($('.show-pic>div>img').height() > 500) {
+					$('.show-pic>div').css('overflow-x', 'hidden');
+				} else {
+					$('.show-pic>div').css('overflow-x', '')
+				}
+				return false;
+			});
+			$('.right-arrow').click(function(event) {
+				var $nowImg = $('.active-img');
+				if($nowImg.next().length) {
+					$nowImg.next().addClass('active-img').end().removeClass();
+					$('.show-pic>div>img').attr('src', $('.active-img').find('img')[0].src);
+				}
+				if ($('.show-pic>div>img').height() > 500) {
+					$('.show-pic>div').css('overflow-x', 'hidden');
+				} else {
+					$('.show-pic>div').css('overflow-x', '')
+				}
+				return false;
+			});
 
 
-		// 	setTimeout(function(){
-		// 		secFadeAnimate('.technology');
-		// 	},100);
-		// 	setTimeout(function(){
-		// 		secFadeAnimate('.design-01');
-		// 	},1300);
-		// 	setTimeout(function(){
-		// 		secFadeAnimate('.planning');
-		// 	},2500);
-		// };
 
+			var $mainDiv = $(".gallery-container ul");
+			var html = '';
+			var displayedImg = 9;
+			var allImg = 39;
+			var oldPic;
+			var scrollTime = 0
+			$(window).scroll(function(event) {
+				var pageH = $(document).height()
+            	var scrollT = $(window).scrollTop(); //滚动条top   
+            	var winheight=$(window).height();
+            	if ((parseInt(scrollT)+parseInt(winheight)+290>=parseInt(pageH))&&(displayedImg<allImg)) {
+            		scrollTime++;
+            		oldPic = displayedImg;
+            		displayedImg = allImg - oldPic>9 ? oldPic+9 : allImg;
+            		for (var i = oldPic+1; i < displayedImg+1; i++) {
+            			html += '<li><a href=""><img src="images/'+i+'.jpg"></a></li>';
+            		};
 
-		// function secFadeAnimate(sec) {
-		// 	$(sec).fadeOut(2000, function() {
-		// 		setTimeout(function(){$(sec).fadeIn(2000);},500)
-		// 	});
-		// 	setInterval(function(){
-		// 		$(sec).fadeOut(2000, function() {
-		// 			setTimeout(function(){$(sec).fadeIn(2000);},500)
-		// 		});
-		// 	},6000);
-		}
-		
-	</script>
+            		$mainDiv.append(html);
+            		html = '';
+            	}
+            });
+
+		});
+</script>
 </body>
 </html>
