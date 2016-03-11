@@ -1,10 +1,16 @@
 .md-gallery .gallery-container {
 	width:640px;
+	height: 456px;
 	margin: 140px auto 120px;
+	position: relative;
+	overflow: hidden;
 }
 .md-gallery ul {
 	overflow:hidden;
 	margin-right:-20px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .md-gallery li {
 	width:200px;
@@ -35,9 +41,12 @@
 .show-pic>div {
 	width: 740px;
 	height: 490px;
+	background-color: #000;
+	text-align: center;
 }
 .show-pic>div>img {
-	width: 740px;
+	height: 490px;
+	/*margin: 0 auto;*/
 }
 .show-pic a {
 	position: absolute;
