@@ -1,26 +1,50 @@
-.md-gallery .gallery-container {
-	width:640px;
+.swiper-container {
+	width:680px;
 	height: 456px;
 	margin: 140px auto 120px;
-	position: relative;
-	overflow: hidden;
+	/*margin-right: -20px;*/
+/*	position: relative;
+	overflow: hidden;*/
 }
-.md-gallery ul {
-	overflow:hidden;
-	margin-right:-20px;
-	position: absolute;
+.swiper-slide {
+/*	overflow:hidden;
+	margin-right:-20px;*/
+/*	position: absolute;
 	top: 0;
-	left: 0;
+	left: 0;*/
+	/*width: 660px;*/
+	/*display: inline-flex;*/
 }
-.md-gallery li {
+.swiper-slide>div {
 	width:200px;
 	float:left;
 	margin-right:20px;
 	margin-bottom:20px;
+	background-color: #000;
 }
-.md-gallery img {
-	width: 100%;
+.swiper-slide>div:nth-child(3n+1) {
+	margin-left: 20px;
 }
+.swiper-slide img {
+	height: 132px;
+	margin: 0 auto;
+	display: block;
+}
+
+.swiper-button-next, .swiper-button-prev {
+	width:41px;
+	height: 41px;
+	background-size: 41px 41px;
+}
+.swiper-button-next {
+	background-image: url(../images/right_arrow.png);
+	right: 30px;
+}
+.swiper-button-prev {
+	background-image: url(../images/left_arrow.png);
+	left: 30px;
+}
+
 .mask {
 	position: fixed;
 	width: 100%;

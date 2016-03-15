@@ -8,6 +8,7 @@
 	<meta name="author" content="ken,kenchung.ftd@gmail.com">
 	<meta name="copyright" content="广州玑域信息科技有限公司">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/index.css">
@@ -31,7 +32,7 @@
 		</div>
 	</header>
 	<section class="md-gallery">
-		<div class="gallery-container">
+		<!-- <div class="gallery-container">
 			<ul class="ul">
 				<li><a href=""><img src="images/1.jpg"></a></li>
 				<li><a href=""><img src="images/2.jpg"></a></li>
@@ -71,13 +72,75 @@
 				<li><a href=""><img src="images/33.jpg"></a></li>
 				<li><a href=""><img src="images/34.jpg"></a></li>
 				<li><a href=""><img src="images/35.jpg"></a></li>
-				<li><a href=""><img src="images/36.jpg"></a></li>
+				<li><a href=""><img src="images/36.jpg"></a></li> -->
 
-				<li><a href=""><img src="images/37.jpg"></a></li>
+<!-- 				<li><a href=""><img src="images/37.jpg"></a></li>
 				<li><a href=""><img src="images/38.jpg"></a></li>
-				<li><a href=""><img src="images/39.jpg"></a></li>
-			</ul>
-		</div>
+				<li><a href=""><img src="images/39.jpg"></a></li> -->
+<!-- 			</ul>
+		</div> -->
+
+
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<div><a href=""><img src="images/1.jpg"></a></div>
+			<div><a href=""><img src="images/2.jpg"></a></div>
+			<div><a href=""><img src="images/3.jpg"></a></div>
+			<div><a href=""><img src="images/4.jpg"></a></div>
+			<div><a href=""><img src="images/5.jpg"></a></div>
+			<div><a href=""><img src="images/6.jpg"></a></div>
+			<div><a href=""><img src="images/7.jpg"></a></div>
+			<div><a href=""><img src="images/8.jpg"></a></div>
+			<div><a href=""><img src="images/9.jpg"></a></div>
+        </div>
+        <div class="swiper-slide">
+        		<div><a href=""><img src="images/10.jpg"></a></div>
+				<div><a href=""><img src="images/11.jpg"></a></div>
+				<div><a href=""><img src="images/12.jpg"></a></div>
+				<div><a href=""><img src="images/13.jpg"></a></div>
+				<div><a href=""><img src="images/14.jpg"></a></div>
+				<div><a href=""><img src="images/15.jpg"></a></div>
+				<div><a href=""><img src="images/16.jpg"></a></div>
+				<div><a href=""><img src="images/17.jpg"></a></div>
+				<div><a href=""><img src="images/18.jpg"></a></div>
+        </div>
+        <div class="swiper-slide">
+        		<div><a href=""><img src="images/19.jpg"></a></div>
+				<div><a href=""><img src="images/20.jpg"></a></div>
+				<div><a href=""><img src="images/21.jpg"></a></div>
+				<div><a href=""><img src="images/22.jpg"></a></div>
+				<div><a href=""><img src="images/23.jpg"></a></div>
+				<div><a href=""><img src="images/24.jpg"></a></div>
+				<div><a href=""><img src="images/25.jpg"></a></div>
+				<div><a href=""><img src="images/26.jpg"></a></div>
+				<div><a href=""><img src="images/27.jpg"></a></div>
+        </div>
+        <div class="swiper-slide">
+        		<div><a href=""><img src="images/28.jpg"></a></div>
+				<div><a href=""><img src="images/29.jpg"></a></div>
+				<div><a href=""><img src="images/30.jpg"></a></div>
+				<div><a href=""><img src="images/31.jpg"></a></div>
+				<div><a href=""><img src="images/32.jpg"></a></div>
+				<div><a href=""><img src="images/33.jpg"></a></div>
+				<div><a href=""><img src="images/34.jpg"></a></div>
+				<div><a href=""><img src="images/35.jpg"></a></div>
+				<div><a href=""><img src="images/36.jpg"></a></div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <!-- <div class="swiper-pagination"></div> -->
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+
+</div>
+
+
 	</section>
 	<section class="show-pic">
 		<div><img src="images/1.jpg"></div>
@@ -88,10 +151,28 @@
 	<div class="mask"></div>
 	<footer class="md-footer"></footer>
 	<script src="lib/jquery-1.12.0.min.js"></script>
+	<script src="lib/swiper-3.3.1.jquery.min.js"></script>
 	<script>
 		$(function() {
 
-			$('.gallery-container').on('click', 'a', function(event) {
+
+	var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    autoplay: 5000,
+    speed: 600,
+    
+    // 如果需要分页器
+    // pagination: '.swiper-pagination',
+    
+    // 如果需要前进后退按钮
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    
+    // 如果需要滚动条
+    // scrollbar: '.swiper-scrollbar',
+  })    
+
+			$('.swiper-slide').on('click', 'a', function(event) {
 				$(this).parent().addClass('active-img');
 				$('.show-pic>div>img').attr('src', $(this).find('img')[0].src);
 				$('.show-pic').show();
@@ -101,11 +182,13 @@
 					$('.show-pic>div').css('overflow-x', '')
 				}
 				$('.mask').show();
+				mySwiper.stopAutoplay();
 				return false;
 			});
 
 			$('.show-pic').mouseover(function(event) {
 				$('.show-pic a').show();
+
 			});
 			$('.show-pic').mouseout(function(event) {
 				$('.show-pic a').hide();
@@ -113,8 +196,9 @@
 			$('.back-btn').click(function(event) {
 				$('.show-pic').hide();
 				$('.mask').hide();
-				$('.gallery-container li').removeClass();
-				timer = setInterval(moveUl,20);
+				$('.swiper-slide div').removeClass();
+				// timer = setInterval(moveUl,20);
+				mySwiper.startAutoplay();
 				return false;
 			});
 			$('.left-arrow').click(function(event) {
@@ -123,11 +207,11 @@
 					$nowImg.prev().addClass('active-img').end().removeClass();
 					$('.show-pic>div>img').attr('src', $('.active-img').find('img')[0].src);
 				}
-				if ($('.show-pic>div>img').height() > 500) {
-					$('.show-pic>div').css('overflow-x', 'hidden');
-				} else {
-					$('.show-pic>div').css('overflow-x', '')
-				}
+				// if ($('.show-pic>div>img').height() > 500) {
+				// 	$('.show-pic>div').css('overflow-x', 'hidden');
+				// } else {
+				// 	$('.show-pic>div').css('overflow-x', '')
+				// }
 				return false;
 			});
 			$('.right-arrow').click(function(event) {
@@ -136,49 +220,53 @@
 					$nowImg.next().addClass('active-img').end().removeClass();
 					$('.show-pic>div>img').attr('src', $('.active-img').find('img')[0].src);
 				}
-				if ($('.show-pic>div>img').height() > 500) {
-					$('.show-pic>div').css('overflow-x', 'hidden');
-				} else {
-					$('.show-pic>div').css('overflow-x', '')
-				}
+				// if ($('.show-pic>div>img').height() > 500) {
+				// 	$('.show-pic>div').css('overflow-x', 'hidden');
+				// } else {
+				// 	$('.show-pic>div').css('overflow-x', '')
+				// }
 				return false;
 			});
 
 
-			var $ul = $('.ul');
-			var timer;
-			var oldTop;
-			var ulHeight = 2368;
-			$ul[0].innerHTML += $ul[0].innerHTML;
+
+		// 滚动图片
+
+		// 	var $ul = $('.ul');
+		// 	var timer;
+		// 	var oldTop;
+		// 	var ulHeight = 2368;
+		// 	$ul[0].innerHTML += $ul[0].innerHTML;
 
 
-			setTimeout(function(){
-				timer = setInterval(moveUl,20);
-			},10)
+		// 	setTimeout(function(){
+		// 		timer = setInterval(moveUl,20);
+		// 	},10)
 
-			function moveUl () {
-				if (parseInt($ul.css('top')) < -ulHeight) {
-					$ul.css('top',0);
-				}
-				// console.log($ul.css('top'));
-				$ul.css('top','-=1px');
-			}
+		// 	function moveUl () {
+		// 		if (parseInt($ul.css('top')) < -ulHeight) {
+		// 			$ul.css('top',0);
+		// 		}
 
-			$('.gallery-container').mouseover(function(event) {
-				clearInterval(timer);
-			});
+		// 		$ul.css('top','-=1px');
+		// 	}
 
-			$('.gallery-container').mouseout(function(event) {
+		// 	$('.gallery-container').mouseover(function(event) {
+		// 		clearInterval(timer);
+		// 	});
 
-				if ($('.show-pic').is(':visible')) {
-					return
-				} else {
-					timer = setInterval(moveUl,20);
-				}
-			});
+		// 	$('.gallery-container').mouseout(function(event) {
+
+		// 		if ($('.show-pic').is(':visible')) {
+		// 			return
+		// 		} else {
+		// 			timer = setInterval(moveUl,20);
+		// 		}
+		// 	});
 
 
 
+			//滚动加载
 
 			// var $mainDiv = $(".gallery-container ul");
 			// var html = '';
