@@ -25,7 +25,9 @@
 			<div class="swiper-slide" id="slide1">
 				<img src="images/s1-circle1.png" id="s1-c1" class="circle">
 				<img src="images/s1-circle2.png" id="s1-c2" class="circle">
-				<!-- <img src="images/s1-circle3.png" id="s1-c3" class="circle"> -->
+				<img src="images/s1-circle3.png" id="s1-c3" class="circle">
+				<a href="#" id="s1-fp"><img src="images/s1-fingerprint.png"></a>
+				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
 			<div class="swiper-slide">Slide 2</div>
 			<div class="swiper-slide">Slide 3</div>
@@ -35,15 +37,29 @@
 	<script src="js/swiper-3.3.1.jquery.min.js"></script>
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>
-		var mainSwiper = new Swiper ('#main-swiper', {
-			direction: 'vertical',
-			effect : 'fade',
-			fade: {
-				crossFade: true,
-			}
-		})
-		$('#s1-c1').css('top',parseInt($(window).width())*0.27);      
-		$('#s1-c2').css('top',parseInt($(window).width())*0.21);      
+		$(document).ready(function() {
+			var mainSwiper = new Swiper ('#main-swiper', {
+				direction: 'vertical',
+				effect : 'fade',
+				fade: {
+					crossFade: true,
+				}
+			})
+			$('#s1-c1').css('top',parseInt($(window).width())*0.27);      
+			$('#s1-c2').css('top',parseInt($(window).width())*0.21);
+			$('#s1-c3').css('top',parseInt($(window).width())*0.205);
+			$('#s1-fp').css('top',parseInt($(window).width())*0.53);
+			// alert('2');
+			// $(document).click(function(event) {
+			// 	alert(3);
+			// });
+
+			$('#s1-fp').click(function(){
+				// alert('1');
+				mainSwiper.slideTo(1, 1000, false);
+				return false;
+			}) 
+		});    
 	</script>
 </body>
 </html>

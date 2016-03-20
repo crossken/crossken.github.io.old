@@ -15,7 +15,8 @@ html,body,.swiper-container {
 	background: #fff url(../images/start.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
-	position: 
+	position: relative;
+	overflow: hidden;
 }
 #slide1 .circle {
 	display: block;
@@ -30,16 +31,45 @@ html,body,.swiper-container {
 #s1-c2 {
 	width: 58%;
 	left: 16%;
-		-webkit-animation: rotate1 6s infinite linear;
+	-webkit-animation: rotate1 6s infinite linear;
 	animation: rotate1 6s infinite linear;
 }
 #s1-c3 {
-	width: 30%;
+	width: 72%;
+	left: 10%;
+	-webkit-animation: rotate1 10s infinite linear;
+	animation: rotate1 10s infinite linear;
 }
 @-webkit-keyframes rotate1{
-	/*0% {}*/
+	0%{ transform:rotate(0deg); }
+	100%{ transform:rotate(-360deg); }
 }
 @keyframes rotate1 {	
 	0%{ transform:rotate(0deg); }
 	100%{ transform:rotate(-360deg); }
+}
+#s1-fp {
+	width: 11.5%;
+	position: absolute;
+	left: 48%;
+	-webkit-animation: fadeInOut 1s infinite linear;
+	animation: fadeInOut 1s infinite linear;
+	z-index: 2;
+}
+#s1-fp>img {
+	width: 100%;
+}
+#s1-sbl {
+	width: 42%;
+	position: absolute;
+	top: 0;
+	left: 40%;
+}
+@-webkit-keyframes fadeInOut{
+	0%{ opacity: 1;}
+	100%{ opacity: 0; }
+}
+@keyframes fadeInOut {	
+	0%{ opacity: 1;}
+	100%{ opacity: 0; }
 }
