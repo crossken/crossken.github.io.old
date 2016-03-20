@@ -2,297 +2,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ameliejiang</title>
-	<meta name="keywords" content="ameliejiang">
-	<meta name="description" content="ameliejiang">
-	<meta name="author" content="ken,kenchung.ftd@gmail.com">
-	<meta name="copyright" content="广州玑域信息科技有限公司">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- 固定视口宽度为设备宽度，禁止用户缩放页面 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+	<!-- 格式检测 -->
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+	<!-- 禁止百度自动转码 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+
+	<title>玑域科技</title>
+	
 	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<header class="md-header">
-		<img src="images/work.jpg" class="banner">
-		<img src="images/title.png" class="title">
-		<div>
-			<ul>
-				<li>
-					<a href="index.html" class="left active"><img src="images/link_work.png"></a>
-				</li>
-				<li>
-					<a href="about.html" class="center"><img src="images/link_about.png"></a>
-				</li>
-				<li>
-					<a href="contact.html" class="right"><img src="images/link_contact.png"></a>
-				</li>
-			</ul>
+	<div class="swiper-container" id="main-swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="silde1">Slide 1</div>
+			<div class="swiper-slide">Slide 2</div>
+			<div class="swiper-slide">Slide 3</div>
 		</div>
-	</header>
-	<section class="md-gallery">
-		<!-- <div class="gallery-container">
-			<ul class="ul">
-				<li><a href=""><img src="images/1.jpg"></a></li>
-				<li><a href=""><img src="images/2.jpg"></a></li>
-				<li><a href=""><img src="images/3.jpg"></a></li>
-				<li><a href=""><img src="images/4.jpg"></a></li>
-				<li><a href=""><img src="images/5.jpg"></a></li>
-				<li><a href=""><img src="images/6.jpg"></a></li>
-				<li><a href=""><img src="images/7.jpg"></a></li>
-				<li><a href=""><img src="images/8.jpg"></a></li>
-				<li><a href=""><img src="images/9.jpg"></a></li>
-
-				<li><a href=""><img src="images/10.jpg"></a></li>
-				<li><a href=""><img src="images/11.jpg"></a></li>
-				<li><a href=""><img src="images/12.jpg"></a></li>
-				<li><a href=""><img src="images/13.jpg"></a></li>
-				<li><a href=""><img src="images/14.jpg"></a></li>
-				<li><a href=""><img src="images/15.jpg"></a></li>
-				<li><a href=""><img src="images/16.jpg"></a></li>
-				<li><a href=""><img src="images/17.jpg"></a></li>
-				<li><a href=""><img src="images/18.jpg"></a></li>
-
-				<li><a href=""><img src="images/19.jpg"></a></li>
-				<li><a href=""><img src="images/20.jpg"></a></li>
-				<li><a href=""><img src="images/21.jpg"></a></li>
-				<li><a href=""><img src="images/22.jpg"></a></li>
-				<li><a href=""><img src="images/23.jpg"></a></li>
-				<li><a href=""><img src="images/24.jpg"></a></li>
-				<li><a href=""><img src="images/25.jpg"></a></li>
-				<li><a href=""><img src="images/26.jpg"></a></li>
-				<li><a href=""><img src="images/27.jpg"></a></li>
-
-				<li><a href=""><img src="images/28.jpg"></a></li>
-				<li><a href=""><img src="images/29.jpg"></a></li>
-				<li><a href=""><img src="images/30.jpg"></a></li>
-				<li><a href=""><img src="images/31.jpg"></a></li>
-				<li><a href=""><img src="images/32.jpg"></a></li>
-				<li><a href=""><img src="images/33.jpg"></a></li>
-				<li><a href=""><img src="images/34.jpg"></a></li>
-				<li><a href=""><img src="images/35.jpg"></a></li>
-				<li><a href=""><img src="images/36.jpg"></a></li> -->
-
-<!-- 				<li><a href=""><img src="images/37.jpg"></a></li>
-				<li><a href=""><img src="images/38.jpg"></a></li>
-				<li><a href=""><img src="images/39.jpg"></a></li> -->
-<!-- 			</ul>
-		</div> -->
-
-
-
-
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-        	<div><a href=""><img src="images/1.jpg"></a></div>
-			<div><a href=""><img src="images/2.jpg"></a></div>
-			<div><a href=""><img src="images/3.jpg"></a></div>
-			<div><a href=""><img src="images/4.jpg"></a></div>
-			<div><a href=""><img src="images/5.jpg"></a></div>
-			<div><a href=""><img src="images/6.jpg"></a></div>
-			<div><a href=""><img src="images/7.jpg"></a></div>
-			<div><a href=""><img src="images/8.jpg"></a></div>
-			<div><a href=""><img src="images/9.jpg"></a></div>
-        </div>
-        <div class="swiper-slide">
-        		<div><a href=""><img src="images/10.jpg"></a></div>
-				<div><a href=""><img src="images/11.jpg"></a></div>
-				<div><a href=""><img src="images/12.jpg"></a></div>
-				<div><a href=""><img src="images/13.jpg"></a></div>
-				<div><a href=""><img src="images/14.jpg"></a></div>
-				<div><a href=""><img src="images/15.jpg"></a></div>
-				<div><a href=""><img src="images/16.jpg"></a></div>
-				<div><a href=""><img src="images/17.jpg"></a></div>
-				<div><a href=""><img src="images/18.jpg"></a></div>
-        </div>
-        <div class="swiper-slide">
-        		<div><a href=""><img src="images/19.jpg"></a></div>
-				<div><a href=""><img src="images/20.jpg"></a></div>
-				<div><a href=""><img src="images/21.jpg"></a></div>
-				<div><a href=""><img src="images/22.jpg"></a></div>
-				<div><a href=""><img src="images/23.jpg"></a></div>
-				<div><a href=""><img src="images/24.jpg"></a></div>
-				<div><a href=""><img src="images/25.jpg"></a></div>
-				<div><a href=""><img src="images/26.jpg"></a></div>
-				<div><a href=""><img src="images/27.jpg"></a></div>
-        </div>
-        <div class="swiper-slide">
-        		<div><a href=""><img src="images/28.jpg"></a></div>
-				<div><a href=""><img src="images/29.jpg"></a></div>
-				<div><a href=""><img src="images/30.jpg"></a></div>
-				<div><a href=""><img src="images/31.jpg"></a></div>
-				<div><a href=""><img src="images/32.jpg"></a></div>
-				<div><a href=""><img src="images/33.jpg"></a></div>
-				<div><a href=""><img src="images/34.jpg"></a></div>
-				<div><a href=""><img src="images/35.jpg"></a></div>
-				<div><a href=""><img src="images/36.jpg"></a></div>
-        </div>
-    </div>
-    <!-- 如果需要分页器 -->
-    <!-- <div class="swiper-pagination"></div> -->
-    
-    <!-- 如果需要导航按钮 -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    
-
-</div>
-
-
-	</section>
-	<section class="show-pic">
-		<div><img src="images/1.jpg"></div>
-		<a href="" class="left-arrow"><img src="images/left_arrow.png"></a>
-		<a href="" class="right-arrow"><img src="images/right_arrow.png"></a>
-		<a href="" class="back-btn"><img src="images/back.png"></a>
-	</section>
-	<div class="mask"></div>
-	<footer class="md-footer"></footer>
-	<script src="lib/jquery-1.12.0.min.js"></script>
-	<script src="lib/swiper-3.3.1.jquery.min.js"></script>
+	</div>
+	<script src="js/zepto.js"></script>
+	<script src="js/swiper-3.3.1.jquery.min.js"></script>
+	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>
-		$(function() {
-
-
-	var mySwiper = new Swiper ('.swiper-container', {
-    loop: true,
-    autoplay: 5000,
-    speed: 600,
-    autoplayDisableOnInteraction: false,
-    
-    // 如果需要分页器
-    // pagination: '.swiper-pagination',
-    
-    // 如果需要前进后退按钮
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    
-    // 如果需要滚动条
-    // scrollbar: '.swiper-scrollbar',
-  })    
-
-			$('.swiper-slide').on('click', 'a', function(event) {
-				$(this).parent().addClass('active-img');
-				$('.show-pic>div>img').attr('src', $(this).find('img')[0].src);
-				$('.show-pic').show();
-				if ($('.show-pic>div>img').height() > 500) {
-					$('.show-pic>div').css('overflow-x', 'hidden');
-				} else {
-					$('.show-pic>div').css('overflow-x', '')
-				}
-				$('.mask').show();
-				mySwiper.stopAutoplay();
-				return false;
-			});
-
-			$('.show-pic').mouseover(function(event) {
-				$('.show-pic a').show();
-
-			});
-			$('.show-pic').mouseout(function(event) {
-				$('.show-pic a').hide();
-			});
-			$('.back-btn').click(function(event) {
-				$('.show-pic').hide();
-				$('.mask').hide();
-				$('.swiper-slide div').removeClass();
-				// timer = setInterval(moveUl,20);
-				mySwiper.startAutoplay();
-				return false;
-			});
-			$('.left-arrow').click(function(event) {
-				var $nowImg = $('.active-img');
-				if($nowImg.prev().length) {
-					$nowImg.prev().addClass('active-img').end().removeClass();
-					$('.show-pic>div>img').attr('src', $('.active-img').find('img')[0].src);
-				}
-				// if ($('.show-pic>div>img').height() > 500) {
-				// 	$('.show-pic>div').css('overflow-x', 'hidden');
-				// } else {
-				// 	$('.show-pic>div').css('overflow-x', '')
-				// }
-				return false;
-			});
-			$('.right-arrow').click(function(event) {
-				var $nowImg = $('.active-img');
-				if($nowImg.next().length) {
-					$nowImg.next().addClass('active-img').end().removeClass();
-					$('.show-pic>div>img').attr('src', $('.active-img').find('img')[0].src);
-				}
-				// if ($('.show-pic>div>img').height() > 500) {
-				// 	$('.show-pic>div').css('overflow-x', 'hidden');
-				// } else {
-				// 	$('.show-pic>div').css('overflow-x', '')
-				// }
-				return false;
-			});
-
-
-
-		// 滚动图片
-
-		// 	var $ul = $('.ul');
-		// 	var timer;
-		// 	var oldTop;
-		// 	var ulHeight = 2368;
-		// 	$ul[0].innerHTML += $ul[0].innerHTML;
-
-
-		// 	setTimeout(function(){
-		// 		timer = setInterval(moveUl,20);
-		// 	},10)
-
-		// 	function moveUl () {
-		// 		if (parseInt($ul.css('top')) < -ulHeight) {
-		// 			$ul.css('top',0);
-		// 		}
-
-		// 		$ul.css('top','-=1px');
-		// 	}
-
-		// 	$('.gallery-container').mouseover(function(event) {
-		// 		clearInterval(timer);
-		// 	});
-
-		// 	$('.gallery-container').mouseout(function(event) {
-
-		// 		if ($('.show-pic').is(':visible')) {
-		// 			return
-		// 		} else {
-		// 			timer = setInterval(moveUl,20);
-		// 		}
-		// 	});
-
-
-
-			//滚动加载
-
-			// var $mainDiv = $(".gallery-container ul");
-			// var html = '';
-			// var displayedImg = 9;
-			// var allImg = 39;
-			// var oldPic;
-			// var scrollTime = 0
-			// $(window).scroll(function(event) {
-			// 	var pageH = $(document).height()
-   //          	var scrollT = $(window).scrollTop(); //滚动条top   
-   //          	var winheight=$(window).height();
-   //          	if ((parseInt(scrollT)+parseInt(winheight)+290>=parseInt(pageH))&&(displayedImg<allImg)) {
-   //          		scrollTime++;
-   //          		oldPic = displayedImg;
-   //          		displayedImg = allImg - oldPic>9 ? oldPic+9 : allImg;
-   //          		for (var i = oldPic+1; i < displayedImg+1; i++) {
-   //          			html += '<li><a href=""><img src="images/'+i+'.jpg"></a></li>';
-   //          		};
-
-   //          		$mainDiv.append(html);
-   //          		html = '';
-   //          	}
-   //          });
-
-});
-</script>
+		var mainSwiper = new Swiper ('#main-swiper', {
+			direction: 'vertical',
+			effect : 'fade',
+			fade: {
+				crossFade: true,
+			}
+		})       
+	</script>
 </body>
 </html>
