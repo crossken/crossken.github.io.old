@@ -28,7 +28,10 @@ html,body,.swiper-container {
 	animation: rotate1 3s infinite linear;
 }
 #s1-c2 {
-	width: 25%;
+	width: 58%;
+	left: 16%;
+		-webkit-animation: rotate1 6s infinite linear;
+	animation: rotate1 6s infinite linear;
 }
 #s1-c3 {
 	width: 30%;
