@@ -100,35 +100,34 @@ html,body,.swiper-container {
 }
 #s2-robot {
 	position: absolute;
-	left: 50%;
-	width: 16%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	left: 0;
+	width: 100%;
 }
 #s2-rbline {
 	position: absolute;
-	left: 50%;
-	width: 14.3%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	/*display: none;*/
+	left: 0;
+	width: 100%;
+/*	height: 0;*/
 }
 #s2-word1 {
 	position: absolute;
 	left: 0;
 	width: 100%;
+	top: 46%;
+}
+#s2-para {
+	position: absolute;
+	top: 60%;
 }
 #now-date {
-	position: absolute;
 	text-align: center;
 	width: 100%;
 	font-weight: 200;
 	font-size: 20px;
+	margin: 8px 0;
 }
 #s2-word2 {
-	position: absolute;
 	width: 100%;
-	left: 0;
 }
 #s2-logo {
 	position: absolute;

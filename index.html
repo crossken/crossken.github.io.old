@@ -30,12 +30,14 @@
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
 			<div class="swiper-slide" id="slide2">
-				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" class="ani">
+				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<img src="images/s2-robot.png" id="s2-robot">
 				<img src="images/s2-rbline.png" id="s2-rbline">
-				<img src="images/s2-word1.png" id="s2-word1">
-				<p id="now-date"></p>
-				<img src="images/s2-word2.png" id="s2-word2">
+				<img src="images/s2-word1.png" id="s2-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
+				<div id="s2-para" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s" class="ani">
+					<p id="now-date"></p>
+					<img src="images/s2-word2.png" id="s2-word2">
+				</div>
 				<img src="images/logo.png" id="s2-logo">
 			</div>
 			<div class="swiper-slide">Slide 3</div>
@@ -57,39 +59,38 @@
 					swiperAnimate(swiper); 
 				}, 
 				onSlideChangeEnd: function(swiper){ 
-					
-					// if (swiper.activeIndex == 1) {
-					// 	alert(1);
-					// 	$('#s2-rbline').slideDown();
-					// }
+
 				},
 				onTransitionEnd: function(swiper){
-					// alert(1);
 					swiperAnimate(swiper);
+					if (swiper.activeIndex == 1) {
+						// $('#s2-rbline').animate({'height': rblineheight}, 300)
+					}
+
 				}
 			})
 			var windowWidth = parseInt($(window).width());
-			// alert($(window).width());
+			var rblineheight = $('#s2-rbline').height();
+			// $('#s2-rbline').height(0);
+			// alert(rblineheight);
 			$('#s1-c1').css('top',parseInt(windowWidth*0.27));    
 			$('#s1-c2').css('top',parseInt(windowWidth*0.21));
 			$('#s1-c3').css('top',parseInt(windowWidth*0.205));
 			$('#s1-fp').css('top',parseInt(windowWidth*0.53));
 
 			$('#s1-fp').click(function(){
-				mainSwiper.slideTo(1, 1000, function(){
+				mainSwiper.slideTo(1, 800, function(){
 					swiperAnimate(swiper);
 				});
 				return false;
 			})
 
 			$('#s2-robot').css('top',parseInt(windowWidth*0.47));
-			$('#s2-rbline').css('top',parseInt(windowWidth*0.505));
-			$('#s2-word1').css('top',parseInt(windowWidth*0.8));
+			$('#s2-rbline').css('top',parseInt(windowWidth*0.52));
 
 			var nowDate = new Date();
-			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate())).css('top',windowWidth); 
-
-			$('#s2-word2').css('top',parseInt($(window).width())*1.14);			
+			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate()));
+			
 		});
 
 function padding(number) {
