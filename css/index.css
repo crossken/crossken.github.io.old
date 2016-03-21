@@ -19,11 +19,13 @@ html,body,.swiper-container {
 	position: relative;
 }
 
+
+/*slide1*/
+
 #slide1 {
 	background: #000 url(../images/start.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
-/*	position: relative;*/
 }
 #slide1 .circle {
 	display: block;
@@ -109,6 +111,7 @@ html,body,.swiper-container {
 	width: 14.3%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
+	/*display: none;*/
 }
 #s2-word1 {
 	position: absolute;
@@ -135,3 +138,11 @@ html,body,.swiper-container {
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
+/*@-webkit-keyframes lineSlideDown{
+	0% {height: 0}
+	100% { height: 100%}
+}
+@keyframes lineSlideDown{
+	0% {height: 0}
+	100% { height: 100%}
+}*/
