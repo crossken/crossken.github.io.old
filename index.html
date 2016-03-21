@@ -29,7 +29,15 @@
 				<a href="#" id="s1-fp"><img src="images/s1-fingerprint.png"></a>
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
-			<div class="swiper-slide">Slide 2</div>
+			<div class="swiper-slide" id="slide2">
+				<img src="images/s2-title.png" id="s2-title">
+				<img src="images/s2-robot.png" id="s2-robot">
+				<img src="images/s2-rbline.png" id="s2-rbline">
+				<img src="images/s2-word1.png" id="s2-word1">
+				<p id="now-date"></p>
+				<img src="images/s2-word2.png" id="s2-word2">
+				<img src="images/logo.png" id="s2-logo">
+			</div>
 			<div class="swiper-slide">Slide 3</div>
 		</div>
 	</div>
@@ -49,17 +57,25 @@
 			$('#s1-c2').css('top',parseInt($(window).width())*0.21);
 			$('#s1-c3').css('top',parseInt($(window).width())*0.205);
 			$('#s1-fp').css('top',parseInt($(window).width())*0.53);
-			// alert('2');
-			// $(document).click(function(event) {
-			// 	alert(3);
-			// });
 
 			$('#s1-fp').click(function(){
-				// alert('1');
 				mainSwiper.slideTo(1, 1000, false);
 				return false;
-			}) 
-		});    
+			})
+
+			$('#s2-robot').css('top',parseInt($(window).width())*0.47);
+			$('#s2-rbline').css('top',parseInt($(window).width())*0.505);
+			$('#s2-word1').css('top',parseInt($(window).width())*0.8);
+
+			var nowDate = new Date();
+			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate())).css('top',parseInt($(window).width())*1);; 
+
+			$('#s2-word2').css('top',parseInt($(window).width())*1.14);			
+		});
+
+		function padding(number) {
+			return number < 10 ? "0" + number : "" + number; 
+		}
 	</script>
 </body>
 </html>

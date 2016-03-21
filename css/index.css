@@ -3,6 +3,8 @@ body {
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	-webkit-user-select: none;
 	-webkit-text-size-adjust: none;
+	background-color: #000;
+	color: #fff;
 }
 a,img {
 	-webkit-touch-callout:none;
@@ -11,12 +13,17 @@ html,body,.swiper-container {
 	width: 100%;
 	height: 100%;
 }
+
+.swiper-slide {
+	overflow: hidden;
+	position: relative;
+}
+
 #slide1 {
-	background: #fff url(../images/start.jpg) 0 0 no-repeat;
+	background: #000 url(../images/start.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
-	position: relative;
-	overflow: hidden;
+/*	position: relative;*/
 }
 #slide1 .circle {
 	display: block;
@@ -72,4 +79,59 @@ html,body,.swiper-container {
 @keyframes fadeInOut {	
 	0%{ opacity: 1;}
 	100%{ opacity: 0; }
+}
+
+
+/*slide2*/
+
+#slide2 {
+	background: #000 url(../images/background.jpg) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+#s2-title {
+	position: absolute;
+	width: 42%;
+	top: 20px;
+	left: 8%;
+}
+#s2-robot {
+	position: absolute;
+	left: 50%;
+	width: 16%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+#s2-rbline {
+	position: absolute;
+	left: 50%;
+	width: 14.3%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+#s2-word1 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+#now-date {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	font-weight: 200;
+	font-size: 20px;
+}
+#s2-word2 {
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+#s2-logo {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	width: 22%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
