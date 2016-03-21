@@ -86,7 +86,7 @@ html,body,.swiper-container {
 
 /*slide2*/
 
-#slide2 {
+#slide2,#slide3,#ani{
 	background: #000 url(../images/background.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -107,7 +107,6 @@ html,body,.swiper-container {
 	position: absolute;
 	left: 0;
 	width: 100%;
-/*	height: 0;*/
 }
 #s2-word1 {
 	position: absolute;
@@ -117,23 +116,72 @@ html,body,.swiper-container {
 }
 #s2-para {
 	position: absolute;
-	top: 66%;
+	top: 69%;
 }
 #now-date {
 	text-align: center;
 	width: 100%;
 	font-weight: 200;
 	font-size: 20px;
-	margin: 8px 0;
+	margin: 0;
 }
 #s2-word2 {
 	width: 100%;
 }
-#s2-logo {
+.s2-logo {
 	position: absolute;
 	bottom: 16px;
 	left: 50%;
 	width: 22%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+
+
+/*slide3*/
+
+#s3-title {
+	position: absolute;
+	width: 25%;
+	top: 20px;
+	left: 8%;
+}
+#s3-word1 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 35%;
+}
+#s3-go {
+	display: block;
+	position: absolute;
+	width: 16%;
+	top: 65%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+#s3-go>img {
+	width: 100%;
+}
+#ani-bg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+#ani-circle {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+#ani-1 {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 58%;
 }

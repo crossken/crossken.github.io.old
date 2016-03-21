@@ -38,9 +38,19 @@
 					<p id="now-date"></p>
 					<img src="images/s2-word2.png" id="s2-word2">
 				</div>
-				<img src="images/logo.png" id="s2-logo">
+				<img src="images/logo.png" class="s2-logo">
 			</div>
-			<div class="swiper-slide">Slide 3</div>
+			<div class="swiper-slide" id="slide3">
+				<img src="images/s3-title.png" id="s3-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
+				<img src="images/s3-word1.png" id="s3-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
+				<a href="" id="s3-go"><img src="images/go.png"></a>
+				<img src="images/logo.png" class="s2-logo">
+			</div>
+			<div class="swiper-slide" id="ani">
+				<img src="images/ani-bg.png" id="ani-bg">
+				<img src="images/ani-circle.png" id="ani-circle">
+				<img src="images/ani-1.jpg" id="ani-1">
+			</div>
 		</div>
 	</div>
 	<script src="js/zepto.js"></script>
@@ -54,6 +64,7 @@
 				fade: {
 					crossFade: true,
 				},
+				// allowSwipeToPrev : false,
 				onInit: function(swiper){ 
 					swiperAnimateCache(swiper); 
 					swiperAnimate(swiper); 
@@ -91,43 +102,14 @@
 			var nowDate = new Date();
 			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate()));
 			
+			$('#ani-1').css('top',parseInt(windowWidth*0.32));
 		});
 
 function padding(number) {
 	return number < 10 ? "0" + number : "" + number; 
 }
 
-// (function ($) {
-//   $.fn.slideDown = function (duration) {    
-//     // get old position to restore it then
-//     var position = this.css('position');
 
-//     // show element if it is hidden (it is needed if display is none)
-//     this.show();
-
-//     // place it so it displays as usually but hidden
-//     this.css({
-//       position: 'absolute',
-//       visibility: 'hidden'
-//     });
-
-//     // get naturally height
-//     var height = this.height();
-
-//     // set initial css for animation
-//     this.css({
-//       position: position,
-//       visibility: 'visible',
-//       overflow: 'hidden',
-//       height: 0
-//     });
-
-//     // animate to gotten height
-//     this.animate({
-//       height: height
-//     }, duration);
-//   };
-// })(Zepto);
 </script>
 </body>
 </html>
