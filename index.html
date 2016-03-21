@@ -30,7 +30,7 @@
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
 			<div class="swiper-slide" id="slide2">
-				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" class="ani">
+				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >
 				<img src="images/s2-robot.png" id="s2-robot">
 				<img src="images/s2-rbline.png" id="s2-rbline">
 				<img src="images/s2-word1.png" id="s2-word1">
@@ -57,7 +57,7 @@
 					swiperAnimate(swiper); 
 				}, 
 				onSlideChangeEnd: function(swiper){ 
-					swiperAnimate(swiper);
+					
 					// if (swiper.activeIndex == 1) {
 					// 	alert(1);
 					// 	$('#s2-rbline').slideDown();
@@ -65,24 +65,29 @@
 				},
 				onTransitionEnd: function(swiper){
 					// alert(1);
+					swiperAnimate(swiper);
 				}
 			})
-			$('#s1-c1').css('top',parseInt($(window).width())*0.27);      
-			$('#s1-c2').css('top',parseInt($(window).width())*0.21);
-			$('#s1-c3').css('top',parseInt($(window).width())*0.205);
-			$('#s1-fp').css('top',parseInt($(window).width())*0.53);
+			var windowWidth = parseInt($(window).width());
+			// alert($(window).width());
+			$('#s1-c1').css('top',parseInt(windowWidth*0.27));    
+			$('#s1-c2').css('top',parseInt(windowWidth*0.21));
+			$('#s1-c3').css('top',parseInt(windowWidth*0.205));
+			$('#s1-fp').css('top',parseInt(windowWidth*0.53));
 
 			$('#s1-fp').click(function(){
-				mainSwiper.slideTo(1, 1000, false);
+				mainSwiper.slideTo(1, 1000, function(){
+					swiperAnimate(swiper);
+				});
 				return false;
 			})
 
-			$('#s2-robot').css('top',parseInt($(window).width())*0.47);
-			$('#s2-rbline').css('top',parseInt($(window).width())*0.505);
-			$('#s2-word1').css('top',parseInt($(window).width())*0.8);
+			$('#s2-robot').css('top',parseInt(windowWidth*0.47));
+			$('#s2-rbline').css('top',parseInt(windowWidth*0.505));
+			$('#s2-word1').css('top',parseInt(windowWidth*0.8));
 
 			var nowDate = new Date();
-			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate())).css('top',parseInt($(window).width())*1);; 
+			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate())).css('top',windowWidth); 
 
 			$('#s2-word2').css('top',parseInt($(window).width())*1.14);			
 		});
