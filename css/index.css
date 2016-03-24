@@ -86,7 +86,7 @@ html,body,.swiper-container {
 
 /*slide2*/
 
-#slide2,#slide3,#ani{
+#slide2,#slide3,#ani,#slide4,#slide5{
 	background: #000 url(../images/background.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -152,7 +152,7 @@ html,body,.swiper-container {
 	width: 100%;
 	top: 35%;
 }
-#s3-go {
+.go {
 	display: block;
 	position: absolute;
 	width: 16%;
@@ -161,7 +161,7 @@ html,body,.swiper-container {
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
-#s3-go>img {
+.go>img {
 	width: 100%;
 }
 #ani-bg {
@@ -184,4 +184,66 @@ html,body,.swiper-container {
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	width: 58%;
+}
+
+
+/*slide4*/
+
+#s4-title {
+	position: absolute;
+	width: 40%;
+	top: 20px;
+	left: 8%;
+}
+
+#s4-word1 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 35%;
+	/*display: none;*/
+}
+#s4-lr{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 35%;
+	display: none;
+}
+#s4-lr>img {
+	width: 100%;
+}
+#slide4 .loading-mask {
+	/*width: 37.5%;*/
+	width: 0;
+	height: 5%;
+	position: absolute;
+	background-color: #fff;
+	top: 43%;
+	left: 34.2%;
+	border-radius: 5px;
+}
+
+
+/*slide5*/
+#s5-title {
+	position: absolute;
+	width: 20%;
+	top: 20px;
+	left: 8%;
+}
+#s5-word1 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+}
+#s5-doc {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 24%;
+}
+#s5-go {
+	top: 68%;
 }

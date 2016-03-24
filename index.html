@@ -22,14 +22,14 @@
 <body>
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" id="slide1">
+			<div class="swiper-slide" id="slide1" data-hash="slide1">
 				<img src="images/s1-circle1.png" id="s1-c1" class="circle">
 				<img src="images/s1-circle2.png" id="s1-c2" class="circle">
 				<img src="images/s1-circle3.png" id="s1-c3" class="circle">
 				<a href="#" id="s1-fp"><img src="images/s1-fingerprint.png"></a>
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
-			<div class="swiper-slide" id="slide2">
+			<div class="swiper-slide" id="slide2" data-hash="slide2">
 				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<img src="images/s2-robot.png" id="s2-robot">
 				<img src="images/s2-rbline.png" id="s2-rbline">
@@ -40,16 +40,33 @@
 				</div>
 				<img src="images/logo.png" class="s2-logo">
 			</div>
-			<div class="swiper-slide" id="slide3">
+			<div class="swiper-slide" id="slide3" data-hash="slide3">
 				<img src="images/s3-title.png" id="s3-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<img src="images/s3-word1.png" id="s3-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
-				<a href="" id="s3-go"><img src="images/go.png"></a>
+				<a href="" id="s3-go" class="go"><img src="images/go.png"></a>
 				<img src="images/logo.png" class="s2-logo">
 			</div>
-			<div class="swiper-slide" id="ani">
+			<div class="swiper-slide" id="ani" data-hash="slide4">
 				<img src="images/ani-bg.png" id="ani-bg">
 				<img src="images/ani-circle.png" id="ani-circle">
 				<img src="images/ani-1.jpg" id="ani-1">
+			</div>
+			<div class="swiper-slide" id="slide4" data-hash="slide5">
+				<img src="images/s4-title.png" id="s4-title">
+				<img src="images/s4-word1.png" id="s4-word1">
+				<div id="s4-lr">
+					<img src="images/s4-loading.png">
+					<div class="loading-mask"></div>
+				</div>
+				<a href="" id="s4-go" class="go"><img src="images/go.png"></a>
+				<img src="images/logo.png" class="s2-logo">
+			</div>
+			<div class="swiper-slide" id="slide5" data-hash="slide6">
+				<img src="images/s5-title.png" id="s5-title">
+				<img src="images/s5-doc.png" id="s5-doc">
+				<img src="images/s5-word1.png" id="s5-word1">
+				<a href="" id="s5-go" class="go"><img src="images/go.png"></a>
+				<img src="images/logo.png" class="s2-logo">
 			</div>
 		</div>
 	</div>
@@ -58,12 +75,16 @@
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>
 		$(document).ready(function() {
+			$('a').on('click', 'a', function(event) {
+				event.preventDefault();
+			});
 			var mainSwiper = new Swiper ('#main-swiper', {
 				direction: 'vertical',
 				effect : 'fade',
 				fade: {
 					crossFade: true,
 				},
+				hashnav: true,
 				// allowSwipeToPrev : false,
 				onInit: function(swiper){ 
 					swiperAnimateCache(swiper); 
@@ -103,6 +124,22 @@
 			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate()));
 			
 			$('#ani-1').css('top',parseInt(windowWidth*0.32));
+
+			$('#s4-go').click(function(event) {
+
+				$('#s4-word1').fadeOut(600);
+				setTimeout(function(){
+					$('#s4-lr').fadeIn(700);
+				},600)
+				setTimeout(function(){
+					$('#slide4 .loading-mask').animate({'width': '37.5%'}, 1500);
+				},1400)
+				setTimeout(function(){
+					mainSwiper.slideTo(1, 800, function(){
+						swiperAnimate(swiper);
+					});
+				},3000)
+			});
 		});
 
 function padding(number) {
