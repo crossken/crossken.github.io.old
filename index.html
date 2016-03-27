@@ -30,15 +30,25 @@
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
 			<div class="swiper-slide" id="slide2" data-hash="slide2">
-				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
-				<img src="images/s2-robot.png" id="s2-robot">
-				<img src="images/s2-rbline.png" id="s2-rbline">
-				<img src="images/s2-word1.png" id="s2-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
-				<div id="s2-para" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s" class="ani">
+				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="3.1s" class="ani">
+				<a href="" id="s2-btn">
+					<img src="images/s2-robot.png" id="s2-robot" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
+					<img src="images/s2-hand.png" id="s2-hand"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="5.5s" class="ani">
+					<canvas id="canvas1" width="90" height="110"></canvas>
+					<canvas id="canvas2" width="90" height="110"></canvas>
+					<canvas id="canvas3" width="90" height="110"></canvas>
+					<canvas id="canvas4" width="90" height="110"></canvas>
+					<canvas id="canvas5" width="90" height="110"></canvas>
+					<canvas id="canvas6" width="90" height="110"></canvas>
+				</a>
+
+				<!-- <img src="images/s2-rbline.png" id="s2-rbline"> -->
+				<img src="images/s2-word1.png" id="s2-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="3.7s" class="ani">
+				<div id="s2-para" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="4.3s" class="ani">
 					<p id="now-date"></p>
 					<img src="images/s2-word2.png" id="s2-word2">
 				</div>
-				<img src="images/logo.png" class="s2-logo">
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="4.9s">
 			</div>
 			<div class="swiper-slide" id="slide3" data-hash="slide3">
 				<img src="images/s3-title.png" id="s3-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
@@ -97,22 +107,28 @@
 			$('a').on('click', 'a', function(event) {
 				event.preventDefault();
 			});
+			// $('#s2-btn').click(function(event) {
+			// 	alert(2);
+			// });
 			var mainSwiper = new Swiper ('#main-swiper', {
 				direction: 'vertical',
 				effect : 'fade',
 				fade: {
 					crossFade: true,
 				},
-				// speed : 100,
 				hashnav: true,
 				// onlyExternal: true,
-				// allowSwipeToPrev : false,
 				onInit: function(swiper){ 
 					swiperAnimateCache(swiper); 
 					swiperAnimate(swiper); 
 				}, 
 				onSlideChangeEnd: function(swiper){ 
 					swiperAnimate(swiper);
+					if (swiper.activeIndex == 1) {
+							setTimeout(function(){
+								drawHexagon();
+							},700)
+					}
 				},
 				onTransitionEnd: function(swiper){
 					
@@ -121,17 +137,19 @@
 			})
 			var windowWidth = parseInt($(window).width());
 			var rblineheight = $('#s2-rbline').height();
-			// $('#s2-rbline').height(0);
-			// alert(rblineheight);
 			$('#s1-c1').css('top',parseInt(windowWidth*0.27));    
 			$('#s1-c2').css('top',parseInt(windowWidth*0.21));
 			$('#s1-c3').css('top',parseInt(windowWidth*0.205));
 			$('#s1-fp').css('top',parseInt(windowWidth*0.53));
 
 			$('#s1-fp').click(function(){
-				mainSwiper.slideTo(1, 300,true);
-				return false;
+				mainSwiper.slideTo(1, 500,true);
+				// return false;
 			})
+			$('#s2-btn').click(function() {
+				mainSwiper.slideTo(2, 500,true);
+				// return false;
+			});
 
 			$('#s2-robot').css('top',parseInt(windowWidth*0.51));
 			$('#s2-rbline').css('top',parseInt(windowWidth*0.56));
@@ -156,6 +174,70 @@
 					});
 				},3000)
 			});
+
+
+			var stepTime = 5;
+		var canvasDelay = 150;
+
+		function drawPic(canvasId,from,to) {
+			var canvas = document.getElementById(canvasId);
+			var context = canvas.getContext("2d");
+
+			var timer=null;
+			var t=0,
+			c1=to.x-from.x,
+			c2=to.y-from.y,
+			d=50;
+			LineAnim();
+			function LineAnim(){
+				if (t>d) {
+					clearTimeout(timer);
+				}
+				else{
+					var x = from.x+(c1 * t / d),
+					y = from.y+(c2 * t / d);
+					context.beginPath();
+					context.clearRect(0,0,canvas.width, canvas.height);
+					context.moveTo(from.x, from.y);
+					context.lineTo(x, y);
+					context.closePath();
+					context.strokeStyle = "#fff";
+					context.lineWidth = 3;
+					context.stroke();
+					t++;
+					timer = setTimeout(arguments.callee, stepTime);
+				}
+			}
+		}
+
+
+
+		function drawHexagon(){
+			drawPic("canvas1",{x:45,y:0}, {x:90,y:30});
+			setTimeout(function(){
+				drawPic("canvas2",{x:90,y:30},{x:90,y:80});
+			},stepTime*50+canvasDelay);
+			setTimeout(function(){
+				drawPic("canvas3",{x:90,y:80},{x:45,y:110});
+			},(stepTime*50+canvasDelay)*2);
+			setTimeout(function(){
+				drawPic("canvas4",{x:45,y:110},{x:0,y:80});
+			},(stepTime*50+canvasDelay)*3);
+			setTimeout(function(){
+				drawPic("canvas5",{x:0,y:80},{x:0,y:30});
+			},(stepTime*50+canvasDelay)*4);
+			setTimeout(function(){
+				drawPic("canvas6",{x:0,y:30},{x:45,y:0});
+			},(stepTime*50+canvasDelay)*5);
+		}
+
+
+
+
+
+
+
+
 		});
 
 function padding(number) {

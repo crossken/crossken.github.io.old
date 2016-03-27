@@ -98,7 +98,7 @@ html,body,.swiper-container {
 	top: 20px;
 	left: 8%;
 }
-#s2-robot {
+/*#s2-robot {
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -107,6 +107,29 @@ html,body,.swiper-container {
 	position: absolute;
 	left: 0;
 	width: 100%;
+}*/
+#s2-btn {
+	position: absolute;
+	display: block;
+	top: 30%;
+	width: 20%;
+	left: 40%;
+	height: 15%;
+}
+#s2-robot {
+	width: 100%;
+}
+#s2-hand {
+	position: absolute;
+	bottom: -10%;
+	right: 0;
+	width: 30%;
+}
+#s2-btn>canvas {
+	position: absolute;
+	width: 72%;
+	top: 20%;
+	left: 14%;
 }
 #s2-word1 {
 	position: absolute;
@@ -131,10 +154,8 @@ html,body,.swiper-container {
 .s2-logo {
 	position: absolute;
 	bottom: 16px;
-	left: 50%;
+	left: 39%;
 	width: 22%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
 }
 
 
