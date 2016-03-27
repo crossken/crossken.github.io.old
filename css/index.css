@@ -178,9 +178,7 @@ html,body,.swiper-container {
 	position: absolute;
 	width: 16%;
 	top: 65%;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	left: 42%;
 }
 .go>img {
 	width: 100%;

@@ -53,8 +53,8 @@
 			<div class="swiper-slide" id="slide3" data-hash="slide3">
 				<img src="images/s3-title.png" id="s3-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<img src="images/s3-word1.png" id="s3-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
-				<a href="" id="s3-go" class="go"><img src="images/go.png"></a>
-				<img src="images/logo.png" class="s2-logo">
+				<a href="" id="s3-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s"><img src="images/go.png"></a>
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s">
 			</div>
 			<div class="swiper-slide" id="ani" data-hash="slide4">
 				<img src="images/ani-bg.png" id="ani-bg">
@@ -62,14 +62,14 @@
 				<img src="images/ani-1.jpg" id="ani-1">
 			</div>
 			<div class="swiper-slide" id="slide4" data-hash="slide5">
-				<img src="images/s4-title.png" id="s4-title">
-				<img src="images/s4-word1.png" id="s4-word1">
+				<img src="images/s4-title.png" id="s4-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
+				<img src="images/s4-word1.png" id="s4-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
 				<div id="s4-lr">
 					<img src="images/s4-loading.png">
 					<div class="loading-mask"></div>
 				</div>
-				<a href="" id="s4-go" class="go"><img src="images/go.png"></a>
-				<img src="images/logo.png" class="s2-logo">
+				<a href="" id="s4-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s"><img src="images/go.png"></a>
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s">
 			</div>
 			<div class="swiper-slide" id="slide5" data-hash="slide6">
 				<img src="images/s5-title.png" id="s5-title">
@@ -103,13 +103,11 @@
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			// alert(1);
+
 			$('a').on('click', 'a', function(event) {
 				event.preventDefault();
 			});
-			// $('#s2-btn').click(function(event) {
-			// 	alert(2);
-			// });
+
 			var mainSwiper = new Swiper ('#main-swiper', {
 				direction: 'vertical',
 				effect : 'fade',
@@ -125,111 +123,146 @@
 				onSlideChangeEnd: function(swiper){ 
 					swiperAnimate(swiper);
 					if (swiper.activeIndex == 1) {
+						setTimeout(function(){
+							drawHexagon();
+						},700)
+					}
+					if (swiper.activeIndex == 2) {
+						setTimeout(function(){
+
+							$btnOne = $('#s3-go');
+							var shake;
+							var shakeNow = setInterval(function(){
+								$btnOne.animate({left:'41.5%'}, 30)
+								setTimeout(function(){
+									$btnOne.animate({left:'42.5%'}, 30);
+								},30)
+							},60);
 							setTimeout(function(){
-								drawHexagon();
-							},700)
+								clearInterval(shakeNow);
+								$btnOne.css('left', '42%');
+							},1500);
+
+							setInterval(function(){
+								shake = setInterval(function(){
+									$btnOne.animate({left:'41.5%'}, 30)
+									setTimeout(function(){
+										$btnOne.animate({left:'42.5%'}, 30);
+									},30)
+								},60);
+								setTimeout(function(){
+									clearInterval(shake);
+									$btnOne.css('left', '42%');
+								},1500);
+							},4000);
+
+						},2500)
 					}
 				},
 				onTransitionEnd: function(swiper){
 					
-					// swiperAnimate(swiper);
+
 				}
 			})
-			var windowWidth = parseInt($(window).width());
-			var rblineheight = $('#s2-rbline').height();
-			$('#s1-c1').css('top',parseInt(windowWidth*0.27));    
-			$('#s1-c2').css('top',parseInt(windowWidth*0.21));
-			$('#s1-c3').css('top',parseInt(windowWidth*0.205));
-			$('#s1-fp').css('top',parseInt(windowWidth*0.53));
+var windowWidth = parseInt($(window).width());
+var rblineheight = $('#s2-rbline').height();
+$('#s1-c1').css('top',parseInt(windowWidth*0.27));    
+$('#s1-c2').css('top',parseInt(windowWidth*0.21));
+$('#s1-c3').css('top',parseInt(windowWidth*0.205));
+$('#s1-fp').css('top',parseInt(windowWidth*0.53));
 
-			$('#s1-fp').click(function(){
-				mainSwiper.slideTo(1, 500,true);
-				// return false;
-			})
-			$('#s2-btn').click(function() {
-				mainSwiper.slideTo(2, 500,true);
-				// return false;
-			});
+$('#s1-fp').click(function(){
+	mainSwiper.slideTo(1, 500,true);
 
-			$('#s2-robot').css('top',parseInt(windowWidth*0.51));
-			$('#s2-rbline').css('top',parseInt(windowWidth*0.56));
+})
+$('#s2-btn').click(function() {
+	mainSwiper.slideTo(2, 500,true);
 
-			var nowDate = new Date();
-			$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate()));
-			
-			$('#ani-1').css('top',parseInt(windowWidth*0.32));
+});
 
-			$('#s4-go').click(function(event) {
+$('#s2-robot').css('top',parseInt(windowWidth*0.51));
+$('#s2-rbline').css('top',parseInt(windowWidth*0.56));
 
-				$('#s4-word1').fadeOut(600);
-				setTimeout(function(){
-					$('#s4-lr').fadeIn(700);
-				},600)
-				setTimeout(function(){
-					$('#slide4 .loading-mask').animate({'width': '37.5%'}, 1500);
-				},1400)
-				setTimeout(function(){
-					mainSwiper.slideTo(5, 800, function(){
-						swiperAnimate(swiper);
-					});
-				},3000)
-			});
+var nowDate = new Date();
+$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate()));
+
+$('#ani-1').css('top',parseInt(windowWidth*0.32));
+
+$('#s4-go').click(function(event) {
+
+	$('#s4-word1')[0].style='';
+	$('#s4-word1').animate({'opacity':0}, 300);
+	console.log($('#s4-word1').css('opacity'));
+	setTimeout(function(){
+		$('#s4-lr').fadeIn(400);
+	},600)
+	setTimeout(function(){
+		$('#slide4 .loading-mask').animate({'width': '37.5%'}, 1000);
+	},1300)
+	setTimeout(function(){
+		// mainSwiper.slideTo(5, 800, true});
+	},2500)
+});
+
+$('#s3-go').click(function() {
+	mainSwiper.slideTo(3, 500,true);
+});
 
 
-			var stepTime = 5;
-		var canvasDelay = 150;
+var stepTime = 4;
+var canvasDelay = 200;
 
-		function drawPic(canvasId,from,to) {
-			var canvas = document.getElementById(canvasId);
-			var context = canvas.getContext("2d");
+function drawPic(canvasId,from,to) {
+	var canvas = document.getElementById(canvasId);
+	var context = canvas.getContext("2d");
 
-			var timer=null;
-			var t=0,
-			c1=to.x-from.x,
-			c2=to.y-from.y,
-			d=50;
-			LineAnim();
-			function LineAnim(){
-				if (t>d) {
-					clearTimeout(timer);
-				}
-				else{
-					var x = from.x+(c1 * t / d),
-					y = from.y+(c2 * t / d);
-					context.beginPath();
-					context.clearRect(0,0,canvas.width, canvas.height);
-					context.moveTo(from.x, from.y);
-					context.lineTo(x, y);
-					context.closePath();
-					context.strokeStyle = "#fff";
-					context.lineWidth = 3;
-					context.stroke();
-					t++;
-					timer = setTimeout(arguments.callee, stepTime);
-				}
-			}
+	var timer=null;
+	var t=0,
+	c1=to.x-from.x,
+	c2=to.y-from.y,
+	d=50;
+	LineAnim();
+	function LineAnim(){
+		if (t>d) {
+			clearTimeout(timer);
 		}
-
-
-
-		function drawHexagon(){
-			drawPic("canvas1",{x:45,y:0}, {x:90,y:30});
-			setTimeout(function(){
-				drawPic("canvas2",{x:90,y:30},{x:90,y:80});
-			},stepTime*50+canvasDelay);
-			setTimeout(function(){
-				drawPic("canvas3",{x:90,y:80},{x:45,y:110});
-			},(stepTime*50+canvasDelay)*2);
-			setTimeout(function(){
-				drawPic("canvas4",{x:45,y:110},{x:0,y:80});
-			},(stepTime*50+canvasDelay)*3);
-			setTimeout(function(){
-				drawPic("canvas5",{x:0,y:80},{x:0,y:30});
-			},(stepTime*50+canvasDelay)*4);
-			setTimeout(function(){
-				drawPic("canvas6",{x:0,y:30},{x:45,y:0});
-			},(stepTime*50+canvasDelay)*5);
+		else{
+			var x = from.x+(c1 * t / d),
+			y = from.y+(c2 * t / d);
+			context.beginPath();
+			context.clearRect(0,0,canvas.width, canvas.height);
+			context.moveTo(from.x, from.y);
+			context.lineTo(x, y);
+			context.closePath();
+			context.strokeStyle = "#fff";
+			context.lineWidth = 3;
+			context.stroke();
+			t++;
+			timer = setTimeout(arguments.callee, stepTime);
 		}
+	}
+}
+
+
+
+function drawHexagon(){
+	drawPic("canvas1",{x:45,y:0}, {x:90,y:30});
+	setTimeout(function(){
+		drawPic("canvas2",{x:90,y:30},{x:90,y:80});
+	},stepTime*50+canvasDelay);
+	setTimeout(function(){
+		drawPic("canvas3",{x:90,y:80},{x:45,y:110});
+	},(stepTime*50+canvasDelay)*2);
+	setTimeout(function(){
+		drawPic("canvas4",{x:45,y:110},{x:0,y:80});
+	},(stepTime*50+canvasDelay)*3);
+	setTimeout(function(){
+		drawPic("canvas5",{x:0,y:80},{x:0,y:30});
+	},(stepTime*50+canvasDelay)*4);
+	setTimeout(function(){
+		drawPic("canvas6",{x:0,y:30},{x:45,y:0});
+	},(stepTime*50+canvasDelay)*5);
+}
 
 
 
@@ -238,7 +271,7 @@
 
 
 
-		});
+});
 
 function padding(number) {
 	return number < 10 ? "0" + number : "" + number; 
