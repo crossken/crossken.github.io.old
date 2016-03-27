@@ -114,21 +114,21 @@ html,body,.swiper-container {
 	top: 30%;
 	width: 20%;
 	left: 40%;
-	height: 15%;
+	/*height: 15%;*/
 }
 #s2-robot {
 	width: 100%;
 }
 #s2-hand {
 	position: absolute;
-	bottom: -10%;
+	bottom: -28%;
 	right: 0;
 	width: 30%;
 }
 #s2-btn>canvas {
 	position: absolute;
 	width: 72%;
-	top: 20%;
+	top: 24%;
 	left: 14%;
 }
 #s2-word1 {
