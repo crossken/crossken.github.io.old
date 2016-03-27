@@ -202,8 +202,46 @@ html,body,.swiper-container {
 	bottom: -30%;
 	left: 15%;
 	z-index: 3;
-/*	-webkit-animation: rotate1 6s infinite linear;
-	animation: rotate1 6s infinite linear;*/
+	-webkit-transform: rotate(6deg);
+	transform: rotate(6deg);
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.circle-rotate1 {
+	-webkit-animation: circle-rotate1 1s ease-out;
+	animation: circle-rotate1 1s ease-out;
+}
+.circle-rotate2 {
+	-webkit-animation: circle-rotate2 1s ease-out;
+	animation: circle-rotate2 1s ease-out;
+}
+.circle-rotate3 {
+	-webkit-animation: circle-rotate3 1s ease-out;
+	animation: circle-rotate3 1s ease-out;
+}
+@-webkit-keyframes circle-rotate1{
+	0%{-webkit-transform: rotate(6deg);transform: rotate(6deg);}
+	100%{-webkit-transform: rotate(-110deg);transform: rotate(-110deg);}
+}
+@keyframes circle-rotate1 {	
+	0%{-webkit-transform: rotate(6deg);transform: rotate(6deg);}
+	100%{-webkit-transform: rotate(-110deg);transform: rotate(-110deg);}
+}
+@-webkit-keyframes circle-rotate2{
+	0%{-webkit-transform: rotate(-110deg);transform: rotate(-110deg);}
+	100%{-webkit-transform: rotate(-220deg);transform: rotate(-220deg);}
+}
+@keyframes circle-rotate2 {	
+	0%{-webkit-transform: rotate(-110deg);transform: rotate(-110deg);}
+	100%{-webkit-transform: rotate(-220deg);transform: rotate(-220deg);}
+}
+@-webkit-keyframes circle-rotate3{
+	0%{-webkit-transform: rotate(-220deg);transform: rotate(-220deg);}
+	100%{-webkit-transform: rotate(-340deg);transform: rotate(-340deg);}
+}
+@keyframes circle-rotate3 {	
+	0%{-webkit-transform: rotate(-220deg);transform: rotate(-220deg);}
+	100%{-webkit-transform: rotate(-340deg);transform: rotate(-340deg);}
 }
 /*#ani-1 {
 	position: absolute;
@@ -217,8 +255,8 @@ html,body,.swiper-container {
 }
 #ani-swiper {
 	position: absolute;
-	width: 63%;
-	left: 18%;
+	width: 62.5%;
+	left: 18.5%;
 	height: 71%;
 	top: 22%;
 	background-color: #88b6d1;
@@ -226,7 +264,67 @@ html,body,.swiper-container {
 #ani-swiper .swiper-slide {
 	
 }
-
+#ani-land {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#steam-house {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 22%;
+}
+#steam-railway {
+	position: absolute;
+	width: 100%;
+	bottom: 12%;
+	left: 0;
+}
+#steam-fulltrain {
+	position: absolute;
+	width: 30%;
+	bottom: 12%;
+	right: -30%;
+	-webkit-transform:rotate(16deg);
+}
+#steam-train {
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+#steam-tire1,#steam-tire2 {
+	position: absolute;
+	width: 25%;
+	bottom: 7%;
+}
+#steam-tire2 {
+	right: 0.5%;	
+}
+#steam-tire1 {
+	right: 28%;	
+}
+#steam-cloud1 {
+	position: absolute;
+	width: 14%;
+	left: 15%;
+	top: 15%;
+}
+#steam-cloud2 {
+	position: absolute;
+	width: 21%;
+	left: 48%;
+	top: 7%;
+}
+#steam-cloud3 {
+	position: absolute;
+	width: 15%;
+	left: 74%;
+	top: 28%;
+}
 
 /*slide4*/
 
