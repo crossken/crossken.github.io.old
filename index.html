@@ -93,7 +93,7 @@
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>
 		$(document).ready(function() {
-
+			alert(1);
 			$('a').on('click', 'a', function(event) {
 				event.preventDefault();
 			});
@@ -103,7 +103,7 @@
 				fade: {
 					crossFade: true,
 				},
-				speed : 100,
+				// speed : 100,
 				hashnav: true,
 				// onlyExternal: true,
 				// allowSwipeToPrev : false,
@@ -134,7 +134,7 @@
 			$('#s1-fp').css('top',parseInt(windowWidth*0.53));
 
 			$('#s1-fp').click(function(){
-				mainSwiper.slideTo(1, 800, function(){
+				mainSwiper.slideTo(1, 500, function(){
 					swiperAnimate(swiper);
 				});
 				return false;
