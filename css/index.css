@@ -22,7 +22,7 @@ html,body,.swiper-container {
 
 /*slide1*/
 
-#slide1 {
+#main-swiper #slide1 {
 	background: #000 url(../images/start.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -87,7 +87,7 @@ html,body,.swiper-container {
 /*slide2*/
 
 
-.swiper-slide{
+#main-swiper>div>.swiper-slide{
 	background: #000 url(../images/background.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -185,26 +185,46 @@ html,body,.swiper-container {
 .go>img {
 	width: 100%;
 }
+
+/*ani*/
 #ani-bg {
 	width: 100%;
-	position: absolute;
+/*	position: relative;
+	z-index: 2;*/
+/*	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 2;*/
 }
 #ani-circle {
-	width: 100%;
+	width: 70%;
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	bottom: -30%;
+	left: 15%;
 	z-index: 3;
+/*	-webkit-animation: rotate1 6s infinite linear;
+	animation: rotate1 6s infinite linear;*/
 }
-#ani-1 {
+/*#ani-1 {
 	position: absolute;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	width: 58%;
+}*/
+#ani-main {
+	position: relative;
+}
+#ani-swiper {
+	position: absolute;
+	width: 63%;
+	left: 18%;
+	height: 71%;
+	top: 22%;
+	background-color: #88b6d1;
+}
+#ani-swiper .swiper-slide {
+	
 }
 
 

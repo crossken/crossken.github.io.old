@@ -57,9 +57,22 @@
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s">
 			</div>
 			<div class="swiper-slide" id="ani" data-hash="slide4">
-				<img src="images/ani-bg.png" id="ani-bg">
+				<div id="ani-main">
+					<div class="swiper-container" id="ani-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><!-- <img src="images/ani-1.jpg" id="ani-1"> -->slie1asdf</div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+						</div>
+					</div>
+					<img src="images/ani-bg.png" id="ani-bg">
+				</div>
+				
+
 				<img src="images/ani-circle.png" id="ani-circle">
-				<img src="images/ani-1.jpg" id="ani-1">
+
+				
+
 			</div>
 			<div class="swiper-slide" id="slide4" data-hash="slide5">
 				<img src="images/s4-title.png" id="s4-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
@@ -166,12 +179,15 @@
 				}, 
 				onSlideChangeEnd: function(swiper){ 
 					swiperAnimate(swiper);
+
 					if (swiper.activeIndex == 1) {
+
 						setTimeout(function(){
 							drawHexagon();
 						},700)
 					}
 					if (swiper.activeIndex == 2) {
+
 						// setTimeout(function(){
 
 						// 	$btnOne = $('#s3-go');
@@ -201,19 +217,36 @@
 						// 	},4000);
 
 						// },2700)
+
 }
+
+					if (swiper.activeIndex == 3) {
+						var aniSwiper = new Swiper ('#ani-swiper', {
+
+
+  						})  
+					}
 },
 onTransitionEnd: function(swiper){
 
 
 }
 })
+
+
+$('#ani-swiper').tap(function(){
+	// alert(1);
+})
+      
+
+
 var windowWidth = parseInt($(window).width());
 var rblineheight = $('#s2-rbline').height();
 $('#s1-c1').css('top',parseInt(windowWidth*0.27));    
 $('#s1-c2').css('top',parseInt(windowWidth*0.21));
 $('#s1-c3').css('top',parseInt(windowWidth*0.205));
 $('#s1-fp').css('top',parseInt(windowWidth*0.53));
+$('#ani-circle').css('bottom',-parseInt(windowWidth*0.48));
 
 $('#s1-fp').tap(function(){
 	mainSwiper.slideTo(1, 800,true);
