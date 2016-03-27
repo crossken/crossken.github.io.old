@@ -72,11 +72,11 @@
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s">
 			</div>
 			<div class="swiper-slide" id="slide5" data-hash="slide6">
-				<img src="images/s5-title.png" id="s5-title">
-				<img src="images/s5-doc.png" id="s5-doc">
-				<img src="images/s5-word1.png" id="s5-word1">
-				<a href="" id="s5-go" class="go"><img src="images/go.png"></a>
-				<img src="images/logo.png" class="s2-logo">
+				<img src="images/s5-title.png" id="s5-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
+				<img src="images/s5-doc.png" id="s5-doc" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
+				<img src="images/s5-word1.png" id="s5-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s" class="ani">
+				<a href="" id="s5-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s" class="ani"><img src="images/go.png"></a>
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.4s" class="ani">
 			</div>
 			<div class="swiper-slide" id="slide6" data-hash="slide7">
 				<img src="images/s6-title.png" id="s6-title">
@@ -104,7 +104,7 @@
 	<script>
 		$(document).ready(function() {
 
-			$('a').on('click', 'a', function(event) {
+			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
 			});
 
@@ -204,7 +204,11 @@ $('#s4-go').click(function(event) {
 });
 
 $('#s3-go').click(function() {
-	mainSwiper.slideTo(3, 500,true);
+	mainSwiper.slideTo(3, 800,true);
+});
+
+$('#s5-go').click(function() {
+	mainSwiper.slideTo(6, 800,true);
 });
 
 
