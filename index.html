@@ -128,35 +128,35 @@
 						},700)
 					}
 					if (swiper.activeIndex == 2) {
-						setTimeout(function(){
+						// setTimeout(function(){
 
-							$btnOne = $('#s3-go');
-							var shake;
-							var shakeNow = setInterval(function(){
-								$btnOne.animate({left:'41.5%'}, 30)
-								setTimeout(function(){
-									$btnOne.animate({left:'42.5%'}, 30);
-								},30)
-							},60);
-							setTimeout(function(){
-								clearInterval(shakeNow);
-								$btnOne.css('left', '42%');
-							},1500);
+						// 	$btnOne = $('#s3-go');
+						// 	var shake;
+						// 	var shakeNow = setInterval(function(){
+						// 		$btnOne.animate({left:'41.5%'}, 30)
+						// 		setTimeout(function(){
+						// 			$btnOne.animate({left:'42.5%'}, 30);
+						// 		},30)
+						// 	},60);
+						// 	setTimeout(function(){
+						// 		clearInterval(shakeNow);
+						// 		$btnOne.css('left', '42%');
+						// 	},1500);
 
-							setInterval(function(){
-								shake = setInterval(function(){
-									$btnOne.animate({left:'41.5%'}, 30)
-									setTimeout(function(){
-										$btnOne.animate({left:'42.5%'}, 30);
-									},30)
-								},60);
-								setTimeout(function(){
-									clearInterval(shake);
-									$btnOne.css('left', '42%');
-								},1500);
-							},4000);
+						// 	setInterval(function(){
+						// 		shake = setInterval(function(){
+						// 			$btnOne.animate({left:'41.5%'}, 30)
+						// 			setTimeout(function(){
+						// 				$btnOne.animate({left:'42.5%'}, 30);
+						// 			},30)
+						// 		},60);
+						// 		setTimeout(function(){
+						// 			clearInterval(shake);
+						// 			$btnOne.css('left', '42%');
+						// 		},1500);
+						// 	},4000);
 
-						},2700)
+						// },2700)
 					}
 				},
 				onTransitionEnd: function(swiper){
@@ -172,11 +172,11 @@ $('#s1-c3').css('top',parseInt(windowWidth*0.205));
 $('#s1-fp').css('top',parseInt(windowWidth*0.53));
 
 $('#s1-fp').click(function(){
-	mainSwiper.slideTo(1, 500,true);
+	mainSwiper.slideTo(1, 800,true);
 
 })
 $('#s2-btn').click(function() {
-	mainSwiper.slideTo(2, 500,true);
+	mainSwiper.slideTo(2, 800,true);
 
 });
 
