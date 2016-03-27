@@ -86,7 +86,7 @@ html,body,.swiper-container {
 
 /*slide2*/
 
-#slide2,#slide3,#ani,#slide4,#slide5,#slide6{
+#slide2,#slide3,#ani,#slide4,#slide5,#slide6,#tech{
 	background: #000 url(../images/background.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -336,4 +336,20 @@ html,body,.swiper-container {
 }
 #s6-go {
 	top: 75%;
+}
+
+/*tech*/
+
+#tech-main {
+	width: 100%;
+	margin-top: 14%;
+}
+#tech-main>img {
+	position: absolute;
+}
+img#showdoc-bg {
+	position: static;
+	width: 84%;
+	margin: 0 auto;
+	display: block;
 }
