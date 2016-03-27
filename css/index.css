@@ -368,6 +368,9 @@ img#tech-bg {
 	top: -8%;
 	right: 3%;
 }
+#tech-back img {
+	width: 100%;
+}
 #tech-title {
 	width: 16%;
 	top: 0.5%;
