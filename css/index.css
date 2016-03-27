@@ -86,11 +86,13 @@ html,body,.swiper-container {
 
 /*slide2*/
 
-#slide2,#slide3,#ani,#slide4,#slide5,#slide6,#tech{
+
+.swiper-slide{
 	background: #000 url(../images/background.jpg) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+
 
 #s2-title {
 	position: absolute;
@@ -161,13 +163,13 @@ html,body,.swiper-container {
 
 /*slide3*/
 
-#s3-title {
+#s3-title,#s7-title {
 	position: absolute;
 	width: 25%;
 	top: 20px;
 	left: 8%;
 }
-#s3-word1 {
+#s3-word1,#s7-word {
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -342,15 +344,15 @@ html,body,.swiper-container {
 
 /*tech*/
 
-#tech-main {
+.showdoc>div {
 	width: 100%;
 	margin-top: 15%;
 	position: relative;
 }
-#tech-main>img {
+.showdoc>div>img {
 	position: absolute;
 }
-img#tech-bg {
+.showdoc .showdoc-bg {
 	position: static;
 	width: 75%;
 	margin: 0 auto;
@@ -361,22 +363,22 @@ img#tech-bg {
 	top: -8%;
 	left: 5%;
 }
-#tech-back {
+.showdoc-back {
 	position: absolute;
 	display: block;
 	width: 18%;
 	top: -8%;
 	right: 3%;
 }
-#tech-back img {
+.showdoc-back img {
 	width: 100%;
 }
-#tech-title {
+#tech-title,#design-title,#planning-title {
 	width: 16%;
 	top: 0.5%;
 	left: 42%;
 }
-#tech-word {
+#tech-word,#design-word,#planning-word {
 	width: 34%;
 	top: 8%;
 	left: 33%;
@@ -390,4 +392,39 @@ img#tech-bg {
 	width: 25%;
 	top: 41%;
 	right: 21.5%;
+}
+#design-title,#planning-title {
+	width: 8%;
+	left: 46%;
+}
+#design-word,#planning-word {
+	top: 6.5%;
+}
+#design-1 {
+	width: 46%;
+	top:31%;
+	left: 21.5%;
+}
+#design-2 {
+	width: 44%;
+	top:56%;
+	right: 21.5%;
+}
+#planning-1 {
+	width: 19%;
+	top: 30%;
+	left: 30%;
+}
+#planning-2 {
+	width: 46%;
+	top: 37%;
+	left: 21.5%;
+}
+#planning-3 {
+	width: 34%;
+	top: 51%;
+	right: 20%;
+}
+#s7-word {
+	top: 32%;
 }
