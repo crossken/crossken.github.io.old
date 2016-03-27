@@ -42,7 +42,7 @@
 					<canvas id="canvas6" width="90" height="110"></canvas>
 				</a>
 
-				<!-- <img src="images/s2-rbline.png" id="s2-rbline"> -->
+
 				<img src="images/s2-word1.png" id="s2-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="3.7s" class="ani">
 				<div id="s2-para" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="4.3s" class="ani">
 					<p id="now-date"></p>
@@ -76,22 +76,23 @@
 				<img src="images/s5-doc.png" id="s5-doc" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
 				<img src="images/s5-word1.png" id="s5-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s" class="ani">
 				<a href="" id="s5-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s" class="ani"><img src="images/go.png"></a>
-				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.4s" class="ani">
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.4s">
 			</div>
 			<div class="swiper-slide" id="slide6" data-hash="slide7">
-				<img src="images/s6-title.png" id="s6-title">
+				<img src="images/s6-title.png" id="s6-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<div id="s6-main">
-					<img src="images/s6-left-top.png" id="s6-lt">
-					<img src="images/s6-right-bottom.png" id="s6-rb">
-					<img src="images/s6-circle.png" id="s6-circle">
-					<img src="images/s6-word1.png" id="s6-word1">
+					<img src="images/s6-left-top.png" id="s6-lt" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
+					<img src="images/s6-right-bottom.png" id="s6-rb" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
+					<img src="images/s6-circle.png" id="s6-circle" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s" class="ani">
+					<img src="images/s6-word1.png" id="s6-word1" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s" class="ani">
 				</div>
-				<div id="s6-btn-wrapper">
+				<div id="s6-btn-wrapper" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.1s" class="ani">
 					<a href="" id="s6-tech" class="s6-btn"><img src="images/s6-small.png"><img src="images/s6-tech-word.png"></a>
-					<a href="" id="s6-design" class="s6-btn"><img src="images/s6-small.png"><img src="images/s6-design-word.png"></a>
-					<a href="" id="s6-planning" class="s6-btn"><img src="images/s6-small.png"><img src="images/s6-planning-word.png"></a>
+					<a href="" id="s6-design" class="s6-btn"><img src="images/s6-small2.png"><img src="images/s6-design-word.png"></a>
+					<a href="" id="s6-planning" class="s6-btn"><img src="images/s6-small3.png"><img src="images/s6-planning-word.png"></a>
 				</div>
-				<img src="images/logo.png" class="s2-logo">
+				<a href="" id="s6-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.8s"><img src="images/go.png"></a>
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="3.5s">
 			</div>
 			<div class="swiper-slide" id="tech" data-hash="slide8">
 				
@@ -160,13 +161,13 @@
 						// 	},4000);
 
 						// },2700)
-					}
-				},
-				onTransitionEnd: function(swiper){
-					
+}
+},
+onTransitionEnd: function(swiper){
 
-				}
-			})
+
+}
+})
 var windowWidth = parseInt($(window).width());
 var rblineheight = $('#s2-rbline').height();
 $('#s1-c1').css('top',parseInt(windowWidth*0.27));    
