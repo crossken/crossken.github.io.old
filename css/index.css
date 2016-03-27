@@ -342,14 +342,14 @@ html,body,.swiper-container {
 
 #tech-main {
 	width: 100%;
-	margin-top: 14%;
+	margin-top: 15%;
 }
 #tech-main>img {
 	position: absolute;
 }
 img#showdoc-bg {
 	position: static;
-	width: 84%;
+	width: 80%;
 	margin: 0 auto;
 	display: block;
 }
