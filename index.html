@@ -68,6 +68,24 @@
 				<a href="" id="s5-go" class="go"><img src="images/go.png"></a>
 				<img src="images/logo.png" class="s2-logo">
 			</div>
+			<div class="swiper-slide" id="slide6" data-hash="slide7">
+				<img src="images/s6-title.png" id="s6-title">
+				<div id="s6-main">
+					<img src="images/s6-left-top.png" id="s6-lt">
+					<img src="images/s6-right-bottom.png" id="s6-rb">
+					<img src="images/s6-circle.png" id="s6-circle">
+					<img src="images/s6-word1.png" id="s6-word1">
+				</div>
+				<div id="s6-btn-wrapper">
+					<a href="" id="s6-tech" class="s6-btn"><img src="images/s6-small.png"><img src="images/s6-tech-word.png"></a>
+					<a href="" id="s6-design" class="s6-btn"><img src="images/s6-small.png"><img src="images/s6-design-word.png"></a>
+					<a href="" id="s6-planning" class="s6-btn"><img src="images/s6-small.png"><img src="images/s6-planning-word.png"></a>
+				</div>
+				<img src="images/logo.png" class="s2-logo">
+			</div>
+			<div class="swiper-slide" id="tech" data-hash="slide8">
+				
+			</div>
 		</div>
 	</div>
 	<script src="js/zepto.js"></script>
@@ -75,6 +93,7 @@
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>
 		$(document).ready(function() {
+
 			$('a').on('click', 'a', function(event) {
 				event.preventDefault();
 			});
@@ -84,16 +103,20 @@
 				fade: {
 					crossFade: true,
 				},
+				speed : 100,
 				hashnav: true,
+				// onlyExternal: true,
 				// allowSwipeToPrev : false,
 				onInit: function(swiper){ 
 					swiperAnimateCache(swiper); 
 					swiperAnimate(swiper); 
 				}, 
 				onSlideChangeEnd: function(swiper){ 
-
+					// alert('1');
+					swiperAnimate(swiper);
 				},
 				onTransitionEnd: function(swiper){
+					
 					swiperAnimate(swiper);
 					if (swiper.activeIndex == 1) {
 						// $('#s2-rbline').animate({'height': rblineheight}, 300)
@@ -135,7 +158,7 @@
 					$('#slide4 .loading-mask').animate({'width': '37.5%'}, 1500);
 				},1400)
 				setTimeout(function(){
-					mainSwiper.slideTo(1, 800, function(){
+					mainSwiper.slideTo(5, 800, function(){
 						swiperAnimate(swiper);
 					});
 				},3000)
