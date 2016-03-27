@@ -298,6 +298,8 @@ html,body,.swiper-container {
 }
 #s6-rb {
 	width: 100%;
+	position: relative;
+	top: -2px;
 }
 #s6-main>img {
 	display: block;
@@ -343,13 +345,46 @@ html,body,.swiper-container {
 #tech-main {
 	width: 100%;
 	margin-top: 15%;
+	position: relative;
 }
 #tech-main>img {
 	position: absolute;
 }
-img#showdoc-bg {
+img#tech-bg {
 	position: static;
 	width: 75%;
 	margin: 0 auto;
 	display: block;
+}
+.showdoc-title {
+	width: 18%;
+	top: -8%;
+	left: 5%;
+}
+#tech-back {
+	position: absolute;
+	display: block;
+	width: 18%;
+	top: -8%;
+	right: 3%;
+}
+#tech-title {
+	width: 16%;
+	top: 0.5%;
+	left: 42%;
+}
+#tech-word {
+	width: 34%;
+	top: 8%;
+	left: 33%;
+}
+#tech-1 {
+	width: 30%;
+	top: 33%;
+	left: 21.5%;
+}
+#tech-2 {
+	width: 25%;
+	top: 41%;
+	right: 21.5%;
 }

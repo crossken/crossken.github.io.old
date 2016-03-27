@@ -96,15 +96,15 @@
 			</div>
 			<div class="swiper-slide" id="tech" data-hash="slide8" class="showDoc">
 				<div id="tech-main">
-					<img src="images/showdoc-bg.png" id="showdoc-bg">
-<!-- 					<img src="images/showdoc-title.png" id="showdoc-title">
-					<img src="images/showdoc-back.png" id="showdoc-back">
+					<img src="images/showdoc-bg.png" id="tech-bg">
+					<img src="images/showdoc-title.png" class="showdoc-title">
+					<a href="" id="tech-back"><img src="images/showdoc-back.png"></a>
 					<img src="images/tech-title.png" id="tech-title">
 					<img src="images/tech-word.png" id="tech-word">
 					<img src="images/tech-1.png" id="tech-1">
-					<img src="images/tech-2.png" id="tech-2"> -->
+					<img src="images/tech-2.png" id="tech-2">
 				</div>
-				<img src="images/logo.png" class="s2-logo ani">
+				<img src="images/logo.png" class="s2-logo">
 			</div>
 		</div>
 	</div>
@@ -223,7 +223,21 @@ $('#s3-go').tap(function() {
 $('#s5-go').tap(function() {
 	mainSwiper.slideTo(6, 800,true);
 });
-
+$('#s6-tech').tap(function() {
+	mainSwiper.slideTo(7, 800,true);
+})
+$('#s6-design').tap(function() {
+	mainSwiper.slideTo(8, 800,true);
+})
+$('#s6-planning').tap(function() {
+	mainSwiper.slideTo(9, 800,true);
+})
+$('#s6-go').tap(function() {
+	mainSwiper.slideTo(10, 800,true);
+})
+$('#tech-back').tap(function() {
+	mainSwiper.slideTo(6, 800,true);
+})
 
 var stepTime = 4;
 var canvasDelay = 200;
