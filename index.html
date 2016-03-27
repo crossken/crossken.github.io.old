@@ -93,7 +93,7 @@
 	<script src="js/swiper.animate1.0.2.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			alert(1);
+			// alert(1);
 			$('a').on('click', 'a', function(event) {
 				event.preventDefault();
 			});
@@ -112,16 +112,11 @@
 					swiperAnimate(swiper); 
 				}, 
 				onSlideChangeEnd: function(swiper){ 
-					// alert('1');
 					swiperAnimate(swiper);
 				},
 				onTransitionEnd: function(swiper){
 					
-					swiperAnimate(swiper);
-					if (swiper.activeIndex == 1) {
-						// $('#s2-rbline').animate({'height': rblineheight}, 300)
-					}
-
+					// swiperAnimate(swiper);
 				}
 			})
 			var windowWidth = parseInt($(window).width());
@@ -134,9 +129,7 @@
 			$('#s1-fp').css('top',parseInt(windowWidth*0.53));
 
 			$('#s1-fp').click(function(){
-				mainSwiper.slideTo(1, 500, function(){
-					swiperAnimate(swiper);
-				});
+				mainSwiper.slideTo(1, 300,true);
 				return false;
 			})
 
@@ -168,6 +161,7 @@
 function padding(number) {
 	return number < 10 ? "0" + number : "" + number; 
 }
+
 
 
 </script>
