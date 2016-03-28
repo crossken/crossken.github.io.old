@@ -70,6 +70,12 @@ html,body,.swiper-container {
 	0%{ transform:rotate(0deg); }
 	100%{ transform:rotate(-360deg); }
 }
+#s1-earth {
+	display: block;
+	position: absolute;
+	width: 55%;
+	left: 16%;
+}
 #s1-fp {
 	width: 11.5%;
 	position: absolute;
@@ -592,11 +598,40 @@ animation-play-state:paused;
     opacity: 0;
   }
 }
+@-webkit-keyframes zoomBigOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(3, 3, 3);
+    transform: scale3d(3, 3, 3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 .zoomBigOut {
   -webkit-animation-name: zoomBigOut;
   animation-name: zoomBigOut;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
+}
+.ani-earth {
+	-webkit-animation: scaleOut 20s ease-in-out;
+	animation: scaleOut 20s ease-in-out;
+}
+@keyframes scaleOut {
+  0% {
+    transform:scale(1,1);
+  }
 
+
+
+  100% {
+    transform:scale(5,5);
+  }
 }

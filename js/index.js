@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	alert(1);
+	// alert(1);
 	setInterval(function(){
 		console.log($('#s1-c1').css('transform'));
 	},30)
@@ -93,11 +93,12 @@ $('.s1-c1').css('top',parseInt(windowWidth*0.27));
 $('.s1-c2').css('top',parseInt(windowWidth*0.21));
 $('.s1-c3').css('top',parseInt(windowWidth*0.205));
 $('#s1-fp').css('top',parseInt(windowWidth*0.53));
+$('#s1-earth').css('top',parseInt(windowWidth*0.335));
 $('#ani-circle').css('bottom',-parseInt(windowWidth*0.48));
 
 $('#s1-fp').tap(function(){
 	
-	$(this).fadeOut(300);
+	$(this).fadeOut(400);
 	$('#s1-sbl').fadeOut(400);
 	$('.circle').addClass('ani-pause');
 	var c1transform = $('#s1-c1').css('transform');
@@ -107,10 +108,23 @@ $('#s1-fp').tap(function(){
 	$('#s1-c2').css('transform',c2transform);
 	$('#s1-c3').css('transform',c3transform);
 	setTimeout(function(){
-		$('.circle').removeClass().addClass('zoomBigOut');
-	},400)
+		$('#s1-c3').removeClass().addClass('zoomBigOut');
+	},600);
+	setTimeout(function(){
+		$('#s1-c2').removeClass().addClass('zoomBigOut');
+	},700);
+	setTimeout(function(){
+		$('#s1-c1').removeClass().addClass('zoomBigOut');
+	},800);
 
-	// mainSwiper.slideTo(1, 800,true);
+	setTimeout(function(){
+		$('#s1-earth').addClass('ani-earth');
+	},700)
+	setTimeout(function(){
+		mainSwiper.slideTo(1, 800,true);
+	},1500)
+
+	
 
 })
 $('#s2-btn').tap(function() {
