@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-	alert(1);
-	setInterval(function(){
-		console.log($('#s1-c1').css('transform'));
-	},30)
+	// alert(1);
+	// setInterval(function(){
+	// 	console.log($('#s1-c1').css('transform'));
+	// },30)
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -107,7 +107,7 @@ $('#s1-fp').tap(function(){
 	$('#s1-c1').css('transform',c1transform);
 	$('#s1-c2').css('transform',c2transform);
 	$('#s1-c3').css('transform',c3transform);
-	
+
 	$('#s1-c3').removeClass().addClass('zoomBigOut');
 	setTimeout(function(){
 		$('#s1-c2').removeClass().addClass('zoomBigOut');
@@ -116,8 +116,9 @@ $('#s1-fp').tap(function(){
 		$('#s1-c1').removeClass().addClass('zoomBigOut');
 	},200);
 
+	$('#s1-earth').addClass('ani-earth');
 	setTimeout(function(){
-		$('#s1-earth').addClass('ani-earth');
+		
 	},100)
 	setTimeout(function(){
 		mainSwiper.slideTo(1, 1200,true);

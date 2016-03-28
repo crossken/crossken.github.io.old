@@ -621,8 +621,8 @@ animation-play-state:paused;
   animation-duration: 3s;
 }
 .ani-earth {
-	-webkit-animation: scaleOut 20s ease-in-out;
-	animation: scaleOut 20s ease-in-out;
+	-webkit-animation: scaleOut 15s ease-in-out;
+	animation: scaleOut 15s ease-in-out;
 }
 @keyframes scaleOut {
   0% {
