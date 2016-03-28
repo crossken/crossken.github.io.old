@@ -196,6 +196,16 @@ html,body,.swiper-container {
 	left: 0;
 	z-index: 2;*/
 }
+#ani-s2 {
+	background: #000 url(../images/ani-s2-bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#ani-s3 {
+	background: #000 url(../images/ani-s3-bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 #ani-circle {
 	width: 70%;
 	position: absolute;
