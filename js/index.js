@@ -121,8 +121,8 @@ $('#s1-fp').tap(function(){
 		$('#s1-earth').addClass('ani-earth');
 	},700)
 	setTimeout(function(){
-		mainSwiper.slideTo(1, 800,true);
-	},1500)
+		mainSwiper.slideTo(1, 1200,true);
+	},3000)
 
 	
 
