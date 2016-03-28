@@ -1,3 +1,8 @@
+
+
+
+
+
 body {
 	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -27,27 +32,35 @@ html,body,.swiper-container {
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-#slide1 .circle {
+#s1-c1,#s1-c2,#s1-c3{
 	display: block;
 	position: absolute;
+	-webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
+}
+.s1-c1 {
+	-webkit-animation: rotate1 3s infinite linear;
+	animation: rotate1 3s infinite linear;
 }
 #s1-c1 {
 	width: 40%;
 	left: 25%;
-	-webkit-animation: rotate1 3s infinite linear;
-	animation: rotate1 3s infinite linear;
+}
+.s1-c2 {
+	-webkit-animation: rotate1 6s infinite linear;
+	animation: rotate1 6s infinite linear;
 }
 #s1-c2 {
 	width: 58%;
 	left: 16%;
-	-webkit-animation: rotate1 6s infinite linear;
-	animation: rotate1 6s infinite linear;
+}
+.s1-c3 {
+	-webkit-animation: rotate1 10s infinite linear;
+	animation: rotate1 10s infinite linear;
 }
 #s1-c3 {
 	width: 72%;
 	left: 10%;
-	-webkit-animation: rotate1 10s infinite linear;
-	animation: rotate1 10s infinite linear;
 }
 @-webkit-keyframes rotate1{
 	0%{ transform:rotate(0deg); }
@@ -555,4 +568,33 @@ html,body,.swiper-container {
 }
 #s7-word {
 	top: 32%;
+}
+
+.ani-pause {
+-webkit-animation-play-state:paused; /* Safari 和 Chrome */
+animation-play-state:paused;
+}
+
+@keyframes zoomBigOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(3, 3, 3);
+    transform: scale3d(3, 3, 3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomBigOut {
+  -webkit-animation-name: zoomBigOut;
+  animation-name: zoomBigOut;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+
 }
