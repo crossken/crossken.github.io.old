@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	alert(1);
 	setInterval(function(){
 		console.log($('#s1-c1').css('transform'));
 	},30)

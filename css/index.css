@@ -570,6 +570,8 @@ html,body,.swiper-container {
 	top: 32%;
 }
 
+
+
 .ani-pause {
 -webkit-animation-play-state:paused; /* Safari 和 Chrome */
 animation-play-state:paused;
