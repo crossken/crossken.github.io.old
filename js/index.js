@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	// alert(1);
+	alert(1);
 	setInterval(function(){
 		console.log($('#s1-c1').css('transform'));
 	},30)
@@ -98,8 +98,8 @@ $('#ani-circle').css('bottom',-parseInt(windowWidth*0.48));
 
 $('#s1-fp').tap(function(){
 	
-	$(this).fadeOut(400);
-	$('#s1-sbl').fadeOut(400);
+	$(this).fadeOut(300);
+	$('#s1-sbl').fadeOut(300);
 	$('.circle').addClass('ani-pause');
 	var c1transform = $('#s1-c1').css('transform');
 	var c2transform = $('#s1-c2').css('transform');
@@ -107,22 +107,21 @@ $('#s1-fp').tap(function(){
 	$('#s1-c1').css('transform',c1transform);
 	$('#s1-c2').css('transform',c2transform);
 	$('#s1-c3').css('transform',c3transform);
-	setTimeout(function(){
-		$('#s1-c3').removeClass().addClass('zoomBigOut');
-	},600);
+	
+	$('#s1-c3').removeClass().addClass('zoomBigOut');
 	setTimeout(function(){
 		$('#s1-c2').removeClass().addClass('zoomBigOut');
-	},700);
+	},100);
 	setTimeout(function(){
 		$('#s1-c1').removeClass().addClass('zoomBigOut');
-	},800);
+	},200);
 
 	setTimeout(function(){
 		$('#s1-earth').addClass('ani-earth');
-	},700)
+	},100)
 	setTimeout(function(){
 		mainSwiper.slideTo(1, 1200,true);
-	},3000)
+	},3200)
 
 	
 
