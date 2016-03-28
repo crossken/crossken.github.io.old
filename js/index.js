@@ -96,6 +96,7 @@ $('#ani-circle').css('bottom',-parseInt(windowWidth*0.48));
 $('#s1-fp').tap(function(){
 	
 	$(this).fadeOut(300);
+	$('#s1-sbl').fadeOut(400);
 	$('.circle').addClass('ani-pause');
 	var c1transform = $('#s1-c1').css('transform');
 	var c2transform = $('#s1-c2').css('transform');
