@@ -207,17 +207,17 @@ html,body,.swiper-container {
 	top: 54%;
 }
 #s2-word1 p:first-child {
-	font-size: 1.6em; 
+	font-size: 1.4em; 
  	border-right: .1em solid;
  	width: 2em; /* fallback */
  	white-space: nowrap;
  	overflow: hidden;
- 	margin: 0 auto .6em;
+ 	margin: 0 auto .5em;
  	animation: typing .4s steps(2, end),
  	blink-caret .3s step-end infinite alternate;
 }
 #s2-word1 p:last-child {
-	font-size: 1.6em; 
+	font-size: 1.4em; 
  	border-right: .1em solid;
  	width: 7em; /* fallback */
  	white-space: nowrap;
