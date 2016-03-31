@@ -159,6 +159,7 @@ html,body,.swiper-container {
 	width: 20%;
 	left: 40%;
 	/*height: 15%;*/
+	opacity: 0;
 }
 #s2-robot {
 	width: 100%;
@@ -200,6 +201,9 @@ html,body,.swiper-container {
 }
 .waves>img {
 	width:200%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 #s2-word1 {
 	position: absolute;
