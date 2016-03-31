@@ -55,27 +55,7 @@
 </head>
 <body>
 
-	<div class="loading">
-		<img src="images/logo-big.png">
-		<div class="progress-bar">
-			<img src="images/progress-bg.png">
-			<div id="nowprogress"></div>
-		</div>
-	</div>
-	<script>
-		var isTo80;
-		var nowProgress = document.getElementById('nowprogress');
-		nowProgress.style.width = '0%';
-		var loadingTimer = setInterval(function(){
-			var pbWidth = parseFloat(nowProgress.style.width);
-			if (pbWidth<80) {
-				nowProgress.style.width = pbWidth + 0.5 +'%';
-			} else {
-				clearInterval(loadingTimer);
-				isTo80 = true;
-			}
-		},15);
-	</script>
+
 
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
@@ -89,7 +69,7 @@
 				<img src="images/s1-circle1.png" id="s1-c1" class="s1-c1 circle">
 				<img src="images/s1-circle2.png" id="s1-c2" class="s1-c2 circle">
 				<img src="images/s1-circle3.png" id="s1-c3" class="s1-c3 circle">
-				<img src="images/earth.jpg" id="s1-earth">
+				<img src="images/earth.png" id="s1-earth">
 				<a href="#" id="s1-fp"><img src="images/s1-fingerprint.png"></a>
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
