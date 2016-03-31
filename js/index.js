@@ -1,5 +1,5 @@
 window.onload = function(){
-			alert('5');
+			alert('6');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
