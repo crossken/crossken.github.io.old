@@ -211,10 +211,10 @@ html,body,.swiper-container {
 	width: 100%;
 	top: 54%;
 }
-#s2-word1 p:first-child {
+/*#s2-word1 p:first-child {
 	font-size: 1.4em; 
  	border-right: .1em solid;
- 	width: 2em; /* fallback */
+ 	width: 2em; 
  	white-space: nowrap;
  	overflow: hidden;
  	margin: 0 auto .5em;
@@ -224,17 +224,52 @@ html,body,.swiper-container {
 #s2-word1 p:last-child {
 	font-size: 1.4em; 
  	border-right: .1em solid;
- 	width: 7em; /* fallback */
+ 	width: 7em; 
  	white-space: nowrap;
  	overflow: hidden;
  	margin: 0 auto;
  	animation: typing 1.4s 0.6s steps(7, end),
  	blink-caret .3s step-end 0.6s infinite alternate;
  	animation-fill-mode: both;
+}*/
+#s2-word1 p:first-child {
+	font-size: 22px; 
+ 	border-right: .1em solid;
+ 	width: 2em;
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto 10px;
+ 	border-color:transparent;
+	opacity: 0;
 }
-
- @keyframes typing { from { width: 0; } }
- @keyframes blink-caret { 50% { border-color: transparent; } }
+.s2-para1-ani {
+	-webkit-animation: typing .4s steps(2, end) 5.8s,
+ 	blink-caret .3s step-end 5.8s 2  alternate;
+	animation: typing .4s steps(2, end) 5.8s,
+ 	blink-caret .3s step-end 5.8s 2  alternate;
+ 	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+#s2-word1 p:last-child {
+	font-size: 22px; 
+ 	border-right: .1em solid;
+ 	width: 7em; /* fallback */
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto;
+ 	border-color:transparent;
+ 	opacity: 0;
+}
+.s2-para2-ani {
+	-webkit-animation: typing 1.4s 6.4s steps(7, end),
+ 	blink-caret .3s step-end 6.4s infinite alternate;
+	animation: typing 1.4s 6.4s steps(7, end),
+ 	blink-caret .3s step-end 6.4s infinite alternate;
+ 	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 50% { border-color: #fff; } }
 #s2-para {
 	position: absolute;
 	top: 69%;

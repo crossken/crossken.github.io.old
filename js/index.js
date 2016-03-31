@@ -1,5 +1,5 @@
 window.onload = function(){
-			alert('6');
+	alert('7');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -43,6 +43,8 @@ window.onload = function(){
 						},30)
 
 						$('.waves').height($('.waves img').height());
+						$('.s2-para1').addClass('s2-para1-ani');
+						$('.s2-para2').addClass('s2-para2-ani');
 
 						setTimeout(function(){
 							drawHexagon();
@@ -60,6 +62,9 @@ window.onload = function(){
 						setTimeout(function(){
 							$('#s2-logo').addClass('fadeInUp animated')
 						},5100);
+						setTimeout(function(){
+							$('.s2-para1,.s2-para2').css('opacity', '1');
+						},2000)
 					}
 					if (swiper.activeIndex == 3) {
 
