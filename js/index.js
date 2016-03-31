@@ -1,6 +1,17 @@
 $(document).ready(function() {
 
-	// alert(1);
+
+
+
+
+
+
+
+
+});
+
+window.onload = function(){
+		// alert(1);
 	// setInterval(function(){
 	// 	console.log($('#s1-c1').css('transform'));
 	// },30)
@@ -237,13 +248,21 @@ function drawHexagon(){
 }
 
 
-
-
-
-
-
-
-});
+var nowProgress2 = document.getElementById('nowprogress');
+nowProgress2.style.width = '0%';
+var loadingTimer2 = setInterval(function(){
+var pbWidth2 = parseFloat(nowProgress2.style.width);
+			if (pbWidth2<88.5) {
+				nowProgress2.style.width = pbWidth2 + 0.5 +'%';
+			} else {
+				clearInterval(loadingTimer);
+				// setTimeout(function())
+				setTimeout(function(){
+					$('.loading').fadeOut(500);
+				},300)
+			}
+		},20);
+}
 
 function padding(number) {
 	return number < 10 ? "0" + number : "" + number; 

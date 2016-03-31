@@ -13,13 +13,67 @@
 	<meta http-equiv="Cache-Control" content="no-siteapp">
 
 	<title>玑域科技</title>
-	
+
+	<style>
+		.loading {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: #000 url(images/background.jpg) 0 0 no-repeat;
+			z-index: 9999;
+		}
+		.loading>img {
+			display: block;
+			width: 13%;
+			margin: 60% auto 0;
+		}
+		.progress-bar {
+			width: 52%;
+			margin: 60px auto 0;
+			position: relative;
+		}
+		.progress-bar>img {
+			width: 100%;
+		}
+		.progress-bar>div {
+			position: absolute;
+			/*width: 88.5%;*/
+			/*width: 0;*/
+			top: 40%;
+			height: 10%;
+			background-color: #fff;
+			left: 9%;
+			border-radius: 2px;
+		}
+	</style>
+
 	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+	<div class="loading">
+		<img src="images/logo-big.png">
+		<div class="progress-bar">
+			<img src="images/progress-bg.png">
+			<div id="nowprogress"></div>
+		</div>
+	</div>
+	<script>
+		var nowProgress = document.getElementById('nowprogress');
+		nowProgress.style.width = '0%';
+		var loadingTimer = setInterval(function(){
+			var pbWidth = parseFloat(nowProgress.style.width);
+			if (pbWidth<80) {
+				nowProgress.style.width = pbWidth + 0.5 +'%';
+			} else {
+				clearInterval(loadingTimer);
+			}
+		},20);
+	</script>
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide" id="slide1" data-hash="slide1">
