@@ -137,6 +137,10 @@ html,body,.swiper-container {
 	width: 42%;
 	top: 20px;
 	left: 8%;
+	opacity: 0;
+	-webkit-animation-duration: 0.7s;
+	animation-duration: 0.7s;
+  	/*-vendor-animation-delay: 2s;*/
 }
 /*#s2-robot {
 	position: absolute;
@@ -161,15 +165,40 @@ html,body,.swiper-container {
 }
 #s2-hand {
 	position: absolute;
-	bottom: -28%;
+	bottom: -60%;
 	right: 0;
 	width: 30%;
 }
+#s2-finger {
+	width: 100%;
+}
+#s2-sc {
+	position: absolute;
+	width: 50%;
+	top: -12%;
+	left: 15.5%;
+}
+#s2-bc {
+	position: absolute;
+	width: 75%;
+	top: -20%;
+	left: 6%;
+}
 #s2-btn>canvas {
 	position: absolute;
-	width: 72%;
-	top: 24%;
-	left: 14%;
+	width: 80%;
+	top: 16%;
+	left: 10%;
+}
+.waves {
+	position: absolute;
+	top: -10%;
+	left: 25%;
+	width: 50%;
+	overflow: hidden;
+}
+.waves>img {
+	width:200%;
 }
 #s2-word1 {
 	position: absolute;
@@ -177,6 +206,30 @@ html,body,.swiper-container {
 	width: 100%;
 	top: 54%;
 }
+#s2-word1 p:first-child {
+	font-size: 1.6em; 
+ 	border-right: .1em solid;
+ 	width: 2em; /* fallback */
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto .6em;
+ 	animation: typing .4s steps(2, end),
+ 	blink-caret .3s step-end infinite alternate;
+}
+#s2-word1 p:last-child {
+	font-size: 1.6em; 
+ 	border-right: .1em solid;
+ 	width: 7em; /* fallback */
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto;
+ 	animation: typing 1.4s 0.6s steps(7, end),
+ 	blink-caret .3s step-end 0.6s infinite alternate;
+ 	animation-fill-mode: both;
+}
+
+ @keyframes typing { from { width: 0; } }
+ @keyframes blink-caret { 50% { border-color: transparent; } }
 #s2-para {
 	position: absolute;
 	top: 69%;

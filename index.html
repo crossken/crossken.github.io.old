@@ -54,27 +54,7 @@
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-		<div class="loading">
-		<img src="images/logo-big.png">
-		<div class="progress-bar">
-			<img src="images/progress-bg.png">
-			<div id="nowprogress"></div>
-		</div>
-	</div>
-	<script>
-		var isTo80;
-		var nowProgress = document.getElementById('nowprogress');
-		nowProgress.style.width = '0%';
-		var loadingTimer = setInterval(function(){
-			var pbWidth = parseFloat(nowProgress.style.width);
-			if (pbWidth<80) {
-				nowProgress.style.width = pbWidth + 0.5 +'%';
-			} else {
-				clearInterval(loadingTimer);
-				isTo80 = true;
-			}
-		},15);
-	</script>
+
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide" id="subtitles" data-hash="sub">
@@ -91,7 +71,9 @@
 				<a href="#" id="s1-fp"><img src="images/s1-fingerprint.png"></a>
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
-			<div class="swiper-slide" id="slide2" data-hash="slide2">
+
+
+<!-- 			<div class="swiper-slide" id="slide2" data-hash="slide2">
 				<img src="images/s2-title.png" id="s2-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="3.1s" class="ani">
 				<a href="" id="s2-btn">
 					<img src="images/s2-robot.png" id="s2-robot" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
@@ -111,7 +93,43 @@
 					<img src="images/s2-word2.png" id="s2-word2">
 				</div>
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="4.9s">
+			</div> -->
+
+
+			<div class="swiper-slide" id="slide2" data-hash="slide2">
+				<img src="images/s2-title.png" id="s2-title">
+				<a href="" id="s2-btn">
+					<img src="images/s2-robot.png" id="s2-robot">
+					<div id="s2-hand">
+						<img src="images/s2-hand.png" id="s2-finger">
+						<img src="images/s2-small-circle.png" id="s2-sc">
+						<img src="images/s2-big-circle.png" id="s2-bc">						
+					</div>					
+					<div class="waves">
+						<img src="images/wave.png">
+					</div>
+					<canvas id="canvas1" width="90" height="110"></canvas>
+					<canvas id="canvas2" width="90" height="110"></canvas>
+					<canvas id="canvas3" width="90" height="110"></canvas>
+					<canvas id="canvas4" width="90" height="110"></canvas>
+					<canvas id="canvas5" width="90" height="110"></canvas>
+					<canvas id="canvas6" width="90" height="110"></canvas>
+				</a>
+
+
+				<!-- <img src="images/s2-word1.png" id="s2-word1"> -->
+				<div id="s2-word1">
+					<p>您好</p>
+					<p>很高兴为您服务</p>
+				</div>
+				<div id="s2-para">
+					<p id="now-date"></p>
+					<img src="images/s2-word2.png" id="s2-word2">
+				</div>
+				<img src="images/logo.png" class="s2-logo ani">
 			</div>
+
+
 			<div class="swiper-slide" id="slide3" data-hash="slide3">
 				<img src="images/s3-title.png" id="s3-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<img src="images/s3-word1.png" id="s3-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
