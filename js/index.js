@@ -1,5 +1,5 @@
 window.onload = function(){
-			alert('2');
+			alert('3');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -31,11 +31,15 @@ window.onload = function(){
 					}
 					if (swiper.activeIndex == 2) {
 
-						$('#s2-title').addClass('fadeInUp animated');
+						// $('#s2-title').addClass('fadeInUp animated');
 
 						setTimeout(function(){
 							drawHexagon();
 						},700)
+						$('#s2-btn').addClass('fadeIn animated');
+						setTimeout(function(){
+							$('.waves').addClass('fadeIn animated');
+						},3100);
 					}
 					if (swiper.activeIndex == 3) {
 

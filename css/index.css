@@ -138,8 +138,8 @@ html,body,.swiper-container {
 	top: 20px;
 	left: 8%;
 	opacity: 0;
-	-webkit-animation-duration: 0.7s;
-	animation-duration: 0.7s;
+/*	-webkit-animation-duration: 0.7s;
+	animation-duration: 0.7s;*/
   	/*-vendor-animation-delay: 2s;*/
 }
 /*#s2-robot {
@@ -196,6 +196,7 @@ html,body,.swiper-container {
 	left: 25%;
 	width: 50%;
 	overflow: hidden;
+	opacity: 0;
 }
 .waves>img {
 	width:200%;
