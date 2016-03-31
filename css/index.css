@@ -169,6 +169,8 @@ html,body,.swiper-container {
 	bottom: -60%;
 	right: 0;
 	width: 30%;
+	/*opacity: 0;*/
+	display: none;
 }
 #s2-finger {
 	width: 100%;
@@ -178,12 +180,16 @@ html,body,.swiper-container {
 	width: 50%;
 	top: -12%;
 	left: 15.5%;
+	－webkit-animation: btnFadeInOut 1s infinite;
+	animation: btnFadeInOut 1s infinite;
 }
 #s2-bc {
 	position: absolute;
 	width: 75%;
 	top: -20%;
 	left: 6%;
+	-webkit-animation: btnFadeInOut 1s 0.5s infinite;
+	animation: btnFadeInOut 1s 0.5s infinite;
 }
 #s2-btn>canvas {
 	position: absolute;
@@ -211,34 +217,14 @@ html,body,.swiper-container {
 	width: 100%;
 	top: 54%;
 }
-/*#s2-word1 p:first-child {
-	font-size: 1.4em; 
- 	border-right: .1em solid;
- 	width: 2em; 
- 	white-space: nowrap;
- 	overflow: hidden;
- 	margin: 0 auto .5em;
- 	animation: typing .4s steps(2, end),
- 	blink-caret .3s step-end infinite alternate;
-}
-#s2-word1 p:last-child {
-	font-size: 1.4em; 
- 	border-right: .1em solid;
- 	width: 7em; 
- 	white-space: nowrap;
- 	overflow: hidden;
- 	margin: 0 auto;
- 	animation: typing 1.4s 0.6s steps(7, end),
- 	blink-caret .3s step-end 0.6s infinite alternate;
- 	animation-fill-mode: both;
-}*/
+
 #s2-word1 p:first-child {
 	font-size: 22px; 
  	border-right: .1em solid;
  	width: 2em;
  	white-space: nowrap;
  	overflow: hidden;
- 	margin: 0 auto 10px;
+ 	margin: 0 auto 6px;
  	border-color:transparent;
 	opacity: 0;
 }
@@ -270,9 +256,15 @@ html,body,.swiper-container {
 }
 @keyframes typing { from { width: 0; } }
 @keyframes blink-caret { 50% { border-color: #fff; } }
+@-webkit-keyframes btnFadeInOut {
+	50% {opacity: 1;}
+}
+@keyframes btnFadeInOut {
+	50% {opacity: 0.5;}
+}
 #s2-para {
 	position: absolute;
-	top: 69%;
+	top: 71%;
 	opacity: 0;
 }
 #now-date {
@@ -301,6 +293,7 @@ html,body,.swiper-container {
 	width: 25%;
 	top: 20px;
 	left: 8%;
+	opacity: 0;
 }
 #s3-word1,#s7-word {
 	position: absolute;
@@ -314,9 +307,54 @@ html,body,.swiper-container {
 	width: 16%;
 	top: 65%;
 	left: 42%;
+	opacity: 0;
 }
-.go>img {
+.go-wrapper {
 	width: 100%;
+}
+.go-word {
+	position: absolute;
+	width: 46%;
+	left: 27%;
+	top: 36%;
+	-webkit-animation: fadeInOut 1s infinite linear;
+	animation: fadeInOut 1s infinite linear;
+}
+.s3-para1 {
+	font-size: 22px; 
+ 	border-right: .1em solid;
+ 	width: 2em;
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto 10px;
+ 	border-color:transparent;
+	opacity: 0;
+}
+.s3-para1-ani {
+	@-webkit-animation: typing .4s steps(2, end) 1.4s,
+ 	blink-caret .3s step-end 1.4s 2  alternate;
+	animation: typing .4s steps(2, end) 1.4s,
+ 	blink-caret .3s step-end 1.4s 2  alternate;
+ 	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+.s3-para2 {
+	font-size: 22px; 
+ 	border-right: .1em solid;
+ 	width: 8em; /* fallback */
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto;
+ 	border-color:transparent;
+ 	opacity: 0;
+}
+.s3-para2-ani {
+	-webkit-animation: typing 1.6s 2s steps(8, end),
+ 	blink-caret .3s step-end 2s infinite alternate;
+	animation: typing 1.6s 2s steps(8, end),
+ 	blink-caret .3s step-end 2s infinite alternate;
+ 	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
 }
 
 /*ani*/

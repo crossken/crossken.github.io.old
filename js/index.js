@@ -1,5 +1,5 @@
 window.onload = function(){
-	alert('7');
+			alert('16');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -18,13 +18,13 @@ window.onload = function(){
 				hashnav: true,
 				onlyExternal: true,
 				onInit: function(swiper){ 
-					swiperAnimateCache(swiper); 
-					swiperAnimate(swiper); 
+					// swiperAnimateCache(swiper); 
+					// swiperAnimate(swiper); 
 
 				}, 
 				onSlideChangeEnd: function(swiper){
-					console.log(swiper.activeIndex);
-					swiperAnimate(swiper);
+					// console.log(swiper.activeIndex);
+					// swiperAnimate(swiper);
 
 					if (swiper.activeIndex == 0) {
 
@@ -65,9 +65,25 @@ window.onload = function(){
 						setTimeout(function(){
 							$('.s2-para1,.s2-para2').css('opacity', '1');
 						},2000)
+						setTimeout(function(){
+							// $('#s2-hand').addClass('fadeIn animated')
+							$('#s2-hand').fadeIn(800);
+						},7800)
 					}
 					if (swiper.activeIndex == 3) {
+												$('.s3-para1').addClass('s3-para1-ani');
+						$('.s3-para2').addClass('s3-para2-ani');
 
+						$('#s3-title').addClass('fadeInUp animated');
+						setTimeout(function(){
+							$('#s3-logo').addClass('fadeInUp animated')
+						},700);
+						setTimeout(function(){
+							$('.s3-para1,.s3-para2').css('opacity', '1');
+						},700);
+						setTimeout(function(){
+							$('#s3-go').addClass('fadeIn animated')
+						},3600);
 
 					}
 
@@ -155,7 +171,7 @@ $('#s1-fp').tap(function(){
 		
 	},100)
 	setTimeout(function(){
-		mainSwiper.slideTo(2, 1200,true);
+		mainSwiper.slideTo(2, 800,true);
 	},3200)
 
 	
