@@ -19,12 +19,7 @@ window.onload = function(){
 				onInit: function(swiper){ 
 					swiperAnimateCache(swiper); 
 					swiperAnimate(swiper); 
-					setTimeout(function(){
-						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 20000);
-					},1700);
-					setTimeout(function(){
-						mainSwiper.slideTo(1, 1500,true);
-					},22700)
+
 				}, 
 				onSlideChangeEnd: function(swiper){
 					console.log(swiper.activeIndex);
@@ -245,18 +240,26 @@ function drawHexagon(){
 
 
 var nowProgress2 = document.getElementById('nowprogress');
-nowProgress2.style.width = '80%';
 var loadingTimer2 = setInterval(function(){
-	var pbWidth2 = parseFloat(nowProgress2.style.width);
-	if (pbWidth2<88.5) {
-		nowProgress2.style.width = pbWidth2 + 0.5 +'%';
-	} else {
-		clearInterval(loadingTimer);
-		setTimeout(function(){
-			$('.loading').fadeOut(500);
-		},300)
+	if (isTo80) {
+		var pbWidth2 = parseFloat(nowProgress2.style.width);
+		if (pbWidth2<88.5) {
+			nowProgress2.style.width = pbWidth2 + 0.5 +'%';
+		} else {
+			clearInterval(loadingTimer2);
+			setTimeout(function(){
+				$('.loading').fadeOut(500,function(){
+					setTimeout(function(){
+						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 20000);
+					},200);
+					setTimeout(function(){
+						mainSwiper.slideTo(1, 1500,true);
+					},21000)
+				});
+			},300)
+		}
 	}
-},20);
+},15);
 
 $('.sub').height(parseInt(windowWidth*0.1));
 $('.sub').css('top', parseInt(windowWidth*0.6));

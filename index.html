@@ -62,6 +62,7 @@
 		</div>
 	</div>
 	<script>
+		var isTo80;
 		var nowProgress = document.getElementById('nowprogress');
 		nowProgress.style.width = '0%';
 		var loadingTimer = setInterval(function(){
@@ -70,8 +71,9 @@
 				nowProgress.style.width = pbWidth + 0.5 +'%';
 			} else {
 				clearInterval(loadingTimer);
+				isTo80 = true;
 			}
-		},20);
+		},15);
 	</script>
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
