@@ -21,7 +21,8 @@
 			left: 0;
 			bottom: 0;
 			right: 0;
-			background: #000 url(images/background.jpg) 0 0 no-repeat;
+			/*background: #000 url(images/background.jpg) 0 0 no-repeat;*/
+			background-color: #000;
 			z-index: 9999;
 		}
 		.loading>img {
@@ -39,8 +40,6 @@
 		}
 		.progress-bar>div {
 			position: absolute;
-			/*width: 88.5%;*/
-			/*width: 0;*/
 			top: 40%;
 			height: 10%;
 			background-color: #fff;
@@ -55,7 +54,7 @@
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<div class="loading">
+		<div class="loading">
 		<img src="images/logo-big.png">
 		<div class="progress-bar">
 			<img src="images/progress-bg.png">
@@ -76,6 +75,12 @@
 	</script>
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="subtitles" data-hash="sub">
+				<div class="sub">
+					<img src="images/sub.png">
+				</div>
+				<img src="images/logo-big.png" class="logo-big">
+			</div>
 			<div class="swiper-slide" id="slide1" data-hash="slide1">
 				<img src="images/s1-circle1.png" id="s1-c1" class="s1-c1 circle">
 				<img src="images/s1-circle2.png" id="s1-c2" class="s1-c2 circle">

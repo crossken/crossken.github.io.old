@@ -1,26 +1,12 @@
-$(document).ready(function() {
-
-
-
-
-
-
-
-
-
-});
-
 window.onload = function(){
-		// alert(1);
-	// setInterval(function(){
-	// 	console.log($('#s1-c1').css('transform'));
-	// },30)
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
 			}).on('click', 'a', function(event) {
 				event.preventDefault();
 			});
+
+			var windowWidth = parseInt($(window).width());
 
 			var mainSwiper = new Swiper ('#main-swiper', {
 				direction: 'vertical',
@@ -33,22 +19,32 @@ window.onload = function(){
 				onInit: function(swiper){ 
 					swiperAnimateCache(swiper); 
 					swiperAnimate(swiper); 
+					setTimeout(function(){
+						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 20000);
+					},1700);
+					setTimeout(function(){
+						mainSwiper.slideTo(1, 1500,true);
+					},22700)
 				}, 
-				onSlideChangeEnd: function(swiper){ 
+				onSlideChangeEnd: function(swiper){
+					console.log(swiper.activeIndex);
 					swiperAnimate(swiper);
 
-					if (swiper.activeIndex == 1) {
+					if (swiper.activeIndex == 0) {
+
+					}
+					if (swiper.activeIndex == 2) {
 
 						setTimeout(function(){
 							drawHexagon();
 						},700)
 					}
-					if (swiper.activeIndex == 2) {
+					if (swiper.activeIndex == 3) {
 
 
 					}
 
-					if (swiper.activeIndex == 3) {
+					if (swiper.activeIndex == 4) {
 						var aniSwiper = new Swiper ('#ani-swiper', {
 							effect : 'fade',
 							fade: {
@@ -75,7 +71,7 @@ window.onload = function(){
 							}
 							if (aniIndex==2) {
 								$(this).removeClass().addClass('circle-rotate3');
-								mainSwiper.slideTo(4, 800, true);
+								mainSwiper.slideTo(5, 800, true);
 							}
 							aniIndex++;	
 
@@ -98,7 +94,7 @@ $('#ani-swiper').tap(function(){
 
 
 
-var windowWidth = parseInt($(window).width());
+
 var rblineheight = $('#s2-rbline').height();
 $('.s1-c1').css('top',parseInt(windowWidth*0.27));    
 $('.s1-c2').css('top',parseInt(windowWidth*0.21));
@@ -132,14 +128,14 @@ $('#s1-fp').tap(function(){
 		
 	},100)
 	setTimeout(function(){
-		mainSwiper.slideTo(1, 1200,true);
+		mainSwiper.slideTo(2, 1200,true);
 	},3200)
 
 	
 
 })
 $('#s2-btn').tap(function() {
-	mainSwiper.slideTo(2, 800,true);
+	mainSwiper.slideTo(3, 800,true);
 
 });
 
@@ -162,31 +158,31 @@ $('#s4-go').tap(function(event) {
 		$('#slide4 .loading-mask').animate({'width': '37.5%'}, 1000);
 	},1300)
 	setTimeout(function(){
-		mainSwiper.slideTo(5, 800, true);
+		mainSwiper.slideTo(6, 800, true);
 	},2500)
 });
 
 $('#s3-go').tap(function() {
-	mainSwiper.slideTo(3, 800,true);
+	mainSwiper.slideTo(4, 800,true);
 });
 
 $('#s5-go').tap(function() {
-	mainSwiper.slideTo(6, 800,true);
+	mainSwiper.slideTo(7, 800,true);
 });
 $('#s6-tech').tap(function() {
-	mainSwiper.slideTo(7, 800,true);
-})
-$('#s6-design').tap(function() {
 	mainSwiper.slideTo(8, 800,true);
 })
-$('#s6-planning').tap(function() {
+$('#s6-design').tap(function() {
 	mainSwiper.slideTo(9, 800,true);
 })
-$('#s6-go').tap(function() {
+$('#s6-planning').tap(function() {
 	mainSwiper.slideTo(10, 800,true);
 })
+$('#s6-go').tap(function() {
+	mainSwiper.slideTo(11, 800,true);
+})
 $('.showdoc-back').tap(function() {
-	mainSwiper.slideTo(6, 800,true);
+	mainSwiper.slideTo(7, 800,true);
 })
 $('#s7-go').tap(function() {
 	window.location.href = "http://m.la-chance.net/";
@@ -251,17 +247,22 @@ function drawHexagon(){
 var nowProgress2 = document.getElementById('nowprogress');
 nowProgress2.style.width = '0%';
 var loadingTimer2 = setInterval(function(){
-var pbWidth2 = parseFloat(nowProgress2.style.width);
-			if (pbWidth2<88.5) {
-				nowProgress2.style.width = pbWidth2 + 0.5 +'%';
-			} else {
-				clearInterval(loadingTimer);
-				// setTimeout(function())
-				setTimeout(function(){
-					$('.loading').fadeOut(500);
-				},300)
-			}
-		},20);
+	var pbWidth2 = parseFloat(nowProgress2.style.width);
+	if (pbWidth2<88.5) {
+		nowProgress2.style.width = pbWidth2 + 0.5 +'%';
+	} else {
+		clearInterval(loadingTimer);
+		setTimeout(function(){
+			$('.loading').fadeOut(500);
+		},300)
+	}
+},20);
+
+$('.sub').height(parseInt(windowWidth*0.1));
+$('.sub').css('top', parseInt(windowWidth*0.6));
+
+
+
 }
 
 function padding(number) {
