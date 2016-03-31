@@ -245,7 +245,7 @@ function drawHexagon(){
 
 
 var nowProgress2 = document.getElementById('nowprogress');
-nowProgress2.style.width = '0%';
+nowProgress2.style.width = '80%';
 var loadingTimer2 = setInterval(function(){
 	var pbWidth2 = parseFloat(nowProgress2.style.width);
 	if (pbWidth2<88.5) {
