@@ -238,6 +238,7 @@ html,body,.swiper-container {
 #s2-para {
 	position: absolute;
 	top: 69%;
+	opacity: 0;
 }
 #now-date {
 	text-align: center;
@@ -254,6 +255,7 @@ html,body,.swiper-container {
 	bottom: 16px;
 	left: 39%;
 	width: 22%;
+	opacity: 0;
 }
 
 

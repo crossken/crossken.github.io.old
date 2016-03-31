@@ -1,5 +1,5 @@
 window.onload = function(){
-			alert('4');
+			alert('5');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -36,7 +36,6 @@ window.onload = function(){
 						var wavesWidth = $('.waves').width();
 						setInterval(function(){
 							if (parseFloat($('.waves img').css('left')) < -wavesWidth){
-								console.log(1);
 								$('.waves img').css('left',0);
 							}
 							$('.waves img').css('left',parseFloat($('.waves img').css('left'))-1+'px');
@@ -52,6 +51,15 @@ window.onload = function(){
 						setTimeout(function(){
 							$('.waves').addClass('fadeIn animated');
 						},3100);
+						setTimeout(function(){
+							$('#s2-title').addClass('fadeInUp animated')
+						},3700);
+						setTimeout(function(){
+							$('#s2-para').addClass('fadeInUp animated')
+						},4400);
+						setTimeout(function(){
+							$('#s2-logo').addClass('fadeInUp animated')
+						},5100);
 					}
 					if (swiper.activeIndex == 3) {
 
