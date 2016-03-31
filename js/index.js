@@ -1,4 +1,5 @@
 window.onload = function(){
+			alert('1');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -241,27 +242,27 @@ function drawHexagon(){
 }
 
 
-// var nowProgress2 = document.getElementById('nowprogress');
-// var loadingTimer2 = setInterval(function(){
-// 	if (isTo80) {
-// 		var pbWidth2 = parseFloat(nowProgress2.style.width);
-// 		if (pbWidth2<88.5) {
-// 			nowProgress2.style.width = pbWidth2 + 0.5 +'%';
-// 		} else {
-// 			clearInterval(loadingTimer2);
-// 			setTimeout(function(){
-// 				$('.loading').fadeOut(500,function(){
-// 					setTimeout(function(){
-// 						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 20000);
-// 					},200);
-// 					setTimeout(function(){
-// 						mainSwiper.slideTo(1, 1500,true);
-// 					},21000)
-// 				});
-// 			},300)
-// 		}
-// 	}
-// },15);
+var nowProgress2 = document.getElementById('nowprogress');
+var loadingTimer2 = setInterval(function(){
+	if (isTo80) {
+		var pbWidth2 = parseFloat(nowProgress2.style.width);
+		if (pbWidth2<88.5) {
+			nowProgress2.style.width = pbWidth2 + 0.5 +'%';
+		} else {
+			clearInterval(loadingTimer2);
+			setTimeout(function(){
+				$('.loading').fadeOut(500,function(){
+					setTimeout(function(){
+						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 15000);
+					},200);
+					setTimeout(function(){
+						mainSwiper.slideTo(1, 1500,true);
+					},16000)
+				});
+			},300)
+		}
+	}
+},15);
 
 $('.sub').height(parseInt(windowWidth*0.1));
 $('.sub').css('top', parseInt(windowWidth*0.6));
