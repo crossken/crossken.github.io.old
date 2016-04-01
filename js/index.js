@@ -25,7 +25,7 @@ window.onload = function(){
 				onSlideChangeEnd: function(swiper){
 					// console.log(swiper.activeIndex);
 					swiperAnimate(swiper);
-
+					// alert(1);
 					if (swiper.activeIndex == 0) {
 
 					}
@@ -120,6 +120,20 @@ window.onload = function(){
 							aniIndex++;	
 
 						})
+					}
+
+					if (swiper.activeIndex == 5) {
+						$('.s4-para1').addClass('s4-para1-ani');
+						$('.s4-para2').addClass('s4-para2-ani');
+						$('.s4-para3').addClass('s4-para3-ani');
+
+						setTimeout(function(){
+							$('.s4-para1,.s4-para2,.s4-para3').css('opacity', '1');
+						},700);
+						setTimeout(function(){
+							$('#s4-go').addClass('fadeIn animated')
+						},5300);
+
 					}
 
 

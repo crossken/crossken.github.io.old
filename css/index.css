@@ -842,6 +842,61 @@ html,body,.swiper-container {
 	top: 35%;
 	/*display: none;*/
 }
+.s4-para1 {
+	font-size: 22px; 
+ 	border-right: .1em solid;
+ 	width: 8.2em;
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto 6px;
+ 	border-color:transparent;
+	opacity: 0;
+}
+.s4-para1-ani {
+	@-webkit-animation: typing 1.6s steps(8, end) 1.4s,
+ 	blink-caret .3s step-end 1.4s 5  alternate;
+	animation: typing 1.6s steps(8, end) 1.4s,
+ 	blink-caret .3s step-end 1.4s 5  alternate;
+ 	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+.s4-para2 {
+	font-size: 22px; 
+ 	border-right: .1em solid;
+ 	width: 8em; /* fallback */
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto 6px;
+ 	border-color:transparent;
+ 	opacity: 0;
+}
+.s4-para2-ani {
+	-webkit-animation: typing 1.6s 3s steps(8, end),
+ 	blink-caret .3s step-end 3s 5 alternate;
+	animation: typing 1.6s 3s steps(8, end),
+ 	blink-caret .3s step-end 3s 5 alternate;
+ 	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+.s4-para3 {
+	font-size: 22px; 
+ 	border-right: .1em solid;
+ 	width: 4em; /* fallback */
+ 	white-space: nowrap;
+ 	overflow: hidden;
+ 	margin: 0 auto;
+ 	border-color:transparent;
+ 	opacity: 0;
+}
+.s4-para3-ani {
+	-webkit-animation: typing 0.8s 4.6s steps(4, end),
+ 	blink-caret .3s step-end 4.6s infinite alternate;
+	animation: typing 0.8s 4.6s steps(4, end),
+ 	blink-caret .3s step-end 4.6s infinite alternate;
+ 	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+
 #s4-lr{
 	position: absolute;
 	left: 0;
