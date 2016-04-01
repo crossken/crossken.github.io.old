@@ -1,5 +1,5 @@
 window.onload = function(){
-			alert('11:08');
+			// alert('11:08');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -18,13 +18,13 @@ window.onload = function(){
 				hashnav: true,
 				onlyExternal: true,
 				onInit: function(swiper){ 
-					// swiperAnimateCache(swiper); 
-					// swiperAnimate(swiper); 
+					swiperAnimateCache(swiper); 
+					swiperAnimate(swiper); 
 
 				}, 
 				onSlideChangeEnd: function(swiper){
 					// console.log(swiper.activeIndex);
-					// swiperAnimate(swiper);
+					swiperAnimate(swiper);
 
 					if (swiper.activeIndex == 0) {
 
@@ -157,6 +157,22 @@ var aniSwiper = new Swiper ('#ani-swiper', {
 					aniSwiper.slideTo(2, 300, true);
 					aniIndex = 2;
 					$('#ani-circle').addClass('circle-rotate2');
+				}
+			},4900)
+		}
+		if (swiper.activeIndex==2) {
+
+			$('.info-house').addClass('fadeIn animated');
+			$('.info-cloud1').addClass('info-cloud1-ani');
+			$('.info-cloud2').addClass('info-cloud2-ani');
+			$('.info-signal').addClass('info-signal-ani');
+			$('.info-phone').addClass('info-phone-ani');
+			$('.info-robot').addClass('info-robot-ani');
+			setTimeout(function(){
+				if (aniIndex == 2) {
+					mainSwiper.slideTo(5, 500, true);
+					aniIndex = 3;
+					$('#ani-circle').addClass('circle-rotate3');
 				}
 			},4900)
 		}
