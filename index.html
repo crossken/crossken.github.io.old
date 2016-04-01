@@ -54,7 +54,27 @@
 </head>
 <body>
 
-
+	<div class="loading">
+		<img src="images/logo-big.png">
+		<div class="progress-bar">
+			<img src="images/progress-bg.png">
+			<div id="nowprogress"></div>
+		</div>
+	</div>
+	<script>
+		var isTo80;
+		var nowProgress = document.getElementById('nowprogress');
+		nowProgress.style.width = '0%';
+		var loadingTimer = setInterval(function(){
+			var pbWidth = parseFloat(nowProgress.style.width);
+			if (pbWidth<80) {
+				nowProgress.style.width = pbWidth + 0.5 +'%';
+			} else {
+				clearInterval(loadingTimer);
+				isTo80 = true;
+			}
+		},15);
+	</script>
 
 
 	<div class="swiper-container" id="main-swiper">
@@ -183,43 +203,79 @@
 					<p class="s4-para2">取信息关联性90%</p>
 					<p class="s4-para3">是否恢复</p>
 				</div>
-<!-- 				<img src="images/s4-word1.png" id="s4-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani"> -->
 				<div id="s4-lr">
 					<img src="images/s4-loading.png">
 					<div class="loading-mask"></div>
 				</div>
 				<a href="" id="s4-go" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/go.png" class="go-word"></a>
-<!-- 				<a href="" id="s4-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s"><img src="images/go.png"></a> -->
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
 			</div>
+
+
 			<div class="swiper-slide" id="slide5" data-hash="slide6">
 				<img src="images/s5-title.png" id="s5-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
-				<img src="images/s5-doc.png" id="s5-doc" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
-				<img src="images/s5-word1.png" id="s5-word1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s" class="ani">
-				<a href="" id="s5-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s" class="ani"><img src="images/go.png"></a>
-				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.4s">
-			</div>
-			<div class="swiper-slide" id="slide6" data-hash="slide7">
-				<img src="images/s6-title.png" id="s6-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
-				<div id="s6-main">
-					<img src="images/s6-left-top.png" id="s6-lt" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
-					<img src="images/s6-right-bottom.png" id="s6-rb" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
-					<img src="images/s6-circle.png" id="s6-circle" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s" class="ani">
-					<img src="images/s6-word1.png" id="s6-word1" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s" class="ani">
+				<div class="s5-doc ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s">
+					<img src="images/s5-doc-wrap.png" class="s5-doc-wrap">
+					<p class="s5-percentage">0%</p>
+					<img src="images/s5-square.png" class="s5-square" id="s5-s1">
+					<img src="images/s5-square.png" class="s5-square" id="s5-s2">
+					<img src="images/s5-square.png" class="s5-square" id="s5-s3">
+					<img src="images/s5-square.png" class="s5-square" id="s5-s4">
+					<img src="images/s5-square.png" class="s5-square" id="s5-s5">
+					<img src="images/s5-doc-word.png" class="s5-doc-word">
+					<div class="s5-doc-logo">
+						<img src="images/logo.png" id="s5-doc-logo">
+						<img src="images/dot.png" id="logo-dot1" class="logo-dot">
+						<img src="images/dot.png" id="logo-dot2" class="logo-dot">
+						<img src="images/dot.png" id="logo-dot3" class="logo-dot">
+						<img src="images/dot.png" id="logo-dot4" class="logo-dot">
+					</div>	
+					<img src="images/dot.png" id="doc-dot1" class="doc-dot">
+					<img src="images/dot.png" id="doc-dot2" class="doc-dot">
+					<img src="images/dot.png" id="doc-dot3" class="doc-dot">
+					<img src="images/dot.png" id="doc-dot4" class="doc-dot right-dot">
+					<img src="images/dot.png" id="doc-dot5" class="doc-dot right-dot">
+					<img src="images/dot.png" id="doc-dot6" class="doc-dot right-dot">
+					<img src="images/dot.png" id="doc-dot7" class="doc-dot right-dot">
+					<img src="images/dot.png" id="doc-dot8" class="doc-dot right-dot">
 				</div>
-				<div id="s6-btn-wrapper" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.1s" class="ani">
+				<div id="s5-word1">
+					<p class="s5-para1">是否</p>
+					<p class="s5-para2">打开文件夹</p>
+				</div>
+				<a href="" id="s5-go" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/go.png" class="go-word"></a>
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
+			</div>
+
+
+				<div class="swiper-slide" id="slide6" data-hash="slide7">
+				<img src="images/s6-title.png" class="s6-title">
+				<div id="s6-main">
+					<img src="images/s6-left-top.png" class="s6-lt">
+					<img src="images/s6-right-bottom.png" class="s6-rb">
+					<img src="images/s6-circle.png" class="s6-circle">
+					<img src="images/s6-word1.png" class="s6-word1">
+				</div>
+				<div id="s6-btn-wrapper">
 					<a href="" id="s6-tech" class="s6-btn"><img src="images/s6-small.png"><img src="images/s6-tech-word.png"></a>
 					<a href="" id="s6-design" class="s6-btn"><img src="images/s6-small2.png"><img src="images/s6-design-word.png"></a>
 					<a href="" id="s6-planning" class="s6-btn"><img src="images/s6-small3.png"><img src="images/s6-planning-word.png"></a>
 				</div>
-				<a href="" id="s6-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.8s"><img src="images/go.png"></a>
-				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="3.5s">
+				<a href="" id="s6-go" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/go.png" class="go-word"></a>
+				<img src="images/logo.png" class="s2-logo">
 			</div>
+
 			<div class="swiper-slide showdoc" id="tech" data-hash="slide8">
 				<div id="tech-main">
 					<img src="images/showdoc-bg.png" class="showdoc-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s">
 					<img src="images/showdoc-title.png" class="showdoc-title ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s">
-					<a href="" id="tech-back" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani showdoc-back"><img src="images/showdoc-back.png"></a>
+					<div class="showdoc-bl"><img src="images/showdoc-boder-left.png"></div>
+					<div class="showdoc-br"><img src="images/showdoc-boder-right.png"></div>
+					<a href="" id="tech-back" swiper-animate-effect="flip" swiper-animate-duration="1.2s" swiper-animate-delay="3.4s" class="ani showdoc-back">
+						<img src="images/showdoc-back.png">
+						<img src="images/dot.png" class="showback-dot showback-dot1">
+						<img src="images/dot.png" class="showback-dot showback-dot2">
+					</a>
 					<img src="images/tech-title.png" id="tech-title" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
 					<img src="images/tech-word.png" id="tech-word" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
 					<img src="images/tech-1.png" id="tech-1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="2.1s" class="ani">
@@ -231,7 +287,13 @@
 				<div id="design-main">
 					<img src="images/showdoc-bg.png" class="showdoc-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s">
 					<img src="images/showdoc-title.png" class="showdoc-title ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s">
-					<a href="" id="design-back" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani showdoc-back"><img src="images/showdoc-back.png"></a>
+					<div class="showdoc-bl"><img src="images/showdoc-boder-left.png"></div>
+					<div class="showdoc-br"><img src="images/showdoc-boder-right.png"></div>
+					<a href="" id="design-back" swiper-animate-effect="flip" swiper-animate-duration="1.2s" swiper-animate-delay="3.4s" class="ani showdoc-back">
+						<img src="images/showdoc-back.png">
+						<img src="images/dot.png" class="showback-dot showback-dot1">
+						<img src="images/dot.png" class="showback-dot showback-dot2">
+					</a>
 					<img src="images/design-title.png" id="design-title" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
 					<img src="images/design-word.png" id="design-word" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
 					<img src="images/design-1.png" id="design-1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.7s" swiper-animate-delay="2.1s" class="ani">
@@ -243,7 +305,13 @@
 				<div id="planning-main">
 					<img src="images/showdoc-bg.png" class="showdoc-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s">
 					<img src="images/showdoc-title.png" class="showdoc-title ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s">
-					<a href="" id="planning-back" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani showdoc-back"><img src="images/showdoc-back.png"></a>
+					<div class="showdoc-bl"><img src="images/showdoc-boder-left.png"></div>
+					<div class="showdoc-br"><img src="images/showdoc-boder-right.png"></div>
+					<a href="" id="tech-back" swiper-animate-effect="flip" swiper-animate-duration="1.2s" swiper-animate-delay="3.4s" class="ani showdoc-back">
+						<img src="images/showdoc-back.png">
+						<img src="images/dot.png" class="showback-dot showback-dot1">
+						<img src="images/dot.png" class="showback-dot showback-dot2">
+					</a>
 					<img src="images/planning-title.png" id="planning-title" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
 					<img src="images/planning-word.png" id="planning-word" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.4s" class="ani">
 					<img src="images/planning-1.png" id="planning-1" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.7s" swiper-animate-delay="2.1s" class="ani">
@@ -254,9 +322,13 @@
 			</div>
 			<div class="swiper-slide" id="slide7" data-hash="slide11">
 				<img src="images/s7-title.png" id="s7-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
-				<img src="images/s7-word.png" id="s7-word" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s" class="ani">
-				<a href="" id="s7-go" class="go ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s"><img src="images/go.png"></a>
-				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s">
+				<div id="s7-word">
+					<p class="s7-para1">主人</p>
+					<p class="s7-para2">发现神秘代码</p>
+					<p class="s7-para3">是否查看</p>
+				</div>
+				<a href="" id="s7-go" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/go.png" class="go-word"></a>
+				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
 			</div>
 		</div>
 	</div>
