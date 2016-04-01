@@ -360,14 +360,8 @@ html,body,.swiper-container {
 /*ani*/
 #ani-bg {
 	width: 100%;
-/*	position: relative;
-	z-index: 2;*/
-/*	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;*/
 }
-#ani-s2 {
+/*#ani-s2 {
 	background: #000 url(../images/ani-s2-bg.png) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -376,7 +370,7 @@ html,body,.swiper-container {
 	background: #000 url(../images/ani-s3-bg.png) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
-}
+}*/
 #ani-circle {
 	width: 70%;
 	position: absolute;
@@ -445,30 +439,209 @@ html,body,.swiper-container {
 #ani-swiper .swiper-slide {
 	
 }
-#ani-land {
+.ani-land {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 }
-#steam-house {
+.steam-house {
 	width: 100%;
 	position: absolute;
 	left: 0;
 	bottom: 22%;
+	opacity: 0;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+ 	-webkit-animation-duration: 0.7s;
+ 	animation-duration: 0.7s;
 }
-#steam-railway {
+.elec-house {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 25%;
+	opacity: 0;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+ 	-webkit-animation-duration: 0.7s;
+ 	animation-duration: 0.7s;
+}
+.elec-car {
+	width: 38%;
+	position: absolute;
+	left: 100%;
+	bottom: 10%;
+}
+.elec-car-ani {
+	-webkit-animation: translateMove 4s 2s;
+	animation: translateMove 4s 2s;
+}
+.elec-bus {
+	width: 45%;
+	position: absolute;
+	left: 100%;
+	bottom: 20%;
+}
+.elec-bus-ani {
+	-webkit-animation: translateMove 7s 1.2s;
+	animation: translateMove 7s 1.2s;
+}
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+@keyframes bounceInRight {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+
+@-webkit-keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.steam-railway {
 	position: absolute;
 	width: 100%;
 	bottom: 12%;
 	left: 0;
+	opacity: 0;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+ 	-webkit-animation-duration: 0.7s;
+ 	animation-duration: 0.7s;
+ 	 -webkit-animation-delay: 0.7s;
+ 	animation-delay: 0.7s;
 }
 #steam-fulltrain {
 	position: absolute;
 	width: 30%;
-	bottom: 12%;
+	bottom:12%;
 	right: -30%;
 	-webkit-transform:rotate(16deg);
+	transform:rotate(16deg);
+}
+.fulltrain-run {
+	-webkit-animation: fulltrainRun 4s linear 1s;
+	animation: fulltrainRun 4s linear 1s;
+}
+@keyframes fulltrainRun {
+	0%	{bottom:12%;right:-30%;-webkit-transform:rotate(16deg);transform:rotate(16deg)}
+	27%	{bottom:15%;right:0%;-webkit-transform:rotate(16deg);transform:rotate(16deg)}
+	48%	{bottom:17%;right:20%;-webkit-transform:rotate(10deg);transform:rotate(10deg)}
+	58%	{bottom:18%;right:32%;-webkit-transform:rotate(6deg);transform:rotate(6deg)}
+	67%	{bottom:18%;right:40%;-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	87%	{bottom:17%;right:60%;-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}
+	100% {bottom:16%;right:80%;-webkit-transform:rotate(-8deg);transform:rotate(-8deg)}
+}
+@-webkit-keyframes fulltrainRun {
+	0%	{bottom:12%;right:-30%;-webkit-transform:rotate(16deg);transform:rotate(16deg)}
+	27%	{bottom:15%;right:0%;-webkit-transform:rotate(16deg);transform:rotate(16deg)}
+	48%	{bottom:17%;right:20%;-webkit-transform:rotate(10deg);transform:rotate(10deg)}
+	58%	{bottom:18%;right:32%;-webkit-transform:rotate(6deg);transform:rotate(6deg)}
+	67%	{bottom:18%;right:40%;-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+	87%	{bottom:17%;right:60%;-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}
+	100% {bottom:16%;right:80%;-webkit-transform:rotate(-8deg);transform:rotate(-8deg)}
 }
 #steam-train {
 	width: 100%;
@@ -481,6 +654,8 @@ html,body,.swiper-container {
 	position: absolute;
 	width: 25%;
 	bottom: 7%;
+	-webkit-animation: rotate1 4s linear infinite;
+	animation: rotate1 4s linear infinite;
 }
 #steam-tire2 {
 	right: 0.5%;	
@@ -488,24 +663,79 @@ html,body,.swiper-container {
 #steam-tire1 {
 	right: 28%;	
 }
-#steam-cloud1 {
+.steam-cloud1 {
 	position: absolute;
 	width: 14%;
 	left: 15%;
 	top: 15%;
+	opacity: 0;
+
 }
-#steam-cloud2 {
+.steam-cloud2 {
 	position: absolute;
 	width: 21%;
 	left: 48%;
 	top: 7%;
+	opacity: 0;
 }
-#steam-cloud3 {
+.steam-cloud3 {
 	position: absolute;
 	width: 15%;
 	left: 74%;
 	top: 28%;
+	opacity: 0;
 }
+.elec-cloud2 {
+	position: absolute;
+	width: 21%;
+	left: 30%;
+	top: 7%;
+	opacity: 0;
+}
+.elec-cloud3 {
+	position: absolute;
+	width: 15%;
+	left: 74%;
+	top: 19%;
+	opacity: 0;
+}
+.steam-cloud1-ani {
+	-webkit-animation: fadeIn 0.7s 1.2s,translateMove 5.9s 1.9s;
+	animation: fadeIn 0.7s 1.2s,translateMove 5.9s 1.9s;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+.steam-cloud2-ani {
+	-webkit-animation: fadeIn 0.7s 1.2s,translateMove 8.9s 1.9s;
+	animation: fadeIn 0.7s 1.2s,translateMove 8.9s 1.9s;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+.steam-cloud3-ani {
+	-webkit-animation: fadeIn 0.7s 1.2s,translateMove 17s 1.9s;
+	animation: fadeIn 0.7s 1.2s,translateMove 17s 1.9s;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+.elec-cloud2-ani {
+	-webkit-animation: fadeIn 0.7s 0.6s,translateMove 21s 1.2s;
+	animation: fadeIn 0.7s 0.6s,translateMove 21s 1.2s;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+.elec-cloud3-ani {
+	-webkit-animation: fadeIn 0.7s 0.6s,translateMove 20s 1.2s;
+	animation: fadeIn 0.7s 0.6s,translateMove 20s 1.2s;
+	-webkit-animation-fill-mode: both;
+ 	animation-fill-mode: both;
+}
+@keyframes translateMove {
+	to {left: -40%;}
+}
+@-webkit-keyframes translateMove {
+	to {left: -40%;}
+}
+
 
 /*slide4*/
 

@@ -1,5 +1,5 @@
 window.onload = function(){
-			alert('16');
+			alert('11:08');
 			// 禁止默认点击／点触时间
 			$('a').on('tap', 'a', function(event) {
 				event.preventDefault();
@@ -71,7 +71,7 @@ window.onload = function(){
 						},7800)
 					}
 					if (swiper.activeIndex == 3) {
-												$('.s3-para1').addClass('s3-para1-ani');
+						$('.s3-para1').addClass('s3-para1-ani');
 						$('.s3-para2').addClass('s3-para2-ani');
 
 						$('#s3-title').addClass('fadeInUp animated');
@@ -88,33 +88,34 @@ window.onload = function(){
 					}
 
 					if (swiper.activeIndex == 4) {
-						var aniSwiper = new Swiper ('#ani-swiper', {
-							effect : 'fade',
-							fade: {
-								crossFade: true,
-							},
-							onlyExternal: true,
-							onInit: function(swiper){ 
-								swiperAnimateCache(swiper); 
-								swiperAnimate(swiper); 
-							},
-							onSlideChangeEnd: function(swiper){ 
-								swiperAnimate(swiper);	
+
+						$('.steam-house').addClass('bounceInDown animated');
+						$('.steam-railway').addClass('fadeInUp animated');
+						$('.steam-cloud1').addClass('steam-cloud1-ani');
+						$('.steam-cloud2').addClass('steam-cloud2-ani');
+						$('.steam-cloud3').addClass('steam-cloud3-ani');
+						$('#steam-fulltrain').addClass('fulltrain-run');
+
+						setTimeout(function(){
+							if (aniIndex == 0) {
+								aniSwiper.slideTo(1, 300, true);
+								aniIndex = 1;
+								$('#ani-circle').addClass('circle-rotate1');
 							}
-						})  
-						var aniIndex = 0;
+						},4900)
+						
 						$('#ani-circle').swipeLeft(function(){
 							if (aniIndex==0) {
 								$(this).addClass('circle-rotate1');
-								aniSwiper.slideTo(1, 800, true);	
+								aniSwiper.slideTo(1, 300, true);	
 							}
 							if (aniIndex==1) {
 								$(this).removeClass().addClass('circle-rotate2');
-								aniSwiper.slideTo(2, 800, true);
+								aniSwiper.slideTo(2, 300, true);
 							}
 							if (aniIndex==2) {
 								$(this).removeClass().addClass('circle-rotate3');
-								mainSwiper.slideTo(5, 800, true);
+								mainSwiper.slideTo(5, 300, true);
 							}
 							aniIndex++;	
 
@@ -130,10 +131,37 @@ window.onload = function(){
 				}
 			})
 
+var aniIndex = 0;
+var aniSwiper = new Swiper ('#ani-swiper', {
+	effect : 'fade',
+	fade: {
+		crossFade: true,
+	},
+	speed: 300,
+	onlyExternal: true,
+	onInit: function(swiper){ 
+		swiperAnimateCache(swiper); 
+		swiperAnimate(swiper); 
+	},
+	onSlideChangeEnd: function(swiper){ 
+		swiperAnimate(swiper);
+		if(swiper.activeIndex==1) {
+			$('.elec-house').addClass('bounceInRight animated');
+			$('.elec-cloud2').addClass('elec-cloud2-ani');
+			$('.elec-cloud3').addClass('elec-cloud3-ani');
+			$('.elec-car').addClass('elec-car-ani');
+			$('.elec-bus').addClass('elec-bus-ani');
 
-$('#ani-swiper').tap(function(){
-
-})
+			setTimeout(function(){
+				if (aniIndex == 1) {
+					aniSwiper.slideTo(2, 300, true);
+					aniIndex = 2;
+					$('#ani-circle').addClass('circle-rotate2');
+				}
+			},4900)
+		}
+	}
+}) 
 
 
 
