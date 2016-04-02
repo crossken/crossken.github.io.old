@@ -9,12 +9,31 @@
 	<!-- 格式检测 -->
 	<meta name="format-detection" content="telephone=no,email=no,adress=no">
 
-	<!-- 禁止百度自动转码 -->
-	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!-- 在iOS中以全屏模式运行 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+
+	<!-- UC强制全屏 -->
+	<meta name="screen-orientation" content="portrait"> <!-- 强制竖屏 -->
+	<meta name="full-screen" content="yes">
+	<meta name="browsermode" content="application">
+
+	<!-- QQ强制全屏 -->
+	<meta name="x5-orientation" content="portrait"> <!-- 强制竖屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<meta name="x5-page-mode" content="app">
+
+	<!-- 网站描述 -->
+	<meta name="keywords" content="玑域科技,互联网,技术,设计,策划运营,推广">
+	<meta name="description" content="玑域信息科技有限公司是一家致力于高端互联网一站式服务，为企业从传统经营模式向互联网转型提供高品质服务，涵盖界面设计、技术开发以及营销推广的策划+执行的处于高速成长期的初创型信息技术公司。">
+	<meta name="copyright" content="玑域信息科技有限公司">
+	<meta name="author" content="Ken,kenchung.ftd@gmail.com">
 
 	<title>玑域科技</title>
 
 	<style>
+
+		/*加载页面*/
 		.loading {
 			position: fixed;
 			top: 0;
@@ -45,8 +64,8 @@
 			left: 9%;
 			border-radius: 2px;
 		}
-	</style>
 
+	</style>
 	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
@@ -54,6 +73,7 @@
 </head>
 <body>
 
+	<!-- 加载页面 -->
 	<div class="loading">
 		<img src="images/logo-big.png">
 		<div class="progress-bar">
@@ -61,6 +81,8 @@
 			<div id="nowprogress"></div>
 		</div>
 	</div>
+
+	<!-- 加载页面脚本-1 -->
 	<script>
 		var isTo80;
 		var nowProgress = document.getElementById('nowprogress');
@@ -73,18 +95,24 @@
 				clearInterval(loadingTimer);
 				isTo80 = true;
 			}
-		},15);
+		},10);
 	</script>
 
-
+	<!-- 页面主体 -->
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
+
+			<!-- 字幕页 -->
 			<div class="swiper-slide" id="subtitles" data-hash="sub">
 				<div class="sub">
 					<img src="images/sub.png">
 				</div>
-				<img src="images/logo-big.png" class="logo-big">
+				<img src="images/logo-big.png" class="logo-big" id="sub-logo">
+<!-- 				<a href="" class="skipSub"><span class="skip1">s</span><span class="skip2">k</span><span class="skip3">i</span><span class="skip4">p</span><span class="skip5"> </span><span class="skip6">></span><span class="skip7">></span></a> -->
+				<a href="" class="skipSub">skip >></a>
 			</div>
+
+			<!-- 启动页 -->
 			<div class="swiper-slide" id="slide1" data-hash="slide1">
 				<img src="images/s1-circle1.png" id="s1-c1" class="s1-c1 circle">
 				<img src="images/s1-circle2.png" id="s1-c2" class="s1-c2 circle">
@@ -94,9 +122,7 @@
 				<img src="images/s1-subline.png" id="s1-sbl">
 			</div>
 
-
-
-
+			<!-- 欢迎页 -->
 			<div class="swiper-slide" id="slide2" data-hash="slide2">
 				<img src="images/s2-title.png" id="s2-title">
 				<a href="" id="s2-btn">
@@ -116,7 +142,6 @@
 					<canvas id="canvas5" width="90" height="110"></canvas>
 					<canvas id="canvas6" width="90" height="110"></canvas>
 				</a>
-
 				<div id="s2-word1">
 					<p class="s2-para1">您好</p>
 					<p class="s2-para2">很高兴为您服务</p>
@@ -128,9 +153,7 @@
 				<img src="images/logo.png" class="s2-logo" id="s2-logo">
 			</div>
 
-
-
-
+			<!-- slide3 -->
 			<div class="swiper-slide" id="slide3" data-hash="slide3">
 				<img src="images/s3-title.png" id="s3-title">
 				<div id="s3-word1">
@@ -141,13 +164,15 @@
 				<img src="images/logo.png" class="s2-logo" id="s3-logo">
 			</div>
 
-
+			<!-- 技术革命动画页面 -->
 			<div class="swiper-slide" id="ani" data-hash="slide4">
 				<div id="ani-main">
 					<div class="swiper-container" id="ani-swiper">
 						<div class="swiper-wrapper">
+
+							<!-- 蒸汽时代 -->
 							<div class="swiper-slide">
-								<!-- 层叠的顺序是有讲究的 -->
+								<!-- 注：元素的排序影响层叠渲染 -->
 								<img src="images/steam-house.png" class="steam-house">
 								<img src="images/ani-land.png" class="ani-land">
 								<div id="steam-fulltrain">
@@ -159,43 +184,37 @@
 								<img src="images/steam-cloud1.png" class="steam-cloud1">
 								<img src="images/steam-cloud2.png" class="steam-cloud2">
 								<img src="images/steam-cloud3.png" class="steam-cloud3">
-
 							</div>
-							<div class="swiper-slide">
-							<img src="images/elec-house.png" class="elec-house">
-							<img src="images/ani-land.png" class="ani-land">
 
-								
+							<!-- 电气时代 -->
+							<div class="swiper-slide">
+								<img src="images/elec-house.png" class="elec-house">
+								<img src="images/ani-land.png" class="ani-land">								
 								<img src="images/elec-bus.png" class="elec-bus">
 								<img src="images/elec-car.png" class="elec-car">
 								<img src="images/steam-cloud2.png" class="elec-cloud2">
 								<img src="images/steam-cloud3.png" class="elec-cloud3">
 							</div>
-							<div class="swiper-slide">
-							<img src="images/info-house.png" class="info-house">
-							<img src="images/ani-land.png" class="ani-land">
 
-								
+							<!-- 信息时代 -->
+							<div class="swiper-slide">
+								<img src="images/info-house.png" class="info-house">
+								<img src="images/ani-land.png" class="ani-land">								
 								<img src="images/info-phone.png" class="info-phone">
 								<img src="images/info-signal.png" class="info-signal">
 								<img src="images/info-robot.png" class="info-robot">
 								<img src="images/steam-cloud1.png" class="info-cloud1">
 								<img src="images/steam-cloud2.png" class="info-cloud2">
-
 							</div>
+
 						</div>
 					</div>
 					<img src="images/ani-bg.png" id="ani-bg">
 				</div>
-				
-
 				<img src="images/ani-circle.png" id="ani-circle">
-
-				
-
 			</div>
 
-
+			<!-- slide4 -->
 			<div class="swiper-slide" id="slide4" data-hash="slide5">
 				<img src="images/s4-title.png" id="s4-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<div id="s4-word1">
@@ -211,7 +230,7 @@
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
 			</div>
 
-
+			<!-- slide5 -->
 			<div class="swiper-slide" id="slide5" data-hash="slide6">
 				<img src="images/s5-title.png" id="s5-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<div class="s5-doc ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.2s">
@@ -247,8 +266,8 @@
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
 			</div>
 
-
-				<div class="swiper-slide" id="slide6" data-hash="slide7">
+			<!-- slide6 -->
+			<div class="swiper-slide" id="slide6" data-hash="slide7">
 				<img src="images/s6-title.png" class="s6-title">
 				<div id="s6-main">
 					<img src="images/s6-left-top.png" class="s6-lt">
@@ -265,6 +284,7 @@
 				<img src="images/logo.png" class="s2-logo">
 			</div>
 
+			<!-- 技术 -->
 			<div class="swiper-slide showdoc" id="tech" data-hash="slide8">
 				<div id="tech-main">
 					<img src="images/showdoc-bg.png" class="showdoc-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s">
@@ -283,6 +303,8 @@
 				</div>
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.8s">
 			</div>
+
+			<!-- 设计 -->
 			<div class="swiper-slide showdoc" id="design" data-hash="slide9">
 				<div id="design-main">
 					<img src="images/showdoc-bg.png" class="showdoc-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s">
@@ -301,6 +323,8 @@
 				</div>
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="2.8s">
 			</div>
+
+			<!-- 策划 -->
 			<div class="swiper-slide showdoc" id="planning" data-hash="slide10">
 				<div id="planning-main">
 					<img src="images/showdoc-bg.png" class="showdoc-bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s">
@@ -320,6 +344,8 @@
 				</div>
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="3.4s">
 			</div>
+
+			<!-- slide7 -->
 			<div class="swiper-slide" id="slide7" data-hash="slide11">
 				<img src="images/s7-title.png" id="s7-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0s" class="ani">
 				<div id="s7-word">
@@ -330,6 +356,7 @@
 				<a href="" id="s7-go" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/go.png" class="go-word"></a>
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
 			</div>
+
 		</div>
 	</div>
 	<script src="js/zepto.js"></script>

@@ -1,209 +1,223 @@
 window.onload = function(){
-			// alert('11:08');
-			// 禁止默认点击／点触时间
-			$('a').on('tap', 'a', function(event) {
-				event.preventDefault();
-			}).on('click', 'a', function(event) {
-				event.preventDefault();
-			});
 
-			var windowWidth = parseInt($(window).width());
+	// 管理全局变量
+	var aniIndex = 0;
+	var slide7IsBack = false;
+	var nowDate = new Date();
+	var skipSub = false;
 
-			var mainSwiper = new Swiper ('#main-swiper', {
-				direction: 'vertical',
-				effect : 'fade',
-				fade: {
-					crossFade: true,
-				},
-				hashnav: true,
-				onlyExternal: true,
-				onInit: function(swiper){ 
-					swiperAnimateCache(swiper); 
-					swiperAnimate(swiper); 
+	// 禁止默认点击／点触／滑动／双击事件
+	$('a').on('tap', 'a', function(event) {
+		event.preventDefault();
+	}).on('click', 'a', function(event) {
+		event.preventDefault();
+	});
+	document.querySelector('body').addEventListener('touchstart', function (ev) {
+		ev.preventDefault();
+	});
 
-				}, 
-				onSlideChangeEnd: function(swiper){
-					// console.log(swiper.activeIndex);
-					swiperAnimate(swiper);
-					// alert(1);
-					if (swiper.activeIndex == 0) {
+	// 获取屏幕宽度
+	var windowWidth = parseInt($(window).width());
 
+	// 初始化页面框架
+	var mainSwiper = new Swiper ('#main-swiper', {
+		direction: 'vertical',
+		effect : 'fade',
+		fade: {
+			crossFade: true,
+		},
+		hashnav: true,
+		onlyExternal: true,
+		onInit: function(swiper){ 
+			swiperAnimateCache(swiper); 
+			swiperAnimate(swiper); 
+		},
+		onSlideChangeStart: function(swiper){
+			if (swiper.activeIndex == 2) {
+				setTimeout(function(){
+					$('#s2-btn').addClass('fadeIn animated');
+				},400)
+			}
+		},
+		onSlideChangeEnd: function(swiper){
+
+			swiperAnimate(swiper);
+
+			if (swiper.activeIndex == 2) {
+
+				// 电波动效
+				var wavesWidth = $('.waves').width(),
+				wavesImg = $('.waves img'),
+				wavesImgLeft = 0;
+				$('.waves').height(wavesImg.height());
+				setInterval(function(){
+					wavesImgLeft--;
+					if (wavesImgLeft < -wavesWidth+1){
+						wavesImg.css('left',0);
+						wavesImgLeft = 0;
+					} else {
+						wavesImg.css('left',wavesImgLeft);
+					}					
+				},15);
+
+				// canvas绘制机器人线条
+				setTimeout(function(){
+					drawHexagon();
+				},300);
+
+				// 添加类名激活CSS3动画
+				$('.s2-para1').addClass('s2-para1-ani');
+				$('.s2-para2').addClass('s2-para2-ani');
+				
+				setTimeout(function(){
+					$('.waves').addClass('fadeIn animated');
+				},3100);
+				setTimeout(function(){
+					$('#s2-title').addClass('fadeInUp animated');
+				},3400);
+				setTimeout(function(){
+					$('#s2-para').addClass('fadeInUp animated');
+				},4000);
+				setTimeout(function(){
+					$('#s2-logo').addClass('fadeInUp animated');
+				},4600);
+				setTimeout(function(){
+					//显示打字动画
+					$('.s2-para1,.s2-para2').css('opacity', '1');
+				},2000);
+				setTimeout(function(){
+					$('#s2-hand').fadeIn(800);
+				},7400);
+			}
+
+			if (swiper.activeIndex == 3) {
+				$('.s3-para1').addClass('s3-para1-ani');
+				$('.s3-para2').addClass('s3-para2-ani');
+				$('#s3-title').addClass('fadeInUp animated');
+				setTimeout(function(){
+					$('#s3-logo').addClass('fadeInUp animated');
+				},700);
+				setTimeout(function(){
+					$('.s3-para1,.s3-para2').css('opacity', '1');
+				},700);
+				setTimeout(function(){
+					$('#s3-go').addClass('fadeIn animated');
+				},3600);
+			}
+
+			if (swiper.activeIndex == 4) {
+
+				// 技术革命-蒸气时代动效
+				$('.steam-house').addClass('bounceInDown animated');
+				$('.steam-railway').addClass('fadeInUp animated');
+				$('.steam-cloud1').addClass('steam-cloud1-ani');
+				$('.steam-cloud2').addClass('steam-cloud2-ani');
+				$('.steam-cloud3').addClass('steam-cloud3-ani');
+				$('#steam-fulltrain').addClass('fulltrain-run');
+				setTimeout(function(){
+					if (aniIndex == 0) {
+						aniSwiper.slideTo(1, 300, true);
+						aniIndex = 1;
+						$('#ani-circle').addClass('circle-rotate1');
 					}
-					if (swiper.activeIndex == 2) {
+				},4900);
 
-						// $('#s2-title').addClass('fadeInUp animated');
-
-						var wavesWidth = $('.waves').width();
-						setInterval(function(){
-							if (parseFloat($('.waves img').css('left')) < -wavesWidth){
-								$('.waves img').css('left',0);
-							}
-							$('.waves img').css('left',parseFloat($('.waves img').css('left'))-1+'px');
-
-						},30)
-
-						$('.waves').height($('.waves img').height());
-						$('.s2-para1').addClass('s2-para1-ani');
-						$('.s2-para2').addClass('s2-para2-ani');
-
-						setTimeout(function(){
-							drawHexagon();
-						},700)
-						$('#s2-btn').addClass('fadeIn animated');
-						setTimeout(function(){
-							$('.waves').addClass('fadeIn animated');
-						},3100);
-						setTimeout(function(){
-							$('#s2-title').addClass('fadeInUp animated')
-						},3400);
-						setTimeout(function(){
-							$('#s2-para').addClass('fadeInUp animated')
-						},4000);
-						setTimeout(function(){
-							$('#s2-logo').addClass('fadeInUp animated')
-						},4600);
-						setTimeout(function(){
-							$('.s2-para1,.s2-para2').css('opacity', '1');
-						},2000)
-						setTimeout(function(){
-							$('#s2-hand').fadeIn(800);
-						},7400)
+				// 技术革命底部圆盘动效
+				$('#ani-circle').swipeLeft(function(){
+					if (aniIndex==0) {
+						$(this).addClass('circle-rotate1');
+						aniSwiper.slideTo(1, 300, true);	
 					}
-					if (swiper.activeIndex == 3) {
-						$('.s3-para1').addClass('s3-para1-ani');
-						$('.s3-para2').addClass('s3-para2-ani');
-
-						$('#s3-title').addClass('fadeInUp animated');
-						setTimeout(function(){
-							$('#s3-logo').addClass('fadeInUp animated')
-						},700);
-						setTimeout(function(){
-							$('.s3-para1,.s3-para2').css('opacity', '1');
-						},700);
-						setTimeout(function(){
-							$('#s3-go').addClass('fadeIn animated')
-						},3600);
-
+					if (aniIndex==1) {
+						$(this).removeClass().addClass('circle-rotate2');
+						aniSwiper.slideTo(2, 300, true);
 					}
-
-					if (swiper.activeIndex == 4) {
-
-						$('.steam-house').addClass('bounceInDown animated');
-						$('.steam-railway').addClass('fadeInUp animated');
-						$('.steam-cloud1').addClass('steam-cloud1-ani');
-						$('.steam-cloud2').addClass('steam-cloud2-ani');
-						$('.steam-cloud3').addClass('steam-cloud3-ani');
-						$('#steam-fulltrain').addClass('fulltrain-run');
-
-						setTimeout(function(){
-							if (aniIndex == 0) {
-								aniSwiper.slideTo(1, 300, true);
-								aniIndex = 1;
-								$('#ani-circle').addClass('circle-rotate1');
-							}
-						},4900)
-						
-						$('#ani-circle').swipeLeft(function(){
-							if (aniIndex==0) {
-								$(this).addClass('circle-rotate1');
-								aniSwiper.slideTo(1, 300, true);	
-							}
-							if (aniIndex==1) {
-								$(this).removeClass().addClass('circle-rotate2');
-								aniSwiper.slideTo(2, 300, true);
-							}
-							if (aniIndex==2) {
-								$(this).removeClass().addClass('circle-rotate3');
-								mainSwiper.slideTo(5, 300, true);
-							}
-							aniIndex++;	
-
-						})
+					if (aniIndex==2) {
+						$(this).removeClass().addClass('circle-rotate3');
+						mainSwiper.slideTo(5, 300, true);
 					}
+					aniIndex++;
+				});
+			}
 
-					if (swiper.activeIndex == 5) {
-						$('.s4-para1').addClass('s4-para1-ani');
-						$('.s4-para2').addClass('s4-para2-ani');
-						$('.s4-para3').addClass('s4-para3-ani');
+			if (swiper.activeIndex == 5) {
+				$('.s4-para1').addClass('s4-para1-ani');
+				$('.s4-para2').addClass('s4-para2-ani');
+				$('.s4-para3').addClass('s4-para3-ani');
+				setTimeout(function(){
+					$('.s4-para1,.s4-para2,.s4-para3').css('opacity', '1');
+				},700);
+				setTimeout(function(){
+					$('#s4-go').addClass('fadeIn animated');
+				},5300);
+			}
 
-						setTimeout(function(){
-							$('.s4-para1,.s4-para2,.s4-para3').css('opacity', '1');
-						},700);
-						setTimeout(function(){
-							$('#s4-go').addClass('fadeIn animated')
-						},5300);
+			if (swiper.activeIndex == 6) {
 
-					}
-
-					if (swiper.activeIndex == 6) {
-						setTimeout(function(){
-							var s5Para = 0;
-							var s5Timer = setInterval(function(){
-								if(s5Para<90) {
-									console.log(s5Para);
-									s5Para++;
-									$('.s5-percentage').html(s5Para+'%');
-								} else {
-									clearInterval(s5Timer);
-								}
-							},15)
-						},1900)
-						$('.s5-para1').addClass('s5-para1-ani');
-						$('.s5-para2').addClass('s5-para2-ani');
-
-						setTimeout(function(){
-							$('.s5-para1,.s5-para2').css('opacity', '1');
-						},700);
-						setTimeout(function(){
-							$('#s5-go').addClass('fadeIn animated')
-						},5000);
-
-					}
-
-					if (swiper.activeIndex == 7) {
-						$('.s6-title').addClass('s6-title-ani');
-						$('.s6-circle').addClass('s6-circle-ani');
-						$('.s6-word1').addClass('s6-circle-ani');
-						$('.s6-lt').addClass('s6-lt-ani');
-						$('.s6-rb').addClass('s6-rb-ani');
-						
-
-						if (!slide7IsBack) {
-							$('#s6-btn-wrapper').addClass('s6-btn-wrapper-1');
+				// 0％到90％动效
+				setTimeout(function(){
+					var s5Para = 0,
+					s5Per = $('.s5-percentage');
+					var s5Timer = setInterval(function(){
+						if(s5Para<90) {
+							s5Para++;
+							s5Per.html(s5Para+'%');
 						} else {
-							$('#s6-btn-wrapper').removeClass().addClass('s6-btn-wrapper-2');
-							setTimeout(function(){
-								$('#s6-go').addClass('fadeIn animated');
-							},700)
+							clearInterval(s5Timer);
 						}
+					},15);
+				},1900);
 
-						$('.s6-btn img:first-child').addClass('s6-btn-ani')
-						$('#slide6 .s2-logo').addClass('s6-logo-ani');
-					}
+				$('.s5-para1').addClass('s5-para1-ani');
+				$('.s5-para2').addClass('s5-para2-ani');
+				setTimeout(function(){
+					$('.s5-para1,.s5-para2').css('opacity', '1');
+				},700);
+				setTimeout(function(){
+					$('#s5-go').addClass('fadeIn animated');
+				},5000);
 
-					if (swiper.activeIndex == 11) {
-						$('.s7-para1').addClass('s7-para1-ani');
-						$('.s7-para2').addClass('s7-para2-ani');
-						$('.s7-para3').addClass('s7-para3-ani');
-						setTimeout(function(){
-							$('.s7-para1,.s7-para2,.s7-para3').css('opacity', '1');
-						},700);
-						setTimeout(function(){
-							$('#s7-go').addClass('fadeIn animated');
-						},4200)
-					}
+			}
 
+			if (swiper.activeIndex == 7) {
 
+				$('.s6-title').addClass('s6-title-ani');
+				$('.s6-circle').addClass('s6-circle-ani');
+				$('.s6-word1').addClass('s6-circle-ani');
+				$('.s6-lt').addClass('s6-lt-ani');
+				$('.s6-rb').addClass('s6-rb-ani');
 
-				},
-				onTransitionEnd: function(swiper){
-
-
+				// 实现未点击过技术／设计／策划页面无法进入下页
+				if (!slide7IsBack) {
+					$('#s6-btn-wrapper').addClass('s6-btn-wrapper-1');
+				} else {
+					$('#s6-btn-wrapper').removeClass().addClass('s6-btn-wrapper-2');
+					setTimeout(function(){
+						$('#s6-go').show();
+						$('#s6-go').addClass('fadeIn animated');
+					},700);
 				}
-			})
 
-var aniIndex = 0;
-var slide7IsBack = false;
+				$('.s6-btn img:first-child').addClass('s6-btn-ani');
+				$('#slide6 .s2-logo').addClass('s6-logo-ani');
+			}
+
+			if (swiper.activeIndex == 11) {
+				$('.s7-para1').addClass('s7-para1-ani');
+				$('.s7-para2').addClass('s7-para2-ani');
+				$('.s7-para3').addClass('s7-para3-ani');
+				setTimeout(function(){
+					$('.s7-para1,.s7-para2,.s7-para3').css('opacity', '1');
+				},200);
+				setTimeout(function(){
+					$('#s7-go').addClass('fadeIn animated');
+				},4200);
+			}
+
+		}
+	});
+
+// 初始化技术革命页面
 var aniSwiper = new Swiper ('#ani-swiper', {
 	effect : 'fade',
 	fade: {
@@ -211,14 +225,10 @@ var aniSwiper = new Swiper ('#ani-swiper', {
 	},
 	speed: 300,
 	onlyExternal: true,
-	onInit: function(swiper){ 
-		// swiperAnimateCache(swiper); 
-		// swiperAnimate(swiper); 
-	},
 	onSlideChangeEnd: function(swiper){ 
-		// swiperAnimate(swiper);
+
 		if(swiper.activeIndex==1) {
-			$('.elec-house').addClass('bounceInRight animated');
+			$('.elec-house').addClass('fadeIn animated');
 			$('.elec-cloud2').addClass('elec-cloud2-ani');
 			$('.elec-cloud3').addClass('elec-cloud3-ani');
 			$('.elec-car').addClass('elec-car-ani');
@@ -230,7 +240,7 @@ var aniSwiper = new Swiper ('#ani-swiper', {
 					aniIndex = 2;
 					$('#ani-circle').addClass('circle-rotate2');
 				}
-			},4900)
+			},4900);
 		}
 		if (swiper.activeIndex==2) {
 
@@ -240,20 +250,19 @@ var aniSwiper = new Swiper ('#ani-swiper', {
 			$('.info-signal').addClass('info-signal-ani');
 			$('.info-phone').addClass('info-phone-ani');
 			$('.info-robot').addClass('info-robot-ani');
+
 			setTimeout(function(){
 				if (aniIndex == 2) {
 					mainSwiper.slideTo(5, 500, true);
 					aniIndex = 3;
 					$('#ani-circle').addClass('circle-rotate3');
 				}
-			},4900)
+			},4900);
 		}
 	}
 }) 
 
-
-
-
+// 渲染启动页
 var rblineheight = $('#s2-rbline').height();
 $('.s1-c1').css('top',parseInt(windowWidth*0.27));    
 $('.s1-c2').css('top',parseInt(windowWidth*0.21));
@@ -262,6 +271,18 @@ $('#s1-fp').css('top',parseInt(windowWidth*0.53));
 $('#s1-earth').css('top',parseInt(windowWidth*0.335));
 $('#ani-circle').css('bottom',-parseInt(windowWidth*0.48));
 
+// 渲染欢迎页
+$('#s2-robot').css('top',parseInt(windowWidth*0.51));
+$('#s2-rbline').css('top',parseInt(windowWidth*0.56));
+
+// 渲染字幕页
+$('.sub').css('top', parseInt(windowWidth*0.6));
+
+// 为各链接绑定点触事件
+$('.skipSub').tap(function(){
+	mainSwiper.slideTo(1, 1500,true);
+	skipSub = true;
+});
 $('#s1-fp').tap(function(){
 	
 	$(this).fadeOut(300);
@@ -283,31 +304,17 @@ $('#s1-fp').tap(function(){
 	},200);
 
 	$('#s1-earth').addClass('ani-earth');
-	setTimeout(function(){
-		
-	},100)
+	setTimeout(function(){		
+	},100);
 	setTimeout(function(){
 		mainSwiper.slideTo(2, 800,true);
-	},3200)
-
-	
-
-})
-$('#s2-btn').tap(function() {
-	mainSwiper.slideTo(3, 800,true);
+	},3200);
 
 });
-
-$('#s2-robot').css('top',parseInt(windowWidth*0.51));
-$('#s2-rbline').css('top',parseInt(windowWidth*0.56));
-
-var nowDate = new Date();
-$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate()));
-
-$('#ani-1').css('top',parseInt(windowWidth*0.32));
-
+$('#s2-btn').tap(function() {
+	mainSwiper.slideTo(3, 800,true);
+});
 $('#s4-go').tap(function(event) {
-
 	$('#s4-word1')[0].style='';
 	$('#s4-word1').animate({'opacity':0}, 300);
 	setTimeout(function(){
@@ -321,11 +328,9 @@ $('#s4-go').tap(function(event) {
 	},2500)
 	$(this).hide();
 });
-
 $('#s3-go').tap(function() {
 	mainSwiper.slideTo(4, 800,true);
 });
-
 $('#s5-go').tap(function() {
 	mainSwiper.slideTo(7, 800,true);
 });
@@ -351,6 +356,16 @@ $('.showdoc-back').tap(function() {
 $('#s7-go').tap(function() {
 	window.location.href = "http://m.la-chance.net/";
 })
+
+// 欢迎页显示当前日期
+$('#now-date').html('&nbsp;&nbsp;' + nowDate.getFullYear() + ' / ' + padding(nowDate.getMonth()+1) + ' / ' + padding(nowDate.getDate()));
+function padding(number) {
+	return number < 10 ? "0" + number : "" + number; 
+}
+
+//canvas绘图相关
+
+
 
 var stepTime = 4;
 var canvasDelay = 200;
@@ -407,7 +422,7 @@ function drawHexagon(){
 	},(stepTime*50+canvasDelay)*5);
 }
 
-
+//加载页面脚本-2
 var nowProgress2 = document.getElementById('nowprogress');
 var loadingTimer2 = setInterval(function(){
 	if (isTo80) {
@@ -420,24 +435,19 @@ var loadingTimer2 = setInterval(function(){
 				$('.loading').fadeOut(500,function(){
 					setTimeout(function(){
 						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 12000);
-					},200);
+					},100);
 					setTimeout(function(){
-						mainSwiper.slideTo(1, 1500,true);
-					},13000)
+						if (!skipSub) {
+							mainSwiper.slideTo(1, 1500,true);
+						}
+					},12600);
 				});
-			},300)
+			},300);
 		}
-	}
-},15);
-
-$('.sub').height(parseInt(windowWidth*0.1));
-$('.sub').css('top', parseInt(windowWidth*0.6));
-
 
 
 }
+},10);
 
-function padding(number) {
-	return number < 10 ? "0" + number : "" + number; 
 }
 
