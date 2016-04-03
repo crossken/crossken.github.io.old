@@ -5,6 +5,7 @@ window.onload = function(){
 	var slide7IsBack = false;
 	var nowDate = new Date();
 	var skipSub = false;
+	var waveTimer;
 
 	// 禁止默认点击／点触／滑动／双击事件
 	$('a').on('tap', 'a', function(event) {
@@ -45,12 +46,13 @@ window.onload = function(){
 
 			if (swiper.activeIndex == 2) {
 
+				$('#s1-earth').remove();
 				// 电波动效
 				var wavesWidth = $('.waves').width(),
 				wavesImg = $('.waves img'),
 				wavesImgLeft = 0;
 				$('.waves').height(wavesImg.height());
-				setInterval(function(){
+				waveTimer = setInterval(function(){
 					wavesImgLeft--;
 					if (wavesImgLeft < -wavesWidth+1){
 						wavesImg.css('left',0);
@@ -91,6 +93,8 @@ window.onload = function(){
 			}
 
 			if (swiper.activeIndex == 3) {
+
+				clearInterval(waveTimer);
 				$('.s3-para1').addClass('s3-para1-ani');
 				$('.s3-para2').addClass('s3-para2-ani');
 				$('#s3-title').addClass('fadeInUp animated');
@@ -103,6 +107,9 @@ window.onload = function(){
 				setTimeout(function(){
 					$('#s3-go').addClass('fadeIn animated');
 				},3600);
+
+
+				
 			}
 
 			if (swiper.activeIndex == 4) {
@@ -141,6 +148,9 @@ window.onload = function(){
 			}
 
 			if (swiper.activeIndex == 5) {
+
+				aniSwiper.destroy();
+				$('#ani-main').remove();
 				$('.s4-para1').addClass('s4-para1-ani');
 				$('.s4-para2').addClass('s4-para2-ani');
 				$('.s4-para3').addClass('s4-para3-ani');
@@ -282,6 +292,9 @@ $('.sub').css('top', parseInt(windowWidth*0.6));
 $('.skipSub').tap(function(){
 	mainSwiper.slideTo(1, 1500,true);
 	skipSub = true;
+	setTimeout(function(){
+		$('.sub').remove();
+	},1200)
 });
 $('#s1-fp').tap(function(){
 	
@@ -364,11 +377,9 @@ function padding(number) {
 }
 
 //canvas绘图相关
-
-
-
-var stepTime = 4;
-var canvasDelay = 200;
+var stepTime = 20;
+var canvasDelay = 100;
+var d=10;
 
 function drawPic(canvasId,from,to) {
 	var canvas = document.getElementById(canvasId);
@@ -377,8 +388,8 @@ function drawPic(canvasId,from,to) {
 	var timer=null;
 	var t=0,
 	c1=to.x-from.x,
-	c2=to.y-from.y,
-	d=50;
+	c2=to.y-from.y;
+
 	LineAnim();
 	function LineAnim(){
 		if (t>d) {
@@ -396,6 +407,7 @@ function drawPic(canvasId,from,to) {
 			context.lineWidth = 3;
 			context.stroke();
 			t++;
+			// console.log(t+new Date().getTime());
 			timer = setTimeout(arguments.callee, stepTime);
 		}
 	}
@@ -407,30 +419,30 @@ function drawHexagon(){
 	drawPic("canvas1",{x:45,y:0}, {x:90,y:30});
 	setTimeout(function(){
 		drawPic("canvas2",{x:90,y:30},{x:90,y:80});
-	},stepTime*50+canvasDelay);
+	},stepTime*d+canvasDelay);
 	setTimeout(function(){
 		drawPic("canvas3",{x:90,y:80},{x:45,y:110});
-	},(stepTime*50+canvasDelay)*2);
+	},(stepTime*d+canvasDelay)*2);
 	setTimeout(function(){
 		drawPic("canvas4",{x:45,y:110},{x:0,y:80});
-	},(stepTime*50+canvasDelay)*3);
+	},(stepTime*d+canvasDelay)*3);
 	setTimeout(function(){
 		drawPic("canvas5",{x:0,y:80},{x:0,y:30});
-	},(stepTime*50+canvasDelay)*4);
+	},(stepTime*d+canvasDelay)*4);
 	setTimeout(function(){
 		drawPic("canvas6",{x:0,y:30},{x:45,y:0});
-	},(stepTime*50+canvasDelay)*5);
+	},(stepTime*d+canvasDelay)*5);
 }
 
 //加载页面脚本-2
-var nowProgress2 = document.getElementById('nowprogress');
+
 var loadingTimer2 = setInterval(function(){
 	if (isTo80) {
-		var pbWidth2 = parseFloat(nowProgress2.style.width);
-		if (pbWidth2<88.5) {
-			nowProgress2.style.width = pbWidth2 + 0.5 +'%';
+		pbWidth = parseFloat(nowProgress.style.width);
+		if (pbWidth<88.5) {
+			nowProgress.style.width = pbWidth + 0.5 +'%';
 		} else {
-			clearInterval(loadingTimer2);
+			
 			setTimeout(function(){
 				$('.loading').fadeOut(500,function(){
 					setTimeout(function(){
@@ -443,10 +455,11 @@ var loadingTimer2 = setInterval(function(){
 					},12600);
 				});
 			},300);
+			clearInterval(loadingTimer2);			
 		}
 
 
-}
+	}
 },10);
 
 }

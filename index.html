@@ -84,11 +84,12 @@
 
 	<!-- 加载页面脚本-1 -->
 	<script>
-		var isTo80;
+		var isTo80 = false;
+		var pbWidth;
 		var nowProgress = document.getElementById('nowprogress');
 		nowProgress.style.width = '0%';
 		var loadingTimer = setInterval(function(){
-			var pbWidth = parseFloat(nowProgress.style.width);
+			pbWidth = parseFloat(nowProgress.style.width);
 			if (pbWidth<80) {
 				nowProgress.style.width = pbWidth + 0.5 +'%';
 			} else {
