@@ -39,6 +39,37 @@ window.onload = function(){
 					$('#s2-btn').addClass('fadeIn animated');
 				},400)
 			}
+			if (swiper.activeIndex == 5) {
+
+				// 技术革命-蒸气时代动效
+				setTimeout(function(){
+					$('.steam-house').addClass('bounceInDown animated').css('visibility', 'visible');
+					$('.steam-railway').addClass('fadeInUp animated');
+					$('.steam-cloud1').addClass('steam-cloud1-ani');
+					$('.steam-cloud2').addClass('steam-cloud2-ani');
+					$('.steam-cloud3').addClass('steam-cloud3-ani');
+					$('#steam-fulltrain').addClass('fulltrain-run');
+					setTimeout(function(){
+						if (aniIndex == 0) {
+							aniSwiper.slideTo(1, 300, true);
+							aniIndex = 1;
+							$('#ani-circle').addClass('circle-rotate1');
+						}
+					},4900);
+				},300);
+			}
+
+			if (swiper.activeIndex == 3) {
+				setTimeout(function(){
+					$('#s3-title').addClass('fadeInUp animated');
+				},500)
+			}
+
+			if (swiper.activeIndex == 4) {
+				setTimeout(function(){
+					$('#s3plus-title').addClass('fadeInUp animated');
+				},500)
+			}
 		},
 		onSlideChangeEnd: function(swiper){
 
@@ -47,20 +78,23 @@ window.onload = function(){
 			if (swiper.activeIndex == 2) {
 
 				$('#s1-earth').remove();
+
 				// 电波动效
 				var wavesWidth = $('.waves').width(),
 				wavesImg = $('.waves img'),
 				wavesImgLeft = 0;
 				$('.waves').height(wavesImg.height());
-				waveTimer = setInterval(function(){
-					wavesImgLeft--;
-					if (wavesImgLeft < -wavesWidth+1){
-						wavesImg.css('left',0);
-						wavesImgLeft = 0;
-					} else {
-						wavesImg.css('left',wavesImgLeft);
-					}					
-				},15);
+				setTimeout(function(){
+					waveTimer = setInterval(function(){
+						wavesImgLeft--;
+						if (wavesImgLeft < -wavesWidth+1){
+							wavesImg.css('left',0);
+							wavesImgLeft = 0;
+						} else {
+							wavesImg.css('left',wavesImgLeft);
+						}					
+					},18);
+				},3200)
 
 				// canvas绘制机器人线条
 				setTimeout(function(){
@@ -70,64 +104,68 @@ window.onload = function(){
 				// 添加类名激活CSS3动画
 				$('.s2-para1').addClass('s2-para1-ani');
 				$('.s2-para2').addClass('s2-para2-ani');
+				$('.s2-para-a3').addClass('s2-para-a3-ani');
 				
 				setTimeout(function(){
 					$('.waves').addClass('fadeIn animated');
-				},3100);
+				},2400);
 				setTimeout(function(){
 					$('#s2-title').addClass('fadeInUp animated');
-				},3400);
+				},3200);
 				setTimeout(function(){
 					$('#s2-para').addClass('fadeInUp animated');
-				},4000);
+				},3700);
 				setTimeout(function(){
 					$('#s2-logo').addClass('fadeInUp animated');
-				},4600);
+				},4350);
 				setTimeout(function(){
-					//显示打字动画
-					$('.s2-para1,.s2-para2').css('opacity', '1');
+					$('.s2-para1,.s2-para2,.s2-para-a3').css('opacity', '1');
 				},2000);
 				setTimeout(function(){
-					$('#s2-hand').fadeIn(800);
-				},7400);
+					$('#s2-hand').addClass('fadeInUp animated');
+				},8400);
 			}
+
 
 			if (swiper.activeIndex == 3) {
 
 				clearInterval(waveTimer);
 				$('.s3-para1').addClass('s3-para1-ani');
 				$('.s3-para2').addClass('s3-para2-ani');
-				$('#s3-title').addClass('fadeInUp animated');
+
 				setTimeout(function(){
 					$('#s3-logo').addClass('fadeInUp animated');
-				},700);
+				},400);
 				setTimeout(function(){
 					$('.s3-para1,.s3-para2').css('opacity', '1');
-				},700);
+				},200);
 				setTimeout(function(){
 					$('#s3-go').addClass('fadeIn animated');
-				},3600);
+				},3300);
 
 
 				
 			}
 
 			if (swiper.activeIndex == 4) {
+				$('.s3plus-para1').addClass('s3plus-para1-ani');
+				$('.s3plus-para2').addClass('s3plus-para2-ani');
 
-				// 技术革命-蒸气时代动效
-				$('.steam-house').addClass('bounceInDown animated');
-				$('.steam-railway').addClass('fadeInUp animated');
-				$('.steam-cloud1').addClass('steam-cloud1-ani');
-				$('.steam-cloud2').addClass('steam-cloud2-ani');
-				$('.steam-cloud3').addClass('steam-cloud3-ani');
-				$('#steam-fulltrain').addClass('fulltrain-run');
 				setTimeout(function(){
-					if (aniIndex == 0) {
-						aniSwiper.slideTo(1, 300, true);
-						aniIndex = 1;
-						$('#ani-circle').addClass('circle-rotate1');
-					}
-				},4900);
+					$('#s3plus-logo').addClass('fadeInUp animated');
+				},400);
+				setTimeout(function(){
+					$('.s3plus-para1,.s3plus-para2').css('opacity', '1');
+				},200);
+				setTimeout(function(){
+					$('#s3plus-go').addClass('fadeIn animated');
+				},5100);
+			}
+
+			if (swiper.activeIndex == 5) {
+
+				
+
 
 				// 技术革命底部圆盘动效
 				$('#ani-circle').swipeLeft(function(){
@@ -141,13 +179,13 @@ window.onload = function(){
 					}
 					if (aniIndex==2) {
 						$(this).removeClass().addClass('circle-rotate3');
-						mainSwiper.slideTo(5, 300, true);
+						mainSwiper.slideTo(6, 300, true);
 					}
 					aniIndex++;
 				});
 			}
 
-			if (swiper.activeIndex == 5) {
+			if (swiper.activeIndex == 6) {
 
 				aniSwiper.destroy();
 				$('#ani-main').remove();
@@ -159,10 +197,10 @@ window.onload = function(){
 				},700);
 				setTimeout(function(){
 					$('#s4-go').addClass('fadeIn animated');
-				},5300);
+				},4900);
 			}
 
-			if (swiper.activeIndex == 6) {
+			if (swiper.activeIndex == 7) {
 
 				// 0％到90％动效
 				setTimeout(function(){
@@ -180,16 +218,17 @@ window.onload = function(){
 
 				$('.s5-para1').addClass('s5-para1-ani');
 				$('.s5-para2').addClass('s5-para2-ani');
+				$('.s5-para-a3').addClass('s5-para-a3-ani');
 				setTimeout(function(){
-					$('.s5-para1,.s5-para2').css('opacity', '1');
+					$('.s5-para1,.s5-para2,.s5-para-a3').css('opacity', '1');
 				},700);
 				setTimeout(function(){
-					$('#s5-go').addClass('fadeIn animated');
-				},5000);
+					$('#s5-yes,#s5-no').addClass('fadeIn animated');
+				},7700);
 
 			}
 
-			if (swiper.activeIndex == 7) {
+			if (swiper.activeIndex == 8) {
 
 				$('.s6-title').addClass('s6-title-ani');
 				$('.s6-circle').addClass('s6-circle-ani');
@@ -212,7 +251,7 @@ window.onload = function(){
 				$('#slide6 .s2-logo').addClass('s6-logo-ani');
 			}
 
-			if (swiper.activeIndex == 11) {
+			if (swiper.activeIndex == 12) {
 				$('.s7-para1').addClass('s7-para1-ani');
 				$('.s7-para2').addClass('s7-para2-ani');
 				$('.s7-para3').addClass('s7-para3-ani');
@@ -221,7 +260,7 @@ window.onload = function(){
 				},200);
 				setTimeout(function(){
 					$('#s7-go').addClass('fadeIn animated');
-				},4200);
+				},3800);
 			}
 
 		}
@@ -238,7 +277,7 @@ var aniSwiper = new Swiper ('#ani-swiper', {
 	onSlideChangeEnd: function(swiper){ 
 
 		if(swiper.activeIndex==1) {
-			$('.elec-house').addClass('fadeIn animated');
+			$('.elec-house').addClass('bounceInRight animated').css('visibility', 'visible');
 			$('.elec-cloud2').addClass('elec-cloud2-ani');
 			$('.elec-cloud3').addClass('elec-cloud3-ani');
 			$('.elec-car').addClass('elec-car-ani');
@@ -263,11 +302,11 @@ var aniSwiper = new Swiper ('#ani-swiper', {
 
 			setTimeout(function(){
 				if (aniIndex == 2) {
-					mainSwiper.slideTo(5, 500, true);
+					mainSwiper.slideTo(6, 600, true);
 					aniIndex = 3;
 					$('#ani-circle').addClass('circle-rotate3');
 				}
-			},4900);
+			},4800);
 		}
 	}
 }) 
@@ -317,11 +356,10 @@ $('#s1-fp').tap(function(){
 	},200);
 
 	$('#s1-earth').addClass('ani-earth');
-	setTimeout(function(){		
-	},100);
+
 	setTimeout(function(){
 		mainSwiper.slideTo(2, 800,true);
-	},3200);
+	},2200);
 
 });
 $('#s2-btn').tap(function() {
@@ -337,34 +375,37 @@ $('#s4-go').tap(function(event) {
 		$('#slide4 .loading-mask').animate({'width': '37.5%'}, 1000);
 	},1300)
 	setTimeout(function(){
-		mainSwiper.slideTo(6, 800, true);
+		mainSwiper.slideTo(7, 800, true);
 	},2500)
 	$(this).hide();
 });
 $('#s3-go').tap(function() {
 	mainSwiper.slideTo(4, 800,true);
 });
+$('#s3plus-go').tap(function() {
+	mainSwiper.slideTo(5, 800,true);
+});
 $('#s5-go').tap(function() {
-	mainSwiper.slideTo(7, 800,true);
+	mainSwiper.slideTo(8, 800,true);
 });
 $('#s6-tech').tap(function() {
-	mainSwiper.slideTo(8, 800,true);
-})
-$('#s6-design').tap(function() {
 	mainSwiper.slideTo(9, 800,true);
 })
-$('#s6-planning').tap(function() {
+$('#s6-design').tap(function() {
 	mainSwiper.slideTo(10, 800,true);
+})
+$('#s6-planning').tap(function() {
+	mainSwiper.slideTo(11, 800,true);
 })
 $('.s6-btn').tap(function(){
 	slide7IsBack = true;	
 })
 $('#s6-go').tap(function() {
-	mainSwiper.slideTo(11, 800,true);
+	mainSwiper.slideTo(12, 800,true);
 })
 $('.showdoc-back').tap(function() {
 	$('#s6-btn-wrapper').css('opacity', '1');
-	mainSwiper.slideTo(7, 800,true);
+	mainSwiper.slideTo(8, 800,true);
 })
 $('#s7-go').tap(function() {
 	window.location.href = "http://m.la-chance.net/";
@@ -377,8 +418,8 @@ function padding(number) {
 }
 
 //canvas绘图相关
-var stepTime = 20;
-var canvasDelay = 100;
+var stepTime = 18;
+var canvasDelay = 180;
 var d=10;
 
 function drawPic(canvasId,from,to) {
@@ -434,33 +475,55 @@ function drawHexagon(){
 	},(stepTime*d+canvasDelay)*5);
 }
 
+setTimeout(function(){
+	$('.skip1').addClass('span-ani')
+},100)
+setTimeout(function(){
+	$('.skip2').addClass('span-ani')
+},200)
+setTimeout(function(){
+	$('.skip3').addClass('span-ani')
+},300)
+setTimeout(function(){
+	$('.skip4').addClass('span-ani')
+},400)
+setTimeout(function(){
+	$('.skip5').addClass('span-ani')
+},500)
+setTimeout(function(){
+	$('.skip6').addClass('span-ani')
+},600)
+setTimeout(function(){
+	$('.skip7').addClass('span-ani')
+},700)
+
 //加载页面脚本-2
 
-var loadingTimer2 = setInterval(function(){
-	if (isTo80) {
-		pbWidth = parseFloat(nowProgress.style.width);
-		if (pbWidth<88.5) {
-			nowProgress.style.width = pbWidth + 0.5 +'%';
-		} else {
+// var loadingTimer2 = setInterval(function(){
+// 	if (isTo80) {
+// 		pbWidth = parseFloat(nowProgress.style.width);
+// 		if (pbWidth<88.5) {
+// 			nowProgress.style.width = pbWidth + 0.5 +'%';
+// 		} else {
 			
-			setTimeout(function(){
-				$('.loading').fadeOut(500,function(){
-					setTimeout(function(){
-						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 12000);
-					},100);
-					setTimeout(function(){
-						if (!skipSub) {
-							mainSwiper.slideTo(1, 1500,true);
-						}
-					},12600);
-				});
-			},300);
-			clearInterval(loadingTimer2);			
-		}
+// 			setTimeout(function(){
+// 				$('.loading').fadeOut(500,function(){
+// 					setTimeout(function(){
+// 						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 15000);
+// 					},100);
+// 					setTimeout(function(){
+// 						if (!skipSub) {
+// 							mainSwiper.slideTo(1, 1500,true);
+// 						}
+// 					},15700);
+// 				});
+// 			},300);
+// 			clearInterval(loadingTimer2);			
+// 		}
 
 
-	}
-},10);
+// 	}
+// },10);
 
 }
 
