@@ -74,29 +74,29 @@
 <body>
 
 	<!-- 加载页面 -->
-<!-- 	<div class="loading">
+	<div class="loading">
 		<img src="images/logo-big.png">
 		<div class="progress-bar">
 			<img src="images/progress-bg.png">
 			<div id="nowprogress"></div>
 		</div>
-	</div> -->
+	</div>
 
 	<!-- 加载页面脚本-1 -->
 	 <script>
-	// 	var isTo80;
-	// 	var nowProgress = document.getElementById('nowprogress');
-	// 	nowProgress.style.width = '0%';
-	// 	var loadingTimer = setInterval(function(){
-	// 		var pbWidth = parseFloat(nowProgress.style.width);
-	// 		if (pbWidth<80) {
-	// 			nowProgress.style.width = pbWidth + 0.5 +'%';
-	// 		} else {
-	// 			clearInterval(loadingTimer);
-	// 			isTo80 = true;
-	// 		}
-	// 	},10);
-	// </script>
+		var isTo80;
+		var nowProgress = document.getElementById('nowprogress');
+		nowProgress.style.width = '0%';
+		var loadingTimer = setInterval(function(){
+			var pbWidth = parseFloat(nowProgress.style.width);
+			if (pbWidth<80) {
+				nowProgress.style.width = pbWidth + 0.5 +'%';
+			} else {
+				clearInterval(loadingTimer);
+				isTo80 = true;
+			}
+		},10);
+	</script>
 
 	<!-- 页面主体 -->
 	<div class="swiper-container" id="main-swiper">
@@ -275,8 +275,8 @@
 					<p class="s5-para2">匹配度：90%</p>
 					<p class="s5-para-a3">是否打开文件夹</p>
 				</div>
-				<a href="" id="s5-yes" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/go.png" class="go-word"></a>
-				<a href="" id="s5-no" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/go.png" class="go-word"></a>
+				<a href="" id="s5-yes" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/yes.png" class="go-word" id="yes-img"></a>
+				<a href="" id="s5-no" class="go"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/no.png" class="go-word"></a>
 				<img src="images/logo.png" class="s2-logo ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.7s" swiper-animate-delay="0.6s">
 			</div>
 

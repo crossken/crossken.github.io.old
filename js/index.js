@@ -27,7 +27,7 @@ window.onload = function(){
 		fade: {
 			crossFade: true,
 		},
-		hashnav: true,
+		// hashnav: true,
 		onlyExternal: true,
 		onInit: function(swiper){ 
 			swiperAnimateCache(swiper); 
@@ -385,7 +385,7 @@ $('#s3-go').tap(function() {
 $('#s3plus-go').tap(function() {
 	mainSwiper.slideTo(5, 800,true);
 });
-$('#s5-go').tap(function() {
+$('#s5-yes,#s5-no').tap(function() {
 	mainSwiper.slideTo(8, 800,true);
 });
 $('#s6-tech').tap(function() {
@@ -499,31 +499,31 @@ setTimeout(function(){
 
 //加载页面脚本-2
 
-// var loadingTimer2 = setInterval(function(){
-// 	if (isTo80) {
-// 		pbWidth = parseFloat(nowProgress.style.width);
-// 		if (pbWidth<88.5) {
-// 			nowProgress.style.width = pbWidth + 0.5 +'%';
-// 		} else {
+var loadingTimer2 = setInterval(function(){
+	if (isTo80) {
+		pbWidth = parseFloat(nowProgress.style.width);
+		if (pbWidth<88.5) {
+			nowProgress.style.width = pbWidth + 0.5 +'%';
+		} else {
 			
-// 			setTimeout(function(){
-// 				$('.loading').fadeOut(500,function(){
-// 					setTimeout(function(){
-// 						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 15000);
-// 					},100);
-// 					setTimeout(function(){
-// 						if (!skipSub) {
-// 							mainSwiper.slideTo(1, 1500,true);
-// 						}
-// 					},15700);
-// 				});
-// 			},300);
-// 			clearInterval(loadingTimer2);			
-// 		}
+			setTimeout(function(){
+				$('.loading').fadeOut(500,function(){
+					setTimeout(function(){
+						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 15000);
+					},100);
+					setTimeout(function(){
+						if (!skipSub) {
+							mainSwiper.slideTo(1, 1500,true);
+						}
+					},15700);
+				});
+			},300);
+			clearInterval(loadingTimer2);			
+		}
 
 
-// 	}
-// },10);
+	}
+},10);
 
 }
 

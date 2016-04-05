@@ -253,7 +253,6 @@ html,body,.swiper-container {
 	position: absolute;
 	left: 0;
 	width: 100%;
-	top: 54%;
 	top: 52%;
 }
 
@@ -324,7 +323,7 @@ html,body,.swiper-container {
 #s2-para {
 	position: absolute;
 	/*top: 71%;*/
-	top: 73%;
+	top: 78%;
 	opacity: 0;
 	-webkit-animation-duration: 0.88s;
 	animation-duration: 0.88s;
@@ -383,6 +382,10 @@ html,body,.swiper-container {
 	top: 36%;
 	-webkit-animation: fadeInOut 1s infinite linear;
 	animation: fadeInOut 1s infinite linear;
+}
+#yes-img {
+	width: 58%;
+	left: 21%;
 }
 .s3-para1 {
 	font-size: 22px; 
@@ -1363,11 +1366,11 @@ html,body,.swiper-container {
 
 
 #s5-yes {
-	top: 72%;
+	top: 76%;
 	left: 24%;
 }
 #s5-no {
-	top: 72%;
+	top: 76%;
 	left: 60%;
 }
 
@@ -1436,7 +1439,7 @@ html,body,.swiper-container {
 .s6-word1 {
 	position: absolute;
 	width: 52%;
-	top: 26%;
+	top: 40%;
 	left: 23%;
 	opacity: 0;
 }
