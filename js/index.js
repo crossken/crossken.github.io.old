@@ -142,7 +142,7 @@ window.onload = function(){
 				},200);
 				setTimeout(function(){
 					$('#s3-go').addClass('fadeIn animated');
-				},4300);
+				},3100);
 
 
 				
@@ -193,8 +193,9 @@ window.onload = function(){
 				$('.s4-para1').addClass('s4-para1-ani');
 				$('.s4-para2').addClass('s4-para2-ani');
 				$('.s4-para3').addClass('s4-para3-ani');
+				$('.s4-para-a4').addClass('s4-para-a4-ani');
 				setTimeout(function(){
-					$('.s4-para1,.s4-para2,.s4-para3').css('opacity', '1');
+					$('.s4-para1,.s4-para2,.s4-para3,.s4-para-a4').css('opacity', '1');
 				},700);
 				setTimeout(function(){
 					$('#s4-go').addClass('fadeIn animated');
