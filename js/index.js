@@ -123,7 +123,7 @@ window.onload = function(){
 				},2000);
 				setTimeout(function(){
 					$('#s2-hand').addClass('fadeInUp animated');
-				},8400);
+				},7900);
 			}
 
 
@@ -132,16 +132,17 @@ window.onload = function(){
 				clearInterval(waveTimer);
 				$('.s3-para1').addClass('s3-para1-ani');
 				$('.s3-para2').addClass('s3-para2-ani');
+				$('.s3-para-a3').addClass('s3-para-a3-ani');
 
 				setTimeout(function(){
 					$('#s3-logo').addClass('fadeInUp animated');
 				},400);
 				setTimeout(function(){
-					$('.s3-para1,.s3-para2').css('opacity', '1');
+					$('.s3-para1,.s3-para2,.s3-para-a3').css('opacity', '1');
 				},200);
 				setTimeout(function(){
 					$('#s3-go').addClass('fadeIn animated');
-				},3300);
+				},4300);
 
 
 				
@@ -159,7 +160,7 @@ window.onload = function(){
 				},200);
 				setTimeout(function(){
 					$('#s3plus-go').addClass('fadeIn animated');
-				},5100);
+				},4900);
 			}
 
 			if (swiper.activeIndex == 5) {
@@ -319,13 +320,14 @@ $('.s1-c3').css('top',parseInt(windowWidth*0.205));
 $('#s1-fp').css('top',parseInt(windowWidth*0.53));
 $('#s1-earth').css('top',parseInt(windowWidth*0.335));
 $('#ani-circle').css('bottom',-parseInt(windowWidth*0.48));
+$('#s1-pos').css('top', parseInt(windowWidth*0.55));
 
 // 渲染欢迎页
 $('#s2-robot').css('top',parseInt(windowWidth*0.51));
 $('#s2-rbline').css('top',parseInt(windowWidth*0.56));
 
 // 渲染字幕页
-$('.sub').css('top', parseInt(windowWidth*0.6));
+$('.sub').css('top', parseInt(windowWidth*0.7));
 
 // 为各链接绑定点触事件
 $('.skipSub').tap(function(){
@@ -335,10 +337,14 @@ $('.skipSub').tap(function(){
 		$('.sub').remove();
 	},1200)
 });
+$('.start-btn').tap(function(){
+	mainSwiper.slideTo(1, 1500,true);
+});
 $('#s1-fp').tap(function(){
 	
 	$(this).fadeOut(300);
 	$('#s1-sbl').fadeOut(300);
+	// $('#s1-word').fadeOut(300);
 	$('.circle').addClass('ani-pause');
 	var c1transform = $('#s1-c1').css('transform');
 	var c2transform = $('#s1-c2').css('transform');
@@ -355,11 +361,22 @@ $('#s1-fp').tap(function(){
 		$('#s1-c1').removeClass().addClass('zoomBigOut');
 	},200);
 
-	$('#s1-earth').addClass('ani-earth');
+	
 
 	setTimeout(function(){
 		mainSwiper.slideTo(2, 800,true);
-	},2200);
+	},2700);
+
+	// $('#s1-pos').fadeIn(500);
+	setTimeout(function(){
+		$('#s1-earth').addClass('ani-earth');
+		$('#s1-pos').show();
+		$('#s1-pos').addClass('ani-s1-pos');
+	},100);
+
+	setTimeout(function(){
+		$('#s1-pos').hide();
+	},1900)
 
 });
 $('#s2-btn').tap(function() {
@@ -509,13 +526,20 @@ var loadingTimer2 = setInterval(function(){
 			setTimeout(function(){
 				$('.loading').fadeOut(500,function(){
 					setTimeout(function(){
-						$('.sub').animate({'height':windowWidth*1.15,'top':0}, 15000);
+						$('.sub').animate({'height':windowWidth*1,'top':'10px'}, 15000);
 					},100);
 					setTimeout(function(){
 						if (!skipSub) {
-							mainSwiper.slideTo(1, 1500,true);
+							// mainSwiper.slideTo(1, 1500,true);
+							$('.start-btn').fadeIn(500);
+							$('.skipSub').hide();
 						}
-					},15700);
+					},15200);
+
+
+					// 音乐播放
+					var music = document.getElementById("music");
+					music.play();
 				});
 			},300);
 			clearInterval(loadingTimer2);			
@@ -524,6 +548,11 @@ var loadingTimer2 = setInterval(function(){
 
 	}
 },10);
+
+
+
+
+setTimeout
 
 }
 

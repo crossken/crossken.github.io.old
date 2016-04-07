@@ -31,47 +31,77 @@
 
 	<title>玑域科技</title>
 
-	<style>
+	<script>
+		var browser = {
+			versions: function () {
+				var u = navigator.userAgent, app = navigator.appVersion;
+        return {         //移动终端浏览器版本信息
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+            iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+        };
+    }(),
+    language: (navigator.browserLanguage || navigator.language).toLowerCase()
+}
 
-		/*加载页面*/
-		.loading {
-			position: fixed;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			background-color: #000;
-			z-index: 9999;
-		}
-		.loading>img {
-			display: block;
-			width: 13%;
-			margin: 60% auto 0;
-		}
-		.progress-bar {
-			width: 52%;
-			margin: 60px auto 0;
-			position: relative;
-		}
-		.progress-bar>img {
-			width: 100%;
-		}
-		.progress-bar>div {
-			position: absolute;
-			top: 40%;
-			height: 10%;
-			background-color: #fff;
-			left: 9%;
-			border-radius: 2px;
-		}
+if (browser.versions.mobile) {
+	 var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        if ((browser.versions.android)&&(ua.match(/MicroMessenger/i) == "micromessenger")) {
+                window.location.href="http://m.la-chance.net/h5/android_weixin.html"
+        }
+}
+</script>
 
-	</style>
-	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/index.css">
+<style>
+
+	/*加载页面*/
+	.loading {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: #000;
+		z-index: 9999;
+	}
+	.loading>img {
+		display: block;
+		width: 13%;
+		margin: 60% auto 0;
+	}
+	.progress-bar {
+		width: 52%;
+		margin: 60px auto 0;
+		position: relative;
+	}
+	.progress-bar>img {
+		width: 100%;
+	}
+	.progress-bar>div {
+		position: absolute;
+		top: 40%;
+		height: 10%;
+		background-color: #fff;
+		left: 9%;
+		border-radius: 2px;
+	}
+
+</style>
+<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
+
 
 	<!-- 加载页面 -->
 	<div class="loading">
@@ -83,7 +113,7 @@
 	</div>
 
 	<!-- 加载页面脚本-1 -->
-	 <script>
+	<script>
 		var isTo80;
 		var nowProgress = document.getElementById('nowprogress');
 		nowProgress.style.width = '0%';
@@ -98,6 +128,8 @@
 		},10);
 	</script>
 
+	<audio id="music" src="background.mp3" loop="loop"></audio>
+
 	<!-- 页面主体 -->
 	<div class="swiper-container" id="main-swiper">
 		<div class="swiper-wrapper">
@@ -109,6 +141,8 @@
 				</div>
 				<img src="images/logo-big.png" class="logo-big" id="sub-logo">
 				<a href="" class="skipSub"><span class="skip1">s</span><span class="skip2">k</span><span class="skip3">i</span><span class="skip4">p</span><span class="skip5"> </span><span class="skip6">></span><span class="skip7">></span></a>
+
+				<a href="" class="start-btn"><img src="images/go-wrapper.png" class="go-wrapper"><img src="images/start.png" class="start-word"></a>
 				<!-- <a href="" class="skipSub">skip >></a> -->
 			</div>
 
@@ -120,6 +154,9 @@
 				<img src="images/earth.png" id="s1-earth">
 				<a href="#" id="s1-fp"><img src="images/s1-fingerprint.png"></a>
 				<img src="images/s1-subline.png" id="s1-sbl">
+				<!-- <img src="images/s1-word.png" id="s1-word"> -->
+				<div id="s1-pos"><img src="images/s1-position.png"></div>
+
 			</div>
 
 			<!-- 欢迎页 -->
@@ -158,6 +195,7 @@
 			<div class="swiper-slide" id="slide3" data-hash="slide3">
 				<img src="images/s3-title.png" id="s3-title">
 				<div id="s3-word1">
+					<p class="s3-para-a3">数据获取完毕</p>
 					<p class="s3-para1">是否</p>
 					<p class="s3-para2">重新执行上次任务</p>
 				</div>
