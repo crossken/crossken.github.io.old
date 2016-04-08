@@ -53,10 +53,18 @@
 
 if (browser.versions.mobile) {
 	 var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-        if ((browser.versions.android)&&(ua.match(/MicroMessenger/i) == "micromessenger")) {
-                window.location.href="http://m.la-chance.net/h5/android_weixin.html"
-        }
-}
+	 if ((browser.versions.android)&&(ua.match(/MicroMessenger/i) == "micromessenger")) {
+	 	window.location.href="http://m.la-chance.net/h5/android_weixin.html"
+	 }
+	}
+
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?24446b15067ae623a10bf189870c72ae";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
 </script>
 
 <style>
