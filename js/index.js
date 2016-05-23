@@ -1,5 +1,7 @@
 $(function() {
 
+	alert('9');
+
 	// 布局
 	var rankingHeight = $('.md-ranking>img').height();
 	$('.md-ranking>img').css('top', rankingHeight*(-0.15));
@@ -28,12 +30,13 @@ $(function() {
 		$('.cancel').show();
 
 		//调用微信开始录音的接口
-		wx.startRecord();
+		// wx.startRecord();
 
 	});
 
 
 	el.addEventListener('touchmove', function (e) {
+			e.preventDefault();
             var touch = e.touches[0];
             endPosition = {
                 x: touch.pageX,
@@ -53,7 +56,8 @@ $(function() {
 
 	//松开手停止录音
 	el.addEventListener('touchend', function (e) {
-
+		// e.preventDefault();
+		// alert('touchend');
 		//如果是上滑取消录音
 		if ((deltaY)<-30) {
 			$('.cancel').hide();
@@ -62,23 +66,24 @@ $(function() {
 			// 取消录音？
 
 		} else {
-			wx.stopRecord({
-				success: function (res) {
-					var localId = res.localId;
-					wx.uploadVoice({
-    					localId: '', 
-    					isShowProgressTips: 1, 
-    					success: function (res) {
-        					var serverId = res.serverId; 
-   						}
-					});
-				}
-			});
+			// wx.stopRecord({
+			// 	success: function (res) {
+			// 		var localId = res.localId;
+			// 		wx.uploadVoice({
+   //  					localId: '', 
+   //  					isShowProgressTips: 1, 
+   //  					success: function (res) {
+   //      					var serverId = res.serverId; 
+   // 						}
+			// 		});
+			// 	}
+			// });
 		}
 
 		$('.cancel').hide();
+		// alert('had cancel')
 		deltaY = 0;
-		return false;
+
 	})
 
 
