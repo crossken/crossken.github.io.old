@@ -39,16 +39,13 @@ $(function() {
 
 	//音频播放
 	var Voice = document.getElementById('audio');
-
-
 	var isLoad = false;
 	var isPlaying = false;
 	var durationTime;
 	var timer;
 	var nowSec = 0;
 
-	Voice.addEventListener('loadedmetadata',initTimeDisplay);
-
+	Voice.addEventListener('canplay',initTimeDisplay);
 
 	$('.start-btn').click(function(event) {
 		if(isLoad && !isPlaying) {
@@ -67,7 +64,7 @@ $(function() {
 			},1000)
 			Voice.play();
 		}
-		Voice.removeEventListener('canplaythrough',initTimeDisplay);
+		Voice.removeEventListener('canplay',initTimeDisplay);
 		return false;
 	});
 
@@ -77,13 +74,11 @@ $(function() {
 	function padding(number) {
 		return number < 10 ? "0" + number : "" + number;  //注意多使用switch
 	}
-
 	function initTimeDisplay() {
 		durationTime = Voice.duration;
 		$('.time').text('00:'+padding(parseInt(durationTime)));
 		isLoad = true;
 	}
-
 
 
 
