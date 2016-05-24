@@ -1,6 +1,6 @@
 $(function() {
 
-	alert('9');
+	// alert('19');
 
 	// 布局
 	var rankingHeight = $('.md-ranking>img').height();
@@ -16,75 +16,76 @@ $(function() {
 
 	// 录音
 	var el = document.querySelector('.record-btn');
-	var startPosition, endPosition, deltaX, deltaY;
+	var isStarted = false,upLoading = false;
+	var voice = {
+		localId: '',
+		serverId: ''
+	};
 
 	//点击开始录音
-	el.addEventListener('touchstart', function (e) {
-		e.preventDefault();
-		var touch = e.touches[0];
-		startPosition = {
-			x: touch.pageX,
-			y: touch.pageY
-		}
+	$(el).tap(function(){
 
-		$('.cancel').show();
+		if (upLoading) return false;
 
-		//调用微信开始录音的接口
-		// wx.startRecord();
+		if (!isStarted) {
 
-	});
+			$('.cancel').show();
+			$('.record-btn').css('background-image', 'url(images/record-end.png)');
 
+			wx.startRecord({
+				cancel: function () {
+					
+					alert('用户拒绝授权录音');
 
-	el.addEventListener('touchmove', function (e) {
-			e.preventDefault();
-            var touch = e.touches[0];
-            endPosition = {
-                x: touch.pageX,
-                y: touch.pageY
-            }
+					$('.cancel').hide();
+					$('.record-btn').css('background-image', 'url(images/record-btn.png)');
+					isStarted = false;
+				}
+			});
 
-            deltaY = endPosition.y - startPosition.y;
-
-           if (deltaY<-30) {
-           		$('.cancel img').attr('src', 'images/cancel-2.png');
-           } else {
-           		$('.cancel img').attr('src', 'images/cancel.png');
-           }
-
-    });
-
-
-	//松开手停止录音
-	el.addEventListener('touchend', function (e) {
-		// e.preventDefault();
-		// alert('touchend');
-		//如果是上滑取消录音
-		if ((deltaY)<-30) {
-			$('.cancel').hide();
-			$('.cancel img').attr('src', 'images/cancel.png');
-
-			// 取消录音？
+			isStarted = true;
 
 		} else {
-			// wx.stopRecord({
-			// 	success: function (res) {
-			// 		var localId = res.localId;
-			// 		wx.uploadVoice({
-   //  					localId: '', 
-   //  					isShowProgressTips: 1, 
-   //  					success: function (res) {
-   //      					var serverId = res.serverId; 
-   // 						}
-			// 		});
-			// 	}
-			// });
+
+			$('.cancel').hide();
+			$('.record-btn').css('background-image', 'url(images/waiting.png)');
+			upLoading = true;
+
+			wx.stopRecord({
+				success: function (res) {
+					voice.localId = res.localId;
+					if (voice.localId == '') {
+						alert('请先使用 startRecord 接口录制一段声音');
+						return;
+					}
+					wx.uploadVoice({
+						localId: voice.localId, 
+						isShowProgressTips: 1, 
+						success: function (res) {
+							voice.serverId = res.serverId; 
+							$.ajax({
+								type: "POST",
+								url : $("#url").val(),
+								data: {"media_id" : voice.serverId, "openid" : $("#opid").val()},
+								dataType : "json",
+								success:function(data){
+									if(data.res == 'ok'){
+										window.location.href = _site  + "/uploadv/share/" + data.openid + "/" + data.vid;
+									}
+								}
+							})
+						}
+					});
+				}
+			});
+
 		}
 
-		$('.cancel').hide();
-		// alert('had cancel')
-		deltaY = 0;
+
 
 	})
+
+
 
 
 	wx.onVoiceRecordEnd({
@@ -95,15 +96,15 @@ $(function() {
     		localId: '',
     		isShowProgressTips: 1, 
     		success: function (res) {
-        		var serverId = res.serverId; 
-   			}
-		});
+    			var serverId = res.serverId; 
+    		}
+    	});
 
-		$('.cancel').hide();
-		$('.cancel img').attr('src', 'images/cancel.png');
+			$('.cancel').hide();
+			$('.record-btn').css('background-image', 'url(images/record-btn.png)');
 
-		//window.location.href="share.html“; 
-    }
+
+	}
 });
 
 

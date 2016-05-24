@@ -73,6 +73,11 @@ ul,li,div,p,body {
 }
 
 /*record*/
+.md-record {
+	position: relative;
+	left: 0;
+	top: -20px;
+}
 .md-record .record-btn {
 	display: block;
 	width: 65%;
