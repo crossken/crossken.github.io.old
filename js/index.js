@@ -30,7 +30,7 @@ $(function() {
 		if (!isStarted) {
 
 			$('.cancel').show();
-			$('.record-btn').css('background-image', 'url(images/record-end.png)');
+			$('.record-btn img').attr('src', 'images/record-end.png');
 
 			wx.startRecord({
 				cancel: function () {
@@ -38,7 +38,7 @@ $(function() {
 					alert('用户拒绝授权录音');
 
 					$('.cancel').hide();
-					$('.record-btn').css('background-image', 'url(images/record-btn.png)');
+					$('.record-btn img').attr('src', 'images/record-btn.png');
 					isStarted = false;
 				}
 			});
@@ -48,7 +48,7 @@ $(function() {
 		} else {
 
 			$('.cancel').hide();
-			$('.record-btn').css('background-image', 'url(images/waiting.png)');
+			$('.record-btn img').attr('src', 'images/waiting.png');
 			upLoading = true;
 
 			wx.stopRecord({
@@ -92,6 +92,7 @@ $(function() {
     // 录音时间超过一分钟没有停止的时候会执行 complete 回调
     complete: function (res) {
     	var localId = res.localId; 
+    	upLoading = true;
     	wx.uploadVoice({
     		localId: '',
     		isShowProgressTips: 1, 
@@ -101,7 +102,7 @@ $(function() {
     	});
 
 			$('.cancel').hide();
-			$('.record-btn').css('background-image', 'url(images/record-btn.png)');
+			$('.record-btn img').attr('src', 'images/waiting.png');
 
 
 	}
