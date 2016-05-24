@@ -82,12 +82,12 @@ ul,li,div,p,body {
 	display: block;
 	width: 65%;
 	margin: 0 auto;
-/*	background: transparent url(../images/record-btn.png) 0 0 no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;*/
 }
 .md-record .record-btn img {
 	width: 100%;
+}
+.img-fix {
+	display: none;
 }
 
 /*cancel*/
