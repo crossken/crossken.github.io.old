@@ -15,8 +15,6 @@
 
 	<title>给您的朋友发个冷笑话</title>
 
-	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
-	<!-- <link rel="stylesheet" href="css/base.css"> -->
 	<style>
 		.loading {
 			position: fixed;
@@ -108,9 +106,6 @@
 
 	<link rel="stylesheet" href="css/index.css">
 
-
-
-
 </head>
 <body>
 	<div class="loading">
@@ -126,9 +121,12 @@
 		</div>
 	</div>
 	<script>
+		//loading布局
 		var windowWidth = window.screen.width;
 		document.querySelector('.loading-title').style.height = windowWidth*0.06872 + 'px';
 		document.querySelector('.progress-bar').style.height = windowWidth*0.22496 + 'px';
+
+		//loading进度条
 		var pdWidth,loadState,loadingTimer2,loadingPrgress2;
 		var nowProgress = document.querySelector('.progress-bar>div');
 		nowProgress.style.width = '0%';
@@ -197,7 +195,7 @@
 
 
 	<script>
-
+		//主页面布局
 		document.querySelector('.md-ranking').style.height = windowWidth*0.4578 + 'px';
 		document.querySelector('.md-record').style.height = windowWidth*0.14375 + 'px';
 		document.body.addEventListener('touchstart',function(){

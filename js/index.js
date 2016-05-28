@@ -1,20 +1,19 @@
 $(function() {
 
-	// 布局
+	//布局
 	if($('.container').height()>$(window).height()) {
 		$('.md-record').css('position', 'fixed');
 	}
+	//禁止默认点击
 	$('a').click(function(event) {
 		event.preventDefault();
 	});
-	$('.to-my-money').tap(function(){
+	$('.to-my-money').on('touchstart',function(){
 		window.location.href = 'my_money.html';
 	});
 
 
-
-
-	// 录音
+	//录音
 	var el = document.querySelector('.record-btn');
 	var isStarted = false, isUpLoading = false;
 	var voice = {
@@ -107,7 +106,7 @@ wx.onVoiceRecordEnd({
     }
 });
 
-
+//loading进度条
 loadingPrgress2 = function(){
 	pbWidth = parseFloat(nowProgress.style.width);
 	if (pbWidth<63) {
@@ -120,6 +119,7 @@ loadingPrgress2 = function(){
 		clearInterval(loadingTimer2);			
 	}
 }
+
 loadState = true;
 
 });

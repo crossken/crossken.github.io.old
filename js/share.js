@@ -64,7 +64,7 @@ $(function() {
 
 
 	function initTimeDisplay() {
-			alert(Voice.duration);
+		alert(Voice.duration);
 		durationTime = Voice.duration;
 		console.log(durationTime);
 		$('.md-player p').text(parseInt(durationTime)+'\'\'');
