@@ -1,14 +1,14 @@
 $(function() {
 
-	// alert('19');
-
 	// 布局
-	var rankingHeight = $('.md-ranking>img').height();
-	$('.md-ranking>img').css('top', rankingHeight*(-0.15));
-	$('.md-ranking>ul').css({'top':rankingHeight*(0.3),'height':rankingHeight*0.44});
-	$('.record-btn').css('height', $('.record-btn').width()*0.2282);
+	if($('.container').height()>$(window).height()) {
+		$('.md-record').css('position', 'fixed');
+	}
 	$('a').click(function(event) {
 		event.preventDefault();
+	});
+	$('.to-my-money').tap(function(){
+		window.location.href = 'my_money.html';
 	});
 
 
@@ -16,7 +16,7 @@ $(function() {
 
 	// 录音
 	var el = document.querySelector('.record-btn');
-	var isStarted = false,upLoading = false;
+	var isStarted = false, isUpLoading = false;
 	var voice = {
 		localId: '',
 		serverId: ''
@@ -25,7 +25,9 @@ $(function() {
 	//点击开始录音
 	$(el).tap(function(){
 
-		if (upLoading) return false;
+		//如果录音正在上传，点击按钮不进行任何逻辑
+		if (isUpLoading) return false;
+
 
 		if (!isStarted) {
 
@@ -49,7 +51,7 @@ $(function() {
 
 			$('.cancel').hide();
 			$('.record-btn img').attr('src', 'images/waiting.png');
-			upLoading = true;
+			isUpLoading = true;
 
 			wx.stopRecord({
 				success: function (res) {
@@ -81,18 +83,20 @@ $(function() {
 
 		}
 
-
-
 	})
 
 
 
 
-	wx.onVoiceRecordEnd({
+wx.onVoiceRecordEnd({
     // 录音时间超过一分钟没有停止的时候会执行 complete 回调
     complete: function (res) {
     	var localId = res.localId; 
-    	upLoading = true;
+
+    	isUpLoading = true;
+    	$('.cancel').hide();
+    	$('.record-btn img').attr('src', 'images/waiting.png');
+
     	wx.uploadVoice({
     		localId: '',
     		isShowProgressTips: 1, 
@@ -100,14 +104,22 @@ $(function() {
     			var serverId = res.serverId; 
     		}
     	});
-
-			$('.cancel').hide();
-			$('.record-btn img').attr('src', 'images/waiting.png');
-
-
-	}
+    }
 });
 
 
+loadingPrgress2 = function(){
+	pbWidth = parseFloat(nowProgress.style.width);
+	if (pbWidth<63) {
+		nowProgress.style.width = pbWidth + 0.5 +'%';
+	} else {
+
+		setTimeout(function(){
+			$('.loading').fadeOut(500,function(){});
+		},300);
+		clearInterval(loadingTimer2);			
+	}
+}
+loadState = true;
 
 });

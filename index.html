@@ -15,12 +15,134 @@
 
 	<title>给您的朋友发个冷笑话</title>
 
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/base.css">
+	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+	<!-- <link rel="stylesheet" href="css/base.css"> -->
+	<style>
+		.loading {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			z-index: 2;
+		}
+		.loading .loading-title {
+			width: 100%;
+			margin-top: 30%;
+			position: relative;
+		}
+		.loading .loading-title img {
+			display: block;
+			width: 68.28%;
+			margin-left: 13.28%;
+		}
+		.loading .loading-title span {
+			display: block;
+			width: 4px;
+			height: 4px;
+			background-color: #bea66e;
+			position: absolute;
+		}
+		.loading span.first-dot {
+			right: 16%;
+			bottom: 2px;
+		}
+		.loading span.second-dot {
+			right: 13%;
+			bottom: 2px;
+			-webkit-animation: flash 2s step-end infinite;
+			animation: flash 2s step-end infinite;
+		}
+		.loading span.third-dot {
+			right: 10%;
+			bottom: 2px;
+			-webkit-animation: flash2 2s step-end infinite;
+			animation: flash2 2s step-end infinite;
+		}
+		.loading .progress-bar {
+			width: 100%;
+			margin-top: 34%;
+			position: relative;
+		}
+		.loading .progress-bar img {
+			display: block;
+			width: 77.34%;
+			margin-left: 13.28%;
+			position: relative;
+			z-index: 2;
+		}
+		.loading .progress-bar>div {
+			/*width: 63%;*/
+			height: 13%;
+			background-color: #bea66e;
+			position: absolute;
+			top: 80%;
+			right: 23%;
+		}
+		@keyframes flash {
+			from {opacity: 0;}
+			34% {opacity: 1;}
+			66% {opacity: 1;}
+			to% {opacity: 1;}
+		}
+		@-webkit-keyframes flash {
+			from {opacity: 0;}
+			34% {opacity: 1;}
+			66% {opacity: 1;}
+			to% {opacity: 1;}
+		}
+		@keyframes flash2 {
+			from {opacity: 0;}
+			34% {opacity: 0;}
+			66% {opacity: 1;}
+			to% {opacity: 1;}
+		}
+		@-webkit-keyframes flash2 {
+			from {opacity: 0;}
+			34% {opacity: 0;}
+			66% {opacity: 1;}
+			to% {opacity: 1;}
+		}
+	</style>
+
 	<link rel="stylesheet" href="css/index.css">
+
+
+
 
 </head>
 <body>
+	<div class="loading">
+		<div class="loading-title">
+			<img src="images/loading-title.png" >
+			<span class="first-dot"></span>
+			<span class="second-dot"></span>
+			<span class="third-dot"></span>
+		</div>
+		<div class="progress-bar">
+			<img src="images/loading-bar.png">
+			<div></div>
+		</div>
+	</div>
+	<script>
+		var windowWidth = window.screen.width;
+		document.querySelector('.loading-title').style.height = windowWidth*0.06872 + 'px';
+		document.querySelector('.progress-bar').style.height = windowWidth*0.22496 + 'px';
+		var pdWidth,loadState,loadingTimer2,loadingPrgress2;
+		var nowProgress = document.querySelector('.progress-bar>div');
+		nowProgress.style.width = '0%';
+		var loadingTimer = setInterval(function(){
+			pbWidth = parseFloat(nowProgress.style.width);
+			if (pbWidth<58) {
+				nowProgress.style.width = pbWidth + 0.5 +'%';
+			} else if (loadState){
+				clearInterval(loadingTimer);
+				loadingTimer2 = setInterval(loadingPrgress2,10);
+			}
+		},10);
+	</script>
+
 	<div class="container">
 
 		<!-- 页面标题 -->
@@ -53,11 +175,14 @@
 					<span class="sum">76</span>
 				</li>
 			</ul>
+
 		</section>
 
 		<!-- 录音按钮 -->
 		<section class="md-record">
 			<a href="" class="record-btn"><img src="images/record-btn.png"></a>
+			<a href="myMoney.html" class="to-my-money"><img src="images/my-money-btn.png"></a>
+			<img src="images/record-bg.png">
 		</section>
 		
 		<!-- 语音中提示 -->
@@ -69,6 +194,16 @@
 		<img src="images/waiting.png" class="img-fix">
 
 	</div>
+
+
+	<script>
+
+		document.querySelector('.md-ranking').style.height = windowWidth*0.4578 + 'px';
+		document.querySelector('.md-record').style.height = windowWidth*0.14375 + 'px';
+		document.body.addEventListener('touchstart',function(){
+			return false;
+		})
+	</script>
 	<!-- 微信JS-SDK -->
 	<script src="lib/jweixin-1.0.0.js"></script>
 	<!-- 移动版jQuery -->

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<!-- 固定视口宽度为设备宽度，禁止用户缩放页面 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+	<!-- 文本格式检测 -->
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+
+	<!-- 去掉winphone系统a、input标签被点击时产生的半透明灰色背景 -->
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<title>我的红包</title>
+
+	<link rel="stylesheet" href="css/my_money.css">
+
+
+</head>
+<body>
+	<div class="container">
+		<!-- 头像 -->
+		<section class="md-avatar">
+			<img src="images/test-avatar.jpg">
+		</section>
+
+		<!-- 红包列表 -->
+		<section class="md-ranking">
+			<img src="images/money-bg.png">
+			<ul>
+				<li>
+					<span class="account">dheyd76</span>
+					<span class="sum">234</span>
+				</li>
+				<li>
+					<span class="account">frvrv6</span>
+					<span class="sum">157</span>
+				</li>
+				<li>
+					<span class="account">78974he</span>
+					<span class="sum">76</span>
+				</li>
+				<li>
+					<span class="account">78974he</span>
+					<span class="sum">76</span>
+				</li>
+				<li>
+					<span class="account">78974he</span>
+					<span class="sum">76</span>
+				</li>
+				<li>
+					<span class="account">78974he</span>
+					<span class="sum">76</span>
+				</li>
+				<li>
+					<span class="account">78974he</span>
+					<span class="sum">76</span>
+				</li>
+				<li>
+					<span class="account">78974he</span>
+					<span class="sum">76</span>
+				</li>
+			</ul>
+
+			<div class="turn-page">
+				<a href=""><img src="images/prev-page.png"></a>
+				<a href=""><img src="images/next-page.png"></a>
+			</div>
+		</section>
+		
+		<section class="md-get-money">
+			<a href="" class="get-money-btn"><img src="images/get-money.png"></a>
+			<a href="" class="rules"><img src="images/rules.png"></a>
+			<img src="images/rules-details.png" class="show-rules">
+		</section>
+
+	</div>
+
+
+	<script>
+		//布局
+		var windowWidth = window.screen.width;
+		document.querySelector('.md-ranking').style.height = windowWidth*1.052 + 'px';
+	</script>
+	<!-- 微信JS-SDK -->
+	<script src="lib/jweixin-1.0.0.js"></script>
+	<!-- 移动版jQuery -->
+	<script src="lib/zepto.js"></script>
+	<!-- 本页面的JS -->
+	<script>
+		//布局
+		$('a').click(function(event) {
+			event.preventDefault();
+		});
+		if($('.container').height()>window.screen.height) {
+			$('.get-money').css('position', 'fixed');
+		}
+
+		//显示提现规则
+		var isShown = false;
+		$('.rules').tap(function(){
+			if (!isShown) {
+				$('.show-rules').show();
+				isShown = true;
+			}
+			return false;
+		});
+		$(document).tap(function(){
+			if (isShown) {
+				$('.show-rules').hide();
+				isShown = false;
+			}
+		});
+
+
+		//提现操作
+		$('.get-money-btn').tap(function(){
+			// 在此处写具体逻辑
+		});
+
+
+		//翻页操作
+		
+	</script>
+</body>
+</html>
