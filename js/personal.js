@@ -75,6 +75,7 @@ $(function() {
 		return number < 10 ? "0" + number : "" + number;  //注意多使用switch
 	}
 	function initTimeDisplay() {
+		alert(1);
 		durationTime = Voice.duration;
 		$('.time').text('00:'+padding(parseInt(durationTime)));
 		isLoad = true;
