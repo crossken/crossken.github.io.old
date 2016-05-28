@@ -116,9 +116,12 @@ ul,li,div,p,body {
 .md-record .to-my-money {
 	display: block;
 	position: absolute;
-	width: 15%;
-	top: 36%;
+	width: 18%;
+	top: 34%;
 	right: 19%;
+}
+.md-record .to-my-money img{
+	display: block;
 }
 .img-fix {
 	display: none;
@@ -136,28 +139,30 @@ ul,li,div,p,body {
 	display: block;
 	width: 100%;
 }
-.cancel span {
-	display: block;
-	width: 1%;
-	height: 2px;
-	background-color: #fff;
+.cancel>div {
 	position: absolute;
+	bottom: 14%;
+	right: 32%;
+	font-size: 0;
+}
+.cancel span {
+	display: inline-block;
+	width: 2px;
+	height: 2px;
+	margin-left: 3px;
+	background-color: #fff;
 }
 .cancel span.first-dot {
-	right: 37%;
-	bottom: 14%;
-}
-.cancel span.second-dot {
-	right: 34%;
-	bottom: 14%;
-	-webkit-animation: flash 2s step-end infinite;
+	-webkit-animation: flash 2s step-start infinite;
 	animation: flash 2s step-end infinite;
 }
-.cancel span.third-dot {
-	right: 30%;
-	bottom: 14%;
-	-webkit-animation: flash2 2s step-end infinite;
+.cancel span.second-dot {
+	-webkit-animation: flash2 2s step-start infinite;
 	animation: flash2 2s step-end infinite;
+}
+.cancel span.third-dot {
+	-webkit-animation: flash3 2s step-start infinite;
+	animation: flash3 2s step-end infinite;
 }
 
 .animated {

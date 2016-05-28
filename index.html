@@ -24,7 +24,7 @@
 			height: 100%;
 			background-color: #fff;
 			z-index: 2;
-			display: none;
+			/*display: none;*/
 		}
 		.loading .loading-title {
 			width: 100%;
@@ -81,26 +81,44 @@
 		}
 		@keyframes flash {
 			from {opacity: 0;}
-			34% {opacity: 1;}
-			66% {opacity: 1;}
+			25% {opacity: 1;}
+			50% {opacity: 1;}
+			75% {opacity: 1;}
 			to% {opacity: 1;}
 		}
 		@-webkit-keyframes flash {
 			from {opacity: 0;}
-			34% {opacity: 1;}
-			66% {opacity: 1;}
+			25% {opacity: 1;}
+			50% {opacity: 1;}
+			75% {opacity: 1;}
 			to% {opacity: 1;}
 		}
 		@keyframes flash2 {
 			from {opacity: 0;}
-			34% {opacity: 0;}
-			66% {opacity: 1;}
+			25% {opacity: 0;}
+			50% {opacity: 1;}
+			75% {opacity: 1;}
 			to% {opacity: 1;}
 		}
 		@-webkit-keyframes flash2 {
 			from {opacity: 0;}
-			34% {opacity: 0;}
-			66% {opacity: 1;}
+			25% {opacity: 0;}
+			50% {opacity: 1;}
+			75% {opacity: 1;}
+			to% {opacity: 1;}
+		}
+		@keyframes flash3 {
+			from {opacity: 0;}
+			25% {opacity: 0;}
+			50% {opacity: 0;}
+			75% {opacity: 1;}
+			to% {opacity: 1;}
+		}
+		@-webkit-keyframes flash3 {
+			from {opacity: 0;}
+			25% {opacity: 0;}
+			50% {opacity: 0;}
+			75% {opacity: 1;}
 			to% {opacity: 1;}
 		}
 	</style>
@@ -189,9 +207,11 @@
 		<!-- 语音中提示 -->
 		<div class="cancel">
 			<img src="images/recording.png">
-			<span class="first-dot"></span>
-			<span class="second-dot"></span>
-			<span class="third-dot"></span>
+			<div>
+				<span class="first-dot"></span>
+				<span class="second-dot"></span>
+				<span class="third-dot"></span>
+			</div>
 		</div>
 
 		<img src="images/record-end.png" class="img-fix">

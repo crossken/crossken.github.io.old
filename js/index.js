@@ -121,7 +121,7 @@ loadingPrgress2 = function(){
 		},600)
 		$('.title-2').addClass('animated rotateIn');
 		// 建议测试时把下面这句注释掉
-		// $('.md-record').addClass('animated zoomIn');
+		$('.md-record').addClass('animated zoomIn');
 		clearInterval(loadingTimer2);			
 	}
 }
