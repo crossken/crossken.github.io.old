@@ -45,9 +45,9 @@ $(function() {
 	var timer;
 	var nowSec = 0;
 
-	Voice.addEventListener('canplay',initTimeDisplay);
+	Voice.addEventListener('loadedmetadata',initTimeDisplay);
 
-	alert(Voice.duration);
+	// alert(Voice.duration);
 
 	$('.start-btn').click(function(event) {
 		if(isLoad && !isPlaying) {
@@ -66,7 +66,7 @@ $(function() {
 			},1000)
 			Voice.play();
 		}
-		Voice.removeEventListener('canplay',initTimeDisplay);
+		Voice.removeEventListener('loadedmetadata',initTimeDisplay);
 		return false;
 	});
 
