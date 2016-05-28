@@ -47,6 +47,8 @@ $(function() {
 
 	Voice.addEventListener('canplay',initTimeDisplay);
 
+	alert(Voice.duration);
+
 	$('.start-btn').click(function(event) {
 		if(isLoad && !isPlaying) {
 			$('.progress-now').css('width', '0');

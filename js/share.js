@@ -17,6 +17,8 @@ $(function() {
 
 	var Voice = document.getElementById('audio');
 
+
+
 	var isLoad = false;
 	var isPlaying = false;
 	var isPlayed = false;
@@ -62,6 +64,7 @@ $(function() {
 
 
 	function initTimeDisplay() {
+			alert(Voice.duration);
 		durationTime = Voice.duration;
 		console.log(durationTime);
 		$('.md-player p').text(parseInt(durationTime)+'\'\'');
