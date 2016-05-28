@@ -116,6 +116,12 @@ loadingPrgress2 = function(){
 		setTimeout(function(){
 			$('.loading').fadeOut(500,function(){});
 		},300);
+		setTimeout(function(){
+			$('.title-1').addClass('animated rubberBand');
+		},600)
+		$('.title-2').addClass('animated rotateIn');
+		// 建议测试时把下面这句注释掉
+		// $('.md-record').addClass('animated zoomIn');
 		clearInterval(loadingTimer2);			
 	}
 }
