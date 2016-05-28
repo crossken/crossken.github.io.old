@@ -27,7 +27,7 @@ $(function() {
 
 	Voice.addEventListener('loadedmetadata',initTimeDisplay);
 
-	$('.md-player a').tap(function(event) {
+	$('.md-player a').on('touchstart',function(event) {
 		if(isLoad && !isPlaying) {
 			if (isPlayed) {
 				$('.md-player p').text('0\'\'');
@@ -64,7 +64,6 @@ $(function() {
 
 
 	function initTimeDisplay() {
-		alert(Voice.duration);
 		durationTime = Voice.duration;
 		console.log(durationTime);
 		$('.md-player p').text(parseInt(durationTime)+'\'\'');
