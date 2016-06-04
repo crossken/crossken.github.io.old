@@ -176,15 +176,16 @@ textarea.textarea {
 	color: #fff;
 	line-height: 2;
 	font-size: 16px;
+	top: 120px;
 }
 .confirm .cancel {
 	left: 10%;
-	bottom: 30px;
+	/*bottom: 30px;*/
 	background-color: #ce572c;
 }
 input[type="submit"] {
 	right: 10%;
-	bottom: 30px;
+	/*bottom: 30px;*/
 	background-color: #1c5896;
 	-webkit-appearance: none;
 	border-radius: 0;
