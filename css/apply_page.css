@@ -9,7 +9,7 @@ body {
 a,img {
 	-webkit-touch-callout:none;
 }
-input {
+input,textarea {
 	-webkit-appearance:none;
 	border-radius: 0;
 }
