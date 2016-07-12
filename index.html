@@ -19,7 +19,9 @@
 		<div class="main-wrapper">
 			<div class="machine">
 				<div class="title"></div>
-				<div class="sound-control"></div>
+				<div class="sound-control">
+					<img src="images/sound_03@2x.png">
+				</div>
 				<div class="machine-body">
 					<div class="body-mask"></div>
 					<div class="top-sec">
@@ -40,12 +42,13 @@
 						<div class="glass-mask"></div>
 					</div>
 					<div class="control-sec">
-						<div class="btn-up"></div>
-						<div class="btn-down"></div>
-						<div class="btn-left"></div>
-						<div class="btn-right"></div>
-						<div class="btn-confirm"></div>
-						<div class="times-to-play"></div>
+						<div class="btn-up ctrl-btn"></div>
+						<div class="btn-down ctrl-btn"></div>
+						<div class="btn-left ctrl-btn"></div>
+						<div class="btn-right ctrl-btn"></div>
+						<div class="btn-confirm">
+							<span>20</span>
+						</div>
 					</div>
 				</div>
 				<div class="rechange"></div>
@@ -54,41 +57,57 @@
 				</div>
 
 			</div>
-<!-- 		<div class="tips"></div>
-	<div class="start-game"></div> -->
+			<div class="tips"></div>
+			<div class="start-game"></div>
 
-<!-- 		<div class="sucsess-page">
-			<div class="word"></div>
-			<div class="doll"></div>
-			<form action="" class="info-form">
-				<label for="name">姓名</label><input type="text">
-				<label for="name">电话</label><input type="tel">
-				<label for="name">地址</label><input type="text">
-				<select name="area" id="area">
-					<option value="gd">广东</option>
-				</select>
-				<input type="submit">
-			</form>
+			<div class="sucsess-page">
+				<div class="word"></div>
+				<div class="doll"></div>
+				<form action="">
+					<div class="text-input">
+						<label for="name">姓名：</label><input type="text" id="name" name="name">
+					</div>
+					<div class="text-input">
+						<label for="tel">电话：</label><input type="tel" id="tel" name="tel">
+					</div>
+					<div class="text-input">
+						<label for="address">地址：</label><input type="text" id="address" name="address">
+					</div>
+					<div class="select-wrapper">
+						<select name="area" id="area">
+							<option value="gd">广东省</option>
+						</select>
+					</div>
+					<input type="submit" value="">
+				</form>
+			</div>
+
+			<div class="fail-page">
+				<div class="word">
+					<span>20</span>
+				</div>
+				<div class="doll"></div>
+				<div class="continue"></div>
+			</div>
+
+			<div class="tips-page">
+				<div class="word"></div>
+			</div>
+
+			<div class="pay-page">
+				<form action="">
+					<div class="text-input">
+						<input type="text" name="money">
+					</div>
+					<div class="btn">
+						<div class="confirm"></div>
+						<div class="cancel"></div>
+					</div>
+					<div class="cancel-1"></div>
+				</form>
+			</div>
+
+			<div class="free"></div>
 		</div>
-
-		<div class="fail-page">
-			<div class="word"></div>
-			<div class="doll"></div>
-			<div class="continue"></div>
-		</div>
-
-		<div class="tips-page">
-			<div class="word"></div>
-		</div>
-
-		<div class="pay-page">
-			<form action="">
-				<input type="text">
-				<div class="confirm"></div>
-				<div class="cancel"></div>
-				<div class="cancel-1"></div>
-			</form>
-		</div> -->
-	</div>
-</body>
-</html>
+	</body>
+	</html>

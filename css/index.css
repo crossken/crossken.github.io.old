@@ -10,27 +10,52 @@ html, body {
 body {
 	width: 7.5rem;
 	height: 12rem;
+	position: relative;
+	padding-top: 0.29rem;
 }
 html {
 	background: #fff url(../images/bg.png) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+input,select {
+	border: 0;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	outline:none;
+}
 @media screen and (max-width:321px){
 	.machine .times-left>span{font-size:15px}
+	.machine .btn-confirm>span{font-size:12px}
+	.sucsess-page .text-input>*{font-size:12px}
+	.sucsess-page .select-wrapper>select{font-size:15px}
+	.fail-page .word>span {font-size:20px}
+	.pay-page .text-input>input {font-size:16px}
 }
 
 @media screen and (min-width:321px) and (max-width:400px){
 	.machine .times-left>span{font-size:16px}
+	.machine .btn-confirm>span{font-size:13px}
+	.sucsess-page .text-input>*{font-size:14px}
+	.sucsess-page .select-wrapper>select{font-size:16px}
+	.fail-page .word>span {font-size:24px}
+	.pay-page .text-input>input {font-size:17px}
 }
 
 @media screen and (min-width:400px){
 	.machine .times-left>span{font-size:18px}
+	.machine .btn-confirm>span{font-size:14px}
+	.sucsess-page .text-input>*{font-size:16px}
+	.sucsess-page .select-wrapper>select{font-size:18px}
+	.fail-page .word>span {font-size:28px}
+	.pay-page .text-input>input {font-size:20px}
 }
 .machine {
 	position: relative;
-/*	-webkit-transform: scale(0.8,0.8);
-transform: scale(0.8,0.8);*/
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform: scale(0.766,0.766);
+	transform: scale(0.766,0.766);
 }
 .machine .title {
 	width: 4.86rem;
@@ -38,7 +63,7 @@ transform: scale(0.8,0.8);*/
 	background: url(../images/name@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
-	margin: 0.29rem auto 0;
+	margin: auto;
 }
 .machine .sound-control {
 	width: 0.66rem;
@@ -49,6 +74,9 @@ transform: scale(0.8,0.8);*/
 	position: absolute;
 	right: 0.6rem;
 	top: 0.37rem;
+}
+.machine .sound-control>img {
+	display: none;
 }
 .machine .machine-body {
 	width: 6.8rem;
@@ -91,7 +119,7 @@ transform: scale(0.8,0.8);*/
 	font-size: 16px;
 	position: absolute;
 	left: .17rem;
-	top: .18rem;
+	top: .16rem;
 }
 .machine .progress-bar,.machine .progress-bar-now {
 	position: absolute;
@@ -131,4 +159,300 @@ transform: scale(0.8,0.8);*/
 	width: .28rem;
 	height: .44rem;
 	z-index: 3;
+}
+
+.machine .btn-up {
+	background: url(../images/Button01@2x.png) 0 0 no-repeat;
+	top: 6.82rem;
+	left: 3.19rem;
+}
+.machine .btn-left {
+	background: url(../images/Button04@2x.png) 0 0 no-repeat;
+	top: 7.3rem;
+	left: 2.38rem;
+}
+.machine .btn-down {
+	background: url(../images/Button02@2x.png) 0 0 no-repeat;
+	top: 7.71rem;
+	left: 3.19rem;
+}
+.machine .btn-right {
+	background: url(../images/Button03@2x.png) 0 0 no-repeat;
+	top: 7.3rem;
+	left: 3.98rem;
+}
+.machine .ctrl-btn {
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	width: .74rem;
+	height: .8rem;
+}
+
+.machine .btn-confirm {
+	background: url(../images/ok@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	top: 7.22rem;
+	right: .3rem;
+	width: 1.22rem;
+	height: .96rem;
+}
+.machine .btn-confirm>span {
+	position: absolute;
+	top: .3rem;
+	right: .04rem;
+	color: #fff;
+}
+.tips {
+	background: url(../images/TIPS@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	top: 9.29rem;
+	left: 3.05rem;
+	width: 1.4rem;
+	height: .9rem;
+}
+.start-game {
+	background: url(../images/start@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	top: 10.49rem;
+	left: 1.98rem;
+	width: 3.54rem;
+	height: 1.1rem;
+}
+
+.sucsess-page,.fail-page,.tips-page,.pay-page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+.sucsess-page .word {
+	background: url(../images/Congratulations@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 3.48rem;
+	height: 1.46rem;
+	margin: .2rem auto 0;
+}
+.sucsess-page .doll {
+	background: url(../images/Rabbit-01@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 6.2rem;
+	height: 4.74rem;
+	margin: 0 auto;
+}
+.sucsess-page>form {
+	background: url(../images/information@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 6.82rem;
+	height: 5.2rem;
+	margin: .3rem auto 0;
+	position: relative;
+}
+.sucsess-page .text-input:first-child {
+	top: 1.15rem;
+	background: url(../images/column03@2x.png) .82rem 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.sucsess-page .text-input:nth-child(2) {
+	top: 2.1rem;
+	background: url(../images/column02@2x.png) .82rem 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.sucsess-page .text-input:nth-child(3) {
+	top: 3.05rem;
+	background: url(../images/column01@2x.png) .82rem 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.sucsess-page .text-input>* {
+	display: inline-block;
+}
+.sucsess-page .text-input {
+	position: absolute;
+	left: .42rem;
+	width: 6.06rem;
+	height: .74rem;
+	font-size: 0;
+}
+.sucsess-page .text-input>label {
+	width: 1rem;
+	line-height: .74rem;
+	color: rgb( 166, 114, 53 )
+}
+.sucsess-page .text-input>input {
+	background-color: #a46f34;
+}
+#name {
+	width: 2.32rem;	
+}
+#tel {
+	width: 3.3rem;
+}
+#address {
+	width: 4.7rem;
+}
+.sucsess-page .select-wrapper {
+	background: url(../images/column04@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 2.5rem;
+	height: .74rem;
+	position: absolute;
+	left: 1.2rem;
+	bottom: .5rem;
+	overflow: hidden;
+}
+.sucsess-page .select-wrapper>select {
+	background: transparent;
+	width: 2.11rem;
+
+	padding-left: .75rem;
+	color: #fff;
+	height: .74rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+}
+.sucsess-page input[type="submit"] {
+	background: url(../images/refer@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: .92rem;
+	height: .92rem;
+	position: absolute;
+	right: .36rem;
+	bottom: .4rem;	
+}
+
+.fail-page .word {
+	background: url(../images/no@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 5.20rem;
+	height: 2.18rem;
+	margin: .2rem auto 0;
+	position: relative;
+}
+.fail-page .word>span {
+	color: #fb0000;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 1.52rem;
+}
+.fail-page .doll {
+	background: url(../images/Rabbit-02@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 4.04rem;
+	height: 3.96rem;
+	margin: .26rem auto 0;
+}
+.fail-page .continue {
+	background: url(../images/continue@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 3.54rem;
+	height: 1.1rem;
+	margin: .54rem auto 0;
+}
+
+.tips-page .word {
+	background: url(../images/tips03@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 6.8rem;
+	height: 7.22rem;
+	margin: .32rem auto 0;
+}
+
+.pay-page>form {
+	background: url(../images/store@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 6.7rem;
+	height: 5.76rem;
+	margin: .32rem auto 0;
+	padding-top: 1.75rem;
+	position: relative;
+}
+.pay-page .text-input {
+	background: url(../images/recharge05@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 4rem;
+	height: 1.04rem;
+	margin: 0 auto;
+	position: relative;
+}
+.pay-page .text-input>input {
+	display: block;
+	background-color: transparent;
+	width: 1.72rem;
+	text-align: center;
+	position: absolute;
+	top: .41rem;
+	left: 1.3rem;
+}
+.pay-page .btn {
+	width: 4.2rem;
+	height: .68rem;
+	margin: .5rem auto;
+	font-size: 0;
+}
+.pay-page .confirm {
+	background: url(../images/determine@2x.png) 0 0 no-repeat;
+}
+.pay-page .cancel {
+	background: url(../images/cancel@2x.png) 0 0 no-repeat;
+}
+.pay-page .btn>div {
+	display: inline-block;
+	width: 2.1rem;
+	height: .68rem;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.pay-page .cancel-1 {
+	background: url(../images/backtrack@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: .66rem;
+	height: .68rem;
+	position: absolute;
+	bottom: 1.52rem;
+	left: 1rem;
+}
+.free {
+	position: absolute;
+	top: 1.48rem; 
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 6.7rem;
+	height: 4rem;
+	background: url(../images/free@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	display: none;
+}
+
+.pay-page {
+	display: block;
 }
