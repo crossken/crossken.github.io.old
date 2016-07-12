@@ -1,0 +1,67 @@
+html,body,div {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 7.5rem;
+}
+html {
+	background: #fff url(../images/bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.machine {
+	position: relative;
+}
+.machine .title {
+	width: 4.86rem;
+	height: 1.24rem;
+	background: url(../images/name@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	margin: 0.29rem auto 0;
+}
+.machine .sound-control {
+	width: 0.66rem;
+	height: 0.66rem;
+	background: url(../images/sound_04@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	right: 0.6rem;
+	top: 0.37rem;
+}
+.machine .body-1 {
+	width: 6.8rem;
+	height: 6.29rem;
+	margin: 0 auto;
+	background: url(../images/body-1@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.machine .body-2 {
+	width: 6.8rem;
+	height: .73rem;
+	margin: 0 auto;
+	position: relative;
+}
+.machine .body-2>div:first-child{
+	position: absolute;
+	width: 1.76rem;
+	height: .73rem;
+	top: 0;
+	left: 0;
+	background: url(../images/body-2-left@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.machine .body-2>div:last-child{
+	position: absolute;
+	width: 5.04rem;
+	height: .73rem;
+	top: 0;
+	left: 1.76rem;
+	background: url(../images/body-2-right@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
