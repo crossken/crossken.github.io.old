@@ -2,16 +2,35 @@ html,body,div {
 	margin: 0;
 	padding: 0;
 }
+html, body {
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+}
 body {
 	width: 7.5rem;
+	height: 12rem;
 }
 html {
 	background: #fff url(../images/bg.png) 0 0 no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+@media screen and (max-width:321px){
+	.machine .times-left>span{font-size:15px}
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+	.machine .times-left>span{font-size:16px}
+}
+
+@media screen and (min-width:400px){
+	.machine .times-left>span{font-size:18px}
+}
 .machine {
 	position: relative;
+/*	-webkit-transform: scale(0.8,0.8);
+transform: scale(0.8,0.8);*/
 }
 .machine .title {
 	width: 4.86rem;
@@ -31,37 +50,85 @@ html {
 	right: 0.6rem;
 	top: 0.37rem;
 }
-.machine .body-1 {
+.machine .machine-body {
 	width: 6.8rem;
-	height: 6.29rem;
+	height: 9.03rem;
 	margin: 0 auto;
-	background: url(../images/body-1@2x.png) 0 0 no-repeat;
+	background: url(../images/body@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
-}
-.machine .body-2 {
-	width: 6.8rem;
-	height: .73rem;
-	margin: 0 auto;
 	position: relative;
 }
-.machine .body-2>div:first-child{
+.machine .body-mask{
 	position: absolute;
 	width: 1.76rem;
 	height: .73rem;
-	top: 0;
+	top: 6.28rem;
 	left: 0;
-	background: url(../images/body-2-left@2x.png) 0 0 no-repeat;
+	background: url(../images/body-mask@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
 }
-.machine .body-2>div:last-child{
-	position: absolute;
-	width: 5.04rem;
-	height: .73rem;
-	top: 0;
-	left: 1.76rem;
-	background: url(../images/body-2-right@2x.png) 0 0 no-repeat;
+.machine .rechange {
+	float: left;
+	margin: .3rem 0 0 .36rem;
+	background: url(../images/recharge02@2x.png) 0 0 no-repeat;
+}
+.machine .times-left {
+	float: right;
+	margin: .3rem .36rem 0 0;
+	background: url(../images/heart03@2x.png) 0 0 no-repeat;
+}
+.machine .rechange,.machine .times-left {
+	width: 3.04rem;
+	height: .72rem;
 	-webkit-background-size: contain;
 	background-size: contain;
+	position: relative;
+}
+.machine .times-left>span {
+	color: #fff;
+	font-size: 16px;
+	position: absolute;
+	left: .17rem;
+	top: .18rem;
+}
+.machine .progress-bar,.machine .progress-bar-now {
+	position: absolute;
+	left: 1.2rem;
+	top: .24rem;
+	height: .16rem;
+	border-radius: .08rem;
+}
+.machine .progress-bar {
+	background-color: #74b7d7;
+	width: 5.4rem;
+	z-index: 1;
+}
+.machine .progress-bar-now {
+	background-color: #a5e24d;
+	width: 3rem;
+	z-index: 2;
+}
+.machine .worm {
+	background: url(../images/pet@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	top: -0.03rem;
+	left: 3.8rem;
+	width: .78rem;
+	height: .46rem;
+	z-index: 3;
+}
+.machine .flag {
+	background: url(../images/flam@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	top: -0.03rem;
+	left: 4.8rem;
+	width: .28rem;
+	height: .44rem;
+	z-index: 3;
 }
