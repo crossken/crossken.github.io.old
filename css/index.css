@@ -91,7 +91,7 @@ input,select {
 	position: absolute;
 	width: 1.76rem;
 	height: .73rem;
-	top: 6.28rem;
+	top: 6.27rem;
 	left: 0;
 	background: url(../images/body-mask@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
@@ -204,6 +204,121 @@ input,select {
 	top: .3rem;
 	right: .04rem;
 	color: #fff;
+}
+{
+	position: absolute;
+	border: 1px solid #000;
+}
+.machine .glass-mask,.machine .glass-sec {
+	position: absolute;
+	width: 5.79rem;
+	height: 5.74rem;
+	top: .65rem;
+	left: .48rem;
+	overflow: hidden;
+}
+.machine .glass-mask>div:first-child {
+	height: .3rem;
+	background-color: rgb( 0, 153, 204 );
+	opacity: 0.8;
+}
+.machine .glass-mask>div:last-child {
+	height: 5.44rem;
+	background-color: rgb( 255, 255, 255 );
+	opacity: 0.102;
+}
+
+.machine .glass-sec {
+	/*z-index: 2;*/
+}
+.machine .hook {
+	position: absolute;
+	bottom: .8rem;
+	left: 2.4rem;
+}
+.machine .hook-iron {
+	width: .14rem;
+	height: 4.8rem;
+	background: url(../images/Irons@2x.png) 0 0 repeat-y;
+	-webkit-background-size: contain;
+	background-size: contain;
+	margin: 0 auto;
+}
+.machine .hook-join {
+	width: 1.3rem;
+	height: .7rem;
+	background: url(../images/claw01@2x.png) 0 0;
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: relative;
+	top: -0.2rem;
+	-webkit-transform-origin: 50% .2rem;
+	transform-origin: 50% .2rem;
+/*	-webkit-transform: rotate(10deg);
+	transform: rotate(10deg);*/
+}
+.machine .hook-sub-left,.machine .hook-sub-right {
+	width: .62rem;
+	height: .82rem;
+	position: absolute;
+}
+.machine .hook-sub-left {
+	background: url(../images/Lclaw01@2x.png) 0 0;
+	-webkit-background-size: contain;
+	background-size: contain;
+	top:.6rem;
+	left: -0.01rem;
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+	-webkit-transform-origin: 0.07rem 0.07rem;
+	transform-origin: 0.07rem 0.07rem;
+}
+
+.machine .hook-sub-right {
+	background: url(../images/Rclaw01@2x.png) 0 0;
+	-webkit-background-size: contain;
+	background-size: contain;
+	top:.6rem;
+	right: -0.01rem;
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	-webkit-transform-origin: 0.55rem 0.07rem;
+	transform-origin: 0.55rem 0.07rem;
+}
+.machine .doll-catch {
+	background: url(../images/Rabbit-03@2x.png) 0 0;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 1.3rem;
+	height: 1.96rem;
+	position: absolute;
+	bottom: -1rem;
+	left: -.1rem;
+	transform: rotate(-20deg);
+}
+
+/*.machine .doll-1 {
+	background: url(../images/Rabbit-03@2x.png) 0 0;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 1.3rem;
+	height: 1.96rem;
+	position: absolute;
+	bottom: .01rem;
+	left: 2.4rem;
+}
+.machine .dolls {
+	position: absolute;
+	width: 5.79rem;
+	height: 5.74rem;
+	top: .65rem;
+	left: .48rem;
+}*/
+
+
+
+.tips,.start-game {
+	/*display: none;*/
 }
 .tips {
 	background: url(../images/TIPS@2x.png) 0 0 no-repeat;
@@ -453,6 +568,6 @@ input,select {
 	display: none;
 }
 
-.pay-page {
+/*.pay-page {
 	display: block;
-}
+}*/
