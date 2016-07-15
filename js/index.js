@@ -26,7 +26,7 @@ $(function() {
 
 	$('#base-bg')[0].pause();
 
-		// alert(10);
+		alert(11);
 
 
 
@@ -131,7 +131,7 @@ $(function() {
 
 	//上
 	$('.btn-up').on('touchstart', function(event) {
-		if (hookScale == hookScaleMin) {return false};
+		if (hookScale <= hookScaleMin) {return false};
 		$('#moving')[0].play();
 		hookScale = hookScale-0.005;
 		$('.hook').css('-webkit-transform', 'scale('+hookScale+','+hookScale+')');
@@ -140,7 +140,7 @@ $(function() {
 			hookScale = hookScale-0.005;
 			$('.hook').css('-webkit-transform', 'scale('+hookScale+','+hookScale+')');
 			$('.hook').css('transform','scale('+hookScale+','+hookScale+')');
-			if (hookScale == hookScaleMin) {clearInterval(btnUp);}
+			if (hookScale <= hookScaleMin) {clearInterval(btnUp);}
 		},30)
 	});
 	$('.btn-up').on('touchend', function(event) {
