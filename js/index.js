@@ -12,6 +12,8 @@ var gameSecondLeft = 30;
 var gameSecondLeftCount;
 var btnUp;
 var btnLeft;
+var btnDown;
+var btnRight;
 
 $(function() {
 
@@ -20,7 +22,7 @@ $(function() {
 		left : '2.4rem'
 	});
 
-			$('#base-bg')[0].pause();
+	$('#base-bg')[0].pause();
 
 		// alert(10);
 
@@ -92,11 +94,11 @@ $(function() {
 		// 	}
 		// },1000)
 
-	})
+})
 
 	//游戏操作
 	$('.btn-left').on('touchstart', function(event) {
-		// console.log($('.hook').css('bottom'));
+		$('#moving')[0].play();
 		var nowLeft = parseFloat($('.hook').css('left'));
 		console.log(nowLeft);
 		$('.hook').css('left', nowLeft-0.01+'rem');
@@ -107,6 +109,19 @@ $(function() {
 	});
 	$('.btn-left').on('touchend', function(event) {
 		clearInterval(btnLeft);
+	});
+
+	$('.btn-right').on('touchstart', function(event) {
+		$('#moving')[0].play();
+		var nowRight = parseFloat($('.hook').css('left'));
+		$('.hook').css('left', nowRight+0.01+'rem');
+		btnRight = setInterval(function(){
+			var nowRight = parseFloat($('.hook').css('left'));
+			$('.hook').css('left', nowRight+0.01+'rem');
+		},30)
+	});
+	$('.btn-right').on('touchend', function(event) {
+		clearInterval(btnRight);
 	});
 
 	//开关背景音乐
