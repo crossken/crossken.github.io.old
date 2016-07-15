@@ -262,6 +262,8 @@ input,select {
 	position: absolute;
 	bottom: 4.3rem;
 	left: 2.4rem;
+	transform-origin:50% 71%;
+	/*transform: scale(0.7,0.7);*/
 }
 .machine .hook-iron {
 	width: .14rem;
@@ -324,7 +326,7 @@ transform: rotate(10deg);*/
 	transform: rotate(-20deg);
 }
 
-/*.machine .doll-1 {
+.machine .doll-1 {
 	background: url(../images/Rabbit-03@2x.png) 0 0;
 	-webkit-background-size: contain;
 	background-size: contain;
@@ -340,7 +342,7 @@ transform: rotate(10deg);*/
 	height: 5.74rem;
 	top: .65rem;
 	left: .48rem;
-	}*/
+	}
 
 
 

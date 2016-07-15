@@ -14,6 +14,8 @@ var btnUp;
 var btnLeft;
 var btnDown;
 var btnRight;
+var hookScale = 1;
+var hookScaleMin = 0.7;
 
 $(function() {
 
@@ -97,31 +99,52 @@ $(function() {
 })
 
 	//游戏操作
+
+	//左
 	$('.btn-left').on('touchstart', function(event) {
 		$('#moving')[0].play();
 		var nowLeft = parseFloat($('.hook').css('left'));
 		console.log(nowLeft);
-		$('.hook').css('left', nowLeft-0.01+'rem');
+		$('.hook').css('left', nowLeft-0.02+'rem');
 		btnLeft = setInterval(function(){
 			var nowLeft = parseFloat($('.hook').css('left'));
-			$('.hook').css('left', nowLeft-0.01+'rem');
+			$('.hook').css('left', nowLeft-0.02+'rem');
 		},30)
 	});
 	$('.btn-left').on('touchend', function(event) {
 		clearInterval(btnLeft);
 	});
 
+	//右
 	$('.btn-right').on('touchstart', function(event) {
 		$('#moving')[0].play();
 		var nowRight = parseFloat($('.hook').css('left'));
-		$('.hook').css('left', nowRight+0.01+'rem');
+		$('.hook').css('left', nowRight+0.02+'rem');
 		btnRight = setInterval(function(){
 			var nowRight = parseFloat($('.hook').css('left'));
-			$('.hook').css('left', nowRight+0.01+'rem');
+			$('.hook').css('left', nowRight+0.02+'rem');
 		},30)
 	});
 	$('.btn-right').on('touchend', function(event) {
 		clearInterval(btnRight);
+	});
+
+	//上
+	$('.btn-up').on('touchstart', function(event) {
+		if (hookScale == hookScaleMin) {return false};
+		$('#moving')[0].play();
+		hookScale = hookScale-0.005;
+		$('.hook').css('-webkit-transform', 'scale('+hookScale+','+hookScale+')');
+		$('.hook').css('transform','scale('+hookScale+','+hookScale+')');
+		btnUp = setInterval(function(){
+			hookScale = hookScale-0.005;
+			$('.hook').css('-webkit-transform', 'scale('+hookScale+','+hookScale+')');
+			$('.hook').css('transform','scale('+hookScale+','+hookScale+')');
+			if (hookScale == hookScaleMin) {clearInterval(btnUp);}
+		},30)
+	});
+	$('.btn-up').on('touchend', function(event) {
+		clearInterval(btnUp);
 	});
 
 	//开关背景音乐
