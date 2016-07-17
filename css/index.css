@@ -101,6 +101,7 @@ input,select {
 	background: url(../images/body-mask@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
+	z-index: 99;
 }
 .machine .recharge {
 	float: left;
@@ -315,7 +316,7 @@ transform: rotate(10deg);*/
 	transform-origin: 0.55rem 0.07rem;
 }
 .machine .doll-catch {
-	background: url(../images/Rabbit-03@2x.png) 0 0;
+	background: url() 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
 	width: 1.3rem;
@@ -326,8 +327,8 @@ transform: rotate(10deg);*/
 	transform: rotate(-20deg);
 }
 
-.machine .doll-1 {
-	background: url(../images/Rabbit-03@2x.png) 0 0;
+.machine .doll-0 {
+	background: url(../images/Rabbit-03@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
 	width: 1.3rem;
@@ -508,6 +509,9 @@ transform: rotate(10deg);*/
 		align-items: center;
 		width: .64rem;
 		height: .46rem;
+	}
+	.fail-page .word span {
+		line-height: 1;
 	}
 	.fail-page .doll {
 		background: url(../images/Rabbit-02@2x.png) 0 0 no-repeat;
