@@ -28,8 +28,8 @@ input,select {
 @media screen and (max-width:321px){
 	.machine .times-left span{font-size:15px}
 	.machine .btn-confirm span{font-size:12px}
-	.sucsess-page .text-input>*{font-size:12px}
-	.sucsess-page .select-wrapper>select{font-size:15px}
+	.success-page .text-input>*{font-size:12px}
+	.success-page .select-wrapper>select{font-size:15px}
 	.fail-page .word span {font-size:20px}
 	.pay-page .text-input>input {font-size:16px}
 	.machine .time {font-size: 12px}
@@ -38,8 +38,8 @@ input,select {
 @media screen and (min-width:321px) and (max-width:400px){
 	.machine .times-left span{font-size:16px}
 	.machine .btn-confirm span{font-size:13px}
-	.sucsess-page .text-input>*{font-size:14px}
-	.sucsess-page .select-wrapper>select{font-size:16px}
+	.success-page .text-input>*{font-size:14px}
+	.success-page .select-wrapper>select{font-size:16px}
 	.fail-page .word span {font-size:24px}
 	.pay-page .text-input>input {font-size:17px}
 	.machine .time {font-size: 13px}
@@ -48,8 +48,8 @@ input,select {
 @media screen and (min-width:400px){
 	.machine .times-left span{font-size:18px}
 	.machine .btn-confirm span{font-size:14px}
-	.sucsess-page .text-input>*{font-size:16px}
-	.sucsess-page .select-wrapper>select{font-size:18px}
+	.success-page .text-input>*{font-size:16px}
+	.success-page .select-wrapper>select{font-size:18px}
 	.fail-page .word span {font-size:28px}
 	.pay-page .text-input>input {font-size:20px}
 	.machine .time {font-size: 15px}
@@ -133,44 +133,47 @@ input,select {
 	justify-content: center;
 	align-items: center;
 }
-.machine .progress-bar,.machine .progress-bar-now {
+.progress-bar,.progress-bar-now {
 	position: absolute;
-	left: 1.2rem;
-	top: .24rem;
+	left: 1.57rem;
+	top: 1.76rem;
 	height: .16rem;
 	border-radius: .08rem;
 }
-.machine .progress-bar {
+.progress-bar {
 	background-color: #74b7d7;
 	width: 5.4rem;
 	z-index: 1;
 }
-.machine .progress-bar-now {
+.progress-bar-now {
 	background-color: #a5e24d;
 	width: .4rem;
 	z-index: 2;
 }
-.machine .worm {
+.worm {
 	background: url(../images/pet@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
 	position: absolute;
-	top: -0.03rem;
-	left: 1.1rem;
+	top: 1.49rem;
+	left: 1.47rem;
 	width: .78rem;
 	height: .46rem;
 	z-index: 3;
 }
-.machine .flag {
+.flag {
 	background: url(../images/flam@2x.png) 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
 	position: absolute;
-	top: -0.03rem;
-	left: 4.8rem;
+	top: 1.49rem;
+	left: 5.1rem;
 	width: .28rem;
 	height: .44rem;
 	z-index: 3;
+}
+.flag,.worm,.progress-bar,.progress-bar-now {
+	visibility: hidden;
 }
 .machine .time {
 	/*font-size: 13px;*/
@@ -337,13 +340,23 @@ transform: rotate(10deg);*/
 	bottom: .01rem;
 	left: 2.4rem;
 }
+.machine .doll-1 {
+	background: url(../images/Rabbit-07@2x.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	width: 1rem;
+	height: 1.539rem;
+	position: absolute;
+	bottom: 1.6rem;
+	left: 1rem;
+}
 .machine .dolls {
 	position: absolute;
 	width: 5.79rem;
 	height: 5.74rem;
 	top: .65rem;
 	left: .48rem;
-	}
+}
 
 
 
@@ -371,7 +384,7 @@ transform: rotate(10deg);*/
 		height: 1.1rem;
 	}
 
-	.sucsess-page,.fail-page,.tips-page,.pay-page {
+	.success-page,.fail-page,.tips-page,.pay-page {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -381,7 +394,7 @@ transform: rotate(10deg);*/
 		background-color: rgba(0,0,0,0.7);
 		display: none;
 	}
-	.sucsess-page .word {
+	.success-page .word {
 		background: url(../images/Congratulations@2x.png) 0 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
@@ -389,7 +402,7 @@ transform: rotate(10deg);*/
 		height: 1.46rem;
 		margin: .2rem auto 0;
 	}
-	.sucsess-page .doll {
+	.success-page .doll {
 		background: url(../images/Rabbit-01@2x.png) 0 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
@@ -397,7 +410,7 @@ transform: rotate(10deg);*/
 		height: 4.74rem;
 		margin: 0 auto;
 	}
-	.sucsess-page>form {
+	.success-page>form {
 		background: url(../images/information@2x.png) 0 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
@@ -406,40 +419,40 @@ transform: rotate(10deg);*/
 		margin: .3rem auto 0;
 		position: relative;
 	}
-	.sucsess-page .text-input:first-child {
+	.success-page .text-input:first-child {
 		top: 1.15rem;
 		background: url(../images/column03@2x.png) .82rem 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
 	}
-	.sucsess-page .text-input:nth-child(2) {
+	.success-page .text-input:nth-child(2) {
 		top: 2.1rem;
 		background: url(../images/column02@2x.png) .82rem 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
 	}
-	.sucsess-page .text-input:nth-child(3) {
+	.success-page .text-input:nth-child(3) {
 		top: 3.05rem;
 		background: url(../images/column01@2x.png) .82rem 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
 	}
-	.sucsess-page .text-input>* {
+	.success-page .text-input>* {
 		display: inline-block;
 	}
-	.sucsess-page .text-input {
+	.success-page .text-input {
 		position: absolute;
 		left: .42rem;
 		width: 6.06rem;
 		height: .74rem;
 		font-size: 0;
 	}
-	.sucsess-page .text-input>label {
+	.success-page .text-input>label {
 		width: 1rem;
 		line-height: .74rem;
 		color: rgb( 166, 114, 53 )
 	}
-	.sucsess-page .text-input>input {
+	.success-page .text-input>input {
 		background-color: #a46f34;
 	}
 	#name {
@@ -451,7 +464,7 @@ transform: rotate(10deg);*/
 	#address {
 		width: 4.7rem;
 	}
-	.sucsess-page .select-wrapper {
+	.success-page .select-wrapper {
 		background: url(../images/column04@2x.png) 0 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
@@ -462,7 +475,7 @@ transform: rotate(10deg);*/
 		bottom: .5rem;
 		overflow: hidden;
 	}
-	.sucsess-page .select-wrapper>select {
+	.success-page .select-wrapper>select {
 		background: transparent;
 		width: 2.11rem;
 
@@ -474,7 +487,7 @@ transform: rotate(10deg);*/
 		left: 0;
 		display: block;
 	}
-	.sucsess-page input[type="submit"] {
+	.success-page .submit {
 		background: url(../images/refer@2x.png) 0 0 no-repeat;
 		-webkit-background-size: contain;
 		background-size: contain;
@@ -484,10 +497,9 @@ transform: rotate(10deg);*/
 		right: .36rem;
 		bottom: .4rem;	
 	}
-
-/*	.fail-page {
-	display: block;
-}*/
+	.success-page input {
+		color: #fff;
+	}
 
 	.fail-page .word {
 		background: url(../images/no@2x.png) 0 0 no-repeat;
@@ -605,6 +617,9 @@ transform: rotate(10deg);*/
 		height: .6rem;
 		bottom: .1rem;
 		right: .1rem;
+	}
+	#money {
+		color: #fff;
 	}
 
 
