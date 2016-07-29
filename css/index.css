@@ -260,7 +260,7 @@ input,select {
 }
 
 .machine .glass-sec {
-	/*z-index: 2;*/
+	z-index: 2;
 }
 .machine .hook {
 	position: absolute;
@@ -332,23 +332,93 @@ transform: rotate(10deg);*/
 
 .machine .doll-0 {
 	background: url(../images/Rabbit-03@2x.png) 0 0 no-repeat;
-	-webkit-background-size: contain;
-	background-size: contain;
 	width: 1.3rem;
 	height: 1.96rem;
-	position: absolute;
 	bottom: .01rem;
-	left: 2.4rem;
+	left: 2.2rem;
 }
 .machine .doll-1 {
 	background: url(../images/Rabbit-07@2x.png) 0 0 no-repeat;
-	-webkit-background-size: contain;
-	background-size: contain;
 	width: 1rem;
 	height: 1.539rem;
-	position: absolute;
-	bottom: 1.6rem;
+	bottom: 1.8rem;
 	left: 1rem;
+}
+.machine .doll-2 {
+	background: url(../images/Rabbit-05@2x.png) 0 0 no-repeat;
+	width: 1.3rem;
+	height: 1.44rem;
+	bottom: 0.01rem;
+	left: 1.08rem;
+}
+.machine .doll-3 {
+	background: url(../images/Rabbit-06@2x.png) 0 0 no-repeat;
+	width: 1.15rem;
+	height: 2rem;
+	bottom: 0.85rem;
+	left: 0.2rem;
+}
+.machine .doll-4 {
+	background: url(../images/Rabbit-08@2x.png) 0 0 no-repeat;
+	width: 1.15rem;
+	height: 2rem;
+	bottom: 0.75rem;
+	left: 1.28rem;
+}
+.machine .doll-5 {
+	background: url(../images/Rabbit-07@2x.png) 0 0 no-repeat;
+	width: 1.15rem;
+	height: 1.77rem;
+	bottom: 1rem;
+	left: 2.4rem;
+}
+.machine .doll-6 {
+	background: url(../images/Rabbit-05@2x.png) 0 0 no-repeat;
+	width: 1.15rem;
+	height: 1.275rem;
+	bottom: 1.2rem;
+	left: 3.4rem;
+}
+.machine .doll-7 {
+	background: url(../images/Rabbit-03@2x.png) 0 0 no-repeat;
+	width: 1.15rem;
+	height: 1.735rem;
+	bottom: 1rem;
+	left: 4.4rem;
+}
+.machine .doll-8 {
+	background: url(../images/Rabbit-06@2x.png) 0 0 no-repeat;
+	width: 1.3rem;
+	height: 2.26rem;
+	bottom: .01rem;
+	left: 3.2rem;
+}
+.machine .doll-9 {
+	background: url(../images/Rabbit-07@2x.png) 0 0 no-repeat;
+	width: 1.3rem;
+	height: 2rem;
+	bottom: .01rem;
+	left: 4.3rem;
+}
+.machine .doll-10 {
+	background: url(../images/Rabbit-06@2x.png) 0 0 no-repeat;
+	width: 1rem;
+	height: 1.74rem;
+	bottom: 1.8rem;
+	left: 2rem;
+}
+.machine .doll-11 {
+	background: url(../images/Rabbit-03@2x.png) 0 0 no-repeat;
+	width: 1rem;
+	height: 1.508rem;
+	bottom: 1.8rem;
+	left: 3.3rem;
+}
+.machine .dolls>div {
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	z-index: 0;
 }
 .machine .dolls {
 	position: absolute;
@@ -453,16 +523,16 @@ transform: rotate(10deg);*/
 		color: rgb( 166, 114, 53 )
 	}
 	.success-page .text-input>input {
-		background-color: #a46f34;
+		background-color: rgba(0,0,0,0);
 	}
 	#name {
-		width: 2.32rem;	
+		width: 2.22rem;	
 	}
 	#tel {
-		width: 3.3rem;
+		width: 3.2rem;
 	}
 	#address {
-		width: 4.7rem;
+		width: 4.6rem;
 	}
 	.success-page .select-wrapper {
 		background: url(../images/column04@2x.png) 0 0 no-repeat;

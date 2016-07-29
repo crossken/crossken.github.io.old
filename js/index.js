@@ -2,10 +2,62 @@ var isNewPlayer = true;
 var timesLeft = 3;
 var isGameStarted = false;
 
-var dolls = [{leftMin:2.38,leftMax:2.42,scaleMin:0.98,scaleMax:1},{leftMin:0.78,leftMax:0.92,scaleMin:0.77,scaleMax:0.85}];
-var dollsPos = [{left: '2.4rem',bottom:'0.01rem'},{left: '1rem',bottom:'1.6rem'}];
-var dollsPicSrc = ["images/Rabbit-03@2x.png","images/Rabbit-07@2x.png"];
-var dollsGetSrc = ["images/Rabbit-01@2x.png","images/Rabbit-01@2x.png"];
+var dolls = [
+			{leftMin:2.14,leftMax:2.26,scaleMin:0.97,scaleMax:1},
+			{leftMin:0.78,leftMax:0.92,scaleMin:0.73,scaleMax:0.82},
+			{leftMin:1.06,leftMax:1.16,scaleMin:0.97,scaleMax:1},
+			{leftMin:0.06,leftMax:0.16,scaleMin:0.86,scaleMax:0.9},
+			{leftMin:1.14,leftMax:1.28,scaleMin:0.83,scaleMax:0.9},
+			{leftMin:2.26,leftMax:2.4,scaleMin:0.83,scaleMax:0.9},
+			{leftMin:3.26,leftMax:3.4,scaleMin:0.83,scaleMax:0.9},
+			{leftMin:4.26,leftMax:4.4,scaleMin:0.83,scaleMax:0.9},
+			{leftMin:3.14,leftMax:3.26,scaleMin:0.93,scaleMax:1},
+			{leftMin:4.24,leftMax:4.36,scaleMin:0.95,scaleMax:1},
+			{leftMin:1.78,leftMax:1.92,scaleMin:0.72,scaleMax:0.82},
+			{leftMin:3.08,leftMax:3.22,scaleMin:0.73,scaleMax:0.82},
+			];
+var dollsPos = [
+				{left: '2.2rem',bottom:'0.01rem'},
+				{left: '1rem',bottom:'1.8rem'},
+				{left: '1.08rem',bottom:'0.01rem'},
+				{left: '0.2rem',bottom:'0.85rem'},
+				{left: '1.28rem',bottom:'0.75rem'},
+				{left: '2.4rem',bottom:'1rem'},
+				{left: '3.4rem',bottom:'1.2rem'},
+				{left: '4.4rem',bottom:'1rem'},
+				{left: '3.2rem',bottom:'0.01rem'},
+				{left: '4.3rem',bottom:'0.01rem'},
+				{left: '2rem',bottom:'1.8rem'},
+				{left: '3.3rem',bottom:'1.8rem'},
+				];
+var dollsPicSrc = [
+					"images/Rabbit-03@2x.png",
+					"images/Rabbit-07@2x.png",
+					"images/Rabbit-05@2x.png",
+					"images/Rabbit-06@2x.png",
+					"images/Rabbit-08@2x.png",
+					"images/Rabbit-07@2x.png",
+					"images/Rabbit-05@2x.png",
+					"images/Rabbit-03@2x.png",
+					"images/Rabbit-06@2x.png",
+					"images/Rabbit-07@2x.png",
+					"images/Rabbit-06@2x.png",
+					"images/Rabbit-03@2x.png",
+					];
+var dollsGetSrc = [
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png",
+					"images/Rabbit-01@2x.png"
+					];
 var thisDoll;
 var dollID;
 
@@ -46,6 +98,7 @@ var hook = $('.hook');
 
 $(function() {
 
+	alert('测试中');
 
 
 	wormPosMin = deviceWidth*0.196;
@@ -228,6 +281,7 @@ $(function() {
 
 
 $('.continue').tap(function(){
+	console.log(thisDoll);
 	resetState();
 	$('.fail-page').hide();
 })
@@ -358,7 +412,8 @@ function resetState(){
 	if (thisDoll) {
 		thisDoll.css({
 			'left': dollsPos[dollID].left,
-			'bottom': dollsPos[dollID].bottom
+			'bottom': dollsPos[dollID].bottom,
+			'z-index': 0
 		});
 	}
 	$('.hook-sub-left').css('transform', 'rotate(30deg)');
@@ -408,6 +463,7 @@ function transportDoll(dollID){
 						}).show();
 						$('.doll-catch').css('background-image', '');
 						setTimeout(function(){
+							thisDoll.css('z-index', '10');
 							thisDoll.animate({'bottom': '-2.2rem'}, 1200, 'linear', function(){
 								success();
 							});
