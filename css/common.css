@@ -1,0 +1,44 @@
+html,
+body,
+div,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+body {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout:none;
+}
+a {
+	outline: none;
+	text-decoration: none;
+}
+input[type="text"],textarea {
+	-webkit-appearance: none;
+}
+ul {
+	list-style: none;
+}
+@font-face {
+  font-family: 'pingfang';
+  src: url('../font/pingfang.eot');
+  src:
+    url('../font/pingfang.eot?#font-spider') format('embedded-opentype'),
+    url('../font/pingfang.woff') format('woff'),
+    url('../font/pingfang.ttf') format('truetype'),
+    url('../font/pingfang.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*使用选择器指定字体*/
+body {
+    font-family: 'pingfang';
+}

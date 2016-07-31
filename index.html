@@ -1,192 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
 	<meta name="format-detection" content="telephone=no,email=no,adress=no">
-	<!-- 去掉winphone系统a、input标签被点击时产生的半透明灰色背景 -->
-	<meta name="msapplication-tap-highlight" content="no">
-	<title>夹娃娃游戏</title>
+	<title>首页</title>
 	<script>
 		var deviceWidth = document.documentElement.clientWidth;
 		if(deviceWidth > 750) deviceWidth = 750;
 		document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
 	</script>
+	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="container">
 
-	<body>
+		<nav class="nav">
+			<ul>
+				<li class="homepage"><a href="">首页</a></li>
+				<li class="abstract"><a href="">珠光简介</a></li>
+				<li class="ideal"><a href="">企业理念</a></li>
+				<li class="history"><a href="">发展历程</a></li>
+				<li class="project"><a href="">项目概念</a></li>
+				<li class="about"><a href="">关于我们</a></li>
+			</ul>
+		</nav>
 
-		<div class="progress-bar"></div>
-		<div class="progress-bar-now"></div>
-		<div class="worm"></div>
-		<div class="flag"></div>
-		<div class="main-wrapper">
+		<section class="main">
 
-			<!-- 缩放部分 -->
-			<div class="machine">
-				<div class="title"></div>
-				<div class="sound-control">
-					<img src="images/sound_03@2x.png">
-				</div>
-				<div class="machine-body">
+			<header class="md-header">
+				<button type="button" class="nav"></button>
+				<h2>首页</h2>
+			</header>
 
-					<!-- 娃娃穿过出物口的视觉效果hack -->
-					<div class="body-mask"></div>
-
-					<!-- 机器顶部 -->
-					<div class="top-sec">
-						<div class="time"><span>30</span></div>
-<!-- 						<div class="progress-bar"></div>
-						<div class="progress-bar-now"></div>
-						<div class="worm"></div>
-						<div class="flag"></div> -->
+			<section class="md-banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="" alt=""></div>
+						<div class="swiper-slide"><img src="" alt=""></div>
+						<div class="swiper-slide"><img src="" alt=""></div>
 					</div>
+				</div>
+			</section>
 
-					<!-- 玻璃箱体 -->
-					<div class="glass-sec">
-						<div class="hook">
-							<div class="hook-iron"></div>
-							<div class="hook-join">
-								<div class="doll-catch"></div>
-								<div class="hook-sub-left"></div>
-								<div class="hook-sub-right"></div>
-
-							</div>
+			<section class="md-content">
+				<h3>珠光动态</h3>
+				<ul class="news-list">
+					<li>
+						<div class="news-text">
+							<h4></h4>
+							<p></p>
 						</div>
-
-					</div>
-
-					<!-- 娃娃 -->
-					<div class="dolls">
-						<div class="doll-1"></div>
-						<div class="doll-10"></div>
-						<div class="doll-11"></div>
-
-
-						<div class="doll-3"></div>
-						<div class="doll-4"></div>
-						<div class="doll-5"></div>
-						<div class="doll-6"></div>
-						<div class="doll-7"></div>
-						
-
-
-						<div class="doll-2"></div>
-						<div class="doll-8"></div>
-						<div class="doll-9"></div>
-						<div class="doll-0"></div>
-					</div>
-
-					<!-- 前面板玻璃 -->
-					<!-- <div class="glass-mask">
-						<div></div>
-						<div></div>
-					</div> -->
-
-					<!-- 控制区域 -->
-					<div class="control-sec">
-						<div class="btn-up ctrl-btn"></div>
-						<div class="btn-down ctrl-btn"></div>
-						<div class="btn-left ctrl-btn"></div>
-						<div class="btn-right ctrl-btn"></div>
-						<div class="btn-confirm">
-							<div>
-								<span>0</span>
-							</div>
+						<div class="news-img">
+							<img src="" alt="">
 						</div>
-					</div>
-				</div>
+					</li>
+					<li>
+						<div class="news-text">
+							<h4></h4>
+							<p></p>
+						</div>
+						<div class="news-img">
+							<img src="" alt="">
+						</div>
+					</li>
+				</ul>
+			</section>
 
-				<!-- 充值 -->
-				<div class="recharge"></div>
-				<!-- 剩余游戏次数 -->
-				<div class="times-left">
-					<div><span>0</span></div>
-					<img src="images/heart04@2x.png" style="display:none;">
-				</div>
-
-
-
-			</div>
-
-			<!-- 游戏提示 -->
-			<div class="tips"></div>
-
-			<!-- 开始游戏 -->
-			<div class="start-game"></div>
+		</section>
 
 
 
-			<!-- 成功页面 -->
-			<div class="success-page">
-				<div class="word"></div>
-				<div class="doll"></div>
-				<form action="">
-					<div class="text-input">
-						<label for="name">姓名：</label><input type="text" id="name" name="name">
-					</div>
-					<div class="text-input">
-						<label for="tel">电话：</label><input type="tel" id="tel" name="tel">
-					</div>
-					<div class="text-input">
-						<label for="address">地址：</label><input type="text" id="address" name="address">
-					</div>
-					<div class="select-wrapper">
-						<select name="area" id="area">
-							<option value="gd">广东省</option>
-						</select>
-					</div>
-					<div class="submit"></div>
-				</form>
-			</div>
 
-			<!-- 失败页面 -->
-			<div class="fail-page">
-				<div class="word">
-					<div>
-						<span>0</span>
-					</div>
-				</div>
-				<div class="doll"></div>
-				<div class="continue"></div>
-			</div>
+	</div>
 
-			<!-- 游戏提示页面 -->
-			<div class="tips-page">
-				<div class="word"></div>
-			</div>
+	<script src="lib/zepto.js"></script>
+	<script src="lib/swiper-3.3.1.jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
 
-			<!-- 充值页面 -->
-			<div class="pay-page">
-				<form action="">
-					<div class="text-input">
-						<input type="number" name="money" id="money" value='1'>
-						<div class="add-money"></div>
-					</div>
-					<div class="btn">
-						<div class="confirm"></div>
-						<div class="cancel"></div>
-					</div>
-					<div class="cancel-1"></div>
-				</form>
-			</div>
-
-			<!-- 新玩家获得3次免费游戏机会页面 -->
-			<div class="free"></div>
-		</div>
-
-		<!-- 音频 -->
-		<audio src="bgm/bgm.mp3" loop="loop" autoplay="autoplay" id="base-bg"></audio>
-		<audio src="bgm/start.mp3" preload="preload" id="start"></audio>
-		<audio src="bgm/fail.mp3" preload="preload" id="fail"></audio>
-		<audio src="bgm/lr.mp3" preload="preload" id="moving"></audio>
-		<audio src="bgm/1.mp3" preload="preload" id="hook-down"></audio>
-		<audio src="bgm/suss.mp3" preload="preload" id="success"></audio>
-
-
-		<script src="lib/zepto.js"></script>
-		<!-- // <script src="lib/jquery-1.12.0.min.js"></script> -->
-		<script src="js/index.js"></script>
-	</body>
-	</html>
