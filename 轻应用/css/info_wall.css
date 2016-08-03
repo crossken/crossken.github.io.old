@@ -1,0 +1,88 @@
+.message-list li {
+  padding: .3rem .2rem;
+  display: flex;
+  border-bottom: .02rem solid #d7d7d7;
+}
+.message-list .avatar {
+  padding-right: .2rem;
+}
+.message-list .avatar img {
+  width: .9rem;
+  height: .9rem;
+  display: block;
+}
+.message-list .content h3 {
+  font-size: .3rem;
+  color: #e3a402;
+  margin-top: 0;
+  margin-bottom: .16rem;
+}
+.message-list .content>span {
+  color: #797979;
+  font-size: .24rem;
+  display: block;
+  margin-bottom: .22rem;
+}
+.message-list .content p {
+  font-size: .28rem;
+  margin-bottom: .1rem;
+  line-height: 1.25;
+}
+.message-list .content .btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-list .content .btn>div {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.message-list .content .like>a {
+  background: url(../images/Info-Wall_like.png) 0 0 no-repeat;
+  margin-right: .04rem;
+}
+.message-list .content .reward>a {
+  background: url(../images/Info-Wal_A-reward.png) 0 0 no-repeat;
+  margin-right: .04rem;
+}
+.message-list .content .btn a {
+  display: block;
+  width: .34rem;
+  height: .32rem;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.message-list .content .btn span {
+  font-size: .28rem;
+  display: block;
+  padding-top: .02rem;
+}
+.message-list .content .like {
+  margin-right: .2rem;
+}
+.message-list .content .reward {
+  margin-right: .1rem;
+}
+.message-list .content img{
+  width: 2.8rem;
+  display: block;
+  margin-bottom: .1rem;
+}
+.large-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,1);
+  display: none;
+}
+.large-img img {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

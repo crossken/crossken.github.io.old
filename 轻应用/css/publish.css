@@ -1,0 +1,200 @@
+html {
+  background-color: #fcf9b2;
+}
+body {
+  height: 10rem;
+}
+button {
+  outline: 0;
+  border: 0;
+}
+.md-nav {
+  height: 1.12rem;
+  background-image:url("../images/release_nav.png"),url("../images/publish-nav-bg-2.png");
+  background-repeat: no-repeat, no-repeat;  
+  background-position: 0 0, 0 .98rem;
+  -webkit-background-size: 7.5rem .98rem, 7.5rem .14rem;
+  background-size: 7.5rem .98rem, 7.5rem .14rem;
+  background-color: #f5f295;
+}
+.md-nav ul {
+  float: right;
+  display: flex;
+}
+.md-nav a {
+  display: block;
+  width: 1.34rem;
+  height: .97rem;
+}
+.md-nav .input-sec a {
+  background-image:url("../images/input-page.png");
+}
+.md-nav .input-sec .selected {
+  background-image:url("../images/input-page-active.png");
+}
+.md-nav .public-sec a {
+  background-image:url("../images/public-page.png");
+}
+.md-nav .public-sec .selected {
+  background-image:url("../images/public-page-active.png");
+}
+.md-nav .contribute-sec a {
+  background-image:url("../images/contribute-page.png");
+}
+.md-nav .contribute-sec .selected {
+  background-image:url("../images/contribute-page-active.png");
+}
+.md-nav a {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.md-input-page textarea {
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 6.4rem;
+  overflow: hidden;
+  outline: none;
+  border: 0;
+  resize: none;
+  font-size: .32rem;
+  color: #797979;
+  padding: .12rem .4rem 0;
+  background-image: url("../images/textarea-bg.png");
+  background-repeat: repeat-y;
+  background-position: 0 0;
+  -webkit-background-size: 7.5rem .8rem;
+  background-size: 7.5rem .8rem;
+  line-height: .8rem;
+}
+.md-upload {
+  position: absolute;
+  width: 100%;
+  height: 4.7rem;
+  top: 7.49rem;
+  left: 0;
+  background: #fcf9b2 url(../images/input-page-bg-2.png) 0 0 no-repeat;
+  -webkit-background-size: 7.5rem .16rem;
+  background-size: 7.5rem .16rem;
+}
+.md-upload input[type="file"] {
+  font-size: 0;
+}
+
+.md-upload .uplaod-img {
+    display: flex;
+    padding: .36rem .4rem;
+}
+.md-upload .uplaod-img label {
+  width: .44rem;
+  height: .4rem;
+  background: #fcf9b2 url(../images/photo.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-right: .52rem;
+}
+.md-upload .uplaod-img label>input {
+  opacity: 0;
+}
+.md-upload .uplaod-img img {
+  border: .02rem solid #939154;
+  height: 1.56rem;
+  display: none;
+}
+.md-upload .publish-btn {
+  position: absolute;
+  top: 3.08rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 5.46rem;
+  height: .82rem;
+  background: url(../images/send.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.md-upload .instruction-btn {
+  position: absolute;
+  top: 3.48rem;
+  right: .2rem;
+  width: .44rem;
+  height: .44rem;
+  background: url(../images/Micro-blackboard_Q.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.instruction, .submit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  display: none;
+}
+.instruction>div {
+  position: absolute;
+  width: 7.1rem;
+  height: 5.2rem;
+  top: 1.8rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: .34rem;
+  background-color: #fff;
+}
+/*.submit {
+  display: block;
+}*/
+.submit .cancel-btn {
+  position: absolute;
+  bottom: .3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 7.1rem;
+  height: 1.16rem;
+  font-size: .36rem;
+  line-height: 1.16rem;
+  color: #cc0505;
+  border-radius: .4rem;
+  background-color: #fff;
+}
+.submit .confirm {
+  position: absolute;
+  bottom: 1.76rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 7.1rem;
+  height: 3.2rem;
+  font-size: .36rem;
+  line-height: 1.14rem;
+  border-radius: .4rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+.submit .confirm p {
+  font-size: .24rem;
+  color: #797979;
+  text-align: center;
+  border-bottom: .02rem solid #d7d7d7;
+  line-height: .88rem;
+  height: .88rem;
+}
+.submit .confirm>button {
+  width: 7.1rem;
+  height: 1.14rem;
+  display: block;
+  line-height: 1.14rem;
+  background-color: #fff;
+}
+.submit .confirm .public-btn {
+  border-bottom: .02rem solid #d7d7d7;
+}
+section[data-index="2"], section[data-index="3"] {
+  display: none;
+}

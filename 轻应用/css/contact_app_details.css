@@ -1,0 +1,76 @@
+.md-basic-info img {
+  position: absolute;
+  top: .6rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.md-basic-info h3 {
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: .48rem;
+  color: #333;
+}
+.md-basic-info p {
+  position: absolute;
+  top: 4.58rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: .3rem;
+  color: #797979;
+}
+.md-basic-info span:last-child {
+  margin-left: .5rem;
+}
+
+.md-contact-info {
+  position: absolute;
+  top: 4.98rem;
+  left: 0;
+  width: 100%;
+}
+.md-contact-info li {
+  height: 1rem;
+  position: relative;
+  border-bottom: .02rem solid #d9d9d9;
+  /*padding-top: .35rem;*/
+}
+.md-contact-info li>div {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-top: .35rem;
+}
+.md-contact-info li p {
+  font-size: .28rem;
+}
+.md-contact-info .email>span {
+  background: url(../images/email.png) center center no-repeat;
+  -webkit-background-size: .44rem .36rem;  
+  background-size: .44rem .36rem;
+}
+.md-contact-info .mobile-phone>span {
+  background: url(../images/iphone.png) center center no-repeat;
+  -webkit-background-size: .28rem .5rem;  
+  background-size: .28rem .5rem;
+}
+.md-contact-info .tel>span {
+  background: url(../images/iphone.png) center center no-repeat;
+  -webkit-background-size: .44rem .38rem;  
+  background-size: .44rem .38rem;
+}
+.md-contact-info div>span {
+  width: .44rem;
+  height: .5rem;
+  margin-left: 1.92rem;
+  margin-right: 1.04rem;
+}

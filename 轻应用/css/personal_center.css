@@ -1,0 +1,185 @@
+body {
+  background: #fff url(../images/bg_shading_personal.png) 0 0 repeat-y;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.md-avatar,
+.md-avatar .background,
+.md-avatar .mask {
+  width: 7.5rem;
+}
+.md-avatar {
+  overflow: hidden;
+  height: 4rem;
+  position: relative;
+  text-align: center;
+  color: #000;
+}
+.md-avatar .background {
+  display: block;
+}
+.md-avatar .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 4rem;
+  background-color: rgba(255,255,255,0.8);
+}
+.md-avatar .circle {
+  position: absolute;
+  top: .6rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 2rem;
+  border: .1rem solid #e9b632;
+  border-radius: 50%;
+  z-index: 2;
+}
+.md-avatar .name,
+.md-avatar .rank {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+}
+.md-avatar .name {
+  top: 3.1rem;
+  font-size: .32rem;
+}
+.md-avatar .rank {
+  top: 3.52rem;
+  height: .3rem;
+  font-size: 0;
+}
+.md-avatar .rank>span {
+  display: inline-block;
+  width: .3rem;
+  height: .3rem;
+  margin: 0 .08rem;
+  background: url(../images/stars.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.md-main {
+  
+}
+.md-main .btn {
+  font-size: 0;
+  text-align: center;
+}
+.md-main .my-point {
+  border-right: .02rem solid #d7d7d7;
+  background: url(../images/point.png) center .3rem no-repeat;
+  -webkit-background-size: .44rem .5rem;
+  background-size: .44rem .5rem;
+}
+.md-main .my-favorite {
+  background: url(../images/like.png) center .3rem no-repeat;
+  -webkit-background-size: .54rem .5rem;
+  background-size: .54rem .5rem;
+}
+.md-main .btn>div {
+  display: inline-block;
+  width: 3.73rem;
+  height: 1.6rem;
+  position: relative;
+  font-size: .32rem;
+  color: #e3a402;
+  border-bottom: .02rem solid #d7d7d7;
+}
+.md-main .selected:after {
+  content: "";
+  display: block;
+  background-color: #cc0503;
+  position: absolute;
+  top: 1.62rem;
+  left: 0;
+  width: 3.74rem;
+  height: .1rem
+}
+.md-main .btn p {
+  position: absolute;
+  top: .94rem;
+  width: 100%;
+}
+.md-main .my-point a {
+  position: absolute;
+  display: block;
+  width: .36rem;
+  height: .36rem;
+  bottom: .02rem;
+  right: .7rem;
+  background: url(../images/credit_Q.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.md-main .content {
+  padding-top: .1rem;
+}
+.md-main .my-point-content>*,
+.md-main .my-favorite-content li {
+  border-bottom: .02rem solid #d7d7d7;
+  position: relative;
+}
+.md-main .my-point-content>* {
+  padding: 0 .8rem;
+}
+.md-main .my-point-content h3 {
+  height: 1.2rem;
+  margin: 0;
+  font-size: .32rem;
+}
+.md-main .my-point-content p {
+  height: 1rem;
+  font-size: .28rem;
+}
+.md-main .my-point-content span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.md-main .my-point-content span:first-child {
+  left: .8rem;
+}
+.md-main .my-point-content span:last-child {
+  right: .8rem;
+  color: #e3a402;
+}
+.md-main .content {
+  display: none;
+}
+.md-main .cur-show {
+  display: block;
+}
+.md-main .my-favorite-content li {
+  height: 1.5rem;
+}
+.md-main .my-favorite-content img {
+  width: .9rem;
+  height: .9rem;
+  margin: 0 .2rem;
+}
+.md-main .my-favorite-content li>* {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.md-main .my-favorite-content p {
+  font-size: .24rem;
+  color: #666;
+  left: 1.3rem;
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;
+  margin-right: .4rem;
+  line-height: 1.3;  
+}

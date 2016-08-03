@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>个人中心</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/personal_center.css">
+</head>
+<body>
+  <div class="container">
+    <section class="md-avatar">
+      <div class="mask"></div>
+      <img class="background" src="images/avatar.jpg"></img>
+      <img class="circle" src="images/avatar.jpg"></img>
+      <p class="name">张三</p>
+      <div class="rank">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <section class="md-main">
+
+      <div class="btn">
+        <div class="my-point selected">
+          <p>我的积分<a href="#"></a></p>
+        </div>
+        <div class="my-favorite">
+          <p>我喜爱的</p>
+        </div>
+      </div>
+
+      <div>
+              <div class="my-point-content content cur-show">
+        <h3><span>当前总积分</span><span>1150分</span></h3>
+        <p><span>首次认证</span><span>1000分</span></p>
+        <p><span>活动积分</span><span>100分</span></p>
+        <p><span>发表积分</span><span>50分</span></p>
+      </div>
+
+      <div class="my-favorite-content content">
+        <ul>
+          <li>
+            <img src="images/like_HQ.png" alt="">
+            <p>欧洲杯小组赛已经全部结束，16强已经产生。意大利将在北京时间6月28日零点的1/8决赛中迎来强敌。6强已经产生。意大利将在北京时间6月28日零点的1/8决赛中迎来强敌。6强已经产生。意大利将在北京时间6月28日零点的1/8决赛中迎来强敌。</p>
+          </li>
+          <li>
+            <img src="images/Info-Wall_head-sculpture.png" alt="">
+            <p>欧洲杯小组赛已经全部结束，16强已经产生。意大利将在北京时间6月28日零点的1/8决赛中迎来强敌。</p>
+          </li>
+          <li>
+            <img src="images/Info-Wall_head-sculpture.png" alt="">
+            <p>今天天气很好。</p>
+          </li>
+          <li>
+            <img src="images/Info-Wall_head-sculpture.png" alt="">
+            <p>欧洲杯小组赛已经全部结束，16强已经产生。意大利将在北京时间6月28日零点的1/8决赛中迎来强敌。</p>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </section>
+  </div>
+  <script src="lib/zepto.js"></script>
+  <script src="js/personal_center.js"></script>
+</body>
+</html>

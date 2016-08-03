@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>珠光人</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="container">
+    <section class="md-avatar">
+      <div class="mask"></div>
+      <img class="background" src="images/avatar.jpg"></img>
+      <img class="circle" src="images/avatar.jpg"></img>
+      <p class="name">张三</p>
+      <p class="title">&nbsp;&nbsp;&nbsp;&nbsp;<span>人事专员</span>（认证）</p>
+    </section>
+    <section class="md-menu">
+      <ul>
+        <li><a href="personal_center.html" class="personal-center"><span>个人中心</span><i></i></a></li>
+        <li><a href="contact_app.html" class="contact-app"><span>通讯录</span><i></i></a></li>
+        <li><a href="memo.html" class="memo"><span>备忘录</span><i></i></a></li>
+        <li><a href="blackboard.html" class="blackboard"><span>微板报</span><i></i></a></li>
+        <li><a href="info_wall.html" class="info-wall"><span>信息墙</span><i></i></a></li>
+        <li><a href="publish.html" class="publish"><span>微发布</span><i></i></a></li>
+      </ul>
+    </section>
+  </div>
+  <script src="lib/zepto.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

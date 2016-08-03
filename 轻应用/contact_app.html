@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>通讯录</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact_app.css">
+</head>
+<body>
+  <div class="container">
+    <section class="md-search">
+      <input type="text" id="search" placeholder="部门">
+      <a href=""></a>
+    </section>
+    <section class="md-list">
+      <ul>
+        <li class="index"><span>L</span></li>
+        <li class="content">
+          <a href="contact_app_details.html">
+            <h3>李四</h3>
+            <p><span>销售部</span><span>组长</span></p>
+          </a>
+        </li>
+        <li class="content">
+          <h3>李四</h3>
+          <p><span>销售部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>李四</h3>
+          <p><span>销售部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>李四</h3>
+          <p><span>销售部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>李四</h3>
+          <p><span>销售部</span><span>组长</span></p>
+        </li>
+        <li class="index"><span>Z</span></li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>
+        <li class="content">
+          <h3>张三</h3>
+          <p><span>市场部</span><span>组长</span></p>
+        </li>   
+      </ul>
+      <div class="loader">
+        <div class="laoder-inner ball-pulse">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="lib/zepto.js"></script>
+  <script src="js/contact_app.js"></script>
+</body>
+</html>

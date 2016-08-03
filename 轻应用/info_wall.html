@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>信息墙</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/info_wall.css">
+</head>
+<body>
+  <div class="container">
+    <ul class="message-list">
+      <li>
+
+        <div class="avatar"><img src="images/Info-Wall_head-sculpture.png"></div>
+        <div class="content">
+          <h3>张三</h3>
+          <span>人事专员</span>
+          <p>年岁最久远的要数次卧的角落里那台陈旧的蝴蝶牌脚踏式缝纫机，那是奶奶十九岁嫁给爷爷时的嫁妆。古老的缝纫机虽然效率不高，但却很有时光的质感。</p>
+          <img src="images/fengrenji.jpg">
+          <div class="btn">
+            <div class="like">
+              <a href="#"></a><span>562</span>
+            </div>
+            <div class="reward">
+              <a href="#"></a>
+              <span>3500</span>
+            </div>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+
+  <div class="large-img">
+    <img src="">
+  </div>
+  <script src="lib/zepto.js"></script>
+  <script src="js/info_wall.js"></script>
+</body>
+</html>

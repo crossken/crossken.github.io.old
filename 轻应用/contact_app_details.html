@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>通讯录详情</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact_app_details.css">
+</head>
+<body>
+  <div class="container">
+    <section class="md-basic-info">
+      <img src="images/avatar-details.png" alt="avatar">
+      <h3>张三</h3>
+      <p><span>销售部</span><span>组长</span></p>
+    </section>
+    <section class="md-contact-info">
+      <ul>
+        <li><div class="email"><span></span><p>zhou@gmail.com</p></div></li>
+        <li><div class="mobile-phone"><span></span><p>13186668888</p></div></li>
+        <li><div class="tel"><span></span><p>020-88888888</p></div></li>
+      </ul>   
+    </section>
+  </div>
+</body>
+</html>

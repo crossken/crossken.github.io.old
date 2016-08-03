@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>微板报</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/blackboard.css">
+</head>
+<body>
+  <div class="container">
+    <ul class="message-list">
+      <li>
+
+        <div class="left-tag">
+          <div class="top"></div>
+          <div class="center">
+            <div class="center-left">
+              <div class="sub-top"></div>
+              <div class="sub-center"></div>
+              <div class="sub-bottom"></div>
+            </div>
+            <div class="center-right"></div>
+          </div>
+          <div class="bottom"></div>
+        </div>
+
+        <div class="content">
+          <h3>公告</h3>
+          <div class="date"><span class="day">2016-07-19</span><span class="time">11:36</span></div>
+          <p>年岁最久远的要数次卧的角落里那台陈旧的蝴蝶牌脚踏式缝纫机，那是奶奶十九岁嫁给爷爷时的嫁妆。古老的缝纫机虽然效率不高，但却很有时光的质感。</p>
+          <img src="images/fengrenji.jpg">
+          <div class="btn"><a href="publish.html" class="comment"></a><a href="#" class="like"></a><span>1234</span></div>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+  <div class="large-img">
+    <img src="">
+  </div>
+  <script src="lib/zepto.js"></script>
+  <script src="js/blackboard.js"></script>
+</body>
+</html>
