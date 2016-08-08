@@ -1,9 +1,6 @@
 html {
   background-color: #fcf9b2;
 }
-body {
-  height: 10rem;
-}
 button {
   outline: 0;
   border: 0;
@@ -70,10 +67,10 @@ button {
   line-height: .8rem;
 }
 .md-upload {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 4.7rem;
-  top: 7.49rem;
+  height: 4.2rem;
+  top: -.16rem;
   left: 0;
   background: #fcf9b2 url(../images/input-page-bg-2.png) 0 0 no-repeat;
   -webkit-background-size: 7.5rem .16rem;
@@ -197,4 +194,92 @@ button {
 }
 section[data-index="2"], section[data-index="3"] {
   display: none;
+}
+
+.public-page li, .contribution-page li {
+  padding-left: .2rem;
+  padding-right: .8rem;
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+  border-bottom: .02rem solid #d7d7d7;
+  position: relative;
+}
+.public-page .date, .contribution-page .date{
+  display: flex;
+  align-items: flex-end;
+  width: 1.6rem;
+  flex-shrink: 0;
+}
+.public-page .date span:first-child, .contribution-page .date span:first-child {
+  font-size: .48rem;
+  margin-right: .06rem;
+}
+.public-page .date span:last-child, .contribution-page .date span:last-child{
+  font-size: .2rem;
+  padding-bottom: .1rem;
+}
+.public-page a.content, .contribution-page a.content {
+  display: block;
+  color: #000;
+  font-size: .28rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.3;
+}
+.public-page a.delete-btn, .contribution-page a.delete-btn {
+  position: absolute;
+  bottom: .16rem;
+  right: .2rem;
+  width: .6rem;
+  height: .6rem;
+  background: url(../images/del.png) center center no-repeat;
+  -webkit-background-size: .26rem .26rem;
+  background-size: .26rem .26rem;
+  flex-shrink: 0;
+}
+.details-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: none;
+}
+.details-content>div {
+  margin-top: 1.12rem;
+  background-color: #f7f497;
+}
+.details-content>div>p {
+  padding: .16rem .2rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  vertical-align: bottom;
+  background: url(../images/details-content-bg.png) 0 0 repeat-y;
+  -webkit-background-size: 7.5rem .8rem;
+  background-size: 7.5rem .8rem;
+}
+.details-content .like-reward {
+  display: flex;
+  justify-content: flex-end;
+}
+.like-reward>span:first-child {
+  background: url(../images/like-red.png) 0 0 no-repeat;
+}
+.like-reward>span:last-child {
+  background: url(../images/reward-red.png) 0 0 no-repeat;
+}
+.details-content .like-reward>span {
+  display: block;
+  height: .32rem;
+  line-height: .32rem;
+  padding-left: .36rem;
+  -webkit-background-size: .34rem .32rem;
+  background-size: .34rem .32rem;
+  font-size: .24rem;
+  margin-right: .3rem;
 }

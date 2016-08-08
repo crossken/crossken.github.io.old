@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>认证</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/accreditation.css">
+</head>
+<body>
+  <div class="container">
+    <form action="" method="post">
+      <input type="text" id="name" placeholder="姓名" class="input-area">
+      <input type="tel" id="mobile-phone" placeholder="电话" class="input-area">
+      <input type="number" id="id-card" placeholder="身份证" class="input-area">
+      <input type="submit" value="我要认证" id="submit-btn">
+      <p>仅接受珠光集团内部人员认证</p>
+    </form>
+  </div>
+</body>
+</html>

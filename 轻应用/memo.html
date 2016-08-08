@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>备忘录</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/memo.css">
+</head>
+<body>
+  <div class="container">
+
+    <div id="calendar" class="md-calendar">
+
+    <!-- 以下html用于测试静态布局，可删除 -->
+    <!-- <p><a href="#" id="prev-btn"><</a><a href="#" id="next-btn">></a><span class="title-month">June</span><span class="title-year">2016</span></p>
+      <table>
+        <thead>
+          <tr>
+            <td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>31</td><td class="cur">1</td><td class="cur">2</td><td class="cur">3</td><td class="cur cur-day">4</td><td class="cur">5</td><td class="cur">6</td></tr>
+          <tr><td class="cur">7</td><td class="cur">8</td><td class="cur">9</td><td class="cur">10</td><td class="cur">11</td><td class="cur">12</td><td class="cur">13</td></tr>
+          <tr><td class="cur">14</td><td class="cur">15</td><td class="cur">16</td><td class="cur">17</td><td class="cur">18</td><td class="cur">19</td><td class="cur">20</td></tr>
+          <tr><td class="cur">21</td><td class="cur">22</td><td class="cur">23</td><td class="cur">24</td><td class="cur">25</td><td class="cur">26</td><td class="cur">27</td></tr>
+          <tr><td class="cur">28</td><td class="cur">29</td><td class="cur">30</td><td class="cur">31</td><td>1</td><td>2</td><td>3</td></tr>
+          <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        </tbody>
+      </table> -->
+
+    </div>
+
+    <div class="md-memo-content">
+      <p class="time"><span class="date">21</span><span class="month">June</span><span class="year">2016</span></p>
+
+      <ul><!-- 在此ul内插入备忘录条目 -->
+
+        <li>
+          <a class="edit-btn"></a>
+          <p>召开周会</p>
+        </li>
+        <li>
+          <a class="edit-btn"></a>
+          <p>召开周会召开周会召开周会召开周会会召开周会召会召开周会召</p>
+        </li>
+
+      </ul>
+
+      <div class="append-memo"><a href="" class="append-btn"></a><p>新增行程</p></div>
+    </div>
+  </div>
+
+<!-- 编辑/新增 -->
+<!--   <div class="md-memo-details">
+
+      <div class="textarea-wrapper">
+        <textarea rows="4" maxlength="60"></textarea>
+      </div>
+
+      <div class="btn-wrapper"><a href="" class="confirm">保存</a><a href="" class="cancel">取消</a></div>
+  </div> -->
+
+  <script src="lib/zepto.js"></script>
+  <script src="js/memo.js"></script>
+</body>
+</html>

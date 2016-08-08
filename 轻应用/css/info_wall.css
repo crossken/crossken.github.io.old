@@ -2,14 +2,24 @@
   padding: .3rem .2rem;
   display: flex;
   border-bottom: .02rem solid #d7d7d7;
+  position: relative;
 }
 .message-list .avatar {
   padding-right: .2rem;
+  width: 1.1rem;
+  flex-basis: 1.1rem;
+  position: absolute;
+  top: .3rem;
+  left: .2rem;
 }
 .message-list .avatar img {
   width: .9rem;
   height: .9rem;
   display: block;
+}
+.message-list .content {
+  flex-grow: 1;
+  margin-left: 1.1rem;
 }
 .message-list .content h3 {
   font-size: .3rem;

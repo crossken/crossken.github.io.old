@@ -5,17 +5,15 @@ body {
   background-size: cover;
 }
 .message-list {
-  padding: .3rem .2rem;
+  padding: .3rem .2rem 0;
 
 }
 .message-list li {
   display: flex;
   position: relative;
-    box-shadow: .06rem .06rem .04rem #888;
+  box-shadow: .06rem .06rem .04rem #888;
+  margin-bottom: .3rem;
 }
-/*.message-list li>div {
-
-}*/
 .message-list .left-tag {
   width: .98rem;
   display: flex;

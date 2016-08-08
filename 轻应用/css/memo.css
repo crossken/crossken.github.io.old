@@ -1,0 +1,230 @@
+html {
+  background: #f9f8f7;
+}
+.md-calendar {
+  height: 7.4rem;
+}
+.md-calendar>p {
+  padding-top: .3rem;
+  padding-bottom: .1rem;
+  display: flex;
+  position: relative;
+  width: 7.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.md-calendar>p>* {
+  font-size: .4rem;
+  display: block;
+  color: #cb0404;
+  font-weight: bold;
+
+}
+.md-calendar>p>a {
+  position: absolute;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+}
+.md-calendar #prev-btn {
+  left: .46rem;
+}
+.md-calendar #next-btn {
+  right: .46rem;
+}
+.md-calendar .title-year {
+  margin-left: .6rem;
+}
+.md-calendar table {
+  BORDER-COLLAPSE: collapse;
+  font-size: .34rem;
+  width: 6.7rem;
+  text-align: center;
+  margin: .3rem .4rem;
+  color: rgb(204, 204, 204);
+}
+.md-calendar table thead {
+  color: #8c8c8c;
+  font-weight: bold;
+}
+.md-calendar table tr {
+  display: flex;
+}
+.md-calendar table td {
+  height: .9rem;
+  line-height: .9rem;
+  width: .957rem;
+  padding: 0;
+
+}
+.md-calendar table .cur {
+  color: #000;
+}
+.md-calendar table .cur-day {
+  color: #fff;
+  background-image: url(../images/remind.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: .8rem .8rem;
+  background-size: .8rem .8rem;
+}
+.md-memo-content {
+  font-size: .32rem;
+}
+.md-memo-content .time {
+  margin-left: 1rem;
+  margin-bottom: .2rem;
+  margin-top: .3rem;
+}
+.md-memo-content .time>span {
+  margin-left: .15rem;
+}
+.md-memo-content li, .md-memo-content .append-memo {
+  display: flex;
+  align-items: center;
+  height: .74rem;
+  background-color: #fff;
+  color: #e3a402;
+  margin-bottom: .2rem;
+}
+.md-memo-content li .edit-btn {
+  display: block;
+  width: .74rem;
+  height: .74rem;
+  background: url(../images/edit-memo-btn.png) center center no-repeat;
+  -webkit-background-size: .44rem .44rem;
+  background-size: .44rem .44rem;
+}
+
+.md-memo-content li>p{
+  margin-left: .38rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 6.2rem;
+}
+.md-memo-content .append-btn {
+  display: block;
+  width: .74rem;
+  height: .74rem;
+  background: url(../images/append-memo-btn.png) center center no-repeat;
+  -webkit-background-size: .44rem .44rem;
+  background-size: .44rem .44rem;
+}
+.md-memo-content .append-memo {
+  color: #797979;
+}
+.md-memo-content .append-memo>p {
+  margin-left: .38rem;
+}
+
+.md-memo-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+/*.md-memo-details>div {
+  width: 7.1rem;
+  background-color: #fff;
+  margin: 2rem auto;
+  height: 4.6rem;
+  border-radius: .3rem;
+  position: relative;
+}*/
+.md-memo-details .textarea-wrapper {
+  width: 7.1rem;
+  height: 3.18rem;
+  border-radius: .4rem;
+  background-color: #000;
+  position: absolute;
+  top: 3.4rem;
+  left: .2rem;
+  border: 0;
+  background: url(../images/memo-bg.png) 0 0 repeat-y;
+  -webkit-background-size: 7.1rem .8rem;
+  background-size: 7.1rem .8rem;
+
+}
+.md-memo-details textarea {
+  padding: 0;
+  margin: 0;
+  resize: none;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-size: .32rem;
+  line-height: .8rem;
+  padding-left: .35rem;
+  padding-top: .14rem; 
+  width: 6.4rem;
+  height: 3.2rem;
+}
+.md-memo-details .btn-wrapper {
+  position: absolute;
+  top: 7rem;
+  left: .2rem;
+  width: 7.1rem;
+  height: 1.14rem;
+  background-color: #fff;
+  border-radius: .44rem;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  line-height: 1.14rem;
+  font-size: .36rem;
+}
+.md-memo-details .btn-wrapper>a {
+  flex-grow: 1;
+  color: #cb0404;
+}
+.md-memo-details .btn-wrapper>a:first-child {
+  border-right: .02rem solid #d7d7d7;
+}
+/*.md-memo-details>div>select {
+  font-size: .5rem;
+  position: absolute;
+  top: .6rem;
+  left: .5rem;
+  text-align: left;*/
+  /*width: 1.6rem;*/
+/*}*/
+
+/*.md-memo-details>div>input {
+  outline: none;
+  border: 1px solid #000;
+  width: 6rem;
+  position: absolute;
+  top: 1.6rem;
+  left: .5rem;
+  font-size: .36rem;
+  height: .7rem;
+  border: 0;
+  padding-left: .1rem;
+}*/
+/*.md-memo-details>div>a {
+  position: absolute;
+  font-size: .4rem;
+  top: 3rem;
+  text-align: center;
+  width: 1.6rem;
+  display: block;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-radius: .5rem;
+  border: 2px solid #000
+}
+.md-memo-details .confirm {
+  left: 1rem;
+  color: #fff;
+  background-color:#000; 
+}
+.md-memo-details .cancel {
+  right: 1rem;
+  color: #000;
+  background-color: #fff; 
+}*/

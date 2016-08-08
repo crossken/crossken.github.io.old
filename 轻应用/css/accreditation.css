@@ -1,0 +1,53 @@
+html {
+  background: url(../images/accreditation-bg.jpg) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+input {
+  width: .8rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 1px solid #cc0505;
+  width: 5.88rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+}
+.input-area {
+  height: .9rem;
+  font-size: .32rem;
+  line-height: normal;
+  color: #333;
+  border-radius: .36rem;
+  background-color: transparent;
+}
+#name {
+  top: 3.48rem;
+}
+#mobile-phone {
+  top: 4.66rem;
+}
+#id-card {
+  top: 5.84rem;
+}
+#submit-btn {
+  top: 7.38rem;
+  background-color: #cc0505;
+  border-radius: .2rem;
+  font-size: .36rem;
+  height: .9rem;
+  color: #fff;
+}
+form>p {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: .2rem;
+  color: #401212;
+  top: 8.62rem;
+}

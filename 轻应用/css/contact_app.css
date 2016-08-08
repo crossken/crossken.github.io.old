@@ -5,19 +5,21 @@
   top: 0;
   left: 0;
   background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .md-search input {
-  position: absolute;
+  display: block;
   width: 6.6rem;
   height: .6rem;
-  border: .02rem solid #cb0404;
+  border: 1px solid #cb0404;
   border-radius: .1rem;
   color: #a6a6a6;
   font-size: .28rem;
   padding-left: .2rem;
   outline: none;
-  top: .2rem;
-  left: .3rem;
+  line-height: normal;
 }
 .md-search a {
   position: absolute;
