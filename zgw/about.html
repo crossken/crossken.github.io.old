@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <title>首页</title>
+  <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    if(deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+  <div class="container">
+    <section class="banner">
+      <img src="images/about-banner.jpg">
+    </section>
+    <section class="content">
+      <ul>
+        <li class="HQ">
+          <h3>集团总部</h3>
+          <i class="spread-details"></i>
+          <div>
+            <p><span>电话</span><span>020-38960559</span></p>
+            <p><span>传真</span><span>020-38960908</span></p>
+            <p><span>地址</span><span>广州市天河区珠江新城马场路庆亿街3号珠光·新城国际中心B栋</span></p>
+          </div>
+        </li>
+        <li>
+          <h3>从化地区</h3>
+          <i class="spread-details"></i>
+          <div>
+            <p><span>电话</span><span>020-87821000</span></p>
+            <p><span>传真</span><span>020-87821112</span></p>
+            <p><span>地址</span><span>广州从化街口街大坳村流溪御景花园会所</span></p>
+          </div>
+        </li>
+        <li>
+          <h3>粤东地区</h3>
+          <i class="spread-details"></i>
+          <div>
+            <p><span>地址</span><span>广东省丰顺县留隍镇口铺阳光村鹿湖酒店五楼</span></p>
+          </div>
+        </li>
+        <li>
+          <h3>深圳地区 </h3>
+          <i class="spread-details"></i>
+          <div>
+            <p><span>地址</span><span>深圳市宝安区宝安大道4004号旭生大厦11楼</span></p>
+          </div>
+        </li>
+        <li>
+          <h3>北京地区</h3>
+          <i class="spread-details"></i>
+          <div>
+            <p><span>电话</span><span>010-87729888</span></p>
+            <p><span>传真</span><span>010-67727500</span></p>
+            <p><span>地址</span><span>北京市朝阳区东三环南路甲52号顺迈金钻10层</span></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="lib/zepto.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
+

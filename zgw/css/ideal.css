@@ -1,0 +1,62 @@
+body {
+  width: 7.5rem;
+}
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 0 .3rem;
+}
+.container img {
+  display: block;
+  padding: .3rem 0;
+  width: 100%;
+}
+.container {
+  background-color: #fff;
+  margin-bottom: .4rem;
+}
+.container>div {
+  background-color: #f9f9f9;
+  margin-bottom: .4rem;
+}
+.container h2 {
+  font-size: .32rem;
+  color: #e3a402;
+  padding-top: .3rem;
+  padding-bottom: .15rem;
+  font-weight: normal;
+}
+.container p {
+  color: #333;
+  font-size: .28rem;
+  line-height: .38rem;
+  padding-bottom: .3rem;
+}
+.container .para-spec>div {
+  font-size: .28rem;
+}
+.container .para-spec h3 {
+  text-align: center;
+}
+.container .para-spec ul {
+  padding-bottom: .15rem;
+  line-height: .38rem;
+}
+.container .para-spec li.multiline-hack {
+  padding-left: 1em;
+  position: relative;
+}
+.container .para-spec li.multiline-hack>span {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.container .para-spec h3 {
+  padding-top: .35rem;
+  padding-bottom: .2rem;
+}
+
+

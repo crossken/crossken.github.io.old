@@ -12,6 +12,24 @@ $(function() {
 
   //监听滚动事件
   $(window).scroll(scrollHandler);
+
+  //点击显示/隐藏打赏详情
+  $('.message-list').on('tap', '.reward>a', function(event) {
+    $('.reward-details').show();
+    return false;
+  });
+  $('.reward-details .cancel').tap(function(){
+    $('.reward-details').hide();
+    return false;
+  })
+
+  //点击切换打赏分数
+  $('.point-select>a').tap(function(){
+    $(this).addClass('selected').siblings().removeClass('selected');
+    return false;
+  })
+
+
 });
 
 function scrollHandler() {

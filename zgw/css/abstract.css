@@ -1,0 +1,18 @@
+body {
+  width: 7.5rem;
+}
+.container {
+  padding: .48rem .28rem;
+}
+.container p {
+  font-size: .28rem;
+  text-indent: 2em;
+  line-height: .4rem;
+  margin-bottom: .16rem;
+}
+.container img {
+  display: block;
+  width: 100%;
+  padding-top: .1rem;
+  padding-bottom: .26rem;
+}
